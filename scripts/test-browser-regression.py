@@ -3,7 +3,7 @@ Requires Playwright and Chromium. No npm engines, test doubles, or network neede
 """
 from pathlib import Path
 import subprocess,json,time,hashlib,shutil
-ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'test-results/v11/browser-regression';OUT.mkdir(parents=True,exist_ok=True)
+ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'test-results/v12/browser-regression';OUT.mkdir(parents=True,exist_ok=True)
 suites=[('v4_browser','test-results/v9-editor-report.json'),('v5_browser','test-results/v9-browser-report.json'),('navigation_browser','test-results/v9-navigation-browser.json'),('tidal_browser','test-results/v9-tidal-browser.json'),('frontier_browser','test-results/v9-frontier-browser.json'),('bloom_browser','test-results/v9-bloom-browser.json'),('field_browser','test-results/v9-field-browser.json'),('delivery_browser','test-results/v11/regression-delivery/browser-report.json'),('coverage_browser','test-results/v11/browser/report.json')]
 results=[];html=ROOT/'dist/Morph-Lab-Review.html';sha=hashlib.sha256(html.read_bytes()).hexdigest()
 for test,report_path in suites:

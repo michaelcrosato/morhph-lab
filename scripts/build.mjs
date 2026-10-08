@@ -46,6 +46,7 @@ try{
 let html=await readFile(path.join(root,'index.html'),'utf8');
 html=html.replace('<link rel="stylesheet" href="./style.css">',`<style>${await readFile(path.join(root,'style.css'),'utf8')}</style>`);
 html=html.replace('<link rel="stylesheet" href="./review.css">',`<style>${await readFile(path.join(root,'review.css'),'utf8')}</style>`);
+html=html.replace('<link rel="stylesheet" href="./creator.css">',`<style>${await readFile(path.join(root,'creator.css'),'utf8')}</style>`);
 html=html.replace(/<script type="importmap">[\s\S]*?<\/script>/,`<script type="importmap">${JSON.stringify({imports}).replaceAll('<','\\u003c')}</script>`);
 html=html.replace("import './src/boot.js'", "import 'morph/src/boot.js'");
 html=html.replace('<title>Morph Lab','<!-- '+(offline?'OFFLINE EDITION: engines embedded':'CDN EDITION: engines require internet')+' -->\n<title>Morph Lab');
@@ -54,10 +55,13 @@ html=html.replace('<!doctype html>','<!doctype html>\n<!-- LICENSE NOTICES\n'+no
 await writeFile(path.join(out,'runtime.html'),html);
 const workshop=await packWorkspace(html,'workshop');
 const review=await packWorkspace(html,'review');
-await writeFile(path.join(out,'index.html'),workshop);
-await writeFile(path.join(out,'Morph-Lab.html'),workshop);
+const creator=await packWorkspace(html,'creator');
+await writeFile(path.join(out,'index.html'),creator);
+await writeFile(path.join(out,'Morph-Lab.html'),creator);
 await writeFile(path.join(out,'Morph-Lab-Review.html'),review);
-await writeFile(path.join(out,'build-info.json'),JSON.stringify({edition:offline?'offline':'cdn',three:'0.181.0',rapier:'0.19.3',modules:Object.keys(imports).length,bytes:Buffer.byteLength(workshop),combined:true,version:'11.0.0'},null,2));
+await writeFile(path.join(out,'Morph-Lab-Workshop.html'),workshop);
+await writeFile(path.join(out,'Morph-Lab-Creator.html'),creator);
+await writeFile(path.join(out,'build-info.json'),JSON.stringify({edition:offline?'offline':'cdn',three:'0.181.0',rapier:'0.19.3',modules:Object.keys(imports).length,bytes:Buffer.byteLength(creator),combined:true,version:'12.0.0'},null,2));
 console.log(`Built ${offline?'offline':'CDN'} single-file edition: ${(Buffer.byteLength(html)/1024).toFixed(0)} KB`);
 // Redistributed library notices stay alongside the artifact.
 for(const f of ['LICENSE','THIRD-PARTY-NOTICES.md'])try{await copyFile(path.join(root,f),path.join(out,f));}catch{}

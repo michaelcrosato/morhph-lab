@@ -20,7 +20,7 @@ with sync_playwright() as p:
  except Exception as e:
   direct['reason']=str(e).split('Call log:')[0].strip();page.close();page=ctx.new_page();page.on('pageerror',lambda e:errors.append(str(e)));page.set_content((ROOT/'dist/Morph-Lab-Review.html').read_text(),timeout=30000)
  f=page.frames[-1];f.wait_for_function('window.foundationReview?.ready',timeout=30000)
- check('Current release version is visible in the combined shell','11.0.0' in page.locator('header').inner_text())
+ check('Current release version is visible in the combined shell','12.0.0' in page.locator('header').inner_text())
  check('89 model sources and 24 foundations are present',f.locator('#model-select option').count()==89 and f.locator('#foundation-select option').count()==24)
  f.locator('#model-select').evaluate('e=>e.closest("details").open=true');before=f.evaluate('foundationReview.snapshot().candidate');f.locator('#review-collection').select_option('field')
  check('Field filter contains exactly ten sources',f.locator('#model-select option').count()==10);check('Filter does not edit the candidate',f.evaluate('foundationReview.snapshot().candidate')==before)

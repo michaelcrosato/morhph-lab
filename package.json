@@ -1,12 +1,12 @@
 {
   "name": "morph-lab",
-  "version": "11.0.0",
+  "version": "12.0.0",
   "private": true,
   "type": "module",
-  "description": "Procedural creature and NPC generator with complete shared geometry and lossless material-grouped GLB delivery.",
+  "description": "Discovery-first procedural monster creator: seeded rolls, locked traits, saved parents, mixing, and complete asset delivery.",
   "scripts": {
     "dev": "node scripts/serve.mjs",
-    "test": "node --test tests/core.test.js tests/mixer.test.js tests/humanoid.test.js tests/content.test.js tests/review.test.js tests/navigation.test.js tests/tidal.test.js tests/frontier.test.js tests/bloom.test.js tests/field.test.js tests/delivery.test.js tests/diagnostics.test.js tests/coverage.test.js tests/packing.test.js",
+    "test": "node --test tests/core.test.js tests/mixer.test.js tests/humanoid.test.js tests/content.test.js tests/review.test.js tests/navigation.test.js tests/tidal.test.js tests/frontier.test.js tests/bloom.test.js tests/field.test.js tests/delivery.test.js tests/diagnostics.test.js tests/coverage.test.js tests/packing.test.js tests/frame-clock.test.js tests/creator.test.js",
     "test:engine": "node --test tests/engine.test.js",
     "build": "node scripts/build.mjs",
     "vendor": "node scripts/vendor.mjs",
@@ -64,7 +64,9 @@
     "test:packing-import": "python tests/packing_import.py",
     "audit:exports": "node scripts/check-catalog-delivery.mjs",
     "test:all-ui": "python scripts/test-browser-regression.py",
-    "test:coverage-engine": "node --test tests/coverage-engine.test.js"
+    "test:coverage-engine": "node --test tests/coverage-engine.test.js",
+    "test:creator": "node --test tests/frame-clock.test.js tests/creator.test.js",
+    "test:creator-ui": "python tests/creator_browser.py"
   },
   "dependencies": {
     "three": "0.181.0",

@@ -1,7 +1,8 @@
+import {FrameClock} from './core/frame-clock.js';
 import {openDeliveryPanel} from './export/panel.js';
 import {openDiagnostics} from './diagnostics/panel.js';
 import {foundationBlueprint} from './review/foundation.js';
-import {enterFoundationReview,takeWorkshopTransfer} from './review/transfer.js';
+import {enterFoundationReview,enterCreator,takeWorkshopTransfer} from './review/transfer.js';
 import {captureRuntimeReview} from './render/review-capture.js';
 import {restPickPoint} from './render/picking.js';
 import * as THREE from 'three';
@@ -23,7 +24,8 @@ const view=new View();
 let stage,creature,editor,habitat,physics,store,lastRuntimeReview;
 let previewPlaying=true,previewTime=0,previewSeek=false,transportClock=0;
 let mode='editor',walking=false,dirty=false,frameRequested=false,lastBuild=0,stopped=false,completed=false;
-let clock=0,lastTime=performance.now(),fpsFrames=0,fpsTime=0,debugTime=0;
+const frameClock=new FrameClock(.1);
+let clock=0,fpsFrames=0,fpsTime=0,debugTime=0;
 const keys=new Set(),tmp=new THREE.Vector3();
 function applyOptions(){if(!creature||!editor)return;creature.guides.visible=editor.options.guides&&mode==='editor';if(creature.humanoid)creature.humanoid.guides.visible=editor.options.rigGuides&&mode==='editor';creature.setWireframe(editor.options.wireframe);stage.debug.visible=editor.options.debug&&mode==='habitat';creature.select(editor.selected);}
 function rebuild(){
@@ -55,13 +57,13 @@ function enterHabitat(){
     if(count===8)completed=true;
   });}catch(error){habitat.dispose();habitat=null;throw error;}
   stage.scene.add(habitat.root);
-  mode='habitat';editor.habitat=true;completed=false;clearFeet();creature.root.position.set(0,creature.analysis.restHeight+.15,0);creature.root.rotation.set(0,0,0);habitat.root.visible=true;stage.setMode(true);stage.target.set(0,creature.analysis.restHeight*.6,0);view.mode(true);view.travelControls(creature.analysis.travel.medium);applyOptions();view.progress(0,0,0);stage.resize();lastTime=performance.now();
+  mode='habitat';editor.habitat=true;completed=false;clearFeet();creature.root.position.set(0,creature.analysis.restHeight+.15,0);creature.root.rotation.set(0,0,0);habitat.root.visible=true;stage.setMode(true);stage.target.set(0,creature.analysis.restHeight*.6,0);view.mode(true);view.travelControls(creature.analysis.travel.medium);applyOptions();view.progress(0,0,0);stage.resize();frameClock.reset();
   document.querySelector('#scene').focus({preventScroll:true});
 }
 function leaveHabitat(){
   if(mode!=='habitat')return;
   keys.clear();physics.dispose();physics=null;habitat.dispose();habitat=null;mode='editor';editor.habitat=false;completed=false;
-  clearFeet();creature.root.position.set(0,creature.analysis.restHeight,0);creature.root.rotation.set(0,0,0);creature.torso.rotation.set(0,0,0);stage.setMode(false);stage.key.position.set(5,9,6);stage.key.target.position.set(0,0,0);view.mode(false);view.closeDialog();applyOptions();stage.resize();animateCreature(creature,0,{time:previewTime,preview:true,seek:true});stage.frame(creature);
+  clearFeet();creature.root.position.set(0,creature.analysis.restHeight,0);creature.root.rotation.set(0,0,0);creature.torso.rotation.set(0,0,0);stage.setMode(false);stage.key.position.set(5,9,6);stage.key.target.position.set(0,0,0);view.mode(false);view.closeDialog();frameClock.reset();applyOptions();stage.resize();animateCreature(creature,0,{time:previewTime,preview:true,seek:true});stage.frame(creature);
 }
 function completeTrial(){
   if(!completed||document.querySelector('#dialog').open)return;completed=false;keys.clear();
@@ -69,6 +71,7 @@ function completeTrial(){
   view.dialog(`<span class="eyebrow">FIRST EXPEDITION / COMPLETE</span><h2>${name}<br>is a natural.</h2><p>Eight spores collected. Your blueprint has become a moving, world-interacting organism.</p><div class="completion-stat"><div><b>${Math.floor(elapsed/60)}:${String(Math.floor(elapsed%60)).padStart(2,'0')}</b><span>expedition time</span></div><div><b>${Math.floor(physics.distance)} m</b><span>distance travelled</span></div><div><b>${physics.jumps}</b><span>leaps of faith</span></div></div><p class="fine-copy">Try fewer limbs, a longer body, or a different gait. Return to the workshop and continue the experiment.</p><button class="primary" data-action="editor">Back to workshop ${icon('arrow')}</button><button class="quiet" data-action="retry">Try again</button>`);
 }
 async function action(name,el){
+  if(name==='creator'){if(mode==='habitat')leaveHabitat();store?.commitPreview();enterCreator(store?.state);return;}
   if(name==='system-checks'){openDiagnostics();return;}
   if(name==='delivery'){if(mode==='habitat')leaveHabitat();store.commitPreview();openDeliveryPanel(store.state,{pose:'bind',phase:0});return;}
   if(name==='review'){if(mode==='habitat')leaveHabitat();store.commitPreview();enterFoundationReview(store.state);return;}
@@ -96,10 +99,10 @@ function movement(){
 }
 function loop(now){
   if(stopped)return;requestAnimationFrame(loop);
-  let dt=Math.min((now-lastTime)/1000,.1);lastTime=now;if(document.hidden)return;
+  const dt=frameClock.tick(now,document.hidden);if(document.hidden)return;
   if(!document.querySelector('#dialog').open)clock+=dt;
   try{
-    if(dirty&&now-lastBuild>65&&mode==='editor')rebuild();
+    if(dirty&&performance.now()-lastBuild>65&&mode==='editor')rebuild();
     if(!creature)return;
     const paused=document.querySelector('#dialog').open;
     if(mode==='habitat'){
@@ -148,7 +151,7 @@ async function boot(){
     if(e.code==='KeyR'&&!e.repeat){physics.reset();clearFeet();view.toast('Returned to the start. Collected spores are kept.');}
   });
   document.addEventListener('keyup',e=>keys.delete(e.code));window.addEventListener('blur',()=>keys.clear());
-  document.addEventListener('visibilitychange',()=>{keys.clear();lastTime=performance.now();if(physics)physics.accumulator=0;});
+  document.addEventListener('visibilitychange',()=>{keys.clear();frameClock.reset();if(physics)physics.accumulator=0;});
   // Read-only diagnostics for reproducible browser smoke tests and bug reports.
   Object.defineProperty(window,'morphLab',{value:Object.freeze({
     actor:()=>({family:creature.genome.rig.family,bones:creature.humanoid?.spec.length||0,pose:creature.humanoid?.pose||null,events:creature.humanoid?.events||[],sockets:creature.parts.map(p=>({id:p.part.id,socket:p.part.socket,parent:p.group.parent?.name}))}),
@@ -159,6 +162,6 @@ async function boot(){
     snapshot:()=>({mode,genome:store.state,analysis:analyze(store.state),history:{undo:store.past.length,redo:store.future.length},renderer:{...stage.renderer.info.memory},position:creature.root.position.toArray(),spores:physics?.collected.size||0}),
     ready:true
   })});
-  view.ready();lastTime=performance.now();requestAnimationFrame(loop);
+  view.ready();frameClock.reset();requestAnimationFrame(loop);
 }
 boot().catch(error=>{console.error(error);view.fail(error);window.dispatchEvent(new CustomEvent('morph-lab:startup-error',{detail:error}));});

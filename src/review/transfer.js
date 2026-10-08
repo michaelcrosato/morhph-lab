@@ -47,3 +47,11 @@ export function takeWorkshopTransfer() {
     return genome;
   } catch { return null; }
 }
+
+/** Return from an advanced workspace without losing the current creature. */
+export function enterCreator(genome, review) {
+  const text=genome ? serializeGenome(genome) : null;
+  if(embeddedSwitch('creator', {...(text?{genome:JSON.parse(text)}:{}), ...(review?{review}:{})}))return;
+  if(text)sessionStorage.setItem('morph-lab.creator-transfer',text);
+  location.assign(workspaceURL(location.href,'creator'));
+}

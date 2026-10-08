@@ -3,7 +3,7 @@ import {openDeliveryPanel} from '../export/panel.js';
 import {openDiagnostics} from '../diagnostics/panel.js';
 import {libraryCoverage} from '../core/library-coverage.js';
 import {HUMANOID_ACTIONS} from '../core/humanoid-motion.js';
-import {enterWorkshop,takeReviewTransfer} from './transfer.js';
+import {enterCreator,enterWorkshop,takeReviewTransfer} from './transfer.js';
 import {workspaceURL} from '../core/workspace-route.js';
 import {FoundationCompiler,FOUNDATIONS,foundationBlueprint,deriveFoundation,SHAPE_PROFILES,REVIEW_POSES} from './foundation.js';
 import {ReviewSession,parseReviewSession,REVIEW_ITEMS} from './session.js';
@@ -33,7 +33,7 @@ try{
 function start(){
   $('#app').classList.add('review-root');
   $('#app').innerHTML=`<div class="review-app">
-    <header class="review-header"><a class="review-brand" href="#" data-review="home"><span class="review-logo">m</span><div><b>morph<span>lab</span></b><small>COMPLETE COVERAGE / 11</small></div></a><nav><a href="?workshop=1" id="review-workshop-link" data-review="workshop">Workshop</a><span class="active">Inspect</span><span class="review-offline">Local geometry renderer</span></nav><div class="review-header-actions"><button data-review="system-checks">System checks</button><button data-review="delivery">Export asset</button><button class="review-primary" data-review="sheet">Export review sheet ↗</button></div></header>
+    <header class="review-header"><a class="review-brand" href="#" data-review="home"><span class="review-logo">m</span><div><b>morph<span>lab</span></b><small>DISCOVERY STUDIO / 12</small></div></a><nav><a href="?workshop=1" id="review-workshop-link" data-review="workshop">Workshop</a><span class="active">Inspect</span><span class="review-offline">Local geometry renderer</span></nav><div class="review-header-actions"><button data-review="system-checks">System checks</button><button data-review="delivery">Export asset</button><button class="review-primary" data-review="sheet">Export review sheet ↗</button></div></header>
     <div class="review-layout"><aside class="review-left"><span class="review-eyebrow">01 / SOURCE & VARIATION</span><h1>Build from a<br>strong foundation.</h1><p class="review-muted">Check form first. Test deformation. Keep a traceable source.</p>
       <label>Foundation<select id="foundation-select">${options(FOUNDATIONS.map(x=>[x.id,x.label]),'balanced')}</select></label>
       <details><summary>All ${PRESET_MODELS.length} blueprint sources</summary><label>Content filter<select id="review-collection"><option value="all">All models</option><option value="classic">Completed: original models</option><option value="field"> Field &amp; Settlement</option><option value="bloom">Carapace &amp; Bloom</option><option value="frontier">Strange Forms</option><option value="water">Water</option><option value="air">Air</option></select></label><label>Model<select id="model-select">${options(PRESET_MODELS.map(x=>[x.id,x.label]),'wayfarer')}</select></label><p class="review-hint">Shared part factories are shown on creatures and humanoid joints. All 73 part families are supported. Inactive genes are retained in the source. Nothing is removed from the blueprint. Motion-cycle samples the current humanoid action without terrain contact.</p></details>
@@ -51,7 +51,7 @@ function start(){
       <section class="review-method"><div><span class="review-eyebrow">WHAT THIS VIEW PROVES</span><p>These are generated mesh triangles, not AI replacement images. Clay, normals and edge distortion expose the underlying form.</p></div><div><span class="review-eyebrow">WHAT IT DOES NOT PROVE</span><p>Shared parts and body waves use the runtime geometry. CPU pigment is an approximation, not a GPU shader test. Game materials, terrain IK, and physics require the Workshop.</p></div></section>
     </main>
     <aside class="review-right"><span class="review-eyebrow">02 / TECHNICAL & VISUAL GATES</span><h2>Inspection record</h2><label>Budget target<select id="budget-target">${options(Object.entries(TARGETS).map(([k,v])=>[k,v.label]),'desktop')}</select></label><div id="audit-summary"></div><div id="audit-checks"></div><section><h2>Reviewer decisions</h2><p class="review-hint">Technical checks never mark these as accepted. Blueprint or geometry-version changes reset all decisions.</p><div id="review-decisions">${Object.entries(REVIEW_ITEMS).map(([key,label])=>`<label>${label}<select data-decision="${key}">${options([['unreviewed','Not reviewed'],['accept','Accept'],['revise','Needs revision']],'unreviewed')}</select></label>`).join('')}</div><label>Review notes<textarea id="review-notes" maxlength="5000" rows="4" placeholder="Record defects, target style, and next changes."></textarea></label><div id="approval-status" class="review-approval">Not approved</div><p id="approval-reset" class="review-hint" hidden></p></section><section><h2>Interpretation</h2><p class="review-hint">Blue in A/B = candidate only. Orange = baseline only. Gray = overlap.</p><p class="review-hint">Edge distortion shows stretch or compression relative to the bind mesh. Large values need a closer visual check.</p><p class="review-hint">Mesh count is not a measured draw-call count. Crowd and mobile budgets are draft limits.</p></section></aside></div>
-    <footer class="review-footer"><span>MORPH LAB v11 / COMPLETE COVERAGE</span><span>Metres · +Y up · +Z forward</span><span>Game: Three r181 / Rapier 0.19.3 / WebGL2</span></footer><div id="review-toast" role="status" aria-live="polite"></div>
+    <footer class="review-footer"><span>MORPH LAB v12 / DISCOVERY STUDIO</span><span>Metres · +Y up · +Z forward</span><span>Game: Three r181 / Rapier 0.19.3 / WebGL2</span></footer><div id="review-toast" role="status" aria-live="polite"></div>
     <input id="review-file" type="file" hidden><input id="review-image" type="file" accept="image/png,image/jpeg,image/webp" hidden>
   </div>`;
   if(!window.__MORPH_EMBEDDED__)$('#review-workshop-link').href=workspaceURL(location.href,'workshop');
@@ -93,7 +93,7 @@ function render(fit=false){
   const clipped=lastFrames.some(x=>x.render.clipped);$('#clipping-note').textContent=clipped?'Frame warning: geometry touches an image edge. Refit both before judging overlap.':'';
   $('#approval-status').textContent=session.status;$('#approval-reset').hidden=!session.invalidatedReason;$('#approval-reset').textContent=session.invalidatedReason||'';$('#review-source-id').textContent=fingerprint(session.candidate)+' · schema 6';
 }
-function report(){return {format:'morph-lab-review-report',version:1,appVersion:'11.0.0',createdAt:new Date().toISOString(),enginePins:{three:'0.181.0',rapier:'0.19.3',gameRenderer:'WebGL2'},session:session.export(),audit:structuredClone(audit),comparison,frameClipped:lastFrames.some(x=>x.render.clipped),reference:referenceMeta?{...referenceMeta,alignment:{...refSettings}}:null,externalOBJ:objReference?{name:objReference.label,bounds:objReference.bounds,note:'Reload external data separately. Reference not rigged or deformed.'}:null,proportionSweep:suite,gpuVerified:false,physicsVerified:false};}
+function report(){return {format:'morph-lab-review-report',version:1,appVersion:'12.0.0',createdAt:new Date().toISOString(),enginePins:{three:'0.181.0',rapier:'0.19.3',gameRenderer:'WebGL2'},session:session.export(),audit:structuredClone(audit),comparison,frameClipped:lastFrames.some(x=>x.render.clipped),reference:referenceMeta?{...referenceMeta,alignment:{...refSettings}}:null,externalOBJ:objReference?{name:objReference.label,bounds:objReference.bounds,note:'Reload external data separately. Reference not rigged or deformed.'}:null,proportionSweep:suite,gpuVerified:false,physicsVerified:false};}
 async function exportSheet(kind='views'){
   if(busy)return;setBusy(true);await new Promise(r=>setTimeout(r,20));try{
     const entries=[],s=session.settings;
@@ -131,7 +131,7 @@ async function action(key){
   switch(key){
     case 'delivery':openDeliveryPanel(session.candidate,session.settings);break;
     case 'system-checks':openDiagnostics();break;
-    case 'home':break;
+    case 'home':enterCreator(session.candidate,session.export());break;
     case 'workshop':enterWorkshop(session.candidate,session.export());break;
     case 'pin':session.pin();objReference=null;baseCompiler=new FoundationCompiler(session.baseline);sourceControls();render();toast('Candidate pinned. Camera scale was kept.');break;
     case 'fit':render(true);break;

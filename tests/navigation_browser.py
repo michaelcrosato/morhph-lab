@@ -79,7 +79,7 @@ with sync_playwright() as p:
     page.screenshot(path=str(OUT/'v9-mobile.png'),full_page=True)
     # Default workshop release also contains the entire inspector.
     other=ctx.new_page();other.on('pageerror',lambda e:errors.append(str(e)))
-    other.set_content((ROOT/'dist/Morph-Lab.html').read_text(),timeout=30000)
+    other.set_content((ROOT/'dist/Morph-Lab-Workshop.html').read_text(),timeout=30000)
     other.frames[-1].wait_for_selector('#startup-error',timeout=30000)
     other.locator('[data-open-workspace="review"]').click()
     other.wait_for_function('document.documentElement.dataset.workspace==="review"')

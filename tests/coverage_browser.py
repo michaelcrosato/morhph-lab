@@ -18,7 +18,7 @@ with sync_playwright() as p:
  browser=p.chromium.launch(executable_path=os.environ.get('CHROMIUM_PATH','/usr/bin/chromium'),headless=True,args=['--no-sandbox','--disable-dev-shm-usage'])
  ctx=browser.new_context(offline=True,accept_downloads=True,viewport={'width':1560,'height':1100});page=ctx.new_page();errors=[];requests=[];page.on('pageerror',lambda e:errors.append(str(e)));page.on('request',lambda r:requests.append(r.url))
  html=(ROOT/'dist/Morph-Lab-Review.html').read_text();page.set_content(html,timeout=30000);f=page.frames[-1];f.wait_for_function('window.foundationReview?.ready',timeout=30000)
- check('Version 11 in combined shell','11.0.0' in page.locator('header').inner_text());check('All 89 presets retained',f.locator('#model-select option').count()==89)
+ check('Version 12 in combined shell','12.0.0' in page.locator('header').inner_text());check('All 89 presets retained',f.locator('#model-select option').count()==89)
  f.locator('#model-select').evaluate('e=>e.closest("details").open=true');before=f.evaluate('foundationReview.snapshot()');f.locator('#review-collection').select_option('classic');check('Completed-originals filter contains 24 sources',f.locator('#model-select option').count()==24);check('Filter leaves source and reviews unchanged',f.evaluate('foundationReview.snapshot()')==before)
  ids=f.locator('#model-select option').evaluate_all('es=>es.map(e=>e.value)')
  for id in ids:

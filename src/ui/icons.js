@@ -1,5 +1,6 @@
 // Original inline SVG icons. No downloaded artwork or icon font.
 const paths={
+  lock:'<rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/>',
   legbank:"<path d=\"M5 4v16M5 5l8 2 5 6m-13-2 8 2 5 6m-13-2 6 2 2 3\"/>",
   plateband:"<path d=\"M3 6Q12-1 21 6l-2 5Q12 6 5 11Zm1 5q8-5 16 0l-2 6q-6-4-12 0Zm2 6q6-4 12 0l-2 4H8Z\"/>",
   petalcrown:"<path d=\"M12 12C2 2 0 13 12 14C2 24 16 25 13 14C24 25 25 9 14 12C26 2 12-2 12 12Z\"/><circle cx=\"12\" cy=\"13\" r=\"2\"/>",
