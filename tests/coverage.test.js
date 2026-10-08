@@ -1,39 +1,222 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createHash} from 'node:crypto';
-import {preset,createPart,validateGenome,serializeGenome} from '../src/core/genome.js';
-import {CATALOG} from '../src/core/catalog.js';
-import {CLASSIC_PARTS} from '../src/core/classic-catalog.js';
-import {SHARED_PARTS} from '../src/core/shared-parts.js';
-import {compileTidalPart,sampleTidalPart} from '../src/core/tidal-geometry.js';
-import {walkerDimensions,walkerPreviewTarget,solveWalker} from '../src/core/walker-geometry.js';
-import {FoundationCompiler} from '../src/review/foundation.js';
-import {auditSnapshot} from '../src/review/audit.js';
-import {analyze} from '../src/core/anatomy.js';
-import {sampleMotion} from '../src/core/motion.js';
-import {libraryCoverage} from '../src/core/library-coverage.js';
-import {deliveryEligibility} from '../src/export/delivery.js';
-const hash=a=>createHash('sha256').update(new Uint8Array(a.buffer,a.byteOffset,a.byteLength)).digest('hex');
-const gene=(type,variant=0,extra={})=>({type,variant,size:.81,length:1.21,bend:.18,twist:.17,side:1,mirrorSide:1,phase:.14,flex:.73,material:'inherit',...extra});
-const shapes=x=>x.map(m=>hash(m.positions));
-const valid=frame=>{assert.ok(frame.length);for(const m of frame){assert.equal(m.positions.length,m.normals.length);assert.ok(m.indices.length>0);assert.equal(m.indices.length%3,0);assert.ok(m.positions.every(Number.isFinite));assert.ok(m.normals.every(Number.isFinite));for(const i of m.indices)assert.ok(i<m.positions.length/3);for(let i=0;i<m.normals.length;i+=3)assert.ok(Math.abs(Math.hypot(...m.normals.subarray(i,i+3))-1)<1e-5);}};
-test('all original metadata keys have one shared factory',()=>{assert.equal(Object.keys(CLASSIC_PARTS).length,16);assert.deepEqual(Object.keys(CATALOG).sort(),Object.keys(SHARED_PARTS).sort());const c=libraryCoverage();assert.equal(c.counts.completeReviewModels,89);assert.deepEqual(c.unsupportedFamilies,[]);assert.equal(c.gpuVerified,false);});
-for(const type of Object.keys(CLASSIC_PARTS))for(let v=0;v<3;v++){
- test(`${type}/${v}: immutable finite indexed geometry; stable topology and reusable buffers`,()=>{const p=compileTidalPart(gene(type,v)),before=shapes(p.components),a=sampleTidalPart(p,.35),saved=shapes(a);valid(a);const b=sampleTidalPart(p,1.9,{},a);valid(b);assert.equal(b[0].positions,a[0].positions);assert.deepEqual(shapes(p.components),before);assert.deepEqual(shapes(sampleTidalPart(p,.35)),saved);for(let i=0;i<a.length;i++)assert.deepEqual(b[i].indices,p.components[i].indices);});
- test(`${type}/${v}: zero flex has no time-dependent deformation`,()=>{const p=compileTidalPart(gene(type,v,{flex:0}));assert.deepEqual(shapes(sampleTidalPart(p,0)),shapes(sampleTidalPart(p,8.3)));});
- if(type!=='leg')test(`${type}/${v}: mirrored moving points reflect exactly, with corrected winding`,()=>{const a=compileTidalPart(gene(type,v)),b=compileTidalPart(gene(type,v,{side:-1,mirrorSide:-1})),x=sampleTidalPart(a,.43),y=sampleTidalPart(b,.43);assert.equal(x.length,y.length);for(let mi=0;mi<x.length;mi++){for(let k=0;k<x[mi].positions.length;k++)assert.ok(Math.abs(x[mi].positions[k]*(k%3===0?-1:1)-y[mi].positions[k])<1e-6);for(let k=0;k<x[mi].indices.length;k+=3){assert.equal(x[mi].indices[k],y[mi].indices[k]);assert.equal(x[mi].indices[k+1],y[mi].indices[k+2]);}}});
-}
-for(const type of Object.keys(CLASSIC_PARTS))test(type+': three variants are geometric, not color-only',()=>{const seen=new Set([0,1,2].map(v=>shapes(sampleTidalPart(compileTidalPart(gene(type,v)),.7)).join('|')));assert.equal(seen.size,3);});
-test('unknown factories and nonfinite animation time are rejected',()=>{assert.throws(()=>compileTidalPart(gene('unknown')));assert.throws(()=>sampleTidalPart(compileTidalPart(gene('leg')),NaN));});
-test('eye pigments remain protected when skin is assigned metal',()=>{const p=compileTidalPart(gene('eye',0,{material:'metal'})),materials=new Set(p.components.map(c=>c.material));for(const key of ['metal','eye','iris','pupil','glint'])assert.ok(materials.has(key));assert.ok(!materials.has('skin'));});
-test('walker shape remains tied to solved joints rather than surface-normal rotation',()=>{const g=preset('mossback'),a=analyze(g),part=a.parts.find(p=>p.type==='leg'),pose=sampleMotion(g.motion,{preview:true}),hip=part.position,target=walkerPreviewTarget(part,pose,{gait:.45,restHeight:a.restHeight,hip,moving:true}),j=solveWalker(part,hip,target),d=walkerDimensions(part),plan=compileTidalPart(part);valid(sampleTidalPart(plan,.3,{walker:j}));assert.ok(Math.abs(Math.hypot(...hip.map((x,i)=>x-j.knee[i]))-d.upperLength)<1e-6);assert.ok(Math.abs(Math.hypot(...j.foot.map((x,i)=>x-j.knee[i]))-d.lowerLength)<1e-6);assert.throws(()=>sampleTidalPart(plan,0,{walker:{...j,hip:[NaN,0,0]}}));});
-test('walker stance feet stay level in diagnostic ground motion',()=>{const g=preset('mossback'),c=new FoundationCompiler(g);for(const phase of [0,.125,.5,.875]){const s=c.sample({pose:'motion-cycle',phase}),legs=s.meshes.filter(m=>m.name.includes('/leg/'));assert.ok(legs.length>=8);assert.equal(s.excludedGenes,0);assert.ok(s.bounds.min[1]>-.01&&s.bounds.min[1]<.13);}});
-test('humanoid walker genes are inactive, retained, and disclosed rather than extra legs',()=>{const g=preset('wayfarer');g.parts.push(createPart(g,'leg'));const before=serializeGenome(g),c=new FoundationCompiler(g),s=c.sample();assert.equal(s.inactiveGenes.length,1);assert.match(s.inactiveGenes[0].reason,/Humanoid/);assert.ok(!s.meshes.some(m=>m.name.includes('/leg/')));assert.equal(s.excludedGenes,0);assert.equal(serializeGenome(g),before);});
-test('zero-presence genes are explicitly inactive',()=>{const g=preset('mossback');g.parts[0].presence=0;const s=new FoundationCompiler(g).sample();assert.ok(s.inactiveGenes.some(x=>x.id===g.parts[0].id));assert.equal(s.excludedGenes,0);});
-for(const model of libraryCoverage().models)test('full model coverage and technical sample: '+model.id,()=>{const g=preset(model.id),before=serializeGenome(g),s=new FoundationCompiler(g).sample({pose:'motion-cycle',phase:.375}),a=auditSnapshot(s);assert.equal(s.excludedGenes,0);assert.notEqual(a.technicalStatus,'fail');assert.equal(a.visualStatus,'not-reviewed');assert.equal(deliveryEligibility(g).eligible,true);assert.equal(serializeGenome(g),before);});
-test('all original factories reject invalid shape indices, including legs',()=>{for(const type of Object.keys(CLASSIC_PARTS))for(const variant of [-1,3,.5,NaN,Infinity])assert.throws(()=>compileTidalPart(gene(type,variant)),/variant/);});
-test('inactive genes survive the audit export without becoming missing geometry',()=>{const g=preset('wayfarer');g.parts.push(createPart(g,'leg'));const s=new FoundationCompiler(g).sample(),a=auditSnapshot(s);assert.deepEqual(a.inactiveGenes,s.inactiveGenes);assert.equal(a.excludedGenes,0);assert.equal(a.visualStatus,'not-reviewed');});
+import { createHash } from 'node:crypto';
+import { preset, createPart, validateGenome, serializeGenome } from '../src/core/genome.js';
+import { CATALOG } from '../src/core/catalog.js';
+import { CLASSIC_PARTS } from '../src/core/classic-catalog.js';
+import { SHARED_PARTS } from '../src/core/shared-parts.js';
+import { compileTidalPart, sampleTidalPart } from '../src/core/tidal-geometry.js';
+import { walkerDimensions, walkerPreviewTarget, solveWalker } from '../src/core/walker-geometry.js';
+import { FoundationCompiler } from '../src/review/foundation.js';
+import { auditSnapshot } from '../src/review/audit.js';
+import { analyze } from '../src/core/anatomy.js';
+import { sampleMotion } from '../src/core/motion.js';
+import { libraryCoverage } from '../src/core/library-coverage.js';
+import { deliveryEligibility } from '../src/export/delivery.js';
+const hash = a =>
+  createHash('sha256')
+    .update(new Uint8Array(a.buffer, a.byteOffset, a.byteLength))
+    .digest('hex');
+const gene = (type, variant = 0, extra = {}) => ({
+  type,
+  variant,
+  size: 0.81,
+  length: 1.21,
+  bend: 0.18,
+  twist: 0.17,
+  side: 1,
+  mirrorSide: 1,
+  phase: 0.14,
+  flex: 0.73,
+  material: 'inherit',
+  ...extra,
+});
+const shapes = x => x.map(m => hash(m.positions));
+const valid = frame => {
+  assert.ok(frame.length);
+  for (const m of frame) {
+    assert.equal(m.positions.length, m.normals.length);
+    assert.ok(m.indices.length > 0);
+    assert.equal(m.indices.length % 3, 0);
+    assert.ok(m.positions.every(Number.isFinite));
+    assert.ok(m.normals.every(Number.isFinite));
+    for (const i of m.indices) assert.ok(i < m.positions.length / 3);
+    for (let i = 0; i < m.normals.length; i += 3)
+      assert.ok(Math.abs(Math.hypot(...m.normals.subarray(i, i + 3)) - 1) < 1e-5);
+  }
+};
+test('all original metadata keys have one shared factory', () => {
+  assert.equal(Object.keys(CLASSIC_PARTS).length, 16);
+  assert.deepEqual(Object.keys(CATALOG).sort(), Object.keys(SHARED_PARTS).sort());
+  const c = libraryCoverage();
+  assert.equal(c.counts.completeReviewModels, 89);
+  assert.deepEqual(c.unsupportedFamilies, []);
+  assert.equal(c.gpuVerified, false);
+});
+for (const type of Object.keys(CLASSIC_PARTS))
+  for (let v = 0; v < 3; v++) {
+    test(`${type}/${v}: immutable finite indexed geometry; stable topology and reusable buffers`, () => {
+      const p = compileTidalPart(gene(type, v)),
+        before = shapes(p.components),
+        a = sampleTidalPart(p, 0.35),
+        saved = shapes(a);
+      valid(a);
+      const b = sampleTidalPart(p, 1.9, {}, a);
+      valid(b);
+      assert.equal(b[0].positions, a[0].positions);
+      assert.deepEqual(shapes(p.components), before);
+      assert.deepEqual(shapes(sampleTidalPart(p, 0.35)), saved);
+      for (let i = 0; i < a.length; i++) assert.deepEqual(b[i].indices, p.components[i].indices);
+    });
+    test(`${type}/${v}: zero flex has no time-dependent deformation`, () => {
+      const p = compileTidalPart(gene(type, v, { flex: 0 }));
+      assert.deepEqual(shapes(sampleTidalPart(p, 0)), shapes(sampleTidalPart(p, 8.3)));
+    });
+    if (type !== 'leg')
+      test(`${type}/${v}: mirrored moving points reflect exactly, with corrected winding`, () => {
+        const a = compileTidalPart(gene(type, v)),
+          b = compileTidalPart(gene(type, v, { side: -1, mirrorSide: -1 })),
+          x = sampleTidalPart(a, 0.43),
+          y = sampleTidalPart(b, 0.43);
+        assert.equal(x.length, y.length);
+        for (let mi = 0; mi < x.length; mi++) {
+          for (let k = 0; k < x[mi].positions.length; k++)
+            assert.ok(
+              Math.abs(x[mi].positions[k] * (k % 3 === 0 ? -1 : 1) - y[mi].positions[k]) < 1e-6,
+            );
+          for (let k = 0; k < x[mi].indices.length; k += 3) {
+            assert.equal(x[mi].indices[k], y[mi].indices[k]);
+            assert.equal(x[mi].indices[k + 1], y[mi].indices[k + 2]);
+          }
+        }
+      });
+  }
+for (const type of Object.keys(CLASSIC_PARTS))
+  test(type + ': three variants are geometric, not color-only', () => {
+    const seen = new Set(
+      [0, 1, 2].map(v => shapes(sampleTidalPart(compileTidalPart(gene(type, v)), 0.7)).join('|')),
+    );
+    assert.equal(seen.size, 3);
+  });
+test('unknown factories and nonfinite animation time are rejected', () => {
+  assert.throws(() => compileTidalPart(gene('unknown')));
+  assert.throws(() => sampleTidalPart(compileTidalPart(gene('leg')), NaN));
+});
+test('eye pigments remain protected when skin is assigned metal', () => {
+  const p = compileTidalPart(gene('eye', 0, { material: 'metal' })),
+    materials = new Set(p.components.map(c => c.material));
+  for (const key of ['metal', 'eye', 'iris', 'pupil', 'glint']) assert.ok(materials.has(key));
+  assert.ok(!materials.has('skin'));
+});
+test('walker shape remains tied to solved joints rather than surface-normal rotation', () => {
+  const g = preset('mossback'),
+    a = analyze(g),
+    part = a.parts.find(p => p.type === 'leg'),
+    pose = sampleMotion(g.motion, { preview: true }),
+    hip = part.position,
+    target = walkerPreviewTarget(part, pose, {
+      gait: 0.45,
+      restHeight: a.restHeight,
+      hip,
+      moving: true,
+    }),
+    j = solveWalker(part, hip, target),
+    d = walkerDimensions(part),
+    plan = compileTidalPart(part);
+  valid(sampleTidalPart(plan, 0.3, { walker: j }));
+  assert.ok(Math.abs(Math.hypot(...hip.map((x, i) => x - j.knee[i])) - d.upperLength) < 1e-6);
+  assert.ok(Math.abs(Math.hypot(...j.foot.map((x, i) => x - j.knee[i])) - d.lowerLength) < 1e-6);
+  assert.throws(() => sampleTidalPart(plan, 0, { walker: { ...j, hip: [NaN, 0, 0] } }));
+});
+test('walker stance feet stay level in diagnostic ground motion', () => {
+  const g = preset('mossback'),
+    c = new FoundationCompiler(g);
+  for (const phase of [0, 0.125, 0.5, 0.875]) {
+    const s = c.sample({ pose: 'motion-cycle', phase }),
+      legs = s.meshes.filter(m => m.name.includes('/leg/'));
+    assert.ok(legs.length >= 8);
+    assert.equal(s.excludedGenes, 0);
+    assert.ok(s.bounds.min[1] > -0.01 && s.bounds.min[1] < 0.13);
+  }
+});
+test('humanoid walker genes are inactive, retained, and disclosed rather than extra legs', () => {
+  const g = preset('wayfarer');
+  g.parts.push(createPart(g, 'leg'));
+  const before = serializeGenome(g),
+    c = new FoundationCompiler(g),
+    s = c.sample();
+  assert.equal(s.inactiveGenes.length, 1);
+  assert.match(s.inactiveGenes[0].reason, /Humanoid/);
+  assert.ok(!s.meshes.some(m => m.name.includes('/leg/')));
+  assert.equal(s.excludedGenes, 0);
+  assert.equal(serializeGenome(g), before);
+});
+test('zero-presence genes are explicitly inactive', () => {
+  const g = preset('mossback');
+  g.parts[0].presence = 0;
+  const s = new FoundationCompiler(g).sample();
+  assert.ok(s.inactiveGenes.some(x => x.id === g.parts[0].id));
+  assert.equal(s.excludedGenes, 0);
+});
+for (const model of libraryCoverage().models)
+  test('full model coverage and technical sample: ' + model.id, () => {
+    const g = preset(model.id),
+      before = serializeGenome(g),
+      s = new FoundationCompiler(g).sample({ pose: 'motion-cycle', phase: 0.375 }),
+      a = auditSnapshot(s);
+    assert.equal(s.excludedGenes, 0);
+    assert.notEqual(a.technicalStatus, 'fail');
+    assert.equal(a.visualStatus, 'not-reviewed');
+    assert.equal(deliveryEligibility(g).eligible, true);
+    assert.equal(serializeGenome(g), before);
+  });
+test('all original factories reject invalid shape indices, including legs', () => {
+  for (const type of Object.keys(CLASSIC_PARTS))
+    for (const variant of [-1, 3, 0.5, NaN, Infinity])
+      assert.throws(() => compileTidalPart(gene(type, variant)), /variant/);
+});
+test('inactive genes survive the audit export without becoming missing geometry', () => {
+  const g = preset('wayfarer');
+  g.parts.push(createPart(g, 'leg'));
+  const s = new FoundationCompiler(g).sample(),
+    a = auditSnapshot(s);
+  assert.deepEqual(a.inactiveGenes, s.inactiveGenes);
+  assert.equal(a.excludedGenes, 0);
+  assert.equal(a.visualStatus, 'not-reviewed');
+});
 // A blueprint hash alone cannot approve a changed implementation.
-import {ReviewSession,parseReviewSession,REVIEW_ITEMS,REVIEW_IMPLEMENTATION} from '../src/review/session.js';
-for(const implementation of [undefined,'morph-lab-shared-geometry-10','future-implementation'])test('review decisions reset across geometry implementations: '+implementation,()=>{const s=new ReviewSession(preset('mossback'));s.notes='Keep this note and recheck the eyes.';s.frame={center:[1,2,3],span:6};for(const key of Object.keys(REVIEW_ITEMS))s.approve(key,'accept');const raw=s.export();if(implementation===undefined)delete raw.implementation;else raw.implementation=implementation;const p=parseReviewSession(JSON.stringify(raw));assert.equal(p.status,'not-approved');assert.ok(Object.values(p.decisions).every(x=>x==='unreviewed'));assert.deepEqual(p.candidate,s.candidate);assert.deepEqual(p.baseline,s.baseline);assert.deepEqual(p.frame,s.frame);assert.equal(p.notes,s.notes);assert.match(p.invalidatedReason,/implementation/);assert.equal(p.export().implementation,REVIEW_IMPLEMENTATION);assert.deepEqual(parseReviewSession(JSON.stringify(p.export())).export(),p.export());});
-test('current-implementation manual decisions round-trip and edits still reset them',()=>{const s=new ReviewSession(preset('mossback'));for(const key of Object.keys(REVIEW_ITEMS))s.approve(key,'accept');const p=parseReviewSession(JSON.stringify(s.export()));assert.equal(p.status,'reviewer-accepted');assert.equal(p.invalidatedReason,null);p.setCandidate({...p.candidate,name:'Changed'});assert.equal(p.status,'not-approved');});
+import {
+  ReviewSession,
+  parseReviewSession,
+  REVIEW_ITEMS,
+  REVIEW_IMPLEMENTATION,
+} from '../src/review/session.js';
+for (const implementation of [undefined, 'morph-lab-shared-geometry-10', 'future-implementation'])
+  test('review decisions reset across geometry implementations: ' + implementation, () => {
+    const s = new ReviewSession(preset('mossback'));
+    s.notes = 'Keep this note and recheck the eyes.';
+    s.frame = { center: [1, 2, 3], span: 6 };
+    for (const key of Object.keys(REVIEW_ITEMS)) s.approve(key, 'accept');
+    const raw = s.export();
+    if (implementation === undefined) delete raw.implementation;
+    else raw.implementation = implementation;
+    const p = parseReviewSession(JSON.stringify(raw));
+    assert.equal(p.status, 'not-approved');
+    assert.ok(Object.values(p.decisions).every(x => x === 'unreviewed'));
+    assert.deepEqual(p.candidate, s.candidate);
+    assert.deepEqual(p.baseline, s.baseline);
+    assert.deepEqual(p.frame, s.frame);
+    assert.equal(p.notes, s.notes);
+    assert.match(p.invalidatedReason, /implementation/);
+    assert.equal(p.export().implementation, REVIEW_IMPLEMENTATION);
+    assert.deepEqual(parseReviewSession(JSON.stringify(p.export())).export(), p.export());
+  });
+test('current-implementation manual decisions round-trip and edits still reset them', () => {
+  const s = new ReviewSession(preset('mossback'));
+  for (const key of Object.keys(REVIEW_ITEMS)) s.approve(key, 'accept');
+  const p = parseReviewSession(JSON.stringify(s.export()));
+  assert.equal(p.status, 'reviewer-accepted');
+  assert.equal(p.invalidatedReason, null);
+  p.setCandidate({ ...p.candidate, name: 'Changed' });
+  assert.equal(p.status, 'not-approved');
+});

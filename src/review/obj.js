@@ -1,13 +1,87 @@
-import {faceNormals} from './math.js';
+import { faceNormals } from './math.js';
 /** A deliberately small static reference interchange. Materials, bones, and
  * animation are not imported. Polygon faces must be convex to triangulate. */
-export function parseOBJ(text){
-  if(typeof text!=='string'||text.length>8000000)throw new Error('OBJ exceeds the 8 MB text limit.');const vertices=[],indices=[];
-  for(const raw of text.split(/\r?\n/)){const line=raw.split('#')[0].trim();if(!line)continue;const fields=line.split(/\s+/),op=fields.shift();
-    if(op==='v'){if(fields.length<3)throw new Error('OBJ vertex lacks coordinates.');const p=fields.slice(0,3).map(Number);if(p.some(x=>!Number.isFinite(x)||Math.abs(x)>10000))throw new Error('Invalid OBJ coordinate.');vertices.push(...p);if(vertices.length/3>200000)throw new Error('OBJ vertex limit is 200,000.');}
-    if(op==='f'){if(fields.length<3||fields.length>32)throw new Error('OBJ faces require 3–32 vertices.');const n=vertices.length/3,ids=fields.map(s=>{const v=Number(s.split('/')[0]);if(!Number.isInteger(v)||v===0)throw new Error('Invalid OBJ face index.');const i=v>0?v-1:n+v;if(i<0||i>=n)throw new Error('OBJ face references a missing vertex.');return i;});for(let i=1;i<ids.length-1;i++)indices.push(ids[0],ids[i],ids[i+1]);if(indices.length/3>300000)throw new Error('OBJ triangle limit is 300,000.');}
+export function parseOBJ(text) {
+  if (typeof text !== 'string' || text.length > 8000000)
+    throw new Error('OBJ exceeds the 8 MB text limit.');
+  const vertices = [],
+    indices = [];
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.split('#')[0].trim();
+    if (!line) continue;
+    const fields = line.split(/\s+/),
+      op = fields.shift();
+    if (op === 'v') {
+      if (fields.length < 3) throw new Error('OBJ vertex lacks coordinates.');
+      const p = fields.slice(0, 3).map(Number);
+      if (p.some(x => !Number.isFinite(x) || Math.abs(x) > 10000))
+        throw new Error('Invalid OBJ coordinate.');
+      vertices.push(...p);
+      if (vertices.length / 3 > 200000) throw new Error('OBJ vertex limit is 200,000.');
+    }
+    if (op === 'f') {
+      if (fields.length < 3 || fields.length > 32)
+        throw new Error('OBJ faces require 3–32 vertices.');
+      const n = vertices.length / 3,
+        ids = fields.map(s => {
+          const v = Number(s.split('/')[0]);
+          if (!Number.isInteger(v) || v === 0) throw new Error('Invalid OBJ face index.');
+          const i = v > 0 ? v - 1 : n + v;
+          if (i < 0 || i >= n) throw new Error('OBJ face references a missing vertex.');
+          return i;
+        });
+      for (let i = 1; i < ids.length - 1; i++) indices.push(ids[0], ids[i], ids[i + 1]);
+      if (indices.length / 3 > 300000) throw new Error('OBJ triangle limit is 300,000.');
+    }
   }
-  if(!vertices.length||!indices.length)throw new Error('OBJ has no visible triangles.');const positions=new Float32Array(vertices),idx=new Uint32Array(indices),bounds={min:[Infinity,Infinity,Infinity],max:[-Infinity,-Infinity,-Infinity]};for(let i=0;i<positions.length;i++){const k=i%3;bounds.min[k]=Math.min(bounds.min[k],positions[i]);bounds.max[k]=Math.max(bounds.max[k],positions[i]);}
-  return {meshes:[{name:'OBJ reference',positions,indices:idx,normals:faceNormals(positions,idx),color:[163,174,172],material:'reference',kind:'static'}],bounds,bones:[],sockets:[],boneCount:0,pose:'static',phase:0,backend:'local-obj-reference',generator:'external',coverage:'Static OBJ reference. No rig, texture, or animation import.',excludedGenes:0,blueprint:null};
+  if (!vertices.length || !indices.length) throw new Error('OBJ has no visible triangles.');
+  const positions = new Float32Array(vertices),
+    idx = new Uint32Array(indices),
+    bounds = { min: [Infinity, Infinity, Infinity], max: [-Infinity, -Infinity, -Infinity] };
+  for (let i = 0; i < positions.length; i++) {
+    const k = i % 3;
+    bounds.min[k] = Math.min(bounds.min[k], positions[i]);
+    bounds.max[k] = Math.max(bounds.max[k], positions[i]);
+  }
+  return {
+    meshes: [
+      {
+        name: 'OBJ reference',
+        positions,
+        indices: idx,
+        normals: faceNormals(positions, idx),
+        color: [163, 174, 172],
+        material: 'reference',
+        kind: 'static',
+      },
+    ],
+    bounds,
+    bones: [],
+    sockets: [],
+    boneCount: 0,
+    pose: 'static',
+    phase: 0,
+    backend: 'local-obj-reference',
+    generator: 'external',
+    coverage: 'Static OBJ reference. No rig, texture, or animation import.',
+    excludedGenes: 0,
+    blueprint: null,
+  };
 }
-export function exportOBJ(snapshot){let offset=1;const lines=['# Morph Lab inspection geometry. Metres; +Y up; +Z forward.','# Posed triangles only. No skeleton, textures, UVs or animation.'];for(let k=0;k<snapshot.meshes.length;k++){const m=snapshot.meshes[k];lines.push('o inspection_'+k);for(let i=0;i<m.positions.length;i+=3)lines.push('v '+Array.from(m.positions.subarray(i,i+3),x=>x.toFixed(6)).join(' '));for(let i=0;i<m.indices.length;i+=3)lines.push('f '+Array.from(m.indices.subarray(i,i+3),x=>x+offset).join(' '));offset+=m.positions.length/3;}return lines.join('\n')+'\n';}
+export function exportOBJ(snapshot) {
+  let offset = 1;
+  const lines = [
+    '# Morph Lab inspection geometry. Metres; +Y up; +Z forward.',
+    '# Posed triangles only. No skeleton, textures, UVs or animation.',
+  ];
+  for (let k = 0; k < snapshot.meshes.length; k++) {
+    const m = snapshot.meshes[k];
+    lines.push('o inspection_' + k);
+    for (let i = 0; i < m.positions.length; i += 3)
+      lines.push('v ' + Array.from(m.positions.subarray(i, i + 3), x => x.toFixed(6)).join(' '));
+    for (let i = 0; i < m.indices.length; i += 3)
+      lines.push('f ' + Array.from(m.indices.subarray(i, i + 3), x => x + offset).join(' '));
+    offset += m.positions.length / 3;
+  }
+  return lines.join('\n') + '\n';
+}

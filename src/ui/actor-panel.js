@@ -1,25 +1,104 @@
-import {escapeHTML as esc,icon} from './icons.js';
-import {BODY_STYLES,PROPORTIONS,OUTFITS,HEAD_STYLES,HAND_STYLES,compatibilityReport,SOCKETS} from '../core/humanoid.js';
-import {HUMANOID_ACTIONS,HUMANOID_STYLES} from '../core/humanoid-motion.js';
-import {ACTOR_ROLES,ACTOR_RANGES,BEHAVIORS} from '../core/actors.js';
-const opts=(items,value)=>items.map(item=>{const [id,label]=Array.isArray(item)?item:[item,item];return `<option value="${esc(id)}" ${id===value?'selected':''}>${esc(label)}</option>`;}).join('');
-const select=(label,attr,items,value)=>`<label class="select-row">${label}<select ${attr} aria-label="${label}">${opts(items,value)}</select></label>`;
-const range=(label,attr,value,min,max,step=.01)=>`<label class="range-label"><span>${label}</span><output>${Number(value).toFixed(step===1?0:2)}</output><input type="range" ${attr} aria-label="${label}" min="${min}" max="${max}" step="${step}" value="${value}"></label>`;
-export function renderActor(g,state={}){
-  const human=g.rig.family==='humanoid',report=compatibilityReport(g),gen=state.generator||{seed:8128,count:6,variation:.25},roster=state.roster;
-  return `<section class="actor-banner"><span class="eyebrow">NPC / ENEMY / MONSTER</span><h3>${human?'Humanoid rig':'Creature rig'}</h3><p>${human?'22 named bones. Generated skin weights. Joint sockets.':'Radial anatomy with procedural appendages.'}</p><span class="actor-tag">${esc(ACTOR_ROLES[g.actor.role].label)}</span><span class="actor-tag">${esc(g.actor.faction)}</span></section>
-  ${human?`<div class="inspector-section"><div class="section-title">RIG APPEARANCE</div>${select('Body construction','data-rig-field="bodyStyle"',BODY_STYLES,g.rig.bodyStyle)}${select('Outfit','data-rig-field="outfit"',OUTFITS,g.rig.outfit)}${select('Head cover','data-rig-field="headStyle"',HEAD_STYLES,g.rig.headStyle)}${select('Hands','data-rig-field="handStyle"',HAND_STYLES,g.rig.handStyle)}<details class="actor-details" open><summary>Body proportions</summary><p class="fine-copy">These controls change the body and its rig together.</p>${Object.entries(PROPORTIONS).map(([key,d])=>range(d.label,`data-proportion="${key}"`,g.rig.proportions[key],d.min,d.max)).join('')}</details><label class="toggle-row"><span>Show skeleton</span><input type="checkbox" data-toggle="rigGuides" ${state.rigGuides?'checked':''}><i></i></label></div>`:
-  `<div class="inspector-section"><p class="fine-copy">Humanoids use a separate rig. Load a humanoid model, or mix one into this creature.</p><button class="quiet actor-wide" data-action="preset" data-preset="wayfarer">Load humanoid foundation ${icon('arrow')}</button></div>`}
-  <div class="inspector-section"><div class="section-title">ACTOR PROFILE</div>${select('Role','data-actor-role',Object.entries(ACTOR_ROLES).map(([id,d])=>[id,d.label]),g.actor.role)}${select('Faction','data-actor-field="faction"',['friendly','neutral','hostile'],g.actor.faction)}${select('Behavior hint','data-actor-field="behavior"',BEHAVIORS,g.actor.behavior)}<p class="fine-copy">Role values are export data. Only the speed multiplier affects the habitat. No AI or combat is attached.</p><details class="actor-details"><summary>Role tuning</summary>${Object.entries(ACTOR_RANGES).map(([k,[lo,hi]])=>range({health:'Health',speed:'Speed multiplier',sight:'Sight distance',range:'Attack range',damage:'Damage',cooldown:'Attack cooldown'}[k],`data-actor-number="${k}"`,g.actor[k],lo,hi,['health','damage'].includes(k)?1:.05)).join('')}</details></div>
-  <div class="inspector-section"><div class="section-title">SEEDED ROSTER</div><p class="fine-copy">Generate variants of this blueprint. The source stays unchanged.</p><div class="batch-inputs"><label>Seed<input type="number" data-generator="seed" aria-label="Roster seed" min="0" max="4294967295" step="1" value="${gen.seed}"></label><label>Count<input type="number" data-generator="count" aria-label="Roster count" min="1" max="24" step="1" value="${gen.count}"></label></div>${range('Variation','data-generator="variation"',gen.variation,0,1)}<div class="actor-actions"><button class="primary" data-action="generate-roster">Generate roster</button><button class="quiet" data-action="export-roster" ${roster?'':'disabled'}>Export roster</button></div>${roster?`<div class="roster-list">${roster.actors.map((a,i)=>`<button data-action="load-roster-actor" data-index="${i}"><span>${String(i+1).padStart(2,'0')}</span>${esc(a.blueprint.name)}${icon('arrow')}</button>`).join('')}</div><p class="fine-copy">${roster.actors.length} validated actors. Select a row to edit one.</p>`:''}</div>
-  <div class="inspector-section"><div class="section-title">RIG COMPATIBILITY</div><p class="fine-copy">${human?'Supported base motion: idle, walk, run, creep, backpedal, side step, prowl, and trot.':'Humanoid actions are stored but inactive on this rig.'}</p>${report.notes.map(note=>`<p class="warning-copy">${esc(note)}</p>`).join('')}<p class="fine-copy">The controller stays upright. No ragdoll, root motion, combat logic, or pathfinding is included.</p><button class="quiet actor-wide" data-action="export-actor">Export actor manifest ${icon('download')}</button></div>`;
+import { escapeHTML as esc, icon } from './icons.js';
+import {
+  BODY_STYLES,
+  PROPORTIONS,
+  OUTFITS,
+  HEAD_STYLES,
+  HAND_STYLES,
+  compatibilityReport,
+  SOCKETS,
+} from '../core/humanoid.js';
+import { HUMANOID_ACTIONS, HUMANOID_STYLES } from '../core/humanoid-motion.js';
+import { ACTOR_ROLES, ACTOR_RANGES, BEHAVIORS } from '../core/actors.js';
+const opts = (items, value) =>
+  items
+    .map(item => {
+      const [id, label] = Array.isArray(item) ? item : [item, item];
+      return `<option value="${esc(id)}" ${id === value ? 'selected' : ''}>${esc(label)}</option>`;
+    })
+    .join('');
+const select = (label, attr, items, value) =>
+  `<label class="select-row">${label}<select ${attr} aria-label="${label}">${opts(items, value)}</select></label>`;
+const range = (label, attr, value, min, max, step = 0.01) =>
+  `<label class="range-label"><span>${label}</span><output>${Number(value).toFixed(step === 1 ? 0 : 2)}</output><input type="range" ${attr} aria-label="${label}" min="${min}" max="${max}" step="${step}" value="${value}"></label>`;
+export function renderActor(g, state = {}) {
+  const human = g.rig.family === 'humanoid',
+    report = compatibilityReport(g),
+    gen = state.generator || { seed: 8128, count: 6, variation: 0.25 },
+    roster = state.roster;
+  return `<section class="actor-banner"><span class="eyebrow">NPC / ENEMY / MONSTER</span><h3>${human ? 'Humanoid rig' : 'Creature rig'}</h3><p>${human ? '22 named bones. Generated skin weights. Joint sockets.' : 'Radial anatomy with procedural appendages.'}</p><span class="actor-tag">${esc(ACTOR_ROLES[g.actor.role].label)}</span><span class="actor-tag">${esc(g.actor.faction)}</span></section>
+  ${
+    human
+      ? `<div class="inspector-section"><div class="section-title">RIG APPEARANCE</div>${select('Body construction', 'data-rig-field="bodyStyle"', BODY_STYLES, g.rig.bodyStyle)}${select('Outfit', 'data-rig-field="outfit"', OUTFITS, g.rig.outfit)}${select('Head cover', 'data-rig-field="headStyle"', HEAD_STYLES, g.rig.headStyle)}${select('Hands', 'data-rig-field="handStyle"', HAND_STYLES, g.rig.handStyle)}<details class="actor-details" open><summary>Body proportions</summary><p class="fine-copy">These controls change the body and its rig together.</p>${Object.entries(
+          PROPORTIONS,
+        )
+          .map(([key, d]) =>
+            range(d.label, `data-proportion="${key}"`, g.rig.proportions[key], d.min, d.max),
+          )
+          .join(
+            '',
+          )}</details><label class="toggle-row"><span>Show skeleton</span><input type="checkbox" data-toggle="rigGuides" ${state.rigGuides ? 'checked' : ''}><i></i></label></div>`
+      : `<div class="inspector-section"><p class="fine-copy">Humanoids use a separate rig. Load a humanoid model, or mix one into this creature.</p><button class="quiet actor-wide" data-action="preset" data-preset="wayfarer">Load humanoid foundation ${icon('arrow')}</button></div>`
+  }
+  <div class="inspector-section"><div class="section-title">ACTOR PROFILE</div>${select(
+    'Role',
+    'data-actor-role',
+    Object.entries(ACTOR_ROLES).map(([id, d]) => [id, d.label]),
+    g.actor.role,
+  )}${select('Faction', 'data-actor-field="faction"', ['friendly', 'neutral', 'hostile'], g.actor.faction)}${select('Behavior hint', 'data-actor-field="behavior"', BEHAVIORS, g.actor.behavior)}<p class="fine-copy">Role values are export data. Only the speed multiplier affects the habitat. No AI or combat is attached.</p><details class="actor-details"><summary>Role tuning</summary>${Object.entries(
+    ACTOR_RANGES,
+  )
+    .map(([k, [lo, hi]]) =>
+      range(
+        {
+          health: 'Health',
+          speed: 'Speed multiplier',
+          sight: 'Sight distance',
+          range: 'Attack range',
+          damage: 'Damage',
+          cooldown: 'Attack cooldown',
+        }[k],
+        `data-actor-number="${k}"`,
+        g.actor[k],
+        lo,
+        hi,
+        ['health', 'damage'].includes(k) ? 1 : 0.05,
+      ),
+    )
+    .join('')}</details></div>
+  <div class="inspector-section"><div class="section-title">SEEDED ROSTER</div><p class="fine-copy">Generate variants of this blueprint. The source stays unchanged.</p><div class="batch-inputs"><label>Seed<input type="number" data-generator="seed" aria-label="Roster seed" min="0" max="4294967295" step="1" value="${gen.seed}"></label><label>Count<input type="number" data-generator="count" aria-label="Roster count" min="1" max="24" step="1" value="${gen.count}"></label></div>${range('Variation', 'data-generator="variation"', gen.variation, 0, 1)}<div class="actor-actions"><button class="primary" data-action="generate-roster">Generate roster</button><button class="quiet" data-action="export-roster" ${roster ? '' : 'disabled'}>Export roster</button></div>${roster ? `<div class="roster-list">${roster.actors.map((a, i) => `<button data-action="load-roster-actor" data-index="${i}"><span>${String(i + 1).padStart(2, '0')}</span>${esc(a.blueprint.name)}${icon('arrow')}</button>`).join('')}</div><p class="fine-copy">${roster.actors.length} validated actors. Select a row to edit one.</p>` : ''}</div>
+  <div class="inspector-section"><div class="section-title">RIG COMPATIBILITY</div><p class="fine-copy">${human ? 'Supported base motion: idle, walk, run, creep, backpedal, side step, prowl, and trot.' : 'Humanoid actions are stored but inactive on this rig.'}</p>${report.notes.map(note => `<p class="warning-copy">${esc(note)}</p>`).join('')}<p class="fine-copy">The controller stays upright. No ragdoll, root motion, combat logic, or pathfinding is included.</p><button class="quiet actor-wide" data-action="export-actor">Export actor manifest ${icon('download')}</button></div>`;
 }
-export function renderHumanoidMotion(g){
-  if(g.rig.family!=='humanoid')return `<div class="inspector-section"><p class="fine-copy">Humanoid gestures and actions become active when the body source uses a humanoid rig.</p></div>`;
-  const m=g.motion.humanoid;
-  return `<div class="inspector-section human-motion"><div class="section-title">HUMANOID ACTION LAYER</div><p class="fine-copy">Use the base motion controls below for locomotion. Add an action here.</p><div class="human-action-grid">${Object.entries(HUMANOID_ACTIONS).map(([id,d])=>`<button data-action="human-action" data-clip="${id}" class="${m.action===id?'active':''}">${d.label}</button>`).join('')}</div><div class="actor-actions"><button class="quiet" data-action="human-replay">Replay action</button><label class="inline-toggle"><input type="checkbox" data-human-repeat ${m.repeat?'checked':''}>Repeat</label></div>${select('Gait style','data-human-field="style"',HUMANOID_STYLES,m.style)}${select('Action mask','data-human-field="mask"',[['auto','Action default'],['upper','Upper body only'],['full','Full body']],m.mask)}${range('Action blend','data-human-number="actionWeight"',m.actionWeight,0,1)}${range('Action speed','data-human-number="actionSpeed"',m.actionSpeed,.25,2)}<details class="actor-details"><summary>Arms and gaze</summary>${range('Arm swing','data-human-number="armSwing"',m.armSwing,0,2)}${range('Look left / right','data-human-number="lookYaw"',m.lookYaw,-.8,.8)}${range('Look up / down','data-human-number="lookPitch"',m.lookPitch,-.5,.5)}</details><p class="fine-copy">Action markers are integration hooks, not gameplay logic. Full-body actions affect the visual rig only.</p></div>`;
+export function renderHumanoidMotion(g) {
+  if (g.rig.family !== 'humanoid')
+    return `<div class="inspector-section"><p class="fine-copy">Humanoid gestures and actions become active when the body source uses a humanoid rig.</p></div>`;
+  const m = g.motion.humanoid;
+  return `<div class="inspector-section human-motion"><div class="section-title">HUMANOID ACTION LAYER</div><p class="fine-copy">Use the base motion controls below for locomotion. Add an action here.</p><div class="human-action-grid">${Object.entries(
+    HUMANOID_ACTIONS,
+  )
+    .map(
+      ([id, d]) =>
+        `<button data-action="human-action" data-clip="${id}" class="${m.action === id ? 'active' : ''}">${d.label}</button>`,
+    )
+    .join(
+      '',
+    )}</div><div class="actor-actions"><button class="quiet" data-action="human-replay">Replay action</button><label class="inline-toggle"><input type="checkbox" data-human-repeat ${m.repeat ? 'checked' : ''}>Repeat</label></div>${select('Gait style', 'data-human-field="style"', HUMANOID_STYLES, m.style)}${select(
+    'Action mask',
+    'data-human-field="mask"',
+    [
+      ['auto', 'Action default'],
+      ['upper', 'Upper body only'],
+      ['full', 'Full body'],
+    ],
+    m.mask,
+  )}${range('Action blend', 'data-human-number="actionWeight"', m.actionWeight, 0, 1)}${range('Action speed', 'data-human-number="actionSpeed"', m.actionSpeed, 0.25, 2)}<details class="actor-details"><summary>Arms and gaze</summary>${range('Arm swing', 'data-human-number="armSwing"', m.armSwing, 0, 2)}${range('Look left / right', 'data-human-number="lookYaw"', m.lookYaw, -0.8, 0.8)}${range('Look up / down', 'data-human-number="lookPitch"', m.lookPitch, -0.5, 0.5)}</details><p class="fine-copy">Action markers are integration hooks, not gameplay logic. Full-body actions affect the visual rig only.</p></div>`;
 }
-export function renderSocketControls(p,g){
-  if(g.rig.family!=='humanoid')return '';
-  return `<div class="section-title spaced">JOINT SOCKET</div>${select('Socket','data-part-socket',SOCKETS.map(s=>[s,s==='body'?'Body surface':s]),p.socket)}${['X','Y','Z'].map((axis,i)=>range('Socket offset '+axis,`data-socket-offset="${i}"`,p.socketOffset[i],-1,1)).join('')}<p class="fine-copy">Joint sockets follow the pose. Mirror links the left and right joints. Creature-leg genes stay inactive on this rig.</p>`;
+export function renderSocketControls(p, g) {
+  if (g.rig.family !== 'humanoid') return '';
+  return `<div class="section-title spaced">JOINT SOCKET</div>${select(
+    'Socket',
+    'data-part-socket',
+    SOCKETS.map(s => [s, s === 'body' ? 'Body surface' : s]),
+    p.socket,
+  )}${['X', 'Y', 'Z'].map((axis, i) => range('Socket offset ' + axis, `data-socket-offset="${i}"`, p.socketOffset[i], -1, 1)).join('')}<p class="fine-copy">Joint sockets follow the pose. Mirror links the left and right joints. Creature-leg genes stay inactive on this rig.</p>`;
 }

@@ -14,5 +14,5 @@ export function requestedWorkspace(search, fallback = 'workshop') {
   if (query.has('creator')) return 'creator';
   if (query.has('workshop')) return 'workshop';
   if (query.has('review')) return 'review';
-  return ['creator','review','workshop'].includes(fallback) ? fallback : 'workshop';
+  return ['creator', 'review', 'workshop'].includes(fallback) ? fallback : 'workshop';
 }

@@ -1,13 +1,73 @@
-import {toolDialog,localDownload} from '../ui/tool-dialog.js';
-import {runDiagnostics} from './runner.js';
-export function openDiagnostics(){
-  const {dialog,body}=toolDialog('system-checks','System checks');let job=null,report=null;
-  body.innerHTML=`<p class="tool-eyebrow">Runtime evidence / 11</p><p>Check the computer that will run the Workshop. A blocked check is not a pass.</p><div class="tool-notice">Browser check: WebAssembly, WebGL2, and the actual pattern shader source.<br>Engine check: pinned Three.js and Rapier, five rendered models, and Ground / Water / Air movement.</div><p class="tool-hint">The engine check loads the pinned packages. The internet edition needs CDN access. Reports stay local. They do not include your file path, model, or save data. Smoke tests do not replace a play test.</p><div class="tool-row"><button id="system-local" class="tool-primary">Check this browser</button><button id="system-full">Check engines + physics</button><button id="system-cancel" hidden>Cancel check</button><button id="system-download" disabled>Export report</button></div><p id="system-status" class="tool-status" role="status" aria-live="polite">No checks have run.</p><div id="system-results"></div>`;
-  const $=s=>body.querySelector(s);
-  async function run(scope){if(job)return;job=new AbortController();report=null;$('#system-results').replaceChildren();$('#system-download').disabled=true;$('#system-local').disabled=$('#system-full').disabled=true;$('#system-cancel').hidden=false;const rows=new Map();
-    try{report=await runDiagnostics({scope,signal:job.signal,onCheck:item=>{let row=rows.get(item.id);if(!row){row=document.createElement('div');row.className='tool-check-result';row.dataset.checkId=item.id;row.append(document.createElement('b'),document.createElement('span'));rows.set(item.id,row);$('#system-results').append(row);}row.dataset.status=item.status;row.children[0].textContent=item.label;row.children[1].textContent=item.status.toUpperCase()+(item.message?' · '+item.message:item.status==='pass'?' · '+(item.data?.revision||item.data?.version||item.data?.note||'Measured successfully.'):'');$('#system-status').textContent=item.status==='running'?'Running: '+item.label:'Checking…';}});
-      if(!dialog.open)return;$('#system-status').textContent=`${report.status.toUpperCase()} · ${report.summary.passed} passed, ${report.summary.failed} failed, ${report.summary.blocked} blocked. ${scope==='local'?'The engine tests have not run.':'Save the report with your release notes.'}`;$('#system-download').disabled=false;
-    }catch(error){if(dialog.open)$('#system-status').textContent=error.message;}finally{job=null;if(dialog.open){$('#system-local').disabled=$('#system-full').disabled=false;$('#system-cancel').hidden=true;}}
+import { toolDialog, localDownload } from '../ui/tool-dialog.js';
+import { runDiagnostics } from './runner.js';
+export function openDiagnostics() {
+  const { dialog, body } = toolDialog('system-checks', 'System checks');
+  let job = null,
+    report = null;
+  body.innerHTML = `<p class="tool-eyebrow">Runtime evidence / 11</p><p>Check the computer that will run the Workshop. A blocked check is not a pass.</p><div class="tool-notice">Browser check: WebAssembly, WebGL2, and the actual pattern shader source.<br>Engine check: pinned Three.js and Rapier, five rendered models, and Ground / Water / Air movement.</div><p class="tool-hint">The engine check loads the pinned packages. The internet edition needs CDN access. Reports stay local. They do not include your file path, model, or save data. Smoke tests do not replace a play test.</p><div class="tool-row"><button id="system-local" class="tool-primary">Check this browser</button><button id="system-full">Check engines + physics</button><button id="system-cancel" hidden>Cancel check</button><button id="system-download" disabled>Export report</button></div><p id="system-status" class="tool-status" role="status" aria-live="polite">No checks have run.</p><div id="system-results"></div>`;
+  const $ = s => body.querySelector(s);
+  async function run(scope) {
+    if (job) return;
+    job = new AbortController();
+    report = null;
+    $('#system-results').replaceChildren();
+    $('#system-download').disabled = true;
+    $('#system-local').disabled = $('#system-full').disabled = true;
+    $('#system-cancel').hidden = false;
+    const rows = new Map();
+    try {
+      report = await runDiagnostics({
+        scope,
+        signal: job.signal,
+        onCheck: item => {
+          let row = rows.get(item.id);
+          if (!row) {
+            row = document.createElement('div');
+            row.className = 'tool-check-result';
+            row.dataset.checkId = item.id;
+            row.append(document.createElement('b'), document.createElement('span'));
+            rows.set(item.id, row);
+            $('#system-results').append(row);
+          }
+          row.dataset.status = item.status;
+          row.children[0].textContent = item.label;
+          row.children[1].textContent =
+            item.status.toUpperCase() +
+            (item.message
+              ? ' · ' + item.message
+              : item.status === 'pass'
+                ? ' · ' +
+                  (item.data?.revision ||
+                    item.data?.version ||
+                    item.data?.note ||
+                    'Measured successfully.')
+                : '');
+          $('#system-status').textContent =
+            item.status === 'running' ? 'Running: ' + item.label : 'Checking…';
+        },
+      });
+      if (!dialog.open) return;
+      $('#system-status').textContent =
+        `${report.status.toUpperCase()} · ${report.summary.passed} passed, ${report.summary.failed} failed, ${report.summary.blocked} blocked. ${scope === 'local' ? 'The engine tests have not run.' : 'Save the report with your release notes.'}`;
+      $('#system-download').disabled = false;
+    } catch (error) {
+      if (dialog.open) $('#system-status').textContent = error.message;
+    } finally {
+      job = null;
+      if (dialog.open) {
+        $('#system-local').disabled = $('#system-full').disabled = false;
+        $('#system-cancel').hidden = true;
+      }
+    }
   }
-  $('#system-local').onclick=()=>run('local');$('#system-full').onclick=()=>run('full');$('#system-cancel').onclick=()=>job?.abort();$('#system-download').onclick=()=>report&&localDownload(JSON.stringify(report,null,2),'Morph-Lab-v11-system-check.json');dialog.addEventListener('close',()=>{job?.abort();report=null;});return dialog;
+  $('#system-local').onclick = () => run('local');
+  $('#system-full').onclick = () => run('full');
+  $('#system-cancel').onclick = () => job?.abort();
+  $('#system-download').onclick = () =>
+    report && localDownload(JSON.stringify(report, null, 2), 'Morph-Lab-v11-system-check.json');
+  dialog.addEventListener('close', () => {
+    job?.abort();
+    report = null;
+  });
+  return dialog;
 }

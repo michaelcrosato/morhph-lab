@@ -1,9 +1,10 @@
-import {readFile} from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 /** Every release HTML file contains all three workspaces. Filenames have no routing role. */
-export async function packWorkspace(html, start='review') {
-  if(!['creator','review','workshop'].includes(start))throw new Error('Unknown initial workspace.');
-  const shell=await readFile(new URL('./workspace-shell.js',import.meta.url),'utf8');
-  const payload=Buffer.from(html).toString('base64');
+export async function packWorkspace(html, start = 'review') {
+  if (!['creator', 'review', 'workshop'].includes(start))
+    throw new Error('Unknown initial workspace.');
+  const shell = await readFile(new URL('./workspace-shell.js', import.meta.url), 'utf8');
+  const payload = Buffer.from(html).toString('base64');
   return `<!doctype html>
 <html lang="en" data-start="${start}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Morph Lab v12.0.0 — Discovery Studio</title>
@@ -13,5 +14,5 @@ export async function packWorkspace(html, start='review') {
 <header><strong>MORPH LAB / 12.0.0</strong><span id="workspace-status" role="status">Opening the studio…</span><nav aria-label="Workspace"><button data-open-workspace="creator">Create</button><button data-open-workspace="review">Inspect</button><button data-open-workspace="workshop">Advanced workshop</button></nav></header>
 <main id="workspace-host"></main><noscript>Enable JavaScript to open the studio.</noscript>
 <script id="morph-document" type="application/octet-stream">${payload}</script>
-<script>${shell.replaceAll('</script','<\\/script')}</script></body></html>`;
+<script>${shell.replaceAll('</script', '<\\/script')}</script></body></html>`;
 }
