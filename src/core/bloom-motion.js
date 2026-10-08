@@ -74,8 +74,7 @@ export function applyBloomAction(name, pose, t) {
   const r = (id, x = 0, y = 0, z = 0) => {
       pose.rotations[id] = [x, y, z];
     },
-    v = Math.sin(t * TAU),
-    pulse = Math.sin(t * Math.PI);
+    v = Math.sin(t * TAU);
   switch (name) {
     case 'salute':
       r('upperArm.R', -2.76, 1.2, 0.23);

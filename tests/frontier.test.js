@@ -21,7 +21,7 @@ import {
 } from '../src/core/genome.js';
 import { expandParts, analyze } from '../src/core/anatomy.js';
 import { compileTidalPart, sampleTidalPart, placeTidalPoint } from '../src/core/tidal-geometry.js';
-import { defaultMotion, sampleMotion, MOTION_CLIPS } from '../src/core/motion.js';
+import { defaultMotion, sampleMotion } from '../src/core/motion.js';
 import {
   defaultMixSettings,
   mixGenomes,

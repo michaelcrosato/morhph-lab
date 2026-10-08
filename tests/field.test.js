@@ -5,7 +5,6 @@ import { FIELD_MODELS, FIELD_PARTS, FIELD_KITS } from '../src/core/field-catalog
 import { FIELD_MOTION, FIELD_ACTIONS } from '../src/core/field-motion.js';
 import { FIELD_PATTERNS, FIELD_MICRO, FIELD_SURFACES } from '../src/core/field-surfaces.js';
 import { EXPANSION_PARTS } from '../src/core/expansion-catalog.js';
-import { SHARED_PARTS } from '../src/core/shared-parts.js';
 import { PRESET_MODELS } from '../src/core/presets.js';
 import {
   preset,

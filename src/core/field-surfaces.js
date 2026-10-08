@@ -1,4 +1,5 @@
 /** Small coat and repaired-cloth set. Fur is a surface field, not hair strands. */
+import { fract, smoothstep } from './math.js';
 export const FIELD_PATTERNS = Object.freeze([
   'countershade',
   'coatflow',
@@ -44,31 +45,26 @@ export const FIELD_SURFACES = Object.freeze({
     emission: 0,
   },
 });
-const fract = x => x - Math.floor(x),
-  ss = (a, b, x) => {
-    const t = Math.max(0, Math.min(1, (x - a) / (b - a)));
-    return t * t * (3 - 2 * t);
-  };
 export function fieldPattern(name, [x, y, z], noise) {
   switch (name) {
     case 'countershade':
-      return 1 - ss(-0.65, 0.65, y + noise([x * 0.4, y * 0.4, z * 0.4]) * 0.18);
+      return 1 - smoothstep(-0.65, 0.65, y + noise([x * 0.4, y * 0.4, z * 0.4]) * 0.18);
     case 'coatflow':
       return (
         (0.4 + 0.6 * noise([x * 0.4, y * 0.4, z * 0.4])) *
-        (1 - ss(0.1, 0.32, Math.abs(Math.sin(x * 7 + Math.sin(z * 1.6) + y * 0.5))))
+        (1 - smoothstep(0.1, 0.32, Math.abs(Math.sin(x * 7 + Math.sin(z * 1.6) + y * 0.5))))
       );
     case 'repairseams': {
       const u = fract(x * 0.6) - 0.5,
         v = fract(z * 0.6) - 0.5;
       return (
-        (1 - ss(0.025, 0.065, Math.min(Math.abs(u), Math.abs(v)))) *
-        (0.25 + 0.75 * ss(0.1, 0.4, Math.sin((x + z) * 22) * 0.5 + 0.5))
+        (1 - smoothstep(0.025, 0.065, Math.min(Math.abs(u), Math.abs(v)))) *
+        (0.25 + 0.75 * smoothstep(0.1, 0.4, Math.sin((x + z) * 22) * 0.5 + 0.5))
       );
     }
     case 'wovencheck': {
-      const a = ss(0.45, 0.55, fract(x)),
-        b = ss(0.45, 0.55, fract(z));
+      const a = smoothstep(0.45, 0.55, fract(x)),
+        b = smoothstep(0.45, 0.55, fract(z));
       return a * 0.38 + b * 0.38 + a * b * 0.24;
     }
     default:

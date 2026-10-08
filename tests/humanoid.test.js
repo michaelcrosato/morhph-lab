@@ -12,13 +12,11 @@ import {
 import {
   HUMANOID_MODELS,
   PROPORTIONS,
-  defaultRig,
   validateRig,
   humanoidLayout,
   humanoidNodes,
   syncHumanoidBody,
   compatibilityReport,
-  socketRest,
 } from '../src/core/humanoid.js';
 import { humanoidSkeleton, humanoidSkinWeights, humanoidGarment } from '../src/core/rig-data.js';
 import {
@@ -48,7 +46,6 @@ import {
   parseMixRecipe,
 } from '../src/core/mixer.js';
 import { GenomeStore } from '../src/core/store.js';
-import { sampleMotion } from '../src/core/motion.js';
 const near = (a, b, e = 1e-6) => assert.ok(Math.abs(a - b) < e, `${a} != ${b}`);
 const human = preset('wayfarer');
 

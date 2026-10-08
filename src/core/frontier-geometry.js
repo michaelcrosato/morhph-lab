@@ -5,12 +5,10 @@ import {
   rod,
   foil,
   translated,
-  rotated,
   rotate,
   reverseWinding,
 } from './parametric-mesh.js';
-const TAU = Math.PI * 2;
-const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+import { TAU, clamp } from './math.js';
 const animation = (mode, values = {}) => ({ pack: 'frontier', mode, ...values });
 /** Emit local meshes and serializable motion descriptors. +Y is the mount normal.
  * Rigid moving units use their own pivots. Neither backend owns model definitions. */

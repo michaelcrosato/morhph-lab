@@ -1,9 +1,16 @@
 /** Seeded discovery recipes. This module does not use a renderer or browser state. */
-import { preset, PRESET_MODELS, validateGenome, mutate, LIMITS } from '../core/genome.js';
+import {
+  preset,
+  PRESET_MODELS,
+  validateGenome,
+  mutate,
+  LIMITS,
+  genomeFingerprint,
+} from '../core/genome.js';
 import { mixGenomes, defaultMixSettings } from '../core/mixer.js';
 import { PALETTES } from '../core/catalog.js';
 import { SURFACE_PRESETS } from '../core/surfaces.js';
-import { rng, clamp, hash } from '../core/math.js';
+import { rng, clamp } from '../core/math.js';
 
 export const CREATOR_VERSION = 1;
 export const TRAITS = Object.freeze({
@@ -371,7 +378,5 @@ export function replayRecipe(raw) {
     },
   };
 }
-export const discoverySignature = g =>
-  hash(JSON.stringify(validateGenome(g)))
-    .toString(16)
-    .padStart(8, '0');
+/** Content signature of a blueprint; equal blueprints share thumbnails and ids. */
+export const discoverySignature = genomeFingerprint;

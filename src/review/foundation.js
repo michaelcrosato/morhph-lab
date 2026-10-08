@@ -15,7 +15,6 @@ import { compileBodySurface } from '../core/mesher.js';
 import {
   humanoidLayout,
   syncHumanoidBody,
-  PROPORTIONS,
   humanoidSurfaceNodes,
   hostBone,
   socketBone,
@@ -37,9 +36,6 @@ import {
   slerp,
   normalTransform,
   faceNormals,
-  normalize,
-  cross,
-  sub,
 } from './math.js';
 export const REVIEW_POSES = [
   'bind',

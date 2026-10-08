@@ -11,6 +11,7 @@ import {
   checkedSeed,
 } from './generator.js';
 import { CreatorSession } from './session.js';
+import { APP_VERSION } from '../core/version.js';
 import { DiscoveryLibrary, parseCollection, MAX_COLLECTION_BYTES } from './library.js';
 import { CreatorPreview, creatureThumbnail } from './preview.js';
 import { escapeHTML as esc, icon } from '../ui/icons.js';
@@ -31,7 +32,7 @@ if (!initial)
   } catch {}
 try {
   session = initial ? CreatorSession.restore(initial) : new CreatorSession();
-} catch (e) {
+} catch {
   session = new CreatorSession();
   notice =
     'The previous work session could not be restored. Your saved collection was not changed.';
@@ -709,7 +710,7 @@ Object.defineProperty(window, 'monsterCreator', {
       history: { undo: session.past.length, redo: session.future.length },
       warnings: library.warning,
     }),
-    versions: () => ({ application: '12.0.0', blueprint: 6 }),
+    versions: () => ({ application: APP_VERSION, blueprint: 6 }),
   }),
 });
 window.addEventListener(

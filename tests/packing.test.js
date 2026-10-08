@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { compilePacking, packMeshes } from '../src/export/packing.js';
 import { preset, serializeGenome, createPart } from '../src/core/genome.js';
 import { buildDelivery, deliveryOptions } from '../src/export/delivery.js';
-import { readDeliveryGLB, deliveryPose } from '../src/export/glb.js';
+import { deliveryPose } from '../src/export/glb.js';
 const maxError = (a, b) => {
   let m = 0;
   assert.equal(a.length, b.length);

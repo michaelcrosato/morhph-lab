@@ -41,7 +41,8 @@ export function prism(points, depth = 0.06) {
       const a = [...pts[0], (sign * depth) / 2],
         b = [...pts[i], (sign * depth) / 2],
         c = [...pts[i + 1], (sign * depth) / 2];
-      sign > 0 ? tri(a, b, c) : tri(a, c, b);
+      if (sign > 0) tri(a, b, c);
+      else tri(a, c, b);
     }
   for (let i = 0; i < pts.length; i++) {
     const a = pts[i],

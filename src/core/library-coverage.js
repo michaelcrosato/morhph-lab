@@ -1,4 +1,5 @@
 import { PRESET_MODELS, preset } from './presets.js';
+import { APP_VERSION } from './version.js';
 import { CATALOG, PALETTES } from './catalog.js';
 import { SHARED_PARTS } from './shared-parts.js';
 import { PART_KITS } from './kits.js';
@@ -42,7 +43,7 @@ export function libraryCoverage() {
   return {
     format: 'morph-lab-library-coverage',
     version: 1,
-    appVersion: '12.0.0',
+    appVersion: APP_VERSION,
     counts: {
       models: models.length,
       humanoids: models.filter(m => m.family === 'humanoid').length,

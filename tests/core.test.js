@@ -24,6 +24,8 @@ import {
 import { solveTwoBone } from '../src/core/ik.js';
 import { rng, distance, normalize, normalToAngles, anglesToNormal } from '../src/core/math.js';
 import { makeLevel } from '../src/core/level.js';
+import { readFileSync } from 'node:fs';
+import { APP_VERSION } from '../src/core/version.js';
 const approx = (a, b, eps = 1e-6) => assert.ok(Math.abs(a - b) < eps, `${a} differs from ${b}`);
 
 test('all three foundational blueprints validate and have intended limb counts', () => {
@@ -389,4 +391,8 @@ test('mesher rejects invalid quality rather than unbounded allocation', () => {
   assert.throws(() => compileBodySurface(nodes, 0));
   assert.throws(() => compileBodySurface(nodes, NaN));
   assert.throws(() => compileBodySurface([], 1));
+});
+test('application version matches package.json', () => {
+  const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
+  assert.equal(APP_VERSION, pkg.version);
 });

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { preset, createPart, validateGenome, serializeGenome } from '../src/core/genome.js';
+import { preset, createPart, serializeGenome } from '../src/core/genome.js';
 import { CATALOG } from '../src/core/catalog.js';
 import { CLASSIC_PARTS } from '../src/core/classic-catalog.js';
 import { SHARED_PARTS } from '../src/core/shared-parts.js';

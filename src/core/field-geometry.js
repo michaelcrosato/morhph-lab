@@ -1,11 +1,10 @@
 import { bowPull } from './equipment-pose.js';
 /** Shared animal foundations and daily-use props. Local +Y is the mount normal. */
-import { grid, sphere, tube, rod, rotate, rotated, translated } from './parametric-mesh.js';
+import { grid, sphere, tube, rod, rotate } from './parametric-mesh.js';
 import { box, prism } from './solid-mesh.js';
 import { solveTwoBone } from './ik.js';
 import { mapSegment } from './bloom-geometry.js';
-const TAU = 2 * Math.PI,
-  clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+import { TAU, clamp } from './math.js';
 const motion = (mode, fields = {}) => ({ pack: 'field', mode, ...fields });
 const ring = (radius, y, r = 0.025) =>
   tube(
@@ -388,7 +387,6 @@ export function animateFieldVertex(a, point, p, time, pose = {}, prepared = null
   const s = p.size,
     l = s * p.length,
     f = p.flex * (pose.layers?.flex ?? 1),
-    phase = time * TAU + p.phase * TAU,
     pull = pose.action?.name === 'bowdraw' ? bowPull(pose.action.phase) * pose.action.weight : 0;
   let [x, y, z] = point;
   if (f === 0) return point;

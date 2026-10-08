@@ -1,17 +1,5 @@
 /** Indexed procedural mesh helpers. No DOM, image, or renderer dependency. */
-const TAU = Math.PI * 2;
-const add = (a, b) => a.map((v, i) => v + b[i]),
-  sub = (a, b) => a.map((v, i) => v - b[i]),
-  mul = (a, s) => a.map(v => v * s);
-const cross = (a, b) => [
-  a[1] * b[2] - a[2] * b[1],
-  a[2] * b[0] - a[0] * b[2],
-  a[0] * b[1] - a[1] * b[0],
-];
-const unit = v => {
-  const n = Math.hypot(...v) || 1;
-  return v.map(x => x / n);
-};
+import { TAU, sub, cross, unit } from './math.js';
 export function meshNormals(positions, indices, out = new Float32Array(positions.length)) {
   out.fill(0);
   for (let i = 0; i < indices.length; i += 3) {

@@ -12,7 +12,7 @@ import { buildLegacySharedPart, animateLegacyVertex } from './legacy-shared-geom
 import { BLOOM_PARTS } from './bloom-catalog.js';
 import { buildBloomPart, animateBloomVertex, prepareBloomMotion } from './bloom-geometry.js';
 import { SHARED_PARTS } from './shared-parts.js';
-import { clamp } from './math.js';
+import { TAU, clamp, add, sub, mul, cross, unit } from './math.js';
 import {
   meshNormals,
   grid,
@@ -27,19 +27,6 @@ import {
 } from './parametric-mesh.js';
 import { buildFrontierPart, animateFrontierVertex } from './frontier-geometry.js';
 export { meshNormals } from './parametric-mesh.js';
-const TAU = Math.PI * 2;
-const add = (a, b) => a.map((v, i) => v + b[i]),
-  sub = (a, b) => a.map((v, i) => v - b[i]),
-  mul = (a, s) => a.map(v => v * s);
-const cross = (a, b) => [
-  a[1] * b[2] - a[2] * b[1],
-  a[2] * b[0] - a[0] * b[2],
-  a[0] * b[1] - a[1] * b[0],
-];
-const unit = v => {
-  const n = Math.hypot(...v) || 1;
-  return v.map(x => x / n);
-};
 /** Shared source geometry for the software inspector and Three.js.
  * The plan is immutable. sampleTidalPart writes into separate frame buffers. */
 export function compileTidalPart(part) {

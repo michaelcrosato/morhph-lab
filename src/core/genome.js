@@ -2,7 +2,7 @@ import { validateRig, humanoidNodes, syncHumanoidBody, SOCKETS, PROPORTIONS } fr
 import { validateActor } from './actors.js';
 import { CATALOG, PALETTES, PART_MATERIALS } from './catalog.js';
 import { normalize, rng, clamp, hash } from './math.js';
-import { defaultMotion, validateMotion } from './motion.js';
+import { validateMotion } from './motion.js';
 import { PATTERNS, MICRO_SURFACES } from './surfaces.js';
 import { resolveNodes } from './anatomy.js';
 export const SCHEMA_VERSION = 6;

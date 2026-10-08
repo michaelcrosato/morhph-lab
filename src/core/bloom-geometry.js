@@ -1,29 +1,8 @@
-import {
-  grid,
-  sphere,
-  tube,
-  rod,
-  rotated,
-  translated,
-  rotate,
-  reverseWinding,
-} from './parametric-mesh.js';
+import { grid, sphere, tube, rod, rotate, reverseWinding } from './parametric-mesh.js';
 import { solveTwoBone } from './ik.js';
-const TAU = Math.PI * 2,
-  clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+import { TAU, clamp, add as add3, sub, unit, cross } from './math.js';
 const behavior = (mode, fields = {}) => ({ pack: 'bloom', mode, ...fields });
-const add3 = (a, b) => a.map((v, i) => v + b[i]),
-  sub = (a, b) => a.map((v, i) => v - b[i]);
 const scale = (v, p) => [v[0] * p.size, v[1] * p.size * p.length, v[2] * p.size];
-const unit = v => {
-  const n = Math.hypot(...v) || 1;
-  return v.map(x => x / n);
-};
-const cross = (a, b) => [
-  a[1] * b[2] - a[2] * b[1],
-  a[2] * b[0] - a[0] * b[2],
-  a[0] * b[1] - a[1] * b[0],
-];
 /** Place a rigid segment between two sampled joints. The source is never changed. */
 export function mapSegment(point, a, b, c, d) {
   const u = unit(sub(b, a)),

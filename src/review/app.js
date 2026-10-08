@@ -5,6 +5,7 @@ import { libraryCoverage } from '../core/library-coverage.js';
 import { HUMANOID_ACTIONS } from '../core/humanoid-motion.js';
 import { enterCreator, enterWorkshop, takeReviewTransfer } from './transfer.js';
 import { workspaceURL } from '../core/workspace-route.js';
+import { APP_VERSION } from '../core/version.js';
 import {
   FoundationCompiler,
   FOUNDATIONS,
@@ -55,7 +56,6 @@ let session = new ReviewSession(),
   referenceMeta = null,
   objReference = null,
   comparison = null,
-  renderSerial = 0,
   lastFrames = [],
   suite = null,
   busy = false;
@@ -287,7 +287,6 @@ function render(fit = false) {
     view = s.view;
   comparison = null;
   lastFrames = [];
-  renderSerial++;
   $('#review-views').replaceChildren();
   $('#review-views').className = 'review-views ' + s.layout;
   $('#reference-controls').hidden = s.layout !== 'reference';
@@ -331,7 +330,7 @@ function render(fit = false) {
     lastFrames.push({ view, title: 'Difference', snapshot: null, render: diff, canvas });
     comparison = diff.metric;
   } else {
-    const result = draw(current, view, 'Candidate + image guide', VIEWS[view].label);
+    draw(current, view, 'Candidate + image guide', VIEWS[view].label);
     const canvas = lastFrames[0].canvas;
     if (reference) {
       const ctx = canvas.getContext('2d'),
@@ -393,7 +392,7 @@ function report() {
   return {
     format: 'morph-lab-review-report',
     version: 1,
-    appVersion: '12.0.0',
+    appVersion: APP_VERSION,
     createdAt: new Date().toISOString(),
     enginePins: { three: '0.181.0', rapier: '0.19.3', gameRenderer: 'WebGL2' },
     session: session.export(),

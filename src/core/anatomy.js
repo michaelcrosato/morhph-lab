@@ -8,7 +8,7 @@ import {
   compatibilityReport,
   humanoidSurfaceNodes,
 } from './humanoid.js';
-import { add, sub, mul, normalize, clamp, length } from './math.js';
+import { add, mul, normalize, clamp } from './math.js';
 /** Body nodes form a rooted translation hierarchy. Parts use normalized radial
  * anchors instead of triangle indices, so remeshing does not orphan attachments. */
 export function resolveNodes(genome) {

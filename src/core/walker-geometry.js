@@ -3,13 +3,7 @@
  */
 import { sphere, tube, meshNormals } from './parametric-mesh.js';
 import { solveTwoBone } from './ik.js';
-import { rotateY, smooth } from './math.js';
-const Y = [0, 1, 0],
-  cross = (a, b) => [
-    a[1] * b[2] - a[2] * b[1],
-    a[2] * b[0] - a[0] * b[2],
-    a[0] * b[1] - a[1] * b[0],
-  ];
+import { rotateY, smooth, cross } from './math.js';
 function fromY(q, d) {
   const len = Math.hypot(...d);
   if (len < 1e-12) return [0, 0, 0];
@@ -117,8 +111,7 @@ export function compileWalker(part) {
   return { kind: 'walker', type: 'leg', part: p, dimensions: dim, components, version: 1 };
 }
 export function sampleWalker(plan, joints = null, reuse = null) {
-  const p = plan.part,
-    d = plan.dimensions,
+  const d = plan.dimensions,
     j = joints || {
       hip: [0, 0, 0],
       knee: [0, -d.upperLength, 0],

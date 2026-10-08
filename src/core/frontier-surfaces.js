@@ -1,4 +1,5 @@
 import { BLOOM_PATTERN_GLSL } from './bloom-surfaces.js';
+import { fract, smoothstep } from './math.js';
 /** CPU pigment functions and GLSL use the same equations. No external texture files. */
 export const FRONTIER_PATTERNS = Object.freeze([
   'combtracks',
@@ -37,53 +38,56 @@ export const FRONTIER_SURFACES = Object.freeze({
   mosaic: recipe('Mosaic enamel', 'tessera', 0.37, 0.18, 0.026, 'tesserae'),
   saltpaper: recipe('Salt paper', 'saltfleck', 0.97, 0, 0.048, 'chalk'),
 });
-const fract = x => x - Math.floor(x),
-  smooth = (a, b, x) => {
-    const t = Math.max(0, Math.min(1, (x - a) / (b - a)));
-    return t * t * (3 - 2 * t);
-  };
 export function frontierPattern(name, [x, y, z], noise) {
   switch (name) {
     case 'combtracks':
       return (
-        (1 - smooth(0.06, 0.19, Math.abs(fract(x * 0.7) - 0.5))) *
-        smooth(0.35, 0.62, Math.sin(z * 9 + y) * 0.5 + 0.5)
+        (1 - smoothstep(0.06, 0.19, Math.abs(fract(x * 0.7) - 0.5))) *
+        smoothstep(0.35, 0.62, Math.sin(z * 9 + y) * 0.5 + 0.5)
       );
     case 'polypcells': {
       const qx = fract(x * 0.6 + Math.floor(z * 0.6) * 0.5) - 0.5,
         qz = fract(z * 0.6) - 0.5,
         d = Math.hypot(qx, qz);
-      return (1 - smooth(0.28, 0.37, d)) * (0.35 + 0.65 * smooth(0.11, 0.2, d));
+      return (1 - smoothstep(0.28, 0.37, d)) * (0.35 + 0.65 * smoothstep(0.11, 0.2, d));
     }
     case 'fanrays':
-      return smooth(0.3, 0.7, Math.cos(Math.atan2(z, x) * 12 + Math.hypot(x, z) * 0.4) * 0.5 + 0.5);
+      return smoothstep(
+        0.3,
+        0.7,
+        Math.cos(Math.atan2(z, x) * 12 + Math.hypot(x, z) * 0.4) * 0.5 + 0.5,
+      );
     case 'dendrite': {
       const a = Math.abs(x - Math.sin(z * 0.4) * 0.22),
         b = Math.abs(Math.sin(z * 2.8 - Math.abs(x) * 4)),
         c = Math.abs(Math.sin(z * 5.6 + Math.abs(x) * 7));
       return Math.max(
-        1 - smooth(0.025, 0.07, a),
-        (1 - smooth(0.035, 0.12, b)) * 0.75,
-        (1 - smooth(0.02, 0.07, c)) * 0.3,
+        1 - smoothstep(0.025, 0.07, a),
+        (1 - smoothstep(0.035, 0.12, b)) * 0.75,
+        (1 - smoothstep(0.02, 0.07, c)) * 0.3,
       );
     }
     case 'foldbands':
-      return smooth(0.45, 0.7, Math.cos(x * 4 + Math.abs(fract(z * 0.4) - 0.5) * 6) * 0.5 + 0.5);
+      return smoothstep(
+        0.45,
+        0.7,
+        Math.cos(x * 4 + Math.abs(fract(z * 0.4) - 0.5) * 6) * 0.5 + 0.5,
+      );
     case 'holofoil':
-      return smooth(0.32, 0.73, Math.sin((x + z) * 4.1) * Math.cos((z - y) * 4.4) * 0.5 + 0.5);
+      return smoothstep(0.32, 0.73, Math.sin((x + z) * 4.1) * Math.cos((z - y) * 4.4) * 0.5 + 0.5);
     case 'tessera': {
       const row = Math.floor(z),
         fx = fract(x + row * 0.5),
         fz = fract(z);
       return (
-        (1 - smooth(0.025, 0.09, Math.min(fx, 1 - fx, fz, 1 - fz))) * 0.75 +
-        smooth(0.44, 0.6, noise([Math.floor(x + row * 0.5), 0, row])) * 0.25
+        (1 - smoothstep(0.025, 0.09, Math.min(fx, 1 - fx, fz, 1 - fz))) * 0.75 +
+        smoothstep(0.44, 0.6, noise([Math.floor(x + row * 0.5), 0, row])) * 0.25
       );
     }
     case 'saltfleck':
       return Math.max(
-        smooth(0.62, 0.78, noise([x * 6, y * 6, z * 6])),
-        smooth(0.65, 0.81, noise([x * 0.5, y * 0.5, z * 0.5])) * 0.35,
+        smoothstep(0.62, 0.78, noise([x * 6, y * 6, z * 6])),
+        smoothstep(0.65, 0.81, noise([x * 0.5, y * 0.5, z * 0.5])) * 0.35,
       );
     default:
       return undefined;
@@ -115,7 +119,7 @@ export function frontierMicroHeight(style, u, v, noise) {
         y = fract(v * 12);
       return (
         0.28 +
-        0.42 * smooth(0.03, 0.11, Math.min(x, 1 - x, y, 1 - y)) +
+        0.42 * smoothstep(0.03, 0.11, Math.min(x, 1 - x, y, 1 - y)) +
         0.055 * noise +
         0.025 * Math.sin((u * 5 + v * 7) * t)
       );

@@ -2,10 +2,13 @@
 export const TAU = Math.PI * 2;
 export const clamp = (x, lo, hi) => Math.max(lo, Math.min(hi, x));
 export const mix = (a, b, t) => a + (b - a) * t;
+export const fract = x => x - Math.floor(x);
 export const smooth = t => {
   t = clamp(t, 0, 1);
   return t * t * (3 - 2 * t);
 };
+/** Hermite step of x between edges a and b (GLSL smoothstep). */
+export const smoothstep = (a, b, x) => smooth((x - a) / (b - a));
 export const add = (a, b) => a.map((v, i) => v + b[i]);
 export const sub = (a, b) => a.map((v, i) => v - b[i]);
 export const mul = (a, s) => a.map(v => v * s);
@@ -13,6 +16,11 @@ export const dot = (a, b) => a.reduce((s, v, i) => s + v * b[i], 0);
 export const length = a => Math.hypot(...a);
 export const normalize = (a, fallback = [0, 1, 0]) =>
   length(a) > 1e-8 ? mul(a, 1 / length(a)) : [...fallback];
+/** Unit vector; unlike normalize(), a zero vector stays zero. */
+export const unit = v => {
+  const n = Math.hypot(...v) || 1;
+  return v.map(x => x / n);
+};
 export const cross = (a, b) => [
   a[1] * b[2] - a[2] * b[1],
   a[2] * b[0] - a[0] * b[2],

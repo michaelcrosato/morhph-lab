@@ -4,7 +4,7 @@ import { animateHumanoid } from './humanoid-animator.js';
 import * as THREE from 'three';
 import { sampleMotion } from '../core/motion.js';
 import { solveTwoBone } from '../core/ik.js';
-import { TAU, clamp, smooth, add, sub, mul, distance, rotateY } from '../core/math.js';
+import { TAU, clamp, smooth, add, sub, distance, rotateY } from '../core/math.js';
 import { alignSegment } from './parts.js';
 /** Authored gait policy + analytic IK, not a physical joint simulation. Stance
  * feet are held in world space in the habitat. Swing feet track terrain probes. */
@@ -15,7 +15,7 @@ export function animateCreature(creature, dt, ctx) {
     speed = 0,
     preview = false,
     walking,
-    groundHeight = (x, z) => 0,
+    groundHeight = () => 0,
     grounded = true,
     seek = false,
   } = ctx;

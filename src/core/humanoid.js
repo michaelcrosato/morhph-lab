@@ -2,7 +2,7 @@ import { FIELD_MOTION } from './field-motion.js';
 import { BLOOM_MOTION } from './bloom-motion.js';
 import { FRONTIER_MOTION } from './frontier-motion.js';
 import { HUMANOID_CONTENT } from './content-pack.js';
-import { clamp, mix } from './math.js';
+import { mix } from './math.js';
 
 /** Rig contracts use metres, +Y up, and +Z forward. No renderer dependency. */
 export const PROPORTIONS = Object.freeze({

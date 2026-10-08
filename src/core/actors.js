@@ -279,7 +279,7 @@ export function parseActorRoster(text) {
   )
     throw new Error('Invalid roster settings.');
   const used = new Set();
-  const actors = raw.actors.map((entry, i) => {
+  const actors = raw.actors.map(entry => {
     if (
       typeof entry.id !== 'string' ||
       !/^actor-[a-zA-Z0-9_-]{1,48}$/.test(entry.id) ||

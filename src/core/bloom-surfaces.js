@@ -1,4 +1,5 @@
 import { FIELD_PATTERN_GLSL } from './field-surfaces.js';
+import { fract, smoothstep } from './math.js';
 /** Pigment masks and tileable height functions. No image assets. */
 export const BLOOM_PATTERNS = Object.freeze([
   'scuteedges',
@@ -37,11 +38,6 @@ export const BLOOM_SURFACES = Object.freeze({
   mazeenamel: recipe('Maze enamel', 'maze', 0.27, 0.2, 0.025, 'hammered', 0.18),
   growthshell: recipe('Growth shell', 'growthbands', 0.46, 0.1, 0.042, 'suction'),
 });
-const fract = x => x - Math.floor(x),
-  ss = (a, b, x) => {
-    const t = Math.max(0, Math.min(1, (x - a) / (b - a)));
-    return t * t * (3 - 2 * t);
-  };
 export function bloomPattern(name, [x, y, z], noise) {
   switch (name) {
     case 'scuteedges': {
@@ -49,7 +45,7 @@ export function bloomPattern(name, [x, y, z], noise) {
         v = fract(z * 0.8) - 0.5;
       return (
         1 -
-        ss(
+        smoothstep(
           0.025,
           0.1,
           Math.abs(Math.max(Math.abs(u) * 0.85, Math.abs(v) + Math.abs(u) * 0.35) - 0.4),
@@ -58,27 +54,27 @@ export function bloomPattern(name, [x, y, z], noise) {
     }
     case 'petalveins':
       return Math.max(
-        1 - ss(0.03, 0.08, Math.abs(x)),
-        (1 - ss(0.02, 0.08, Math.abs(Math.sin(z * 4 - Math.abs(x) * 5)))) * 0.68,
+        1 - smoothstep(0.03, 0.08, Math.abs(x)),
+        (1 - smoothstep(0.02, 0.08, Math.abs(Math.sin(z * 4 - Math.abs(x) * 5)))) * 0.68,
       );
     case 'pollen':
       return Math.max(
-        ss(0.66, 0.8, noise([x * 5, y * 5, z * 5])),
-        ss(0.6, 0.74, noise([x * 0.8, y * 0.8, z * 0.8])) * 0.3,
+        smoothstep(0.66, 0.8, noise([x * 5, y * 5, z * 5])),
+        smoothstep(0.6, 0.74, noise([x * 0.8, y * 0.8, z * 0.8])) * 0.3,
       );
     case 'saddle':
       return (
-        ss(0.25, 0.65, Math.cos(z * 1.8) * 0.5 + 0.5) *
-        (1 - ss(0.15, 0.65, Math.abs(Math.sin(x * 0.7 + y * 0.4))))
+        smoothstep(0.25, 0.65, Math.cos(z * 1.8) * 0.5 + 0.5) *
+        (1 - smoothstep(0.15, 0.65, Math.abs(Math.sin(x * 0.7 + y * 0.4))))
       );
     case 'stitchgrid': {
       const u = fract(x) - 0.5,
         v = fract(z) - 0.5,
-        line = 1 - ss(0.018, 0.065, Math.min(Math.abs(u), Math.abs(v)));
-      return line * (0.3 + 0.7 * ss(0.1, 0.5, Math.cos((x + z) * 25) * 0.5 + 0.5));
+        line = 1 - smoothstep(0.018, 0.065, Math.min(Math.abs(u), Math.abs(v)));
+      return line * (0.3 + 0.7 * smoothstep(0.1, 0.5, Math.cos((x + z) * 25) * 0.5 + 0.5));
     }
     case 'oxidation':
-      return ss(
+      return smoothstep(
         0.38,
         0.62,
         noise([x * 0.6, y * 0.6, z * 0.6]) * 0.75 + noise([x * 3, y * 3, z * 3]) * 0.25,
@@ -89,10 +85,10 @@ export function bloomPattern(name, [x, y, z], noise) {
         u = fract(x),
         v = fract(z),
         d = Math.abs(Math.hypot(u - (flip ? 1 : 0), v) - 0.64);
-      return 1 - ss(0.04, 0.11, d);
+      return 1 - smoothstep(0.04, 0.11, d);
     }
     case 'growthbands':
-      return ss(
+      return smoothstep(
         0.38,
         0.68,
         Math.cos(z * 5 + Math.sin(x * 0.7) * 1.2 + noise([x * 0.3, y * 0.3, z * 0.3])) * 0.5 + 0.5,

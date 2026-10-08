@@ -2,8 +2,8 @@
  * Shapes retain their gene IDs, dimensions, and variants. Triangulation is new.
  * Animation starts from rest data. Protected eye and mouth details retain color.
  */
-import { grid, sphere, tube, rod, rotate, rotated, translated, merge } from './parametric-mesh.js';
-const TAU = Math.PI * 2;
+import { grid, sphere, tube, rod, rotate, rotated, translated } from './parametric-mesh.js';
+import { TAU } from './math.js';
 const behavior = (mode, extra = {}) => ({ pack: 'classic', mode, ...extra });
 const ellipsoid = (c, s) => sphere(c, s, 12, 20);
 const ring = (r, thickness, yscale = 1) =>

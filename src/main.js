@@ -8,7 +8,6 @@ import { restPickPoint } from './render/picking.js';
 import * as THREE from 'three';
 import RAPIER from '@dimforge/rapier3d-compat';
 import { defaultMotion } from './core/motion.js';
-import { preset } from './core/genome.js';
 import { GenomeStore } from './core/store.js';
 import { analyze, nearestNode } from './core/anatomy.js';
 import { Creature } from './creature/assemble.js';
@@ -27,7 +26,6 @@ let previewPlaying = true,
   previewSeek = false,
   transportClock = 0;
 let mode = 'editor',
-  walking = false,
   dirty = false,
   frameRequested = false,
   lastBuild = 0,

@@ -854,7 +854,8 @@ export class Editor {
       if (this.habitat) return;
       if ((e.ctrlKey || e.metaKey) && e.code === 'KeyZ') {
         e.preventDefault();
-        e.shiftKey ? this.store.redo() : this.store.undo();
+        if (e.shiftKey) this.store.redo();
+        else this.store.undo();
       }
       if ((e.ctrlKey || e.metaKey) && e.code === 'KeyY') {
         e.preventDefault();

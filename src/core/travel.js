@@ -1,4 +1,4 @@
-import { clamp } from './math.js';
+import { clamp, cross, unit } from './math.js';
 export const TRAVEL_MEDIA = ['ground', 'water', 'air'];
 export const BODY_WAVES = ['rigid', 'lateral', 'vertical', 'pulse'];
 export const defaultTravel = () => ({ medium: 'ground', speed: 3.4, climb: 2.4, bank: 0.25 });
@@ -56,12 +56,7 @@ export function blendBodyWave(a, b, t) {
 export function travelVelocity(config, input, position, bounds) {
   const c = validateTravel(config);
   if (c.medium === 'ground') throw new Error('Use the ground controller for ground movement.');
-  const values = [
-    input?.x ?? 0,
-    input?.z ?? 0,
-    input?.y ?? 0,
-    ...[position.x, position.y, position.z],
-  ];
+  const values = [input?.x ?? 0, input?.z ?? 0, input?.y ?? 0, position.x, position.y, position.z];
   if (values.some(v => !Number.isFinite(v))) throw new Error('Travel input must be finite.');
   const x = clamp(input.x || 0, -1, 1),
     z = clamp(input.z || 0, -1, 1),
@@ -128,15 +123,6 @@ export function deformBodyFrame(point, normal, wave, time, extent) {
   if (!wave || wave.kind === 'rigid') return { position, normal: [...normal] };
   const e = 0.002,
     axis = Math.abs(normal[1]) < 0.9 ? [0, 1, 0] : [1, 0, 0],
-    cross = (a, b) => [
-      a[1] * b[2] - a[2] * b[1],
-      a[2] * b[0] - a[0] * b[2],
-      a[0] * b[1] - a[1] * b[0],
-    ],
-    unit = v => {
-      const l = Math.hypot(...v) || 1;
-      return v.map(x => x / l);
-    },
     u = unit(cross(normal, axis)),
     v = unit(cross(normal, u));
   const tangent = a => {

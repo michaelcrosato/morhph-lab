@@ -1,7 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { preset } from '../src/core/genome.js';
 import { PRESET_MODELS } from '../src/core/presets.js';
 import { FoundationCompiler, motionCycleTime } from '../src/review/foundation.js';

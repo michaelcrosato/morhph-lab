@@ -12,7 +12,6 @@ import {
 } from '../src/core/genome.js';
 import { CATALOG } from '../src/core/catalog.js';
 import {
-  MIX_CHANNELS,
   defaultMixSettings,
   mixGenomes,
   mixColor,
@@ -21,13 +20,12 @@ import {
   parseMixRecipe,
   validateMixSettings,
 } from '../src/core/mixer.js';
-import { defaultMotion, sampleMotion, MOTION_CLIPS, validateMotion } from '../src/core/motion.js';
+import { defaultMotion, sampleMotion, MOTION_CLIPS } from '../src/core/motion.js';
 import {
   PATTERNS,
   MICRO_SURFACES,
   generateMicroTexture,
   appearanceLayers,
-  setAppearanceLayer,
 } from '../src/core/surfaces.js';
 import { GenomeStore } from '../src/core/store.js';
 import { MixerController } from '../src/editor/mixer-controller.js';

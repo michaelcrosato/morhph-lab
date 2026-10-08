@@ -1,3 +1,4 @@
+import { sub, cross, dot } from '../core/math.js';
 /** Small column-major affine math module for portable geometry inspection. */
 export const identity = () => [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 export function multiply(a, b) {
@@ -73,13 +74,7 @@ export const normalize = v => {
   const d = Math.hypot(...v);
   return d > 1e-12 ? v.map(x => x / d) : [0, 1, 0];
 };
-export const sub = (a, b) => a.map((x, i) => x - b[i]);
-export const cross = (a, b) => [
-  a[1] * b[2] - a[2] * b[1],
-  a[2] * b[0] - a[0] * b[2],
-  a[0] * b[1] - a[1] * b[0],
-];
-export const dot = (a, b) => a.reduce((s, x, i) => s + x * b[i], 0);
+export { sub, cross, dot };
 export function normalTransform(m, n) {
   const a = [m[0], m[1], m[2]],
     b = [m[4], m[5], m[6]],

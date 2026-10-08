@@ -1,5 +1,5 @@
 import { bowPull } from './equipment-pose.js';
-import { clamp, smooth, TAU } from './math.js';
+import { TAU } from './math.js';
 const clip = (label, values) => ({
   label,
   rate: 0,

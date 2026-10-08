@@ -3,7 +3,7 @@
  */
 import { grid, sphere, tube, rod, rotate, rotated, translated } from './parametric-mesh.js';
 import { box, prism } from './solid-mesh.js';
-const TAU = 2 * Math.PI;
+import { TAU } from './math.js';
 const motion = (mode, fields = {}) => ({ pack: 'legacy', mode, ...fields });
 const leaf = (w, h, c = 0.15) =>
   grid(12, 4, (t, u) => [

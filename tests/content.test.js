@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { CATALOG, PART_MATERIALS, PALETTES } from '../src/core/catalog.js';
 import { HUMANOID_CONTENT, CREATURE_CONTENT, PART_KITS } from '../src/core/content-pack.js';
 import { EXPANSION_PARTS } from '../src/core/expansion-catalog.js';
