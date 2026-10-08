@@ -2,8 +2,9 @@ import { CLASSIC_PARTS } from './classic-catalog.js';
 import { SHARED_PARTS } from './shared-parts.js';
 import { EXPANSION_PARTS } from './expansion-catalog.js';
 export { PART_MATERIALS } from './expansion-catalog.js';
-/** Part metadata is deliberately independent of mesh factories. Add an entry here,
- * then a factory in creature/parts.js. Genome validation uses the same catalog. */
+/** Part metadata is deliberately independent of mesh factories. A new family needs a pack
+ * catalog entry here, an entry in SHARED_PARTS, and shared geometry (see docs/extending.md).
+ * Genome validation uses the same catalog. */
 export const CATALOG = Object.freeze({
   ...CLASSIC_PARTS,
   ...EXPANSION_PARTS,

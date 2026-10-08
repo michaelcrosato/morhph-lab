@@ -31,7 +31,7 @@ export { meshNormals } from './parametric-mesh.js';
  * The plan is immutable. sampleTidalPart writes into separate frame buffers. */
 export function compileTidalPart(part) {
   if (!Object.hasOwn(SHARED_PARTS, part.type))
-    throw new Error('No Tide & Sky factory for ' + part.type);
+    throw new Error('No shared geometry for part type ' + part.type);
   const p = {
       variant: 0,
       size: 1,

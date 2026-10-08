@@ -9,6 +9,7 @@ import { auditSnapshot, TARGETS, fingerprint, stableStringify } from '../review/
 import { sampleReviewPigment } from '../review/pigment.js';
 import { GLBWriter, readDeliveryGLB, deliveryPose } from './glb.js';
 import { sha256, archive, safeAssetName } from './archive.js';
+import { APP_VERSION } from '../core/version.js';
 export const DELIVERY_LIMITS = Object.freeze({
   bytes: 64 * 1024 * 1024,
   vertices: 200000,
@@ -530,7 +531,7 @@ export async function buildDelivery(raw, settings = {}, hooks = {}) {
     files: [],
   };
   const auditText = JSON.stringify(report, null, 2) + '\n',
-    readme = `MORPH LAB 11 / COMPLETE COVERAGE\n\n${genome.name}\n\nOpen model.glb in a glTF 2.0 application. Enable vertex colors in your material importer.\nImport source.morph.json into Morph Lab to edit the recipe.\nRead manifest.json and audit.json before game integration.\n\n${DELIVERY_NOTES.join('\n')}\n\nNo engine packages, fonts, or external files are needed to load this GLB.\nNo shader, physics, or target-game approval is included.\n`;
+    readme = `MORPH LAB ${APP_VERSION}\n\n${genome.name}\n\nOpen model.glb in a glTF 2.0 application. Enable vertex colors in your material importer.\nImport source.morph.json into Morph Lab to edit the recipe.\nRead manifest.json and audit.json before game integration.\n\n${DELIVERY_NOTES.join('\n')}\n\nNo engine packages, fonts, or external files are needed to load this GLB.\nNo shader, physics, or target-game approval is included.\n`;
   const files = [
     { name: 'model.glb', data: glb },
     { name: 'source.morph.json', data: sourceText },
