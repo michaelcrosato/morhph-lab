@@ -19,12 +19,19 @@ Morph Lab's authored code is MIT-licensed. Third-party engines keep their own li
 - JavaScript guide: https://rapier.rs/docs/user_guides/javascript/getting_started_js/
 - World API: https://rapier.rs/javascript3d/classes/World.html
 
-The delivered single-file prototype is the CDN edition and refers to these packages rather than redistributing their code. Source archive dependencies are retrieved by `npm install`. An offline build embeds locally installed engine code and copies available license/notice files into the HTML. Preserve those notices and the accompanying files when redistributing that edition. Check the installed package licenses and any additional notice requirements for your intended distribution.
+## Distribution
 
-No third-party graphical assets, fonts, texture packs, animated clips or audio files are used. Optional development-only Playwright is not included as a runtime dependency.
+The release is one file, `dist/Morph-Lab.html`, containing Create, Inspect and Advanced workshop. Both editions include the project license text.
 
-## Foundation Studio
+- **CDN edition** (`npm run build`; the committed release) contains no engine code. It refers to the pinned packages and loads them from jsDelivr only when they are needed: Three.js for Create's optional GPU view, and Three.js and Rapier for the Advanced workshop and the full engine check in System checks. Create, Inspect and asset export run on authored code alone.
+- **Offline edition** (`npm run build:offline`) embeds the engines installed by `npm install` and copies their license and notice files into the HTML. Preserve those notices when redistributing it.
 
-The v5 review renderer, primitive generator, inspection modules, and PNG writer are authored project code under the project MIT license. The offline review HTML does not include or load Three.js or Rapier engine code. The full game HTML remains the CDN edition described above.
+Check the installed package licenses and any additional notice requirements for your intended distribution.
+
+## Authored components
+
+The CPU renderer, geometry, texture and motion generators, inspection modules, PNG writer, and GLB and ZIP writers are authored project code under the project MIT license.
+
+No third-party graphical assets, fonts, texture packs, animation clips or audio files are used. Development-only test tools such as Playwright are not runtime dependencies.
 
 Reference images and OBJ files that a user imports keep their own rights and licenses. They are not supplied as project assets. Reference bytes are not uploaded to a server or embedded in review sessions.
