@@ -394,5 +394,10 @@ test('mesher rejects invalid quality rather than unbounded allocation', () => {
 });
 test('application version matches package.json', () => {
   const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
+  const page = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   assert.equal(APP_VERSION, pkg.version);
+  assert.ok(
+    page.includes(`<title>Morph Lab v${pkg.version} `),
+    'index.html title names the version',
+  );
 });

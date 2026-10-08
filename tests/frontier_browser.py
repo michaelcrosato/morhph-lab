@@ -2,13 +2,22 @@
 The editor harness intentionally has no GPU renderer or Rapier substitute.
 """
 
+import json
 from pathlib import Path
-import json, re, os
+
 from playwright.sync_api import sync_playwright
 
-ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / 'test-results'
-OUT.mkdir(exist_ok=True)
+from browser_support import (
+    harness_html,
+    launch_chromium,
+    release_html,
+    release_url,
+    suite_dir,
+    write_report,
+)
+
+SUITE = Path(__file__).stem
+OUT = suite_dir(SUITE)
 MODELS = [
     'comblantern',
     'salpchain',
@@ -40,28 +49,24 @@ def set_value(frame, selector, value):
 
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(
-        executable_path=os.environ.get('CHROMIUM_PATH', '/usr/bin/chromium'),
-        headless=True,
-        args=['--no-sandbox', '--disable-dev-shm-usage'],
-    )
+    browser = launch_chromium(p)
     ctx = browser.new_context(
         offline=True, accept_downloads=True, viewport={'width': 1560, 'height': 1100}
     )
     page = ctx.new_page()
     errors = []
     page.on('pageerror', lambda e: errors.append(str(e)))
-    direct = {'attempted': True, 'passed': False}
+    direct: dict[str, bool | str] = {'attempted': True, 'passed': False}
     try:
-        page.goto((ROOT / 'dist/Morph-Lab-Review.html').as_uri(), timeout=30000)
+        page.goto(release_url('review'), timeout=30000)
         page.frames[-1].wait_for_function('window.foundationReview?.ready', timeout=10000)
         direct['passed'] = True
-    except Exception as e:
-        direct['reason'] = str(e).split('Call log:')[0].strip()
+    except Exception as error:
+        direct['reason'] = str(error).split('Call log:')[0].strip()
         page.close()
         page = ctx.new_page()
         page.on('pageerror', lambda e: errors.append(str(e)))
-        page.set_content((ROOT / 'dist/Morph-Lab-Review.html').read_text(), timeout=30000)
+        page.set_content(release_html('review'), timeout=30000)
     frame = page.frames[-1]
     frame.wait_for_function('window.foundationReview?.ready', timeout=30000)
     check(
@@ -125,15 +130,15 @@ with sync_playwright() as p:
     )
     with page.expect_download(timeout=90000) as d:
         frame.locator('[data-review="pose-sheet"]').click()
-    d.value.save_as(str(OUT / 'v9-radial-cycle.png'))
+    d.value.save_as(str(OUT / 'radial-cycle.png'))
     check(
         'Creature cycle sheet exports eight rendered phases',
-        (OUT / 'v9-radial-cycle.png').stat().st_size > 10000,
+        (OUT / 'radial-cycle.png').stat().st_size > 10000,
     )
     with page.expect_download() as d:
         frame.locator('[data-review="report"]').click()
-    d.value.save_as(str(OUT / 'v9-starweaver.review-report.json'))
-    record = json.loads((OUT / 'v9-starweaver.review-report.json').read_text())
+    d.value.save_as(str(OUT / 'starweaver.review-report.json'))
+    record = json.loads((OUT / 'starweaver.review-report.json').read_text())
     check(
         'Audit export keeps travel, cycle and exact coverage',
         record['session']['candidate']['motion']['travel']['medium'] == 'water'
@@ -163,33 +168,16 @@ with sync_playwright() as p:
         frame.evaluate('foundationReview.snapshot().candidate') == genome
         and frame.evaluate('foundationReview.snapshot().settings.phase') == 0.39,
     )
-    page.screenshot(path=str(OUT / 'v9-inspector-desktop.png'), full_page=True)
+    page.screenshot(path=str(OUT / 'inspector-desktop.png'), full_page=True)
     page.set_viewport_size({'width': 390, 'height': 844})
     check(
         'Combined new-model review fits mobile width',
         page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
         and frame.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),
     )
-    page.screenshot(path=str(OUT / 'v9-inspector-mobile.png'), full_page=True)
+    page.screenshot(path=str(OUT / 'inspector-mobile.png'), full_page=True)
     # Controls test: real editor, explicitly no engine or rendering substitution.
-    built = (ROOT / 'dist/runtime.html').read_text()
-    imports = re.search(r'<script type="importmap">(.*?)</script>', built, re.S).group(1)
-    entry = (
-        (ROOT / 'tests/ui-harness.html')
-        .read_text()
-        .split('<script type="module">')[1]
-        .split('</script>')[0]
-        .replace('../src/', 'morph/src/')
-    )
-    html = (
-        '<html><head><style>'
-        + (ROOT / 'style.css').read_text()
-        + '</style><script type="importmap">'
-        + imports
-        + '</script></head><body><div id="app"></div><script type="module">'
-        + entry
-        + '</script></body></html>'
-    )
+    html = harness_html(quirks_mode=True)
     editor = ctx.new_page()
     editor.set_viewport_size({'width': 1500, 'height': 1100})
     editor.on('pageerror', lambda e: errors.append(str(e)))
@@ -330,7 +318,7 @@ with sync_playwright() as p:
     )
     check('No uncaught app errors occurred', not errors)
     result = {
-        'suite': 'v9 Strange Forms browser checks',
+        'suite': 'Strange Forms browser checks',
         'passed': len(checks),
         'checks': checks,
         'errors': errors,
@@ -340,6 +328,6 @@ with sync_playwright() as p:
         'engineAndPhysicsVerified': False,
         'editorHarnessHasRenderer': False,
     }
-    (OUT / 'v9-frontier-browser.json').write_text(json.dumps(result, indent=2) + '\n')
+    write_report(SUITE, result)
     print(json.dumps({k: v for k, v in result.items() if k != 'checks'}, indent=2))
     browser.close()

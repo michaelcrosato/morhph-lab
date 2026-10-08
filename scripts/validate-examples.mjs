@@ -34,7 +34,7 @@ for (const { kind } of items) counts[kind] = (counts[kind] || 0) + 1;
 await mkdir(new URL('test-results/', root), { recursive: true });
 const report = { status: 'passed', passed: items.length, counts, files: items };
 await writeFile(
-  new URL('test-results/v7-examples-report.json', root),
+  new URL('test-results/examples-report.json', root),
   JSON.stringify(report, null, 2) + '\n',
 );
 console.log(JSON.stringify({ passed: items.length, counts }, null, 2));

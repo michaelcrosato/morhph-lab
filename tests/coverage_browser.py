@@ -2,13 +2,26 @@
 No substitute WebGL or physics implementation is used.
 """
 
+import hashlib
+import json
+import struct
+import zipfile
 from pathlib import Path
-import json, re, os, hashlib, struct, zipfile
+
 from playwright.sync_api import sync_playwright
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'test-results/v11/browser'
-OUT.mkdir(parents=True, exist_ok=True)
+from browser_support import (
+    APP_VERSION,
+    harness_html,
+    launch_chromium,
+    release_html,
+    release_sha256,
+    suite_dir,
+    write_report,
+)
+
+SUITE = Path(__file__).stem
+OUT = suite_dir(SUITE)
 checks = []
 PARTS = [
     'leg',
@@ -52,11 +65,7 @@ def glb_json(raw):
 
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(
-        executable_path=os.environ.get('CHROMIUM_PATH', '/usr/bin/chromium'),
-        headless=True,
-        args=['--no-sandbox', '--disable-dev-shm-usage'],
-    )
+    browser = launch_chromium(p)
     ctx = browser.new_context(
         offline=True, accept_downloads=True, viewport={'width': 1560, 'height': 1100}
     )
@@ -65,11 +74,10 @@ with sync_playwright() as p:
     requests = []
     page.on('pageerror', lambda e: errors.append(str(e)))
     page.on('request', lambda r: requests.append(r.url))
-    html = (ROOT / 'dist/Morph-Lab-Review.html').read_text()
-    page.set_content(html, timeout=30000)
+    page.set_content(release_html('review'), timeout=30000)
     f = page.frames[-1]
     f.wait_for_function('window.foundationReview?.ready', timeout=30000)
-    check('Version 12 in combined shell', '12.0.0' in page.locator('header').inner_text())
+    check('Package version in combined shell', APP_VERSION in page.locator('header').inner_text())
     check('All 89 presets retained', f.locator('#model-select option').count() == 89)
     f.locator('#model-select').evaluate('e=>e.closest("details").open=true')
     before = f.evaluate('foundationReview.snapshot()')
@@ -110,7 +118,7 @@ with sync_playwright() as p:
     )
     f.locator('[data-review="fit"]').click()
     f.evaluate('window.scrollTo(0,0)')
-    page.screenshot(path=str(OUT / 'v11-complete-desktop.png'), full_page=True)
+    page.screenshot(path=str(OUT / 'complete-desktop.png'), full_page=True)
     check(
         'Desktop has no horizontal overflow',
         f.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),
@@ -169,7 +177,7 @@ with sync_playwright() as p:
         'Export leaves all session state unchanged',
         f.evaluate('foundationReview.snapshot()') == before,
     )
-    page.screenshot(path=str(OUT / 'v11-grouped-export.png'), full_page=True)
+    page.screenshot(path=str(OUT / 'grouped-export.png'), full_page=True)
     f.locator('#delivery-layout').select_option('separate')
     check('Layout change clears stale result', not f.locator('#delivery-result').is_visible())
     f.locator('#delivery-mode').select_option('static')
@@ -225,7 +233,7 @@ with sync_playwright() as p:
         f.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),
     )
     f.evaluate('window.scrollTo(0,0)')
-    page.screenshot(path=str(OUT / 'v11-complete-mobile.png'), full_page=True)
+    page.screenshot(path=str(OUT / 'complete-mobile.png'), full_page=True)
     # Load a synthetic old approval through the actual file control. It must not survive.
     page.set_viewport_size({'width': 1560, 'height': 1100})
     old = f.evaluate('foundationReview.snapshot()')
@@ -273,26 +281,9 @@ with sync_playwright() as p:
         not any(u.startswith(('http:', 'https:')) for u in requests),
     )
     # Existing editor modules through their actual controls. No game renderer.
-    raw = (ROOT / 'dist/runtime.html').read_text()
-    imports = re.search(r'<script type="importmap">(.*?)</script>', raw, re.S).group(1)
-    entry = (
-        (ROOT / 'tests/ui-harness.html')
-        .read_text()
-        .split('<script type="module">')[1]
-        .split('</script>')[0]
-        .replace('../src/', 'morph/src/')
-    )
     e = ctx.new_page()
     e.on('pageerror', lambda err: errors.append(str(err)))
-    e.set_content(
-        '<html><head><style>'
-        + (ROOT / 'style.css').read_text()
-        + '</style><script type="importmap">'
-        + imports
-        + '</script></head><body><div id="app"></div><script type="module">'
-        + entry
-        + '</script></body></html>'
-    )
+    e.set_content(harness_html(quirks_mode=True))
     e.wait_for_function('window.harness?.ready')
     e.locator('[data-library="parts"]').click()
     for t in PARTS:
@@ -306,7 +297,7 @@ with sync_playwright() as p:
         check(t + ' one-step undo preserves source', e.evaluate('harness.store.state') == before)
     check('No uncaught application errors', not errors)
     report = {
-        'suite': 'v11 complete geometry and material packing browser checks',
+        'suite': 'Complete geometry and material packing browser checks',
         'passed': len(checks),
         'checks': checks,
         'errors': errors,
@@ -315,9 +306,9 @@ with sync_playwright() as p:
         'editorHasRenderer': False,
         'gpuTested': False,
         'physicsTested': False,
-        'entry': 'Exact combined HTML via set_content',
-        'htmlSHA256': hashlib.sha256(html.encode()).hexdigest(),
+        'entry': 'Combined HTML via set_content, starting in Inspect',
+        'htmlSHA256': release_sha256(),
     }
-    (OUT / 'report.json').write_text(json.dumps(report, indent=2) + '\n')
+    write_report(SUITE, report)
     print(json.dumps({k: v for k, v in report.items() if k != 'checks'}, indent=2))
     browser.close()

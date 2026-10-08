@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 /** Installation report only. Browser evidence comes from System checks. */
 import { readFile, writeFile } from 'node:fs/promises';
+import { APP_VERSION, ENGINES } from './project.mjs';
 const checks = [];
-for (const [id, want] of [
-  ['three', '0.181.0'],
-  ['@dimforge/rapier3d-compat', '0.19.3'],
-]) {
+for (const [id, { version: want }] of Object.entries(ENGINES)) {
   try {
     const p = JSON.parse(
       await readFile(new URL('../node_modules/' + id + '/package.json', import.meta.url), 'utf8'),
@@ -16,7 +14,7 @@ for (const [id, want] of [
       expected: want,
       actual: p.version,
     });
-  } catch (e) {
+  } catch {
     checks.push({
       id,
       status: 'blocked',
@@ -28,7 +26,7 @@ for (const [id, want] of [
 const report = {
   format: 'morph-lab-install-check',
   version: 1,
-  applicationVersion: '12.0.0',
+  applicationVersion: APP_VERSION,
   node: process.version,
   checks,
   browserTestsRun: false,

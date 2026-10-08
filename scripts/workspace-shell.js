@@ -1,11 +1,7 @@
 /* Single-document launcher. Only the active workspace has a live iframe. */
 (() => {
   'use strict';
-  const bytes = Uint8Array.from(
-    atob(document.querySelector('#morph-document').textContent.trim()),
-    c => c.charCodeAt(0),
-  );
-  const documentHTML = new TextDecoder().decode(bytes);
+  const documentHTML = JSON.parse(document.querySelector('#morph-document').textContent);
   const host = document.querySelector('#workspace-host');
   let frame = null,
     active = '',

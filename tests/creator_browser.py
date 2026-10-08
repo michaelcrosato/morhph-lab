@@ -3,13 +3,17 @@ No renderer, storage, or physics APIs are replaced. Origin storage is unavailabl
 under set_content; persistence faults and successful writes are covered in core tests.
 """
 
+import json
+import struct
+import zipfile
 from pathlib import Path
-import json, hashlib, os, zipfile, struct
+
 from playwright.sync_api import sync_playwright
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'test-results/v12/browser'
-OUT.mkdir(parents=True, exist_ok=True)
+from browser_support import launch_chromium, release_html, release_sha256, suite_dir, write_report
+
+SUITE = Path(__file__).stem
+OUT = suite_dir(SUITE)
 checks = []
 errors = []
 
@@ -29,11 +33,7 @@ def number(f, sel, value):
 
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(
-        executable_path=os.environ.get('CHROMIUM_PATH', '/usr/bin/chromium'),
-        headless=True,
-        args=['--no-sandbox', '--disable-dev-shm-usage'],
-    )
+    browser = launch_chromium(p)
     ctx = browser.new_context(
         offline=True, accept_downloads=True, viewport={'width': 1480, 'height': 1500}
     )
@@ -41,7 +41,7 @@ with sync_playwright() as p:
     requests = []
     page.on('pageerror', lambda e: errors.append(str(e)))
     page.on('request', lambda r: requests.append(r.url))
-    html = (ROOT / 'dist/Morph-Lab.html').read_text()
+    html = release_html('creator')
     page.set_content(html, timeout=30000)
 
     def current(mode):
@@ -449,17 +449,17 @@ with sync_playwright() as p:
     )
     check('No uncaught errors', not errors)
     report = {
-        'suite': 'v12 real creator, saved snapshots, mixing, exports and workspace recovery',
+        'suite': 'Creator: saved snapshots, mixing, exports and workspace recovery',
         'passed': len(checks),
         'checks': checks,
         'errors': errors,
-        'htmlSHA256': hashlib.sha256(html.encode()).hexdigest(),
+        'htmlSHA256': release_sha256(),
         'rendering': 'Actual CPU geometry',
         'gpuTested': False,
         'physicsTested': False,
         'originStorageInBrowser': 'Unavailable under set_content; no mock storage used',
         'navigation': 'Exact packaged HTML via set_content; no Windows file navigation',
     }
-    (OUT / 'report.json').write_text(json.dumps(report, indent=2) + '\n')
+    write_report(SUITE, report)
     print(json.dumps({k: v for k, v in report.items() if k != 'checks'}, indent=2))
     browser.close()

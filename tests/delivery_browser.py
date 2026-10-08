@@ -2,13 +2,25 @@
 No engine or WebGL substitute. Engine failure in the offline context must be reported as blocked.
 """
 
+import hashlib
+import json
+import struct
+import zipfile
 from pathlib import Path
-import json, os, zipfile, hashlib, struct
+
 from playwright.sync_api import sync_playwright
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'test-results/v11/regression-delivery'
-OUT.mkdir(parents=True, exist_ok=True)
+from browser_support import (
+    APP_VERSION,
+    launch_chromium,
+    release_html,
+    release_sha256,
+    suite_dir,
+    write_report,
+)
+
+SUITE = Path(__file__).stem
+OUT = suite_dir(SUITE)
 checks = []
 
 
@@ -33,11 +45,7 @@ def download(page, f, selector, target):
 
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(
-        executable_path=os.environ.get('CHROMIUM_PATH', '/usr/bin/chromium'),
-        headless=True,
-        args=['--no-sandbox', '--disable-dev-shm-usage'],
-    )
+    browser = launch_chromium(p)
     ctx = browser.new_context(
         offline=True, accept_downloads=True, viewport={'width': 1540, 'height': 1120}
     )
@@ -46,10 +54,13 @@ with sync_playwright() as p:
     requests = []
     page.on('pageerror', lambda e: errors.append(str(e)))
     page.on('request', lambda r: requests.append(r.url))
-    page.set_content((ROOT / 'dist/Morph-Lab-Review.html').read_text(), timeout=30000)
+    page.set_content(release_html('review'), timeout=30000)
     f = page.frames[-1]
     f.wait_for_function('window.foundationReview?.ready', timeout=30000)
-    check('Current shell is version 12', '12.0.0' in page.locator('header').inner_text())
+    check(
+        'Current shell shows the package version',
+        APP_VERSION in page.locator('header').inner_text(),
+    )
     check('All 89 models remain', f.locator('#model-select option').count() == 89)
     check(
         'No engine requests during offline startup',
@@ -84,9 +95,9 @@ with sync_playwright() as p:
         'Open endpoints are reported',
         'Endpoints differ' in f.locator('#delivery-loop').inner_text(),
     )
-    page.screenshot(path=str(OUT / 'v10-delivery-desktop.png'), full_page=True)
-    zpath = download(page, f, '#delivery-zip', 'browser-moonbell.asset.zip')
-    gpath = download(page, f, '#delivery-glb', 'browser-moonbell.glb')
+    page.screenshot(path=str(OUT / 'delivery-desktop.png'), full_page=True)
+    zpath = download(page, f, '#delivery-zip', 'moonbell.asset.zip')
+    gpath = download(page, f, '#delivery-glb', 'moonbell.glb')
     with zipfile.ZipFile(zpath) as z:
         check('Archive passes CRC verification', z.testzip() is None)
         check(
@@ -150,7 +161,7 @@ with sync_playwright() as p:
         'Complete source reports active geometry coverage',
         'all active' in f.locator('#delivery-coverage').inner_text(),
     )
-    source = download(page, f, '#delivery-source', 'browser-blocked-source.json')
+    source = download(page, f, '#delivery-source', 'mossback-source.json')
     check(
         'Original model exports its complete unchanged blueprint',
         json.loads(source.read_text()) == before_missing['candidate'],
@@ -181,16 +192,14 @@ with sync_playwright() as p:
             'e=>e.getBoundingClientRect().right<=innerWidth && e.scrollWidth<=e.clientWidth+1'
         ),
     )
-    page.screenshot(path=str(OUT / 'v10-delivery-mobile.png'), full_page=True)
+    page.screenshot(path=str(OUT / 'delivery-mobile.png'), full_page=True)
     f.locator('#asset-delivery [data-tool-close]').click()
     page.set_viewport_size({'width': 1540, 'height': 1120})
     f.locator('[data-review="system-checks"]').click()
     check('System panel opens offline', f.locator('#system-checks').evaluate('e=>e.open'))
     f.locator('#system-local').click()
     f.wait_for_function('!document.querySelector("#system-download").disabled', timeout=30000)
-    local = json.loads(
-        download(page, f, '#system-download', 'browser-system-local.json').read_text()
-    )
+    local = json.loads(download(page, f, '#system-download', 'system-local.json').read_text())
     check('Browser report has local scope', local['scope'] == 'local')
     check(
         'Actual WebAssembly compiles',
@@ -204,7 +213,7 @@ with sync_playwright() as p:
     )
     f.locator('#system-full').click()
     f.wait_for_function('!document.querySelector("#system-download").disabled', timeout=90000)
-    full = json.loads(download(page, f, '#system-download', 'browser-system-full.json').read_text())
+    full = json.loads(download(page, f, '#system-download', 'system-full.json').read_text())
     check('Offline engine report is blocked', full['status'] == 'blocked')
     check(
         'Engine load failure is explicit',
@@ -224,7 +233,7 @@ with sync_playwright() as p:
         'Model render remains unverified without engines',
         next(x for x in full['checks'] if x['id'] == 'three-render')['status'] == 'blocked',
     )
-    page.screenshot(path=str(OUT / 'v10-system-checks.png'), full_page=True)
+    page.screenshot(path=str(OUT / 'system-checks.png'), full_page=True)
     f.locator('#system-checks [data-tool-close]').click()
     saved = f.evaluate('foundationReview.snapshot()')
     f.locator('#review-workshop-link').click()
@@ -247,17 +256,15 @@ with sync_playwright() as p:
     )
     check('No uncaught application errors', not errors)
     report = {
-        'suite': 'v11 regression asset delivery and diagnostic UI',
+        'suite': 'Asset delivery and diagnostic UI regression',
         'passed': len(checks),
         'checks': checks,
         'webgl2Available': webgl,
         'engineRenderingTested': False,
         'physicsTested': False,
         'errors': errors,
-        'htmlSHA256': hashlib.sha256(
-            (ROOT / 'dist/Morph-Lab-Review.html').read_bytes()
-        ).hexdigest(),
+        'htmlSHA256': release_sha256(),
     }
-    (OUT / 'browser-report.json').write_text(json.dumps(report, indent=2) + '\n')
+    write_report(SUITE, report)
     print(json.dumps({k: v for k, v in report.items() if k != 'checks'}, indent=2))
     browser.close()

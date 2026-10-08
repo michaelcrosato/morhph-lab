@@ -3,13 +3,21 @@ Source pose fixtures come from the procedural compiler before material grouping.
 This checks transfer, not GPU playback or Khronos conformance.
 """
 
+import hashlib
+import io
+import json
+import struct
+import zipfile
 from pathlib import Path
-import io, json, struct, hashlib, zipfile
+
 import numpy as np
 import trimesh
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = ROOT / 'test-results/v11/packing'
+# Written by scripts/packing-samples.mjs: report.json plus one directory per model id.
+BASE = ROOT / 'test-results/packing'
+if not (BASE / 'report.json').exists():
+    raise SystemExit('Missing ' + str(BASE / 'report.json') + '. Run scripts/packing-samples.mjs.')
 checks = []
 records = []
 
@@ -67,6 +75,7 @@ for item in json.loads((BASE / 'report.json').read_text())['records']:
         len(j['meshes']) == item['groupedMeshes'] < item['sourceMeshes'],
     )
     scene = trimesh.load(io.BytesIO(raw), file_type='glb', force='scene', process=False)
+    assert isinstance(scene, trimesh.Scene), type(scene)
     check(id + ' trimesh loads all material groups', len(scene.geometry) == item['groupedMeshes'])
     check(
         id + ' independent triangle count',
@@ -169,7 +178,7 @@ report = {
     'passed': len(checks),
     'failures': 0,
     'source': 'Fresh procedural source buffers before grouping',
-    'staticImporter': 'trimesh ' + trimesh.__version__,
+    'staticImporter': 'trimesh ' + str(trimesh.__version__),
     'animationDecoder': 'Independent Python / NumPy',
     'models': records,
     'gpuTested': False,
@@ -179,5 +188,5 @@ report = {
     'unityTested': False,
     'unrealTested': False,
 }
-(BASE / 'independent-import.json').write_text(json.dumps(report, indent=2) + '\n')
+(BASE / 'import-report.json').write_text(json.dumps(report, indent=2) + '\n')
 print(json.dumps(report, indent=2))

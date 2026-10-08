@@ -1,6 +1,5 @@
 # Dependencies
 node_modules/
-vendor/
 
 # Generated test and review output
 test-results/

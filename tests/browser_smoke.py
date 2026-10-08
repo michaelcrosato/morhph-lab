@@ -7,11 +7,14 @@ import json
 import math
 import os
 from pathlib import Path
+
 from playwright.sync_api import sync_playwright
 
+from browser_support import SWIFTSHADER_ARGS, launch_chromium, suite_dir, write_report
+
 BASE = os.environ.get('MORPH_URL', 'http://localhost:3000')
-OUT = Path(os.environ.get('TEST_OUTPUT', 'test-results'))
-OUT.mkdir(parents=True, exist_ok=True)
+SUITE = Path(__file__).stem
+OUT = suite_dir(SUITE)
 checks, errors, console_errors = [], [], []
 
 
@@ -21,19 +24,9 @@ def check(label, condition):
 
 
 with sync_playwright() as p:
-    options = {'headless': True}
-    if os.environ.get('CHROMIUM_PATH'):
-        options['executable_path'] = os.environ['CHROMIUM_PATH']
-    elif Path('/usr/bin/chromium').exists():
-        options['executable_path'] = '/usr/bin/chromium'
     # Optional software rendering for CI, not an alteration of browser policies.
-    if os.environ.get('MORPH_SOFTWARE_GL') == '1':
-        options['args'] = [
-            '--use-gl=angle',
-            '--use-angle=swiftshader',
-            '--enable-unsafe-swiftshader',
-        ]
-    browser = p.chromium.launch(**options)
+    software_gl = os.environ.get('MORPH_SOFTWARE_GL') == '1'
+    browser = launch_chromium(p, SWIFTSHADER_ARGS if software_gl else ())
     page = browser.new_page(viewport={'width': 1440, 'height': 960}, device_scale_factor=1)
     page.on('pageerror', lambda error: errors.append(str(error)))
     page.on('console', lambda msg: console_errors.append(msg.text) if msg.type == 'error' else None)
@@ -110,7 +103,7 @@ with sync_playwright() as p:
                 pattern + ' reaches the running skin shader',
                 page.evaluate('morphLab.snapshot().genome.appearance.pattern') == pattern,
             )
-        page.screenshot(path=str(OUT / 'full-engine-v4-duelist.png'))
+        page.screenshot(path=str(OUT / 'duelist.png'))
         page.locator('#model-library [data-preset="wayfarer"]').click()
         page.locator('[data-library="kits"]').click()
         page.locator('[data-kit="guard"]').click()
@@ -158,7 +151,7 @@ with sync_playwright() as p:
             counts[-1]['geometries'] <= counts[0]['geometries'] + 2
             and counts[-1]['textures'] <= counts[0]['textures'] + 1,
         )
-        page.screenshot(path=str(OUT / 'full-engine-workshop.png'))
+        page.screenshot(path=str(OUT / 'workshop.png'))
         page.locator('[data-action="test"]').first.click()
         page.wait_for_function("morphLab.snapshot().mode==='habitat'")
         page.wait_for_timeout(800)
@@ -174,7 +167,7 @@ with sync_playwright() as p:
         check('Habitat pose remains finite', all(math.isfinite(v) for v in after))
         page.keyboard.press('Space')
         page.wait_for_timeout(250)
-        page.screenshot(path=str(OUT / 'full-engine-habitat.png'))
+        page.screenshot(path=str(OUT / 'habitat.png'))
         page.keyboard.press('Escape')
         page.wait_for_function("morphLab.snapshot().mode==='editor'")
         check(
@@ -197,7 +190,7 @@ with sync_playwright() as p:
             'consoleErrors': console_errors,
             'versions': versions,
         }
-        (OUT / 'full-engine-report.json').write_text(json.dumps(report, indent=2))
+        write_report(SUITE, report)
         print(json.dumps(report, indent=2))
     except Exception as error:
         report = {
@@ -209,7 +202,7 @@ with sync_playwright() as p:
             'pageErrors': errors,
             'consoleErrors': console_errors,
         }
-        (OUT / 'full-engine-report.json').write_text(json.dumps(report, indent=2))
+        write_report(SUITE, report)
         raise
     finally:
         browser.close()

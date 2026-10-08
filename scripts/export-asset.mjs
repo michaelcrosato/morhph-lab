@@ -1,5 +1,19 @@
 #!/usr/bin/env node
 /** Local, engine-free delivery. Refuses missing geometry and accidental overwrite. */
+const USAGE = `Usage: node scripts/export-asset.mjs (--preset ID | --input source.morph.json) --out NEW_DIRECTORY [options]
+
+Writes <name>.glb, <name>.asset.zip, manifest.json and audit.json into a new directory.
+
+Options:
+  --motion            export the motion cycle (default: one static pose)
+  --frames N          motion samples (default 9)
+  --pose NAME         static review pose, e.g. bind or a-pose (default bind)
+  --phase T           static pose phase, 0..1 (default 0.5)
+  --target NAME       triangle/mesh budget: desktop, mobile, or crowd (default desktop)
+  --layout NAME       mesh layout: separate, or material to group by material (default separate)
+  --flat              omit pigment; flat material colors only
+  --allow-warnings    export even when the audit reports warnings
+  --help              show this message`;
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { preset, parseGenome } from '../src/core/genome.js';
@@ -7,6 +21,10 @@ import { buildDelivery } from '../src/export/delivery.js';
 const args = process.argv.slice(2),
   options = {},
   flags = new Set(['motion', 'allow-warnings', 'flat']);
+if (args.includes('--help') || args.includes('-h')) {
+  console.log(USAGE);
+  process.exit(0);
+}
 try {
   for (let i = 0; i < args.length; i++) {
     const key = args[i].replace(/^--/, '');
@@ -24,10 +42,7 @@ try {
       options[key] = value;
     }
   }
-  if (Boolean(options.preset) === Boolean(options.input) || !options.out)
-    throw new Error(
-      'Use --preset ID or --input source.json, and --out NEW_DIRECTORY. Optional: --motion --frames 9 --target desktop --allow-warnings --flat.',
-    );
+  if (Boolean(options.preset) === Boolean(options.input) || !options.out) throw new Error(USAGE);
   const g = options.preset
     ? preset(options.preset)
     : parseGenome(await readFile(options.input, 'utf8'));

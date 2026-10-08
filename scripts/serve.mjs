@@ -1,8 +1,7 @@
 import http from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-const base = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+import { ROOT as base, ENGINES, cdnUrl, localUrl } from './project.mjs';
 const root = path.resolve(process.env.SERVE_DIR || base),
   port = Number(process.env.PORT || 3000);
 const types = {
@@ -29,20 +28,14 @@ const server = http.createServer(async (req, res) => {
     let content = await readFile(file);
     // With npm dependencies installed, dev mode uses pinned local engine files.
     // No bundler and no CDN access are then required.
-    if (['index.html', 'review.html'].includes(path.basename(file))) {
+    if (path.basename(file) === 'index.html') {
       try {
-        await stat(path.join(base, 'node_modules/three/build/three.module.js'));
-        await stat(path.join(base, 'node_modules/@dimforge/rapier3d-compat/rapier.mjs'));
-        content = content
-          .toString()
-          .replace(
-            'https://cdn.jsdelivr.net/npm/three@0.181.0/build/three.module.js',
-            '/node_modules/three/build/three.module.js',
-          )
-          .replace(
-            'https://cdn.jsdelivr.net/npm/@dimforge/rapier3d-compat@0.19.3/rapier.mjs',
-            '/node_modules/@dimforge/rapier3d-compat/rapier.mjs',
-          );
+        let text = content.toString();
+        for (const id of Object.keys(ENGINES)) {
+          await stat(path.join(base, localUrl(id)));
+          text = text.replace(cdnUrl(id), localUrl(id));
+        }
+        content = text;
       } catch {}
     }
     res.writeHead(200, {

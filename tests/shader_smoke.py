@@ -2,13 +2,15 @@
 This verifies these shader functions, not Three.js material integration.
 """
 
+import json
+import subprocess
 from pathlib import Path
-import json, os, subprocess
+
 from playwright.sync_api import sync_playwright
 
-ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / 'test-results'
-OUT.mkdir(exist_ok=True)
+from browser_support import ROOT, SWIFTSHADER_ARGS, launch_chromium, write_report
+
+SUITE = Path(__file__).stem
 shaders = json.loads(
     subprocess.check_output(
         [
@@ -29,21 +31,7 @@ fragment = (
 )
 vertex = '#version 300 es\nout vec2 uv;void main(){vec2 pos=vec2((gl_VertexID==1)?3.0:-1.0,(gl_VertexID==2)?3.0:-1.0);uv=pos*.5+.5;gl_Position=vec4(pos,0.,1.);}'
 with sync_playwright() as p:
-    launch = {
-        'headless': True,
-        'args': [
-            '--no-sandbox',
-            '--disable-dev-shm-usage',
-            '--use-gl=angle',
-            '--use-angle=swiftshader',
-            '--enable-unsafe-swiftshader',
-        ],
-    }
-    if os.environ.get('CHROMIUM_PATH'):
-        launch['executable_path'] = os.environ['CHROMIUM_PATH']
-    elif Path('/usr/bin/chromium').exists():
-        launch['executable_path'] = '/usr/bin/chromium'
-    browser = p.chromium.launch(**launch)
+    browser = launch_chromium(p, SWIFTSHADER_ARGS)
     page = browser.new_page()
     page.set_content('<canvas id="shader" width="64" height="64"></canvas>')
     result = page.evaluate(
@@ -68,12 +56,13 @@ with sync_playwright() as p:
 result.setdefault('status', 'passed')
 result.update(
     {
+        'suite': 'Raw WebGL2 pigment shader smoke test',
         'scope': 'Raw WebGL2 pigment functions only',
         'three_material_integration_tested': False,
         'rapier_tested': False,
     }
 )
-(OUT / 'v7-shader-report.json').write_text(json.dumps(result, indent=2))
+write_report(SUITE, result)
 print(json.dumps(result, indent=2))
 
 if not result.get('webgl2'):

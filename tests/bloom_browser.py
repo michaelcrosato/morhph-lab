@@ -1,12 +1,21 @@
 """Actual offline geometry and actual editor controls. No mock physics or renderer."""
 
+import json
 from pathlib import Path
-import json, re, os
+
 from playwright.sync_api import sync_playwright
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'test-results'
-OUT.mkdir(exist_ok=True)
+from browser_support import (
+    harness_html,
+    launch_chromium,
+    release_html,
+    release_url,
+    suite_dir,
+    write_report,
+)
+
+SUITE = Path(__file__).stem
+OUT = suite_dir(SUITE)
 MODELS = [
     'pebbleroller',
     'mossstrider',
@@ -40,11 +49,7 @@ def value(frame, selector, v):
 
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(
-        executable_path=os.environ.get('CHROMIUM_PATH', '/usr/bin/chromium'),
-        headless=True,
-        args=['--no-sandbox', '--disable-dev-shm-usage'],
-    )
+    browser = launch_chromium(p)
     ctx = browser.new_context(
         offline=True, accept_downloads=True, viewport={'width': 1560, 'height': 1150}
     )
@@ -54,17 +59,17 @@ with sync_playwright() as p:
     webgl = page.evaluate(
         '(()=>{try{const g=document.createElement("canvas").getContext("webgl2");return {available:!!g,version:g?g.getParameter(g.VERSION):null};}catch(e){return {available:false,error:e.message}}})()'
     )
-    direct = {'attempted': True, 'passed': False}
+    direct: dict[str, bool | str] = {'attempted': True, 'passed': False}
     try:
-        page.goto((ROOT / 'dist/Morph-Lab-Review.html').as_uri(), timeout=20000)
+        page.goto(release_url('review'), timeout=20000)
         page.frames[-1].wait_for_function('window.foundationReview?.ready', timeout=10000)
         direct['passed'] = True
-    except Exception as e:
-        direct['reason'] = str(e).split('Call log:')[0].strip()
+    except Exception as error:
+        direct['reason'] = str(error).split('Call log:')[0].strip()
         page.close()
         page = ctx.new_page()
         page.on('pageerror', lambda e: errors.append(str(e)))
-        page.set_content((ROOT / 'dist/Morph-Lab-Review.html').read_text(), timeout=30000)
+        page.set_content(release_html('review'), timeout=30000)
     f = page.frames[-1]
     f.wait_for_function('window.foundationReview?.ready', timeout=30000)
     check(
@@ -134,10 +139,10 @@ with sync_playwright() as p:
     )
     with page.expect_download(timeout=90000) as d:
         f.locator('[data-review="pose-sheet"]').click()
-    d.value.save_as(str(OUT / 'v9-overhead-cycle.png'))
+    d.value.save_as(str(OUT / 'overhead-cycle.png'))
     check(
         'Humanoid action-cycle sheet exports eight real frames',
-        (OUT / 'v9-overhead-cycle.png').stat().st_size > 10000,
+        (OUT / 'overhead-cycle.png').stat().st_size > 10000,
     )
     check(
         'Audit includes the exact action sample time',
@@ -178,15 +183,15 @@ with sync_playwright() as p:
     )
     with page.expect_download(timeout=90000) as d:
         f.locator('[data-review="pose-sheet"]').click()
-    d.value.save_as(str(OUT / 'v9-shell-cycle.png'))
+    d.value.save_as(str(OUT / 'shell-cycle.png'))
     check(
         'Pose sheet exports actual rendered frames',
-        (OUT / 'v9-shell-cycle.png').stat().st_size > 10000,
+        (OUT / 'shell-cycle.png').stat().st_size > 10000,
     )
     with page.expect_download() as d:
         f.locator('[data-review="report"]').click()
-    d.value.save_as(str(OUT / 'v9-shell.review-report.json'))
-    r = json.loads((OUT / 'v9-shell.review-report.json').read_text())
+    d.value.save_as(str(OUT / 'shell.review-report.json'))
+    r = json.loads((OUT / 'shell.review-report.json').read_text())
     check(
         'Audit export retains the blueprint and exact coverage',
         r['audit']['excludedGenes'] == 0 and r['session']['candidate']['name'] == 'Clap shell',
@@ -219,33 +224,16 @@ with sync_playwright() as p:
     value(f, '#review-phase', 0.5)
     f.locator('[data-review="fit"]').click()
     f.evaluate('window.scrollTo(0,0)')
-    page.screenshot(path=str(OUT / 'v9-inspector-desktop.png'), full_page=True)
+    page.screenshot(path=str(OUT / 'inspector-desktop.png'), full_page=True)
     page.set_viewport_size({'width': 390, 'height': 844})
     check(
         'Combined inspector has no horizontal mobile overflow',
         page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
         and f.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),
     )
-    page.screenshot(path=str(OUT / 'v9-inspector-mobile.png'), full_page=True)
+    page.screenshot(path=str(OUT / 'inspector-mobile.png'), full_page=True)
     # Real editor harness, without a GPU renderer. It uses the release module bytes.
-    built = (ROOT / 'dist/runtime.html').read_text()
-    imports = re.search(r'<script type="importmap">(.*?)</script>', built, re.S).group(1)
-    entry = (
-        (ROOT / 'tests/ui-harness.html')
-        .read_text()
-        .split('<script type="module">')[1]
-        .split('</script>')[0]
-        .replace('../src/', 'morph/src/')
-    )
-    html = (
-        '<html><head><style>'
-        + (ROOT / 'style.css').read_text()
-        + '</style><script type="importmap">'
-        + imports
-        + '</script></head><body><div id="app"></div><script type="module">'
-        + entry
-        + '</script></body></html>'
-    )
+    html = harness_html(quirks_mode=True)
     e = ctx.new_page()
     e.set_viewport_size({'width': 1500, 'height': 1100})
     e.on('pageerror', lambda x: errors.append(str(x)))
@@ -407,7 +395,7 @@ with sync_playwright() as p:
     e.locator('[data-mix-action="apply"]').click()
     check('No uncaught application errors occurred', not errors)
     result = {
-        'suite': 'v9 Carapace & Bloom browser checks',
+        'suite': 'Carapace & Bloom browser checks',
         'passed': len(checks),
         'checks': checks,
         'errors': errors,
@@ -418,6 +406,6 @@ with sync_playwright() as p:
         'engineAndPhysicsVerified': False,
         'editorHarnessHasRenderer': False,
     }
-    (OUT / 'v9-bloom-browser.json').write_text(json.dumps(result, indent=2) + '\n')
+    write_report(SUITE, result)
     print(json.dumps({k: v for k, v in result.items() if k != 'checks'}, indent=2))
     browser.close()

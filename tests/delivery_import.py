@@ -3,14 +3,21 @@ standard morph-weight animation and compares every vertex with original source s
 This is not Khronos conformance validation or target-game GPU verification.
 """
 
+import hashlib
+import io
+import json
+import struct
+import zipfile
 from pathlib import Path
-import json, struct, hashlib, zipfile, io
+
 import numpy as np
 import trimesh
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'test-results/v10'
-BASE = OUT / 'samples'
+# Written by scripts/delivery-samples.mjs: index.json plus one directory per model id.
+BASE = ROOT / 'test-results/delivery'
+if not (BASE / 'index.json').exists():
+    raise SystemExit('Missing ' + str(BASE / 'index.json') + '. Run scripts/delivery-samples.mjs.')
 records = []
 checks = []
 
@@ -51,6 +58,7 @@ for item in json.loads((BASE / 'index.json').read_text()):
         ).copy()
 
     scene = trimesh.load(io.BytesIO(raw), file_type='glb', force='scene', process=False)
+    assert isinstance(scene, trimesh.Scene), type(scene)
     check(id + ' loads in independent trimesh', len(scene.geometry) == item['meshes'])
     check(
         id + ' independent triangle count',
@@ -113,7 +121,7 @@ for item in json.loads((BASE / 'index.json').read_text()):
             'meshes': item['meshes'],
             'posesChecked': len(item['fixtures']),
             'maxVertexErrorMetres': max_error,
-            'staticImporter': 'trimesh ' + trimesh.__version__,
+            'staticImporter': 'trimesh ' + str(trimesh.__version__),
         }
     )
 report = {
@@ -128,5 +136,5 @@ report = {
     'gpuTested': False,
     'physicsTested': False,
 }
-(OUT / 'independent-import.json').write_text(json.dumps(report, indent=2) + '\n')
+(BASE / 'import-report.json').write_text(json.dumps(report, indent=2) + '\n')
 print(json.dumps({k: v for k, v in report.items() if k != 'checks'}, indent=2))

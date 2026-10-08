@@ -5,3 +5,4 @@ examples/
 tests/fixtures/
 *.html
 *.md
+package-lock.json

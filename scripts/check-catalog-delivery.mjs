@@ -6,7 +6,7 @@ import { createHash } from 'node:crypto';
 import { PRESET_MODELS, preset } from '../src/core/presets.js';
 import { buildDelivery } from '../src/export/delivery.js';
 const records = [],
-  out = new URL('../test-results/v11/static-exports.json', import.meta.url);
+  out = new URL('../test-results/catalog-exports.json', import.meta.url);
 await mkdir(new URL('./', out), { recursive: true });
 for (const { id } of PRESET_MODELS) {
   try {

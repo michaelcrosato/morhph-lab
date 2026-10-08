@@ -24,7 +24,7 @@ const args = process.argv.slice(2),
     return args[i + 1];
   };
 const out = path.resolve(
-    value('--out', new URL('../test-results/foundation-batch/', import.meta.url).pathname),
+    value('--out', new URL('../test-results/review/foundation/', import.meta.url).pathname),
   ),
   selected = value('--foundation', null),
   catalog = args.includes('--catalog'),

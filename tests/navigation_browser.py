@@ -3,13 +3,17 @@ No engine mocks. Offline workshop failure is expected and tested as recovery.
 The app runs with set_content because local file navigation is blocked in CI.
 """
 
+import json
 from pathlib import Path
-import json, os
+
 from playwright.sync_api import sync_playwright
 
-ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / 'test-results'
-OUT.mkdir(exist_ok=True)
+from browser_support import RELEASE, launch_chromium, release_html, suite_dir, write_report
+
+SUITE = Path(__file__).stem
+OUT = suite_dir(SUITE)
+# A routed stand-in origin for the ?workshop entry; the shipped file is served unchanged.
+RELEASE_ORIGIN = 'http://morph-lab.test/'
 checks = []
 
 
@@ -20,10 +24,7 @@ def check(label, condition):
 
 
 with sync_playwright() as p:
-    binary = os.environ.get('CHROMIUM_PATH') or '/usr/bin/chromium'
-    browser = p.chromium.launch(
-        executable_path=binary, headless=True, args=['--no-sandbox', '--disable-dev-shm-usage']
-    )
+    browser = launch_chromium(p)
     ctx = browser.new_context(
         offline=True, accept_downloads=True, viewport={'width': 1440, 'height': 1000}
     )
@@ -36,7 +37,7 @@ with sync_playwright() as p:
     requests = []
     page.on('pageerror', lambda e: errors.append(str(e)))
     page.on('request', lambda r: requests.append(r.url))
-    page.set_content((ROOT / 'dist/Morph-Lab-Review.html').read_text(), timeout=30000)
+    page.set_content(release_html('review'), timeout=30000)
 
     def current(mode):
         page.wait_for_function(
@@ -106,7 +107,7 @@ with sync_playwright() as p:
         'The old inspector frame is removed',
         len(page.frames) == 2 and not f.evaluate('!!window.foundationReview'),
     )
-    page.screenshot(path=str(OUT / 'v9-workshop-offline.png'), full_page=True)
+    page.screenshot(path=str(OUT / 'workshop-offline.png'), full_page=True)
     f.locator('#startup-inspect').click()
     f = current('review')
     after = f.evaluate('foundationReview.snapshot()')
@@ -130,7 +131,7 @@ with sync_playwright() as p:
     )
     with page.expect_download() as pending:
         f.locator('[data-review="export-blueprint"]').click()
-    export = OUT / 'v9-navigation.morph.json'
+    export = OUT / 'restored.morph.json'
     pending.value.save_as(str(export))
     check(
         'Restored blueprint export is valid and unchanged',
@@ -165,41 +166,55 @@ with sync_playwright() as p:
         'Messages from outside the active workspace are ignored',
         page.evaluate('document.documentElement.dataset.workspace') == 'review',
     )
-    page.screenshot(path=str(OUT / 'v9-inspector.png'), full_page=True)
+    page.screenshot(path=str(OUT / 'inspector.png'), full_page=True)
     page.set_viewport_size({'width': 390, 'height': 844})
     check(
         'The combined layout fits a mobile viewport',
         page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
         and f.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),
     )
-    page.screenshot(path=str(OUT / 'v9-mobile.png'), full_page=True)
-    # Default workshop release also contains the entire inspector.
+    page.screenshot(path=str(OUT / 'mobile.png'), full_page=True)
+    # Morph-Lab.html?workshop opens Workshop first and still contains the entire inspector.
+    # Serve the exact shipped bytes from a routed origin: file:// navigation may be blocked.
     other = ctx.new_page()
     other.on('pageerror', lambda e: errors.append(str(e)))
-    other.set_content((ROOT / 'dist/Morph-Lab-Workshop.html').read_text(), timeout=30000)
+    shipped = RELEASE.read_text()
+    other.route(
+        RELEASE_ORIGIN + '**', lambda route: route.fulfill(body=shipped, content_type='text/html')
+    )
+    other.goto(RELEASE_ORIGIN + 'Morph-Lab.html?workshop', timeout=30000)
     other.frames[-1].wait_for_selector('#startup-error', timeout=30000)
+    first_workspace = other.evaluate('document.documentElement.dataset.workspace')
     other.locator('[data-open-workspace="review"]').click()
     other.wait_for_function('document.documentElement.dataset.workspace==="review"')
     other.frames[-1].wait_for_function('window.foundationReview?.ready', timeout=30000)
     check(
-        'The workshop-default file also contains a working offline inspector',
-        other.frames[-1].evaluate('foundationReview.renderStats().every(x=>x.coverage>500)'),
+        'The ?workshop entry opens Workshop and also contains a working offline inspector',
+        first_workspace == 'workshop'
+        and other.frames[-1].evaluate('foundationReview.renderStats().every(x=>x.coverage>500)'),
     )
     check('No uncaught browser errors occurred', not errors)
     result = {
-        'suite': 'v9 combined-workspace navigation',
+        'suite': 'Combined-workspace navigation',
         'passed': len(checks),
         'checks': checks,
         'uncaughtErrors': errors,
         'offline': True,
-        'entryMethod': 'Playwright set_content with the exact shipped HTML',
+        'entryMethod': (
+            'Playwright set_content with the shipped HTML set to start in Inspect; the '
+            '?workshop entry is the unchanged file served from a routed http origin'
+        ),
         'fileNavigationTested': False,
-        'fileNavigationLimitation': 'Direct file navigation is blocked by the test environment (ERR_BLOCKED_BY_ADMINISTRATOR). In-file switches were exercised through the real buttons.',
+        'fileNavigationLimitation': (
+            'Direct file navigation can be blocked by the test environment '
+            '(ERR_BLOCKED_BY_ADMINISTRATOR), so this suite does not use it. In-file switches '
+            'were exercised through the real buttons.'
+        ),
         'engineMocks': False,
         'engineFailureRecoveryTested': True,
         'fullWebGL2WorkshopTested': False,
         'rapierTested': False,
     }
-    (OUT / 'v9-navigation-browser.json').write_text(json.dumps(result, indent=2) + '\n')
+    write_report(SUITE, result)
     print(json.dumps({k: v for k, v in result.items() if k != 'checks'}, indent=2))
     browser.close()
