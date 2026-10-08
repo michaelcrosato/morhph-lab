@@ -1,6 +1,7 @@
 {
   "format": "morph-lab-review",
   "version": 1,
+  "implementation": "morph-lab-shared-geometry-11",
   "source": {
     "version": 6,
     "rig": {
@@ -189,6 +190,9 @@
         "siphonreach": 0,
         "padcrawl": 0,
         "sensorscan": 0,
+        "animalamble": 0,
+        "animalsniff": 0,
+        "animalbound": 0,
         "idle": 0,
         "walk": 0,
         "run": 0,
@@ -435,6 +439,9 @@
         "siphonreach": 0,
         "padcrawl": 0,
         "sensorscan": 0,
+        "animalamble": 0,
+        "animalsniff": 0,
+        "animalbound": 0,
         "idle": 0,
         "walk": 0,
         "run": 0,
@@ -681,6 +688,9 @@
         "siphonreach": 0,
         "padcrawl": 0,
         "sensorscan": 0,
+        "animalamble": 0,
+        "animalsniff": 0,
+        "animalbound": 0,
         "idle": 0,
         "walk": 0,
         "run": 0,
@@ -753,7 +763,7 @@
   },
   "frame": null,
   "lineage": {
-    "parent": "fnv1a32-06b4afac",
+    "parent": "fnv1a32-65318fbf",
     "profile": "unchanged",
     "amount": 0
   },
@@ -766,6 +776,7 @@
       "attachments": "unreviewed",
       "gameplay": "unreviewed"
     },
+    "resetReason": null,
     "notes": "Actual procedural geometry. Check attachment and body clearance. CPU pigment is approximate. No GPU, physics, or production approval.",
     "fingerprint": null,
     "status": "not-approved"

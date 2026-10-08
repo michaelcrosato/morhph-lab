@@ -1,15 +1,22 @@
+# Dependencies
 node_modules/
-vendor/
+
+# Generated test and review output
+test-results/
+
+# Build output (only the single-file release is committed)
+dist/*
+!dist/Morph-Lab.html
+
+# Python
 __pycache__/
 *.pyc
+
+# OS / editor junk
 .DS_Store
 *:Zone.Identifier
+
+# Local environment
 .env
 .env.*
 !.env.example
-
-# Managed-workspace mounts and the writable Git metadata fallback used here.
-.agents/
-.aws/
-.codex/
-.git-data/

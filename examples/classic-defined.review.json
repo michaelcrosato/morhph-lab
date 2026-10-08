@@ -1,6 +1,7 @@
 {
   "format": "morph-lab-review",
   "version": 1,
+  "implementation": "morph-lab-shared-geometry-11",
   "source": {
     "version": 6,
     "rig": {
@@ -123,6 +124,15 @@
         "corkscrew": 0,
         "turbines": 0,
         "concertina": 0,
+        "ripplewalk": 0,
+        "shellclap": 0,
+        "bloomcycle": 0,
+        "siphonreach": 0,
+        "padcrawl": 0,
+        "sensorscan": 0,
+        "animalamble": 0,
+        "animalsniff": 0,
+        "animalbound": 0,
         "idle": 1,
         "walk": 0,
         "run": 0,
@@ -303,6 +313,15 @@
         "corkscrew": 0,
         "turbines": 0,
         "concertina": 0,
+        "ripplewalk": 0,
+        "shellclap": 0,
+        "bloomcycle": 0,
+        "siphonreach": 0,
+        "padcrawl": 0,
+        "sensorscan": 0,
+        "animalamble": 0,
+        "animalsniff": 0,
+        "animalbound": 0,
         "idle": 1,
         "walk": 0,
         "run": 0,
@@ -483,6 +502,15 @@
         "corkscrew": 0,
         "turbines": 0,
         "concertina": 0,
+        "ripplewalk": 0,
+        "shellclap": 0,
+        "bloomcycle": 0,
+        "siphonreach": 0,
+        "padcrawl": 0,
+        "sensorscan": 0,
+        "animalamble": 0,
+        "animalsniff": 0,
+        "animalbound": 0,
         "idle": 1,
         "walk": 0,
         "run": 0,
@@ -562,7 +590,7 @@
     "span": 3.8791777372360228
   },
   "lineage": {
-    "parent": "fnv1a32-7d43d4a7",
+    "parent": "fnv1a32-d11713d5",
     "profile": "unchanged",
     "amount": 0
   },
@@ -575,6 +603,7 @@
       "attachments": "unreviewed",
       "gameplay": "unreviewed"
     },
+    "resetReason": null,
     "notes": "Compare the defined head and neck with the original soft blend. No production approval. Inspect joints, hands, clothing, game materials, and all required motions.",
     "fingerprint": null,
     "status": "not-approved"

@@ -1,11 +1,80 @@
 import * as THREE from 'three';
-import {SHARED_PARTS} from '../core/shared-parts.js';
-import {compileTidalPart,sampleTidalPart} from '../core/tidal-geometry.js';
+import { SHARED_PARTS } from '../core/shared-parts.js';
+import { compileTidalPart, sampleTidalPart } from '../core/tidal-geometry.js';
 /** This adapter has no independent model definitions. The reviewer uses the same plan. */
-export function tidalPartFactory(part,{materials}){
-  const group=new THREE.Group(),plan=compileTidalPart(part);let frame=sampleTidalPart(plan,0,{});
-  const meshes=frame.map(c=>{const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(c.positions,3).setUsage(THREE.DynamicDrawUsage));geometry.setAttribute('normal',new THREE.BufferAttribute(c.normals,3).setUsage(THREE.DynamicDrawUsage));geometry.setAttribute('uv',new THREE.BufferAttribute(c.uvs,2));geometry.setIndex(new THREE.BufferAttribute(c.indices,1));geometry.computeBoundingSphere();const source=materials[c.material];if(!source)throw new Error('Missing material '+c.material);const mat=source.clone();mat.side=THREE.DoubleSide;mat.onBeforeCompile=source.onBeforeCompile;mat.customProgramCacheKey=source.customProgramCacheKey;const mesh=new THREE.Mesh(geometry,mat);mesh.castShadow=true;mesh.receiveShadow=true;mesh.name=c.name;group.add(mesh);return mesh;});
-  const upload=()=>{for(const mesh of meshes){mesh.geometry.attributes.position.needsUpdate=true;mesh.geometry.attributes.normal.needsUpdate=true;mesh.geometry.computeBoundingSphere();}};
-  return {group,plan,...(plan.kind==='walker'?{kind:'leg',...plan.dimensions,setLegPose(joints){frame=sampleTidalPart(plan,0,{walker:joints},frame);upload();}}:{}),refreshMaterials(){for(let i=0;i<meshes.length;i++){const source=materials[frame[i].material],m=meshes[i].material;m.copy(source);m.side=THREE.DoubleSide;m.onBeforeCompile=source.onBeforeCompile;m.customProgramCacheKey=source.customProgramCacheKey;m.needsUpdate=true;}},update(time,speed,pose){if(plan.kind==='walker')return;frame=sampleTidalPart(plan,time,{...pose,speed},frame);for(const mesh of meshes){mesh.geometry.attributes.position.needsUpdate=true;mesh.geometry.attributes.normal.needsUpdate=true;mesh.geometry.computeBoundingSphere();}}};
+export function tidalPartFactory(part, { materials }) {
+  const group = new THREE.Group(),
+    plan = compileTidalPart(part);
+  let frame = sampleTidalPart(plan, 0, {});
+  const meshes = frame.map(c => {
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute(
+      'position',
+      new THREE.BufferAttribute(c.positions, 3).setUsage(THREE.DynamicDrawUsage),
+    );
+    geometry.setAttribute(
+      'normal',
+      new THREE.BufferAttribute(c.normals, 3).setUsage(THREE.DynamicDrawUsage),
+    );
+    geometry.setAttribute('uv', new THREE.BufferAttribute(c.uvs, 2));
+    geometry.setIndex(new THREE.BufferAttribute(c.indices, 1));
+    geometry.computeBoundingSphere();
+    const source = materials[c.material];
+    if (!source) throw new Error('Missing material ' + c.material);
+    const mat = source.clone();
+    mat.side = THREE.DoubleSide;
+    mat.onBeforeCompile = source.onBeforeCompile;
+    mat.customProgramCacheKey = source.customProgramCacheKey;
+    const mesh = new THREE.Mesh(geometry, mat);
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    mesh.name = c.name;
+    group.add(mesh);
+    return mesh;
+  });
+  const upload = () => {
+    for (const mesh of meshes) {
+      mesh.geometry.attributes.position.needsUpdate = true;
+      mesh.geometry.attributes.normal.needsUpdate = true;
+      mesh.geometry.computeBoundingSphere();
+    }
+  };
+  return {
+    group,
+    plan,
+    ...(plan.kind === 'walker'
+      ? {
+          kind: 'leg',
+          ...plan.dimensions,
+          setLegPose(joints) {
+            frame = sampleTidalPart(plan, 0, { walker: joints }, frame);
+            upload();
+          },
+        }
+      : {}),
+    refreshMaterials() {
+      for (let i = 0; i < meshes.length; i++) {
+        const source = materials[frame[i].material],
+          m = meshes[i].material;
+        m.copy(source);
+        m.side = THREE.DoubleSide;
+        m.onBeforeCompile = source.onBeforeCompile;
+        m.customProgramCacheKey = source.customProgramCacheKey;
+        m.needsUpdate = true;
+      }
+    },
+    update(time, speed, pose) {
+      if (plan.kind === 'walker') return;
+      frame = sampleTidalPart(plan, time, { ...pose, speed }, frame);
+      for (const mesh of meshes) {
+        mesh.geometry.attributes.position.needsUpdate = true;
+        mesh.geometry.attributes.normal.needsUpdate = true;
+        mesh.geometry.computeBoundingSphere();
+      }
+    },
+  };
 }
-export function registerTidalParts(registry){for(const type of Object.keys(SHARED_PARTS))registry.register(type,tidalPartFactory);return registry;}
+export function registerTidalParts(registry) {
+  for (const type of Object.keys(SHARED_PARTS)) registry.register(type, tidalPartFactory);
+  return registry;
+}

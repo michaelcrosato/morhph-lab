@@ -1,22 +1,39 @@
-import {FRONTIER_PATTERN_GLSL} from './frontier-surfaces.js';
-export const TIDAL_PATTERNS=['cycloid','chromatophore','featherbarbs','eyespots','lightrows','shellgrowth','wingveins','currentbands'];
-export const TIDAL_MICRO=['denticles','feather','down','lamellae','growthrings','wingmesh'];
-const recipe=(label,pattern,roughness,metalness,relief,micro,emission=0)=>({label,pattern,roughness,metalness,relief,micro,emission});
-export const TIDAL_SURFACES=Object.freeze({
-  pelagic:recipe('Pelagic scales','cycloid',.29,.12,.028,'denticles'),
-  eelhide:recipe('Eel hide','chromatophore',.32,.03,.016,'denticles'),
-  jelly:recipe('Jelly sheen','currentbands',.26,.05,.009,'lamellae',.22),
-  nacre:recipe('Shell nacre','shellgrowth',.27,.26,.023,'growthrings'),
-  tropical:recipe('Tropical markings','eyespots',.36,.08,.022,'scales'),
-  abyssal:recipe('Abyssal lights','lightrows',.38,.06,.024,'denticles',.9),
-  rayhide:recipe('Ray hide','chromatophore',.63,.02,.034,'denticles'),
-  tidalarmor:recipe('Tidal armor','cycloid',.43,.24,.055,'growthrings'),
-  plumage:recipe('Flight plumage','featherbarbs',.92,0,.033,'feather'),
-  wingfilm:recipe('Wing film','wingveins',.29,.1,.012,'wingmesh'),
-  mothdust:recipe('Moth dust','eyespots',.97,0,.045,'down'),
-  seedhusk:recipe('Seed husk','currentbands',.87,0,.054,'growthrings')
+import { FRONTIER_PATTERN_GLSL } from './frontier-surfaces.js';
+export const TIDAL_PATTERNS = [
+  'cycloid',
+  'chromatophore',
+  'featherbarbs',
+  'eyespots',
+  'lightrows',
+  'shellgrowth',
+  'wingveins',
+  'currentbands',
+];
+export const TIDAL_MICRO = ['denticles', 'feather', 'down', 'lamellae', 'growthrings', 'wingmesh'];
+const recipe = (label, pattern, roughness, metalness, relief, micro, emission = 0) => ({
+  label,
+  pattern,
+  roughness,
+  metalness,
+  relief,
+  micro,
+  emission,
 });
-export const TIDAL_PATTERN_GLSL=`
+export const TIDAL_SURFACES = Object.freeze({
+  pelagic: recipe('Pelagic scales', 'cycloid', 0.29, 0.12, 0.028, 'denticles'),
+  eelhide: recipe('Eel hide', 'chromatophore', 0.32, 0.03, 0.016, 'denticles'),
+  jelly: recipe('Jelly sheen', 'currentbands', 0.26, 0.05, 0.009, 'lamellae', 0.22),
+  nacre: recipe('Shell nacre', 'shellgrowth', 0.27, 0.26, 0.023, 'growthrings'),
+  tropical: recipe('Tropical markings', 'eyespots', 0.36, 0.08, 0.022, 'scales'),
+  abyssal: recipe('Abyssal lights', 'lightrows', 0.38, 0.06, 0.024, 'denticles', 0.9),
+  rayhide: recipe('Ray hide', 'chromatophore', 0.63, 0.02, 0.034, 'denticles'),
+  tidalarmor: recipe('Tidal armor', 'cycloid', 0.43, 0.24, 0.055, 'growthrings'),
+  plumage: recipe('Flight plumage', 'featherbarbs', 0.92, 0, 0.033, 'feather'),
+  wingfilm: recipe('Wing film', 'wingveins', 0.29, 0.1, 0.012, 'wingmesh'),
+  mothdust: recipe('Moth dust', 'eyespots', 0.97, 0, 0.045, 'down'),
+  seedhusk: recipe('Seed husk', 'currentbands', 0.87, 0, 0.054, 'growthrings'),
+});
+export const TIDAL_PATTERN_GLSL = `
   if(kind<18.5){vec2 q=p.xz;q.x+=mod(floor(q.y),2.0)*.5;vec2 f=fract(q)-.5;return 1.0-smoothstep(.02,.09,abs(length(vec2(f.x,f.y*.72))-.39));}
   if(kind<19.5){float a=skinNoise(p*.42),b=skinNoise(p*1.9);return smoothstep(.32,.64,a*.6+b*.4);}
   if(kind<20.5){float shaft=1.0-smoothstep(.025,.065,abs(fract(p.x)-.5));float barbs=1.0-smoothstep(.035,.11,abs(sin((p.z+abs(fract(p.x)-.5)*1.8)*8.0)));return max(shaft,barbs*.74);}

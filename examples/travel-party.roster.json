@@ -209,6 +209,15 @@
             "corkscrew": 0,
             "turbines": 0,
             "concertina": 0,
+            "ripplewalk": 0,
+            "shellclap": 0,
+            "bloomcycle": 0,
+            "siphonreach": 0,
+            "padcrawl": 0,
+            "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 0,
             "walk": 0,
             "run": 0,
@@ -471,6 +480,95 @@
                 "name": "voice-cue"
               }
             ]
+          },
+          "salute": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": []
+          },
+          "beckon": {
+            "duration": 2.3,
+            "mask": "upper",
+            "events": []
+          },
+          "shiver": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "stretch": {
+            "duration": 3.8,
+            "mask": "full",
+            "events": []
+          },
+          "overhead": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.32,
+                "name": "grip-cue"
+              },
+              {
+                "at": 0.72,
+                "name": "lift-peak"
+              }
+            ]
+          },
+          "sweep": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "sweep-contact"
+              }
+            ]
+          },
+          "readbook": {
+            "duration": 3.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.6,
+                "name": "page-cue"
+              }
+            ]
+          },
+          "writenote": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "lamplook": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "bowdraw": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.76,
+                "name": "release-cue"
+              }
+            ]
+          },
+          "offer": {
+            "duration": 2.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.58,
+                "name": "offer-cue"
+              }
+            ]
+          },
+          "restlean": {
+            "duration": 3.4,
+            "mask": "upper",
+            "events": []
           }
         },
         "compatibility": {
@@ -708,6 +806,15 @@
             "corkscrew": 0,
             "turbines": 0,
             "concertina": 0,
+            "ripplewalk": 0,
+            "shellclap": 0,
+            "bloomcycle": 0,
+            "siphonreach": 0,
+            "padcrawl": 0,
+            "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 0,
             "walk": 0,
             "run": 0,
@@ -970,6 +1077,95 @@
                 "name": "voice-cue"
               }
             ]
+          },
+          "salute": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": []
+          },
+          "beckon": {
+            "duration": 2.3,
+            "mask": "upper",
+            "events": []
+          },
+          "shiver": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "stretch": {
+            "duration": 3.8,
+            "mask": "full",
+            "events": []
+          },
+          "overhead": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.32,
+                "name": "grip-cue"
+              },
+              {
+                "at": 0.72,
+                "name": "lift-peak"
+              }
+            ]
+          },
+          "sweep": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "sweep-contact"
+              }
+            ]
+          },
+          "readbook": {
+            "duration": 3.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.6,
+                "name": "page-cue"
+              }
+            ]
+          },
+          "writenote": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "lamplook": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "bowdraw": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.76,
+                "name": "release-cue"
+              }
+            ]
+          },
+          "offer": {
+            "duration": 2.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.58,
+                "name": "offer-cue"
+              }
+            ]
+          },
+          "restlean": {
+            "duration": 3.4,
+            "mask": "upper",
+            "events": []
           }
         },
         "compatibility": {
@@ -1207,6 +1403,15 @@
             "corkscrew": 0,
             "turbines": 0,
             "concertina": 0,
+            "ripplewalk": 0,
+            "shellclap": 0,
+            "bloomcycle": 0,
+            "siphonreach": 0,
+            "padcrawl": 0,
+            "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 0,
             "walk": 0,
             "run": 0,
@@ -1469,6 +1674,95 @@
                 "name": "voice-cue"
               }
             ]
+          },
+          "salute": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": []
+          },
+          "beckon": {
+            "duration": 2.3,
+            "mask": "upper",
+            "events": []
+          },
+          "shiver": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "stretch": {
+            "duration": 3.8,
+            "mask": "full",
+            "events": []
+          },
+          "overhead": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.32,
+                "name": "grip-cue"
+              },
+              {
+                "at": 0.72,
+                "name": "lift-peak"
+              }
+            ]
+          },
+          "sweep": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "sweep-contact"
+              }
+            ]
+          },
+          "readbook": {
+            "duration": 3.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.6,
+                "name": "page-cue"
+              }
+            ]
+          },
+          "writenote": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "lamplook": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "bowdraw": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.76,
+                "name": "release-cue"
+              }
+            ]
+          },
+          "offer": {
+            "duration": 2.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.58,
+                "name": "offer-cue"
+              }
+            ]
+          },
+          "restlean": {
+            "duration": 3.4,
+            "mask": "upper",
+            "events": []
           }
         },
         "compatibility": {
@@ -1706,6 +2000,15 @@
             "corkscrew": 0,
             "turbines": 0,
             "concertina": 0,
+            "ripplewalk": 0,
+            "shellclap": 0,
+            "bloomcycle": 0,
+            "siphonreach": 0,
+            "padcrawl": 0,
+            "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 0,
             "walk": 0,
             "run": 0,
@@ -1968,6 +2271,95 @@
                 "name": "voice-cue"
               }
             ]
+          },
+          "salute": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": []
+          },
+          "beckon": {
+            "duration": 2.3,
+            "mask": "upper",
+            "events": []
+          },
+          "shiver": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "stretch": {
+            "duration": 3.8,
+            "mask": "full",
+            "events": []
+          },
+          "overhead": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.32,
+                "name": "grip-cue"
+              },
+              {
+                "at": 0.72,
+                "name": "lift-peak"
+              }
+            ]
+          },
+          "sweep": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "sweep-contact"
+              }
+            ]
+          },
+          "readbook": {
+            "duration": 3.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.6,
+                "name": "page-cue"
+              }
+            ]
+          },
+          "writenote": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "lamplook": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "bowdraw": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.76,
+                "name": "release-cue"
+              }
+            ]
+          },
+          "offer": {
+            "duration": 2.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.58,
+                "name": "offer-cue"
+              }
+            ]
+          },
+          "restlean": {
+            "duration": 3.4,
+            "mask": "upper",
+            "events": []
           }
         },
         "compatibility": {
@@ -2205,6 +2597,15 @@
             "corkscrew": 0,
             "turbines": 0,
             "concertina": 0,
+            "ripplewalk": 0,
+            "shellclap": 0,
+            "bloomcycle": 0,
+            "siphonreach": 0,
+            "padcrawl": 0,
+            "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 0,
             "walk": 0,
             "run": 0,
@@ -2467,6 +2868,95 @@
                 "name": "voice-cue"
               }
             ]
+          },
+          "salute": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": []
+          },
+          "beckon": {
+            "duration": 2.3,
+            "mask": "upper",
+            "events": []
+          },
+          "shiver": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "stretch": {
+            "duration": 3.8,
+            "mask": "full",
+            "events": []
+          },
+          "overhead": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.32,
+                "name": "grip-cue"
+              },
+              {
+                "at": 0.72,
+                "name": "lift-peak"
+              }
+            ]
+          },
+          "sweep": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "sweep-contact"
+              }
+            ]
+          },
+          "readbook": {
+            "duration": 3.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.6,
+                "name": "page-cue"
+              }
+            ]
+          },
+          "writenote": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "lamplook": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "bowdraw": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.76,
+                "name": "release-cue"
+              }
+            ]
+          },
+          "offer": {
+            "duration": 2.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.58,
+                "name": "offer-cue"
+              }
+            ]
+          },
+          "restlean": {
+            "duration": 3.4,
+            "mask": "upper",
+            "events": []
           }
         },
         "compatibility": {
@@ -2704,6 +3194,15 @@
             "corkscrew": 0,
             "turbines": 0,
             "concertina": 0,
+            "ripplewalk": 0,
+            "shellclap": 0,
+            "bloomcycle": 0,
+            "siphonreach": 0,
+            "padcrawl": 0,
+            "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 0,
             "walk": 0,
             "run": 0,
@@ -2966,6 +3465,95 @@
                 "name": "voice-cue"
               }
             ]
+          },
+          "salute": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": []
+          },
+          "beckon": {
+            "duration": 2.3,
+            "mask": "upper",
+            "events": []
+          },
+          "shiver": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "stretch": {
+            "duration": 3.8,
+            "mask": "full",
+            "events": []
+          },
+          "overhead": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.32,
+                "name": "grip-cue"
+              },
+              {
+                "at": 0.72,
+                "name": "lift-peak"
+              }
+            ]
+          },
+          "sweep": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "sweep-contact"
+              }
+            ]
+          },
+          "readbook": {
+            "duration": 3.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.6,
+                "name": "page-cue"
+              }
+            ]
+          },
+          "writenote": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "lamplook": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "bowdraw": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.76,
+                "name": "release-cue"
+              }
+            ]
+          },
+          "offer": {
+            "duration": 2.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.58,
+                "name": "offer-cue"
+              }
+            ]
+          },
+          "restlean": {
+            "duration": 3.4,
+            "mask": "upper",
+            "events": []
           }
         },
         "compatibility": {

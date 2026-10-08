@@ -1,12 +1,12 @@
-import {TIDAL_PATTERN_GLSL} from '../core/tidal-surfaces.js';
+import { TIDAL_PATTERN_GLSL } from '../core/tidal-surfaces.js';
 /** Shared GLSL source. No renderer, texture or DOM dependency. */
-export const SKIN_NOISE_GLSL=`
+export const SKIN_NOISE_GLSL = `
 float skinHash(vec3 p){return fract(sin(dot(p,vec3(127.1,311.7,74.7)))*43758.5453);}
 float skinNoise(vec3 p){vec3 i=floor(p),f=fract(p);f=f*f*(3.0-2.0*f);
 return mix(mix(mix(skinHash(i),skinHash(i+vec3(1,0,0)),f.x),mix(skinHash(i+vec3(0,1,0)),skinHash(i+vec3(1,1,0)),f.x),f.y),mix(mix(skinHash(i+vec3(0,0,1)),skinHash(i+vec3(1,0,1)),f.x),mix(skinHash(i+vec3(0,1,1)),skinHash(i+vec3(1,1,1)),f.x),f.y),f.z);}
 `;
 /** Pattern IDs follow core/surfaces.js. Keep this function renderer-independent. */
-export const SKIN_PATTERN_GLSL=`
+export const SKIN_PATTERN_GLSL = `
 float skinPattern(vec3 p,float kind,float warp){
   if(kind<.5)return 0.0;
   float n=skinNoise(p*.7);p+=vec3(n-.5)*warp;

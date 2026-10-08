@@ -1,6 +1,7 @@
 {
   "format": "morph-lab-review",
   "version": 1,
+  "implementation": "morph-lab-shared-geometry-11",
   "source": {
     "version": 6,
     "rig": {
@@ -973,6 +974,7 @@
       "attachments": "unreviewed",
       "gameplay": "unreviewed"
     },
+    "resetReason": null,
     "notes": "Review actual shared triangles and equipment clearance. Fixed socket poses are not two-hand constraints. No GPU or physics approval.",
     "fingerprint": null,
     "status": "not-approved"
