@@ -1,7 +1,0 @@
-{
-  "freshCLIEqualsIndependentSample": true,
-  "sha256": "1e1be433a45e99e93cf5f07d8c62cad85f6c92b42cea1d150f6ee93ca27e85c0",
-  "overwriteRefused": true,
-  "existingBytesUnchanged": true,
-  "overwriteMessage": "EEXIST: file already exists, mkdir '/mnt/data/morph-lab-v11-work/morph-lab-v11/test-results/v11/cli-fresh'"
-}

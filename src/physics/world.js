@@ -4,7 +4,7 @@ import {clamp,shortestAngle} from '../core/math.js';
  * Feet are animation-only. A support capsule stabilizes arbitrary anatomies. */
 export class PhysicsWorld {
   constructor(RAPIER,analysis,level,solids=[],onCollect=()=>{}){
-    this.R=RAPIER;this.analysis=analysis;this.level=level;this.onCollect=onCollect;this.world=new RAPIER.World({x:0,y:-18,z:0});this.world.timestep=1/60;this.world.numSolverIterations=6;this.events=new RAPIER.EventQueue(true);this.dynamic=new Map();this.sensorIds=new Map();this.playerHandles=new Set();this.collected=new Set();this.accumulator=0;this.elapsed=0;this.distance=0;this.yaw=0;this.prevYaw=0;this.jumpBuffer=0;this.coyote=0;this.jumps=0;this.droppedTime=0;
+    this.R=RAPIER;this.analysis=analysis;this.level=level;this.onCollect=onCollect;this.world=new RAPIER.World({x:0,y:-18,z:0});this.world.timestep=1/60;this.world.numSolverIterations=6;this.events=new RAPIER.EventQueue(false);this.dynamic=new Map();this.sensorIds=new Map();this.playerHandles=new Set();this.collected=new Set();this.accumulator=0;this.elapsed=0;this.distance=0;this.yaw=0;this.prevYaw=0;this.jumpBuffer=0;this.coyote=0;this.jumps=0;this.droppedTime=0;
     this.travel=analysis.travel??defaultTravel();this.afloat=this.travel.medium!=='ground';this.spawnY=this.afloat?(level.spawnY??4.4):analysis.restHeight+.15;this.bank=0;this.prevBank=0;
     const w=this.world,R=RAPIER;
     w.createCollider(R.ColliderDesc.cylinder(.25,level.radius).setTranslation(0,-.25,0).setFriction(.9));
