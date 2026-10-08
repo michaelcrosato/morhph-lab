@@ -1,0 +1,1922 @@
+{
+  "format": "morph-lab-roster",
+  "version": 1,
+  "seed": 4615,
+  "variation": 0.2,
+  "actors": [
+    {
+      "id": "actor-3269eb71",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 159,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Sailwing 01",
+        "seed": 2900508769,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.4,
+              0.42,
+              0.8
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "core",
+            "offset": [
+              0,
+              0.15,
+              0.48
+            ],
+            "radii": [
+              0.28,
+              0.27,
+              0.37
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.8426301447967508,
+              0.18537863185528516,
+              0.5055780868780505
+            ],
+            "size": 0.5235829960228875,
+            "length": 1.018131166100502,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "featherwing",
+            "host": "core",
+            "anchor": [
+              0.9754820987386484,
+              0.21460606172250266,
+              0.048774104936932426
+            ],
+            "size": 1.0966840156037359,
+            "length": 1.118519817952439,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "tailfan",
+            "host": "core",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.7846462915360463,
+            "length": 0.9080780974030495,
+            "twist": 1.5707963267948966,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "siphon",
+            "host": "head",
+            "anchor": [
+              0,
+              0,
+              1
+            ],
+            "size": 0.46636504089296793,
+            "length": 0.9305119651593267,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#c4cdd1",
+          "accent": "#455b71",
+          "pattern": "featherbarbs",
+          "roughness": 0.92,
+          "patternScale": 3.8207115827128293,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.2,
+          "strength": 0.7,
+          "metalness": 0,
+          "relief": 0.033,
+          "emission": 0,
+          "micro": "feather",
+          "textureSeed": 2900508769,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 1,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 0.9,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.0122179343272,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "air",
+            "speed": 5.8,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "air",
+          "speed": 5.8,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-d43b2250",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 156,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Sailwing 02",
+        "seed": 2723019602,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.4,
+              0.42,
+              0.8
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "core",
+            "offset": [
+              0,
+              0.15,
+              0.48
+            ],
+            "radii": [
+              0.28,
+              0.27,
+              0.37
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.8426301447967508,
+              0.18537863185528516,
+              0.5055780868780505
+            ],
+            "size": 0.5643188280717004,
+            "length": 1.0170941852219402,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "featherwing",
+            "host": "core",
+            "anchor": [
+              0.9754820987386484,
+              0.21460606172250266,
+              0.048774104936932426
+            ],
+            "size": 1.092965311853215,
+            "length": 1.1697476795196533,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "tailfan",
+            "host": "core",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.7542709174391349,
+            "length": 0.9347426718268543,
+            "twist": 1.5707963267948966,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "siphon",
+            "host": "head",
+            "anchor": [
+              0,
+              0,
+              1
+            ],
+            "size": 0.5021669427475426,
+            "length": 0.9273730642497539,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#c4cdd1",
+          "accent": "#455b71",
+          "pattern": "featherbarbs",
+          "roughness": 0.92,
+          "patternScale": 3.825672533828765,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.2,
+          "strength": 0.7,
+          "metalness": 0,
+          "relief": 0.033,
+          "emission": 0,
+          "micro": "feather",
+          "textureSeed": 2723019602,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 1,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 0.9,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.986932495413348,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "air",
+            "speed": 5.8,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "air",
+          "speed": 5.8,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-03682d9e",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 155,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Sailwing 03",
+        "seed": 4222713327,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.4,
+              0.42,
+              0.8
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "core",
+            "offset": [
+              0,
+              0.15,
+              0.48
+            ],
+            "radii": [
+              0.28,
+              0.27,
+              0.37
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.8426301447967508,
+              0.18537863185528516,
+              0.5055780868780505
+            ],
+            "size": 0.5766576654231177,
+            "length": 0.9744363128580154,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "featherwing",
+            "host": "core",
+            "anchor": [
+              0.9754820987386484,
+              0.21460606172250266,
+              0.048774104936932426
+            ],
+            "size": 1.1790471076257525,
+            "length": 1.1751298156265166,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "tailfan",
+            "host": "core",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.7670009402674623,
+            "length": 0.8791141005791724,
+            "twist": 1.5707963267948966,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "siphon",
+            "host": "head",
+            "anchor": [
+              0,
+              0,
+              1
+            ],
+            "size": 0.4935748495669104,
+            "length": 0.9617054193867369,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#c4cdd1",
+          "accent": "#455b71",
+          "pattern": "featherbarbs",
+          "roughness": 0.92,
+          "patternScale": 4.105745409615338,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.2,
+          "strength": 0.7,
+          "metalness": 0,
+          "relief": 0.033,
+          "emission": 0,
+          "micro": "feather",
+          "textureSeed": 4222713327,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 1,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 0.9,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9943671675305814,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "air",
+            "speed": 5.8,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "air",
+          "speed": 5.8,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-7f18b13b",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 160,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Sailwing 04",
+        "seed": 1687016600,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.4,
+              0.42,
+              0.8
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "core",
+            "offset": [
+              0,
+              0.15,
+              0.48
+            ],
+            "radii": [
+              0.28,
+              0.27,
+              0.37
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.8426301447967508,
+              0.18537863185528516,
+              0.5055780868780505
+            ],
+            "size": 0.5581415364798158,
+            "length": 0.969556557033211,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "featherwing",
+            "host": "core",
+            "anchor": [
+              0.9754820987386484,
+              0.21460606172250266,
+              0.048774104936932426
+            ],
+            "size": 1.1108479826389812,
+            "length": 1.099965810547024,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "tailfan",
+            "host": "core",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.7843863207323012,
+            "length": 0.8683871780410409,
+            "twist": 1.5707963267948966,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "siphon",
+            "host": "head",
+            "anchor": [
+              0,
+              0,
+              1
+            ],
+            "size": 0.47912935036071574,
+            "length": 0.9469122781809419,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#c4cdd1",
+          "accent": "#455b71",
+          "pattern": "featherbarbs",
+          "roughness": 0.92,
+          "patternScale": 4.052292967122048,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.2,
+          "strength": 0.7,
+          "metalness": 0,
+          "relief": 0.033,
+          "emission": 0,
+          "micro": "feather",
+          "textureSeed": 1687016600,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 1,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 0.9,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9740707944054157,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "air",
+            "speed": 5.8,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "air",
+          "speed": 5.8,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-cb92a99d",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 157,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Sailwing 05",
+        "seed": 3733734675,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.4,
+              0.42,
+              0.8
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "core",
+            "offset": [
+              0,
+              0.15,
+              0.48
+            ],
+            "radii": [
+              0.28,
+              0.27,
+              0.37
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.8426301447967508,
+              0.18537863185528516,
+              0.5055780868780505
+            ],
+            "size": 0.5660720010474325,
+            "length": 0.9889065407961607,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "featherwing",
+            "host": "core",
+            "anchor": [
+              0.9754820987386484,
+              0.21460606172250266,
+              0.048774104936932426
+            ],
+            "size": 1.092199054102879,
+            "length": 1.1537946477793157,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "tailfan",
+            "host": "core",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.7783536808099597,
+            "length": 0.8856547281984241,
+            "twist": 1.5707963267948966,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "siphon",
+            "host": "head",
+            "anchor": [
+              0,
+              0,
+              1
+            ],
+            "size": 0.46644857682031576,
+            "length": 0.9757470404868945,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#c4cdd1",
+          "accent": "#455b71",
+          "pattern": "featherbarbs",
+          "roughness": 0.92,
+          "patternScale": 3.8833949039690197,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.2,
+          "strength": 0.7,
+          "metalness": 0,
+          "relief": 0.033,
+          "emission": 0,
+          "micro": "feather",
+          "textureSeed": 3733734675,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 1,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 0.9,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.012542566973716,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "air",
+            "speed": 5.8,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "air",
+          "speed": 5.8,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-7a52488e",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 158,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Sailwing 06",
+        "seed": 2737012956,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.4,
+              0.42,
+              0.8
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "core",
+            "offset": [
+              0,
+              0.15,
+              0.48
+            ],
+            "radii": [
+              0.28,
+              0.27,
+              0.37
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.8426301447967508,
+              0.18537863185528516,
+              0.5055780868780505
+            ],
+            "size": 0.572686132460367,
+            "length": 0.9704823972843587,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "featherwing",
+            "host": "core",
+            "anchor": [
+              0.9754820987386484,
+              0.21460606172250266,
+              0.048774104936932426
+            ],
+            "size": 1.1300795656037517,
+            "length": 1.120264996241033,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "tailfan",
+            "host": "core",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.7823449556424747,
+            "length": 0.9012317183408887,
+            "twist": 1.5707963267948966,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "siphon",
+            "host": "head",
+            "anchor": [
+              0,
+              0,
+              1
+            ],
+            "size": 0.47599257448851134,
+            "length": 0.9193134742509573,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#c4cdd1",
+          "accent": "#455b71",
+          "pattern": "featherbarbs",
+          "roughness": 0.92,
+          "patternScale": 3.813761175516993,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.2,
+          "strength": 0.7,
+          "metalness": 0,
+          "relief": 0.033,
+          "emission": 0,
+          "micro": "feather",
+          "textureSeed": 2737012956,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 1,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 0.9,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9953396856132894,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "air",
+            "speed": 5.8,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "air",
+          "speed": 5.8,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "creature"
+  },
+  "actor": {
+    "role": "monster",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 160,
+    "speed": 1,
+    "sight": 12,
+    "range": 1.8,
+    "damage": 20,
+    "cooldown": 1.4
+  },
+  "name": "Sun manta",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        1.08,
+        0.44,
+        1.15
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "core",
+      "offset": [
+        0,
+        0.05,
+        0.85
+      ],
+      "radii": [
+        0.64,
+        0.4,
+        0.6
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "part-3",
+      "type": "eye",
+      "host": "head",
+      "anchor": [
+        0.3971420353928971,
+        0.3971420353928971,
+        0.827379240401869
+      ],
+      "size": 1.08,
+      "length": 0.9,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-5",
+      "type": "tail",
+      "host": "core",
+      "anchor": [
+        0,
+        0.04993761694389223,
+        -0.9987523388778446
+      ],
+      "size": 1,
+      "length": 1.15,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-1",
+      "type": "wing",
+      "host": "core",
+      "anchor": [
+        0.9759000729485331,
+        0.19518001458970663,
+        -0.09759000729485331
+      ],
+      "size": 1.35,
+      "length": 1.45,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "beak",
+      "host": "head",
+      "anchor": [
+        0,
+        0,
+        1
+      ],
+      "size": 0.6,
+      "length": 0.7,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-4",
+      "type": "frill",
+      "host": "core",
+      "anchor": [
+        0.8164965809277261,
+        0.08164965809277262,
+        -0.5715476066494083
+      ],
+      "size": 0.65,
+      "length": 0.9,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#b78354",
+    "accent": "#f2d995",
+    "pattern": "rings",
+    "roughness": 0.93,
+    "patternScale": 5.4,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.78,
+    "metalness": 0,
+    "relief": 0.012,
+    "emission": 0,
+    "micro": "pores",
+    "textureSeed": 1042,
+    "layers": [
+      {
+        "pattern": "speckle",
+        "scale": 7,
+        "weight": 0.2,
+        "angle": 0.3,
+        "warp": 0.35
+      }
+    ]
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 1,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

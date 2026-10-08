@@ -1,0 +1,378 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "humanoid",
+    "proportions": {
+      "scale": 1.1395,
+      "torso": 1,
+      "shoulders": 1.0805,
+      "hips": 0.958,
+      "arms": 1.13,
+      "legs": 1,
+      "head": 0.9215,
+      "bulk": 0.954,
+      "hands": 1,
+      "feet": 1,
+      "posture": 0
+    },
+    "outfit": "tunic",
+    "headStyle": "bare",
+    "handStyle": "claws",
+    "bodyStyle": "classic"
+  },
+  "actor": {
+    "role": "caster",
+    "faction": "hostile",
+    "behavior": "keep-distance",
+    "health": 160.25,
+    "speed": 0.8125,
+    "sight": 16.6,
+    "range": 5.25,
+    "damage": 25.4,
+    "cooldown": 2.255
+  },
+  "name": "Grovekeeper × Clockwork",
+  "seed": 4201,
+  "generation": 1,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.39299075999999994,
+        0.34185,
+        0.3265873968354964
+      ]
+    },
+    {
+      "id": "spine",
+      "parent": "core",
+      "offset": [
+        0,
+        0.284875,
+        0
+      ],
+      "radii": [
+        0.3578356928343928,
+        0.42161499999999996,
+        0.3227650596050477
+      ]
+    },
+    {
+      "id": "chest",
+      "parent": "spine",
+      "offset": [
+        0,
+        0.38742999999999994,
+        0
+      ],
+      "radii": [
+        0.6525517675000001,
+        0.5013799999999999,
+        0.35364762953385687
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "chest",
+      "offset": [
+        0,
+        0.6213579549999999,
+        0
+      ],
+      "radii": [
+        0.3045142825,
+        0.3675172374999999,
+        0.3255152675
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "mix-part-1",
+      "type": "antler",
+      "host": "head",
+      "anchor": [
+        0.4943740446449421,
+        0.8523690424912795,
+        -0.1704738084982559
+      ],
+      "size": 0.7,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.35,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-2",
+      "type": "ear",
+      "host": "head",
+      "anchor": [
+        0.9347835805883489,
+        0.3552177606235726,
+        0
+      ],
+      "size": 0.5,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.35,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-3",
+      "type": "foliage",
+      "host": "chest",
+      "anchor": [
+        0.8451542547285166,
+        0.50709255283711,
+        -0.16903085094570333
+      ],
+      "size": 0.6,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 0.35,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-4",
+      "type": "staff",
+      "host": "chest",
+      "anchor": [
+        -0.05989229072794672,
+        0.9982048454657787,
+        0
+      ],
+      "size": 0.9,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 0.35,
+      "material": "inherit",
+      "socket": "hand",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-5",
+      "type": "pauldron",
+      "host": "chest",
+      "anchor": [
+        0.9578262852211513,
+        0.2873478855663454,
+        0
+      ],
+      "size": 0.66,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 0.65,
+      "material": "inherit",
+      "socket": "upperArm",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-6",
+      "type": "pack",
+      "host": "chest",
+      "anchor": [
+        0,
+        0,
+        -1
+      ],
+      "size": 0.75,
+      "length": 0.7,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 0.65,
+      "material": "metal",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-7",
+      "type": "crystal",
+      "host": "head",
+      "anchor": [
+        0,
+        1,
+        0
+      ],
+      "size": 0.35,
+      "length": 0.8,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 0.65,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#6a7158",
+    "accent": "#d4b37c",
+    "pattern": "woodgrain",
+    "roughness": 0.65,
+    "patternScale": 5.4,
+    "weight": 0.5,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.6,
+    "metalness": 0.24,
+    "relief": 0.053500000000000006,
+    "emission": 0.325,
+    "micro": "brushed",
+    "textureSeed": 1042,
+    "layers": [
+      {
+        "pattern": "circuit",
+        "scale": 5.4,
+        "weight": 0.4166666666666667,
+        "angle": 0,
+        "warp": 0.45
+      },
+      {
+        "pattern": "speckle",
+        "scale": 7,
+        "weight": 0.08333333333333334,
+        "angle": 0.3,
+        "warp": 0.35
+      }
+    ]
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0.75,
+      "walk": 0.25,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "proud",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "pray",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

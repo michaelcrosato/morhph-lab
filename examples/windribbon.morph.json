@@ -1,0 +1,336 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "creature"
+  },
+  "actor": {
+    "role": "monster",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 160,
+    "speed": 1,
+    "sight": 12,
+    "range": 1.8,
+    "damage": 20,
+    "cooldown": 1.4
+  },
+  "name": "Wind ribbon",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.32499999999999996,
+        0.29,
+        0.51
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "core",
+      "offset": [
+        0,
+        0,
+        0.43
+      ],
+      "radii": [
+        0.33999999999999997,
+        0.305,
+        0.46
+      ]
+    },
+    {
+      "id": "rear1",
+      "parent": "core",
+      "offset": [
+        0,
+        0,
+        -0.39
+      ],
+      "radii": [
+        0.28099999999999997,
+        0.28099999999999997,
+        0.44
+      ]
+    },
+    {
+      "id": "rear2",
+      "parent": "rear1",
+      "offset": [
+        0,
+        0,
+        -0.39
+      ],
+      "radii": [
+        0.27199999999999996,
+        0.27199999999999996,
+        0.44
+      ]
+    },
+    {
+      "id": "rear3",
+      "parent": "rear2",
+      "offset": [
+        0,
+        0,
+        -0.39
+      ],
+      "radii": [
+        0.263,
+        0.263,
+        0.44
+      ]
+    },
+    {
+      "id": "rear4",
+      "parent": "rear3",
+      "offset": [
+        0,
+        0,
+        -0.39
+      ],
+      "radii": [
+        0.254,
+        0.254,
+        0.44
+      ]
+    },
+    {
+      "id": "rear5",
+      "parent": "rear4",
+      "offset": [
+        0,
+        0,
+        -0.39
+      ],
+      "radii": [
+        0.25,
+        0.25,
+        0.44
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "part-1",
+      "type": "optic",
+      "host": "head",
+      "anchor": [
+        0.8426301447967508,
+        0.18537863185528516,
+        0.5055780868780505
+      ],
+      "size": 0.62,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "featherwing",
+      "host": "core",
+      "anchor": [
+        0.9736309117610814,
+        0.17525356411699464,
+        0.1460446367641622
+      ],
+      "size": 0.7,
+      "length": 0.9,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "featherwing",
+      "host": "rear3",
+      "anchor": [
+        0.9889363528682975,
+        0.14834045293024462,
+        0
+      ],
+      "size": 0.52,
+      "length": 0.8,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0.25,
+      "bend": 0,
+      "variant": 2,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-4",
+      "type": "tailfan",
+      "host": "rear5",
+      "anchor": [
+        0,
+        0,
+        -1
+      ],
+      "size": 0.48,
+      "length": 1.12,
+      "twist": 1.5707963267948966,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-5",
+      "type": "siphon",
+      "host": "head",
+      "anchor": [
+        0,
+        0,
+        1
+      ],
+      "size": 0.4,
+      "length": 0.75,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#879fb7",
+    "accent": "#e9d9ad",
+    "pattern": "featherbarbs",
+    "roughness": 0.92,
+    "patternScale": 4,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.2,
+    "strength": 0.7,
+    "metalness": 0,
+    "relief": 0.033,
+    "emission": 0,
+    "micro": "feather",
+    "textureSeed": 1042,
+    "layers": []
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 1,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 0.9,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "air",
+      "speed": 4.5,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "vertical",
+      "amplitude": 0.52,
+      "frequency": 0.6,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

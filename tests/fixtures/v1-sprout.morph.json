@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "name": "Sprout",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.83,
+        0.98,
+        0.8
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "part-1",
+      "type": "leg",
+      "host": "core",
+      "anchor": [
+        0.8574929257125443,
+        -0.5144957554275266,
+        0
+      ],
+      "size": 1.1,
+      "length": 1,
+      "twist": 0,
+      "mirror": true
+    },
+    {
+      "id": "part-2",
+      "type": "eye",
+      "host": "core",
+      "anchor": [
+        0.4000988020269483,
+        0.22227711223719349,
+        0.8891084489487739
+      ],
+      "size": 1.2,
+      "length": 0.7,
+      "twist": 0,
+      "mirror": true
+    },
+    {
+      "id": "part-3",
+      "type": "fin",
+      "host": "core",
+      "anchor": [
+        0,
+        0.9950371902099893,
+        -0.09950371902099893
+      ],
+      "size": 1.2,
+      "length": 0.9,
+      "twist": 0,
+      "mirror": false
+    },
+    {
+      "id": "part-4",
+      "type": "tail",
+      "host": "core",
+      "anchor": [
+        0,
+        0,
+        -1
+      ],
+      "size": 0.65,
+      "length": 1,
+      "twist": 0,
+      "mirror": false
+    },
+    {
+      "id": "part-5",
+      "type": "mouth",
+      "host": "core",
+      "anchor": [
+        0,
+        -0.30477572710378376,
+        0.9524241471993242
+      ],
+      "size": 1,
+      "length": 1,
+      "twist": 0,
+      "mirror": false
+    }
+  ],
+  "appearance": {
+    "color": "#c9a457",
+    "accent": "#e8dfb0",
+    "pattern": "plain",
+    "roughness": 0.57,
+    "patternScale": 5.4
+  }
+}

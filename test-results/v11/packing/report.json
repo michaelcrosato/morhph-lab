@@ -1,0 +1,187 @@
+{
+  "records": [
+    {
+      "id": "mossback",
+      "label": "Mossback",
+      "sourceMeshes": 26,
+      "groupedMeshes": 8,
+      "triangles": 30424,
+      "vertices": 17740,
+      "separateBytes": 4355312,
+      "groupedBytes": 4271492,
+      "internalReadback": {
+        "checked": true,
+        "checkedSamples": 9,
+        "maxPositionError": 1.4901161193847656e-8
+      },
+      "images": [
+        {
+          "sample": 2,
+          "phase": 0.25,
+          "changedColorChannels": 0,
+          "clipped": 0
+        },
+        {
+          "sample": 5,
+          "phase": 0.625,
+          "changedColorChannels": 0,
+          "clipped": 0
+        }
+      ],
+      "warningCount": 0
+    },
+    {
+      "id": "glider",
+      "label": "Glider",
+      "sourceMeshes": 30,
+      "groupedMeshes": 8,
+      "triangles": 29750,
+      "vertices": 17642,
+      "separateBytes": 4350016,
+      "groupedBytes": 4245424,
+      "internalReadback": {
+        "checked": true,
+        "checkedSamples": 9,
+        "maxPositionError": 5.960464477539063e-8
+      },
+      "images": [
+        {
+          "sample": 2,
+          "phase": 0.25,
+          "changedColorChannels": 0,
+          "clipped": 0
+        },
+        {
+          "sample": 5,
+          "phase": 0.625,
+          "changedColorChannels": 0,
+          "clipped": 0
+        }
+      ],
+      "warningCount": 0
+    },
+    {
+      "id": "reef",
+      "label": "Reef drifter",
+      "sourceMeshes": 26,
+      "groupedMeshes": 8,
+      "triangles": 22296,
+      "vertices": 12908,
+      "separateBytes": 3207400,
+      "groupedBytes": 3120756,
+      "internalReadback": {
+        "checked": true,
+        "checkedSamples": 9,
+        "maxPositionError": 5.960464477539063e-8
+      },
+      "images": [
+        {
+          "sample": 2,
+          "phase": 0.25,
+          "changedColorChannels": 0,
+          "clipped": 0
+        },
+        {
+          "sample": 5,
+          "phase": 0.625,
+          "changedColorChannels": 0,
+          "clipped": 0
+        }
+      ],
+      "warningCount": 0
+    },
+    {
+      "id": "tendril",
+      "label": "Tendril",
+      "sourceMeshes": 24,
+      "groupedMeshes": 8,
+      "triangles": 20312,
+      "vertices": 11348,
+      "separateBytes": 2830100,
+      "groupedBytes": 2752988,
+      "internalReadback": {
+        "checked": true,
+        "checkedSamples": 9,
+        "maxPositionError": 2.9802322387695312e-8
+      },
+      "images": [
+        {
+          "sample": 2,
+          "phase": 0.25,
+          "changedColorChannels": 0,
+          "clipped": 0
+        },
+        {
+          "sample": 5,
+          "phase": 0.625,
+          "changedColorChannels": 0,
+          "clipped": 0
+        }
+      ],
+      "warningCount": 0
+    },
+    {
+      "id": "fiend",
+      "label": "Fiend",
+      "sourceMeshes": 73,
+      "groupedMeshes": 9,
+      "triangles": 53532,
+      "vertices": 31809,
+      "separateBytes": 7870632,
+      "groupedBytes": 7621160,
+      "internalReadback": {
+        "checked": true,
+        "checkedSamples": 9,
+        "maxPositionError": 1.4901161193847656e-8
+      },
+      "images": [
+        {
+          "sample": 2,
+          "phase": 0.25,
+          "changedColorChannels": 0,
+          "clipped": 0
+        },
+        {
+          "sample": 5,
+          "phase": 0.625,
+          "changedColorChannels": 0,
+          "clipped": 0
+        }
+      ],
+      "warningCount": 0
+    },
+    {
+      "id": "archivist",
+      "label": "Archivist",
+      "sourceMeshes": 62,
+      "groupedMeshes": 11,
+      "triangles": 42632,
+      "vertices": 25095,
+      "separateBytes": 6261520,
+      "groupedBytes": 6037244,
+      "internalReadback": {
+        "checked": true,
+        "checkedSamples": 9,
+        "maxPositionError": 2.384185791015625e-7
+      },
+      "images": [
+        {
+          "sample": 2,
+          "phase": 0.25,
+          "changedColorChannels": 0,
+          "clipped": 0
+        },
+        {
+          "sample": 5,
+          "phase": 0.625,
+          "changedColorChannels": 0,
+          "clipped": 0
+        }
+      ],
+      "warningCount": 0
+    }
+  ],
+  "backend": "actual CPU geometry + GLB readback",
+  "gpuVerified": false,
+  "visualApproval": false
+}

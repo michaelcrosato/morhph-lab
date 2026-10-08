@@ -1,0 +1,14 @@
+{
+  "suite": "v9 Field & Settlement real editor and CPU review",
+  "passed": 92,
+  "errors": [],
+  "directFileNavigation": {
+    "attempted": true,
+    "passed": false,
+    "reason": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///mnt/data/morph-lab-v11-work/morph-lab-v11/dist/Morph-Lab-Review.html"
+  },
+  "webgl2Available": false,
+  "engineTested": false,
+  "physicsTested": false,
+  "editorHarnessHasRenderer": false
+}

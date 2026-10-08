@@ -1,0 +1,294 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "creature"
+  },
+  "actor": {
+    "role": "monster",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 160,
+    "speed": 1,
+    "sight": 12,
+    "range": 1.8,
+    "damage": 20,
+    "cooldown": 1.4
+  },
+  "name": "Oar shrimp",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.38,
+        0.38,
+        0.63
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "core",
+      "offset": [
+        0,
+        0,
+        0.54
+      ],
+      "radii": [
+        0.4,
+        0.33,
+        0.43
+      ]
+    },
+    {
+      "id": "back1",
+      "parent": "core",
+      "offset": [
+        0,
+        0,
+        -0.47
+      ],
+      "radii": [
+        0.32,
+        0.32,
+        0.52
+      ]
+    },
+    {
+      "id": "back2",
+      "parent": "back1",
+      "offset": [
+        0,
+        -0.09,
+        -0.45
+      ],
+      "radii": [
+        0.26,
+        0.29,
+        0.46
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "part-1",
+      "type": "swimmeret",
+      "host": "core",
+      "anchor": [
+        0.9081532183729996,
+        -0.40866894826784983,
+        -0.09081532183729996
+      ],
+      "size": 0.67,
+      "length": 0.85,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "swimmeret",
+      "host": "back1",
+      "anchor": [
+        0.9245003270420487,
+        -0.3698001308168195,
+        -0.09245003270420488
+      ],
+      "size": 0.44,
+      "length": 0.7,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0.25,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "caudal",
+      "host": "back2",
+      "anchor": [
+        0,
+        0,
+        -1
+      ],
+      "size": 0.58,
+      "length": 0.75,
+      "twist": 1.5707963267948966,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-4",
+      "type": "branchfan",
+      "host": "head",
+      "anchor": [
+        0.5026090374675883,
+        0.3866223365135295,
+        0.773244673027059
+      ],
+      "size": 0.35,
+      "length": 1.1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-5",
+      "type": "optic",
+      "host": "head",
+      "anchor": [
+        0.86386842558136,
+        0.259160527674408,
+        0.43193421279068
+      ],
+      "size": 0.75,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#aa6953",
+    "accent": "#e4ceb2",
+    "pattern": "tessera",
+    "roughness": 0.37,
+    "patternScale": 4,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.18,
+    "strength": 0.72,
+    "metalness": 0.18,
+    "relief": 0.026,
+    "emission": 0,
+    "micro": "tesserae",
+    "textureSeed": 1042,
+    "layers": []
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 1,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "water",
+      "speed": 3.2,
+      "climb": 1.7,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "vertical",
+      "amplitude": 0.1,
+      "frequency": 0.65,
+      "wavelength": 3
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

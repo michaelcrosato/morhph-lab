@@ -1,0 +1,328 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "humanoid",
+    "proportions": {
+      "scale": 1.0405,
+      "torso": 1,
+      "shoulders": 1.063,
+      "hips": 1,
+      "arms": 1.0130000000000001,
+      "legs": 1.0275,
+      "head": 1,
+      "bulk": 0.9135,
+      "hands": 1,
+      "feet": 1,
+      "posture": 0
+    },
+    "outfit": "tunic",
+    "headStyle": "hood",
+    "handStyle": "fingers",
+    "bodyStyle": "defined"
+  },
+  "actor": {
+    "role": "guard",
+    "faction": "friendly",
+    "behavior": "patrol",
+    "health": 112,
+    "speed": 0.935,
+    "sight": 10.6,
+    "range": 1.46,
+    "damage": 11.7,
+    "cooldown": 1.545
+  },
+  "name": "Waypost archer × Prospector",
+  "seed": 9103,
+  "generation": 1,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.37457999999999997,
+        0.31215,
+        0.2949967425398487
+      ]
+    },
+    {
+      "id": "spine",
+      "parent": "core",
+      "offset": [
+        0,
+        0.260125,
+        0
+      ],
+      "radii": [
+        0.32112601024466925,
+        0.38498499999999997,
+        0.28839940383145296
+      ]
+    },
+    {
+      "id": "chest",
+      "parent": "spine",
+      "offset": [
+        0,
+        0.35377,
+        0
+      ],
+      "radii": [
+        0.5862072949999999,
+        0.45782,
+        0.3139443137980597
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "chest",
+      "offset": [
+        0,
+        0.7699699999999999,
+        0
+      ],
+      "radii": [
+        0.301745,
+        0.36417499999999997,
+        0.322555
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "mix-part-1",
+      "type": "bowrig",
+      "host": "chest",
+      "anchor": [
+        0.09950371902099893,
+        0,
+        0.9950371902099893
+      ],
+      "size": 0.83,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 0.65,
+      "material": "inherit",
+      "socket": "hand",
+      "socketOffset": [
+        0,
+        -0.12,
+        -0.06
+      ]
+    },
+    {
+      "id": "mix-part-2",
+      "type": "bowrig",
+      "host": "chest",
+      "anchor": [
+        0.009999500037496877,
+        0.9999500037496877,
+        0
+      ],
+      "size": 0.6,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 0.65,
+      "material": "inherit",
+      "socket": "chest",
+      "socketOffset": [
+        0.12,
+        -0.25,
+        -0.45
+      ]
+    },
+    {
+      "id": "mix-part-3",
+      "type": "utilitybelt",
+      "host": "core",
+      "anchor": [
+        0,
+        0,
+        1
+      ],
+      "size": 0.7815,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "pelvis",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-4",
+      "type": "worktool",
+      "host": "chest",
+      "anchor": [
+        -0.07974522228289,
+        0.996815278536125,
+        0
+      ],
+      "size": 0.72,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 0.35,
+      "material": "inherit",
+      "socket": "hand",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-5",
+      "type": "pack",
+      "host": "chest",
+      "anchor": [
+        0,
+        0,
+        -1
+      ],
+      "size": 0.8,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 0.35,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#7d6e56",
+    "accent": "#c7b898",
+    "pattern": "repairseams",
+    "roughness": 0.9305,
+    "patternScale": 3,
+    "weight": 0.65,
+    "angle": 0,
+    "warp": 0.1,
+    "strength": 0.45,
+    "metalness": 0,
+    "relief": 0.02605,
+    "emission": 0,
+    "micro": "canvasgrain",
+    "textureSeed": 1042,
+    "layers": [
+      {
+        "pattern": "stitchgrid",
+        "scale": 3,
+        "weight": 0.35,
+        "angle": 0,
+        "warp": 0.1
+      }
+    ]
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "ripplewalk": 0,
+      "shellclap": 0,
+      "bloomcycle": 0,
+      "siphonreach": 0,
+      "padcrawl": 0,
+      "sensorscan": 0,
+      "animalamble": 0,
+      "animalsniff": 0,
+      "animalbound": 0,
+      "idle": 1,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "bowdraw",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

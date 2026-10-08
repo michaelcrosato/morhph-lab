@@ -1,0 +1,1054 @@
+{
+  "format": "morph-lab-discovery-recipe",
+  "version": 1,
+  "kind": "mix",
+  "seed": 4221,
+  "scope": "all",
+  "strength": 0.5,
+  "trait": null,
+  "sources": {
+    "a": {
+      "version": 6,
+      "rig": {
+        "family": "creature"
+      },
+      "actor": {
+        "role": "monster",
+        "faction": "hostile",
+        "behavior": "chase",
+        "health": 160,
+        "speed": 1,
+        "sight": 12,
+        "range": 1.8,
+        "damage": 20,
+        "cooldown": 1.4
+      },
+      "name": "Silver skimmer 399",
+      "seed": 4221,
+      "generation": 2,
+      "nodes": [
+        {
+          "id": "core",
+          "parent": null,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "radii": [
+            0.2995122084226459,
+            0.2695609875803814,
+            0.2995122084226459
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "part-1",
+          "type": "valvepair",
+          "host": "core",
+          "anchor": [
+            0,
+            1,
+            0
+          ],
+          "size": 1.5442706969240678,
+          "length": 1.2063123369403184,
+          "twist": -0.07803341106045991,
+          "mirror": false,
+          "flex": 1,
+          "phase": 0.6741339282598346,
+          "bend": 0.014456784445792438,
+          "variant": 2,
+          "presence": 1,
+          "material": "inherit",
+          "socket": "body",
+          "socketOffset": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "part-2",
+          "type": "tubecluster",
+          "host": "core",
+          "anchor": [
+            0,
+            -1,
+            0
+          ],
+          "size": 0.7462682495848275,
+          "length": 0.8278614285215735,
+          "twist": 0.009035490278620273,
+          "mirror": false,
+          "flex": 1,
+          "phase": 0.31376905855722725,
+          "bend": -0.19359251288697124,
+          "variant": 2,
+          "presence": 1,
+          "material": "inherit",
+          "socket": "body",
+          "socketOffset": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "part-3",
+          "type": "optic",
+          "host": "core",
+          "anchor": [
+            0.8025723539051279,
+            0.20064308847628198,
+            0.5618006477335895
+          ],
+          "size": 0.43455446743406356,
+          "length": 0.9627538117114455,
+          "twist": -0.12099532055435702,
+          "mirror": true,
+          "flex": 1,
+          "phase": 0.8570644329302013,
+          "bend": -0.08806277457624674,
+          "variant": 1,
+          "presence": 1,
+          "material": "inherit",
+          "socket": "body",
+          "socketOffset": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "appearance": {
+        "color": "#a36e84",
+        "accent": "#e6ba9a",
+        "pattern": "marble",
+        "roughness": 0.35,
+        "patternScale": 3.8786635575816035,
+        "weight": 1,
+        "angle": 0,
+        "warp": 0.16,
+        "strength": 0.7,
+        "metalness": 0.08,
+        "relief": 0.02,
+        "emission": 0.65,
+        "micro": "pores",
+        "textureSeed": 4221,
+        "layers": []
+      },
+      "motion": {
+        "weights": {
+          "combbeat": 0,
+          "chainpump": 0,
+          "radialstroke": 0,
+          "metachronal": 0,
+          "canopy": 0,
+          "corkscrew": 0,
+          "turbines": 0,
+          "concertina": 0,
+          "ripplewalk": 0,
+          "shellclap": 1,
+          "bloomcycle": 0,
+          "siphonreach": 0,
+          "padcrawl": 0.3,
+          "sensorscan": 0,
+          "animalamble": 0,
+          "animalsniff": 0,
+          "animalbound": 0,
+          "idle": 0,
+          "walk": 0,
+          "run": 0,
+          "creep": 0,
+          "bound": 0,
+          "swim": 0,
+          "hover": 0,
+          "backpedal": 0,
+          "strafe": 0,
+          "prowl": 0,
+          "trot": 0,
+          "cruise": 0,
+          "undulate": 0,
+          "jet": 0,
+          "row": 0,
+          "soar": 0,
+          "powerflight": 0,
+          "flutter": 0,
+          "float": 0,
+          "display": 0
+        },
+        "layers": {
+          "breath": 1,
+          "blink": 1,
+          "gaze": 1,
+          "tail": 1,
+          "flex": 1,
+          "jaw": 1
+        },
+        "tempo": 0.7241607919335366,
+        "stride": 0.871631863527,
+        "lift": 1,
+        "phaseLag": 0.5,
+        "travel": {
+          "medium": "water",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.12,
+          "frequency": 0.55,
+          "wavelength": 3.5
+        },
+        "humanoid": {
+          "style": "neutral",
+          "armSwing": 1,
+          "lookYaw": 0,
+          "lookPitch": 0,
+          "action": "none",
+          "actionWeight": 1,
+          "actionSpeed": 1,
+          "repeat": true,
+          "mask": "auto"
+        }
+      }
+    },
+    "b": {
+      "version": 6,
+      "rig": {
+        "family": "creature"
+      },
+      "actor": {
+        "role": "monster",
+        "faction": "hostile",
+        "behavior": "chase",
+        "health": 160,
+        "speed": 1,
+        "sight": 12,
+        "range": 1.8,
+        "damage": 20,
+        "cooldown": 1.4
+      },
+      "name": "Silver skimmer 399",
+      "seed": 4221,
+      "generation": 5,
+      "nodes": [
+        {
+          "id": "core",
+          "parent": null,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "radii": [
+            0.29915600857458313,
+            0.27154090411446385,
+            0.29915600857458313
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "mix-part-1",
+          "type": "valvepair",
+          "host": "core",
+          "anchor": [
+            0,
+            1,
+            0
+          ],
+          "size": 1.5999689493452307,
+          "length": 1.2471178453648835,
+          "twist": -0.10534510493162089,
+          "mirror": false,
+          "flex": 1,
+          "phase": 0.6741339282598346,
+          "bend": 0.019516659001819793,
+          "variant": 2,
+          "presence": 0.944875,
+          "material": "inherit",
+          "socket": "body",
+          "socketOffset": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "mix-part-2",
+          "type": "tubecluster",
+          "host": "core",
+          "anchor": [
+            0,
+            -1,
+            0
+          ],
+          "size": 0.7590045988650652,
+          "length": 0.8793154156401256,
+          "twist": 0.007003734281170183,
+          "mirror": false,
+          "flex": 1,
+          "phase": 0.2918512456738389,
+          "bend": -0.23345423451620154,
+          "variant": 2,
+          "presence": 1,
+          "material": "inherit",
+          "socket": "body",
+          "socketOffset": [
+            0,
+            -0.006614999999999999,
+            0
+          ]
+        },
+        {
+          "id": "mix-part-3",
+          "type": "optic",
+          "host": "core",
+          "anchor": [
+            0.8025723539051279,
+            0.20064308847628198,
+            0.5618006477335895
+          ],
+          "size": 0.4476932908531811,
+          "length": 0.9502031933001607,
+          "twist": -0.16334368274838199,
+          "mirror": true,
+          "flex": 1,
+          "phase": 0.8570644329302013,
+          "bend": -0.1188847456779331,
+          "variant": 1,
+          "presence": 0.944875,
+          "material": "inherit",
+          "socket": "body",
+          "socketOffset": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "mix-part-4",
+          "type": "latticecage",
+          "host": "core",
+          "anchor": [
+            0,
+            1,
+            0
+          ],
+          "size": 0.8087022467702628,
+          "length": 0.8588785986695437,
+          "twist": 0.008659572689794004,
+          "mirror": false,
+          "flex": 1,
+          "phase": 0.05011405469849706,
+          "bend": -0.007481969147920609,
+          "variant": 0,
+          "presence": 0.05512499999999999,
+          "material": "inherit",
+          "socket": "body",
+          "socketOffset": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "mix-part-5",
+          "type": "petalcrown",
+          "host": "core",
+          "anchor": [
+            0,
+            -1,
+            0
+          ],
+          "size": 0.64695666104462,
+          "length": 0.7280182487517596,
+          "twist": -0.00467623071745038,
+          "mirror": false,
+          "flex": 1,
+          "phase": 0.5220003027934581,
+          "bend": -0.12184714134782554,
+          "variant": 2,
+          "presence": 0.05512499999999999,
+          "material": "inherit",
+          "socket": "body",
+          "socketOffset": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "appearance": {
+        "color": "#9f6d83",
+        "accent": "#e6ba98",
+        "pattern": "marble",
+        "roughness": 0.36819124999999997,
+        "patternScale": 3.8786635575816035,
+        "weight": 0.944875,
+        "angle": 0,
+        "warp": 0.16,
+        "strength": 0.7,
+        "metalness": 0.10590875000000001,
+        "relief": 0.021157625,
+        "emission": 0.61416875,
+        "micro": "pores",
+        "textureSeed": 4221,
+        "layers": [
+          {
+            "pattern": "oxidation",
+            "scale": 7.34638290759176,
+            "weight": 0.05512499999999999,
+            "angle": 0,
+            "warp": 0.16
+          }
+        ]
+      },
+      "motion": {
+        "weights": {
+          "combbeat": 0,
+          "chainpump": 0,
+          "radialstroke": 0,
+          "metachronal": 0,
+          "canopy": 0,
+          "corkscrew": 0,
+          "turbines": 0,
+          "concertina": 0,
+          "ripplewalk": 0,
+          "shellclap": 0.944875,
+          "bloomcycle": 0.05512499999999999,
+          "siphonreach": 0,
+          "padcrawl": 0.31653749999999997,
+          "sensorscan": 0,
+          "animalamble": 0,
+          "animalsniff": 0,
+          "animalbound": 0,
+          "idle": 0,
+          "walk": 0,
+          "run": 0,
+          "creep": 0,
+          "bound": 0,
+          "swim": 0,
+          "hover": 0,
+          "backpedal": 0,
+          "strafe": 0,
+          "prowl": 0,
+          "trot": 0,
+          "cruise": 0,
+          "undulate": 0,
+          "jet": 0,
+          "row": 0,
+          "soar": 0,
+          "powerflight": 0,
+          "flutter": 0,
+          "float": 0,
+          "display": 0
+        },
+        "layers": {
+          "breath": 1,
+          "blink": 1,
+          "gaze": 1,
+          "tail": 1,
+          "flex": 1,
+          "jaw": 1
+        },
+        "tempo": 0.6813561386184737,
+        "stride": 0.8440663872832551,
+        "lift": 1,
+        "phaseLag": 0.5,
+        "travel": {
+          "medium": "water",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.12,
+          "frequency": 0.55,
+          "wavelength": 3.5
+        },
+        "humanoid": {
+          "style": "neutral",
+          "armSwing": 1,
+          "lookYaw": 0,
+          "lookPitch": 0,
+          "action": "none",
+          "actionWeight": 1,
+          "actionSpeed": 1,
+          "repeat": true,
+          "mask": "auto"
+        }
+      }
+    }
+  },
+  "frozen": {
+    "version": 6,
+    "rig": {
+      "family": "creature"
+    },
+    "actor": {
+      "role": "monster",
+      "faction": "hostile",
+      "behavior": "chase",
+      "health": 160,
+      "speed": 1,
+      "sight": 12,
+      "range": 1.8,
+      "damage": 20,
+      "cooldown": 1.4
+    },
+    "name": "Silver skimmer 399",
+    "seed": 1013908447,
+    "generation": 5,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.30258175975388035,
+          0.27458074629372636,
+          0.30258175975388035
+        ]
+      }
+    ],
+    "parts": [
+      {
+        "id": "mix-part-1",
+        "type": "valvepair",
+        "host": "core",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 1.6060534935779327,
+        "length": 1.2238344833413484,
+        "twist": -0.09576461519754957,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.7812131475075148,
+        "bend": -0.05089246192481369,
+        "variant": 2,
+        "presence": 0.944875,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "mix-part-2",
+        "type": "tubecluster",
+        "host": "core",
+        "anchor": [
+          0,
+          -1,
+          0
+        ],
+        "size": 0.7394162056453392,
+        "length": 0.8924382605198107,
+        "twist": -0.03003563836762623,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.4843913309149501,
+        "bend": -0.13765243417728926,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.006614999999999999,
+          0
+        ]
+      },
+      {
+        "id": "mix-part-3",
+        "type": "optic",
+        "host": "core",
+        "anchor": [
+          0.8025723539051279,
+          0.20064308847628198,
+          0.5618006477335895
+        ],
+        "size": 0.4424648670765119,
+        "length": 0.9791074039463178,
+        "twist": -0.08186274858016987,
+        "mirror": true,
+        "flex": 1,
+        "phase": 0.022460947022773237,
+        "bend": -0.11197257451713084,
+        "variant": 1,
+        "presence": 0.944875,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "mix-part-4",
+        "type": "latticecage",
+        "host": "core",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.8971150486916305,
+        "length": 0.7729218459897674,
+        "twist": 0.025719905213918537,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.46212142845615745,
+        "bend": -0.14845156744122506,
+        "variant": 2,
+        "presence": 0.05512499999999999,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "mix-part-5",
+        "type": "petalcrown",
+        "host": "core",
+        "anchor": [
+          0,
+          -1,
+          0
+        ],
+        "size": 0.8171299450108781,
+        "length": 0.7939394285529853,
+        "twist": -0.09278222965076566,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.41915827291086316,
+        "bend": -0.12081878501921893,
+        "variant": 0,
+        "presence": 0.05512499999999999,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "appearance": {
+      "color": "#926f7c",
+      "accent": "#e0b992",
+      "pattern": "marble",
+      "roughness": 0.5249125,
+      "patternScale": 3.8786635575816035,
+      "weight": 0.65,
+      "angle": 0,
+      "warp": 0.16,
+      "strength": 0.7,
+      "metalness": 0.054756250000000006,
+      "relief": 0.021752625,
+      "emission": 0.4346275,
+      "micro": "pores",
+      "textureSeed": 4221,
+      "layers": [
+        {
+          "pattern": "weave",
+          "scale": 4.973576670046896,
+          "weight": 0.294875,
+          "angle": 0,
+          "warp": 0.16
+        },
+        {
+          "pattern": "currentbands",
+          "scale": 8.028796208556741,
+          "weight": 0.05512499999999999,
+          "angle": 0,
+          "warp": 0.16
+        }
+      ]
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 0,
+        "radialstroke": 0,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "ripplewalk": 0,
+        "shellclap": 0.944875,
+        "bloomcycle": 0.05512499999999999,
+        "siphonreach": 0,
+        "padcrawl": 0.31653749999999997,
+        "sensorscan": 0,
+        "animalamble": 0,
+        "animalsniff": 0,
+        "animalbound": 0,
+        "idle": 0,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 0.7971956442955019,
+      "stride": 0.8468532544329348,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "water",
+        "speed": 3.4,
+        "climb": 2.4,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "rigid",
+        "amplitude": 0.12,
+        "frequency": 0.55,
+        "wavelength": 3.5
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "none",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "channels": {
+    "body": 0.25,
+    "head": 0.25,
+    "parts": 0.25,
+    "surface": 0.25,
+    "pigment": 0.25,
+    "motion": 0.25
+  },
+  "locks": {
+    "body": false,
+    "head": false,
+    "parts": false,
+    "surface": false,
+    "pigment": false,
+    "motion": false
+  },
+  "result": {
+    "version": 6,
+    "rig": {
+      "family": "creature"
+    },
+    "actor": {
+      "role": "monster",
+      "faction": "hostile",
+      "behavior": "chase",
+      "health": 160,
+      "speed": 1,
+      "sight": 12,
+      "range": 1.8,
+      "damage": 20,
+      "cooldown": 1.4
+    },
+    "name": "My discovery",
+    "seed": 4221,
+    "generation": 6,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.2994231584606302,
+          0.270055966713902,
+          0.2994231584606302
+        ]
+      }
+    ],
+    "parts": [
+      {
+        "id": "mix-part-1",
+        "type": "valvepair",
+        "host": "core",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 1.5581952600293585,
+        "length": 1.2165137140464597,
+        "twist": -0.08486133452825015,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.6741339282598346,
+        "bend": 0.015721753084799277,
+        "variant": 2,
+        "presence": 0.98621875,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "mix-part-2",
+        "type": "tubecluster",
+        "host": "core",
+        "anchor": [
+          0,
+          -1,
+          0
+        ],
+        "size": 0.7494523369048869,
+        "length": 0.8407249253012116,
+        "twist": 0.00852755127925775,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.30828960533638017,
+        "bend": -0.20355794329427881,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.0016537499999999998,
+          0
+        ]
+      },
+      {
+        "id": "mix-part-3",
+        "type": "optic",
+        "host": "core",
+        "anchor": [
+          0.8025723539051279,
+          0.20064308847628198,
+          0.5618006477335895
+        ],
+        "size": 0.4378391732888429,
+        "length": 0.9596161571086242,
+        "twist": -0.13158241110286323,
+        "mirror": true,
+        "flex": 1,
+        "phase": 0.8570644329302013,
+        "bend": -0.09576826735166832,
+        "variant": 1,
+        "presence": 0.98621875,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "mix-part-4",
+        "type": "latticecage",
+        "host": "core",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.8087022467702628,
+        "length": 0.8588785986695437,
+        "twist": 0.008659572689794004,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.05011405469849706,
+        "bend": -0.007481969147920609,
+        "variant": 0,
+        "presence": 0.013781249999999998,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "mix-part-5",
+        "type": "petalcrown",
+        "host": "core",
+        "anchor": [
+          0,
+          -1,
+          0
+        ],
+        "size": 0.64695666104462,
+        "length": 0.7280182487517596,
+        "twist": -0.00467623071745038,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.5220003027934581,
+        "bend": -0.12184714134782554,
+        "variant": 2,
+        "presence": 0.013781249999999998,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "appearance": {
+      "color": "#a26e84",
+      "accent": "#e6ba9a",
+      "pattern": "marble",
+      "roughness": 0.3545478125,
+      "patternScale": 3.8786635575816035,
+      "weight": 0.98621875,
+      "angle": 0,
+      "warp": 0.16,
+      "strength": 0.7,
+      "metalness": 0.0864771875,
+      "relief": 0.02028940625,
+      "emission": 0.6410421875000001,
+      "micro": "pores",
+      "textureSeed": 4221,
+      "layers": [
+        {
+          "pattern": "oxidation",
+          "scale": 7.34638290759176,
+          "weight": 0.013781249999999998,
+          "angle": 0,
+          "warp": 0.16
+        }
+      ]
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 0,
+        "radialstroke": 0,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "ripplewalk": 0,
+        "shellclap": 0.98621875,
+        "bloomcycle": 0.013781249999999998,
+        "siphonreach": 0,
+        "padcrawl": 0.30413437499999996,
+        "sensorscan": 0,
+        "animalamble": 0,
+        "animalsniff": 0,
+        "animalbound": 0,
+        "idle": 0,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 0.7134596286047709,
+      "stride": 0.8647404944660637,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "water",
+        "speed": 3.4,
+        "climb": 2.4,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "rigid",
+        "amplitude": 0.12,
+        "frequency": 0.55,
+        "wavelength": 3.5
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "none",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "notes": [
+    "Leg banks and tube feet are animated attachments. On ground creatures, downward mounts set fixed rest clearance only. They do not make terrain contacts. Test clearance.",
+    "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+  ]
+}

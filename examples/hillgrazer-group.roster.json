@@ -1,0 +1,2570 @@
+{
+  "format": "morph-lab-roster",
+  "version": 1,
+  "seed": 9110,
+  "variation": 0.2,
+  "actors": [
+    {
+      "id": "actor-9bb8f671",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "civilian",
+          "faction": "neutral",
+          "behavior": "wander",
+          "health": 60,
+          "speed": 1,
+          "sight": 8,
+          "range": 1.2,
+          "damage": 0,
+          "cooldown": 2
+        },
+        "name": "Hill grazer 01",
+        "seed": 1400191517,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.49,
+              0.58,
+              0.92
+            ]
+          },
+          {
+            "id": "neck",
+            "parent": "core",
+            "offset": [
+              0,
+              0.37,
+              0.58
+            ],
+            "radii": [
+              0.27,
+              0.57,
+              0.34
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "neck",
+            "offset": [
+              0,
+              0.48,
+              0.2
+            ],
+            "radii": [
+              0.29,
+              0.37,
+              0.36
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "beastleg",
+            "host": "core",
+            "anchor": [
+              0.37808697000580244,
+              -0.9002070714423868,
+              0.2160496971461728
+            ],
+            "size": 0.8530120703286957,
+            "length": 1.2463732887983323,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0.39
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "beastleg",
+            "host": "core",
+            "anchor": [
+              0.37808697000580244,
+              -0.9002070714423868,
+              -0.2160496971461728
+            ],
+            "size": 0.8506449367804453,
+            "length": 1.2842503111600878,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0.5,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              -0.39
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.777909841584414,
+              0.2333729524753242,
+              0.5834323811883104
+            ],
+            "size": 0.5514180850931444,
+            "length": 0.9759226029738783,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "muzzle",
+            "host": "head",
+            "anchor": [
+              0,
+              -0.09950371902099893,
+              0.9950371902099893
+            ],
+            "size": 0.5772556102504022,
+            "length": 1.0177849922142923,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "ear",
+            "host": "head",
+            "anchor": [
+              0.49171966140998224,
+              0.8707535670801769,
+              0
+            ],
+            "size": 0.40163651834568004,
+            "length": 1.0336107666790486,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-6",
+            "type": "antler",
+            "host": "head",
+            "anchor": [
+              0.411173441012184,
+              0.8938553065482261,
+              -0.17877106130964524
+            ],
+            "size": 0.42784679882507776,
+            "length": 0.7723388802492992,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-7",
+            "type": "brushtail",
+            "host": "core",
+            "anchor": [
+              0,
+              -0.09950371902099893,
+              -0.9950371902099893
+            ],
+            "size": 0.38929181354353204,
+            "length": 0.6260359408594668,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#b1a187",
+          "accent": "#51463b",
+          "pattern": "coatflow",
+          "roughness": 0.98,
+          "patternScale": 3.1553770103491843,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.1,
+          "strength": 0.45,
+          "metalness": 0,
+          "relief": 0.05,
+          "emission": 0,
+          "micro": "woolloops",
+          "textureSeed": 1400191517,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "ripplewalk": 0,
+            "shellclap": 0,
+            "bloomcycle": 0,
+            "siphonreach": 0,
+            "padcrawl": 0,
+            "sensorscan": 0,
+            "animalamble": 1,
+            "animalsniff": 0,
+            "animalbound": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.0136034042062239,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina",
+            "ripplewalk",
+            "shellclap",
+            "bloomcycle",
+            "siphonreach",
+            "padcrawl",
+            "sensorscan",
+            "animalamble",
+            "animalsniff",
+            "animalbound"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-dccc9898",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "civilian",
+          "faction": "neutral",
+          "behavior": "wander",
+          "health": 60,
+          "speed": 1,
+          "sight": 8,
+          "range": 1.2,
+          "damage": 0,
+          "cooldown": 2
+        },
+        "name": "Hill grazer 02",
+        "seed": 779034597,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.49,
+              0.58,
+              0.92
+            ]
+          },
+          {
+            "id": "neck",
+            "parent": "core",
+            "offset": [
+              0,
+              0.37,
+              0.58
+            ],
+            "radii": [
+              0.27,
+              0.57,
+              0.34
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "neck",
+            "offset": [
+              0,
+              0.48,
+              0.2
+            ],
+            "radii": [
+              0.29,
+              0.37,
+              0.36
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "beastleg",
+            "host": "core",
+            "anchor": [
+              0.37808697000580244,
+              -0.9002070714423868,
+              0.2160496971461728
+            ],
+            "size": 0.874506944764871,
+            "length": 1.2752649708747863,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0.39
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "beastleg",
+            "host": "core",
+            "anchor": [
+              0.37808697000580244,
+              -0.9002070714423868,
+              -0.2160496971461728
+            ],
+            "size": 0.8143235852615908,
+            "length": 1.2840793068647383,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0.5,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              -0.39
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.777909841584414,
+              0.2333729524753242,
+              0.5834323811883104
+            ],
+            "size": 0.5279215147884097,
+            "length": 1.015552507340908,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "muzzle",
+            "host": "head",
+            "anchor": [
+              0,
+              -0.09950371902099893,
+              0.9950371902099893
+            ],
+            "size": 0.5580673657308798,
+            "length": 1.0061535801924766,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "ear",
+            "host": "head",
+            "anchor": [
+              0.49171966140998224,
+              0.8707535670801769,
+              0
+            ],
+            "size": 0.42898944721324367,
+            "length": 1.0108212281949818,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-6",
+            "type": "antler",
+            "host": "head",
+            "anchor": [
+              0.411173441012184,
+              0.8938553065482261,
+              -0.17877106130964524
+            ],
+            "size": 0.4446002321392298,
+            "length": 0.774474194976501,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-7",
+            "type": "brushtail",
+            "host": "core",
+            "anchor": [
+              0,
+              -0.09950371902099893,
+              -0.9950371902099893
+            ],
+            "size": 0.3916034438717179,
+            "length": 0.6674197797682137,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#b1a187",
+          "accent": "#51463b",
+          "pattern": "coatflow",
+          "roughness": 0.98,
+          "patternScale": 3.077247405704111,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.1,
+          "strength": 0.45,
+          "metalness": 0,
+          "relief": 0.05,
+          "emission": 0,
+          "micro": "woolloops",
+          "textureSeed": 779034597,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "ripplewalk": 0,
+            "shellclap": 0,
+            "bloomcycle": 0,
+            "siphonreach": 0,
+            "padcrawl": 0,
+            "sensorscan": 0,
+            "animalamble": 1,
+            "animalsniff": 0,
+            "animalbound": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9910971961915493,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina",
+            "ripplewalk",
+            "shellclap",
+            "bloomcycle",
+            "siphonreach",
+            "padcrawl",
+            "sensorscan",
+            "animalamble",
+            "animalsniff",
+            "animalbound"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-47cbb8f5",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "civilian",
+          "faction": "neutral",
+          "behavior": "wander",
+          "health": 58,
+          "speed": 1,
+          "sight": 8,
+          "range": 1.2,
+          "damage": 0,
+          "cooldown": 2
+        },
+        "name": "Hill grazer 03",
+        "seed": 2413747050,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.49,
+              0.58,
+              0.92
+            ]
+          },
+          {
+            "id": "neck",
+            "parent": "core",
+            "offset": [
+              0,
+              0.37,
+              0.58
+            ],
+            "radii": [
+              0.27,
+              0.57,
+              0.34
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "neck",
+            "offset": [
+              0,
+              0.48,
+              0.2
+            ],
+            "radii": [
+              0.29,
+              0.37,
+              0.36
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "beastleg",
+            "host": "core",
+            "anchor": [
+              0.37808697000580244,
+              -0.9002070714423868,
+              0.2160496971461728
+            ],
+            "size": 0.8322957901051268,
+            "length": 1.31443052277565,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0.39
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "beastleg",
+            "host": "core",
+            "anchor": [
+              0.37808697000580244,
+              -0.9002070714423868,
+              -0.2160496971461728
+            ],
+            "size": 0.8097846168791875,
+            "length": 1.2336337306499483,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0.5,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              -0.39
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.777909841584414,
+              0.2333729524753242,
+              0.5834323811883104
+            ],
+            "size": 0.5459247362595051,
+            "length": 0.9827246937155724,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "muzzle",
+            "host": "head",
+            "anchor": [
+              0,
+              -0.09950371902099893,
+              0.9950371902099893
+            ],
+            "size": 0.5801782470541074,
+            "length": 1.0245521984249353,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "ear",
+            "host": "head",
+            "anchor": [
+              0.49171966140998224,
+              0.8707535670801769,
+              0
+            ],
+            "size": 0.43001127229956904,
+            "length": 1.0155463512614369,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-6",
+            "type": "antler",
+            "host": "head",
+            "anchor": [
+              0.411173441012184,
+              0.8938553065482261,
+              -0.17877106130964524
+            ],
+            "size": 0.4490914944726974,
+            "length": 0.7218962210370228,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-7",
+            "type": "brushtail",
+            "host": "core",
+            "anchor": [
+              0,
+              -0.09950371902099893,
+              -0.9950371902099893
+            ],
+            "size": 0.38410448681097475,
+            "length": 0.6398582758596167,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#b1a187",
+          "accent": "#51463b",
+          "pattern": "coatflow",
+          "roughness": 0.98,
+          "patternScale": 2.862679937109351,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.1,
+          "strength": 0.45,
+          "metalness": 0,
+          "relief": 0.05,
+          "emission": 0,
+          "micro": "woolloops",
+          "textureSeed": 2413747050,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "ripplewalk": 0,
+            "shellclap": 0,
+            "bloomcycle": 0,
+            "siphonreach": 0,
+            "padcrawl": 0,
+            "sensorscan": 0,
+            "animalamble": 1,
+            "animalsniff": 0,
+            "animalbound": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.0105360912205652,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina",
+            "ripplewalk",
+            "shellclap",
+            "bloomcycle",
+            "siphonreach",
+            "padcrawl",
+            "sensorscan",
+            "animalamble",
+            "animalsniff",
+            "animalbound"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-c36c3080",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "civilian",
+          "faction": "neutral",
+          "behavior": "wander",
+          "health": 63,
+          "speed": 1,
+          "sight": 8,
+          "range": 1.2,
+          "damage": 0,
+          "cooldown": 2
+        },
+        "name": "Hill grazer 04",
+        "seed": 1157738414,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.49,
+              0.58,
+              0.92
+            ]
+          },
+          {
+            "id": "neck",
+            "parent": "core",
+            "offset": [
+              0,
+              0.37,
+              0.58
+            ],
+            "radii": [
+              0.27,
+              0.57,
+              0.34
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "neck",
+            "offset": [
+              0,
+              0.48,
+              0.2
+            ],
+            "radii": [
+              0.29,
+              0.37,
+              0.36
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "beastleg",
+            "host": "core",
+            "anchor": [
+              0.37808697000580244,
+              -0.9002070714423868,
+              0.2160496971461728
+            ],
+            "size": 0.8754307100886944,
+            "length": 1.3116901260614395,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0.39
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "beastleg",
+            "host": "core",
+            "anchor": [
+              0.37808697000580244,
+              -0.9002070714423868,
+              -0.2160496971461728
+            ],
+            "size": 0.8257973142503761,
+            "length": 1.324426653599739,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0.5,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              -0.39
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.777909841584414,
+              0.2333729524753242,
+              0.5834323811883104
+            ],
+            "size": 0.5431456391944085,
+            "length": 1.0131755115836858,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "muzzle",
+            "host": "head",
+            "anchor": [
+              0,
+              -0.09950371902099893,
+              0.9950371902099893
+            ],
+            "size": 0.5427343372323084,
+            "length": 0.9967826472595334,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "ear",
+            "host": "head",
+            "anchor": [
+              0.49171966140998224,
+              0.8707535670801769,
+              0
+            ],
+            "size": 0.40186001019319517,
+            "length": 0.9667204013466835,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-6",
+            "type": "antler",
+            "host": "head",
+            "anchor": [
+              0.411173441012184,
+              0.8938553065482261,
+              -0.17877106130964524
+            ],
+            "size": 0.4421778657538816,
+            "length": 0.7468088297126815,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-7",
+            "type": "brushtail",
+            "host": "core",
+            "anchor": [
+              0,
+              -0.09950371902099893,
+              -0.9950371902099893
+            ],
+            "size": 0.3634298782837577,
+            "length": 0.6357084285002202,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#b1a187",
+          "accent": "#51463b",
+          "pattern": "coatflow",
+          "roughness": 0.98,
+          "patternScale": 3.1904868192970754,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.1,
+          "strength": 0.45,
+          "metalness": 0,
+          "relief": 0.05,
+          "emission": 0,
+          "micro": "woolloops",
+          "textureSeed": 1157738414,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "ripplewalk": 0,
+            "shellclap": 0,
+            "bloomcycle": 0,
+            "siphonreach": 0,
+            "padcrawl": 0,
+            "sensorscan": 0,
+            "animalamble": 1,
+            "animalsniff": 0,
+            "animalbound": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.971540652057156,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina",
+            "ripplewalk",
+            "shellclap",
+            "bloomcycle",
+            "siphonreach",
+            "padcrawl",
+            "sensorscan",
+            "animalamble",
+            "animalsniff",
+            "animalbound"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-0c4dadd6",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "civilian",
+          "faction": "neutral",
+          "behavior": "wander",
+          "health": 62,
+          "speed": 1,
+          "sight": 8,
+          "range": 1.2,
+          "damage": 0,
+          "cooldown": 2
+        },
+        "name": "Hill grazer 05",
+        "seed": 2446432694,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.49,
+              0.58,
+              0.92
+            ]
+          },
+          {
+            "id": "neck",
+            "parent": "core",
+            "offset": [
+              0,
+              0.37,
+              0.58
+            ],
+            "radii": [
+              0.27,
+              0.57,
+              0.34
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "neck",
+            "offset": [
+              0,
+              0.48,
+              0.2
+            ],
+            "radii": [
+              0.29,
+              0.37,
+              0.36
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "beastleg",
+            "host": "core",
+            "anchor": [
+              0.37808697000580244,
+              -0.9002070714423868,
+              0.2160496971461728
+            ],
+            "size": 0.867629495790461,
+            "length": 1.2294329411506653,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0.39
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "beastleg",
+            "host": "core",
+            "anchor": [
+              0.37808697000580244,
+              -0.9002070714423868,
+              -0.2160496971461728
+            ],
+            "size": 0.8860255695716478,
+            "length": 1.3056884642362596,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0.5,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              -0.39
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.777909841584414,
+              0.2333729524753242,
+              0.5834323811883104
+            ],
+            "size": 0.5498065570311156,
+            "length": 1.0261305805668235,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "muzzle",
+            "host": "head",
+            "anchor": [
+              0,
+              -0.09950371902099893,
+              0.9950371902099893
+            ],
+            "size": 0.5632465056439395,
+            "length": 1.0262609566003085,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "ear",
+            "host": "head",
+            "anchor": [
+              0.49171966140998224,
+              0.8707535670801769,
+              0
+            ],
+            "size": 0.42526230273954563,
+            "length": 0.9730556187033653,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-6",
+            "type": "antler",
+            "host": "head",
+            "anchor": [
+              0.411173441012184,
+              0.8938553065482261,
+              -0.17877106130964524
+            ],
+            "size": 0.4475947251692415,
+            "length": 0.7338358662603424,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-7",
+            "type": "brushtail",
+            "host": "core",
+            "anchor": [
+              0,
+              -0.09950371902099893,
+              -0.9950371902099893
+            ],
+            "size": 0.36456291693262755,
+            "length": 0.6414774867324159,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#b1a187",
+          "accent": "#51463b",
+          "pattern": "coatflow",
+          "roughness": 0.98,
+          "patternScale": 3.177428907435387,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.1,
+          "strength": 0.45,
+          "metalness": 0,
+          "relief": 0.05,
+          "emission": 0,
+          "micro": "woolloops",
+          "textureSeed": 2446432694,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "ripplewalk": 0,
+            "shellclap": 0,
+            "bloomcycle": 0,
+            "siphonreach": 0,
+            "padcrawl": 0,
+            "sensorscan": 0,
+            "animalamble": 1,
+            "animalsniff": 0,
+            "animalbound": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9991989421285689,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina",
+            "ripplewalk",
+            "shellclap",
+            "bloomcycle",
+            "siphonreach",
+            "padcrawl",
+            "sensorscan",
+            "animalamble",
+            "animalsniff",
+            "animalbound"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-ed779986",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "civilian",
+          "faction": "neutral",
+          "behavior": "wander",
+          "health": 60,
+          "speed": 1,
+          "sight": 8,
+          "range": 1.2,
+          "damage": 0,
+          "cooldown": 2
+        },
+        "name": "Hill grazer 06",
+        "seed": 4293551934,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.49,
+              0.58,
+              0.92
+            ]
+          },
+          {
+            "id": "neck",
+            "parent": "core",
+            "offset": [
+              0,
+              0.37,
+              0.58
+            ],
+            "radii": [
+              0.27,
+              0.57,
+              0.34
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "neck",
+            "offset": [
+              0,
+              0.48,
+              0.2
+            ],
+            "radii": [
+              0.29,
+              0.37,
+              0.36
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "beastleg",
+            "host": "core",
+            "anchor": [
+              0.37808697000580244,
+              -0.9002070714423868,
+              0.2160496971461728
+            ],
+            "size": 0.8332449078466743,
+            "length": 1.2707396581411363,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0.39
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "beastleg",
+            "host": "core",
+            "anchor": [
+              0.37808697000580244,
+              -0.9002070714423868,
+              -0.2160496971461728
+            ],
+            "size": 0.837099496377632,
+            "length": 1.2987070543527603,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0.5,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              -0.39
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.777909841584414,
+              0.2333729524753242,
+              0.5834323811883104
+            ],
+            "size": 0.548619004124077,
+            "length": 0.9734578278660774,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "muzzle",
+            "host": "head",
+            "anchor": [
+              0,
+              -0.09950371902099893,
+              0.9950371902099893
+            ],
+            "size": 0.5930763064599595,
+            "length": 0.9603046377189457,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "ear",
+            "host": "head",
+            "anchor": [
+              0.49171966140998224,
+              0.8707535670801769,
+              0
+            ],
+            "size": 0.40873951255017893,
+            "length": 0.9903486201167107,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-6",
+            "type": "antler",
+            "host": "head",
+            "anchor": [
+              0.411173441012184,
+              0.8938553065482261,
+              -0.17877106130964524
+            ],
+            "size": 0.4472927856706083,
+            "length": 0.7515936139365658,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-7",
+            "type": "brushtail",
+            "host": "core",
+            "anchor": [
+              0,
+              -0.09950371902099893,
+              -0.9950371902099893
+            ],
+            "size": 0.36113229871960356,
+            "length": 0.6684737975867466,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#b1a187",
+          "accent": "#51463b",
+          "pattern": "coatflow",
+          "roughness": 0.98,
+          "patternScale": 3.144511098973453,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.1,
+          "strength": 0.45,
+          "metalness": 0,
+          "relief": 0.05,
+          "emission": 0,
+          "micro": "woolloops",
+          "textureSeed": 4293551934,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "ripplewalk": 0,
+            "shellclap": 0,
+            "bloomcycle": 0,
+            "siphonreach": 0,
+            "padcrawl": 0,
+            "sensorscan": 0,
+            "animalamble": 1,
+            "animalsniff": 0,
+            "animalbound": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9962972339522094,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina",
+            "ripplewalk",
+            "shellclap",
+            "bloomcycle",
+            "siphonreach",
+            "padcrawl",
+            "sensorscan",
+            "animalamble",
+            "animalsniff",
+            "animalbound"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    }
+  ]
+}

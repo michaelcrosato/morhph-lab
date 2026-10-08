@@ -1,0 +1,240 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "creature"
+  },
+  "actor": {
+    "role": "monster",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 160,
+    "speed": 1,
+    "sight": 12,
+    "range": 1.8,
+    "damage": 20,
+    "cooldown": 1.4
+  },
+  "name": "Hoop glider",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.29,
+        0.39,
+        0.59
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "core",
+      "offset": [
+        0,
+        0.02,
+        0.44
+      ],
+      "radii": [
+        0.25,
+        0.26,
+        0.3
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "part-1",
+      "type": "ringwing",
+      "host": "core",
+      "anchor": [
+        0,
+        0.9950371902099893,
+        -0.09950371902099893
+      ],
+      "size": 1.12,
+      "length": 1.02,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "tailfan",
+      "host": "core",
+      "anchor": [
+        0,
+        0,
+        -1
+      ],
+      "size": 0.43,
+      "length": 0.9,
+      "twist": 1.5707963267948966,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "siphon",
+      "host": "head",
+      "anchor": [
+        0,
+        0,
+        1
+      ],
+      "size": 0.38,
+      "length": 0.75,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-4",
+      "type": "optic",
+      "host": "head",
+      "anchor": [
+        0.86386842558136,
+        0.259160527674408,
+        0.43193421279068
+      ],
+      "size": 0.43,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#d7d7c5",
+    "accent": "#557f87",
+    "pattern": "holofoil",
+    "roughness": 0.28,
+    "patternScale": 4,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.18,
+    "strength": 0.72,
+    "metalness": 0.45,
+    "relief": 0.015,
+    "emission": 0,
+    "micro": "meshknit",
+    "textureSeed": 1042,
+    "layers": []
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 1,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "air",
+      "speed": 4.8,
+      "climb": 1.7,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.15,
+      "frequency": 0.65,
+      "wavelength": 3
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

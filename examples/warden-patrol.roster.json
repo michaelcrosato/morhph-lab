@@ -1,0 +1,2528 @@
+{
+  "format": "morph-lab-roster",
+  "version": 1,
+  "seed": 8128,
+  "variation": 0.28,
+  "actors": [
+    {
+      "id": "actor-140eec99",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "humanoid",
+          "proportions": {
+            "scale": 0.9933206901643425,
+            "torso": 0.9475287941740825,
+            "shoulders": 1.1076874625142663,
+            "hips": 1.0420901956493034,
+            "arms": 1.0891557708987967,
+            "legs": 1.0306728450367226,
+            "head": 0.8790832298094033,
+            "bulk": 1.1795317254068889,
+            "hands": 1.000475726608187,
+            "feet": 0.9979184586284682,
+            "posture": 0
+          },
+          "outfit": "armor",
+          "headStyle": "crest",
+          "handStyle": "fingers",
+          "bodyStyle": "classic"
+        },
+        "actor": {
+          "role": "guard",
+          "faction": "friendly",
+          "behavior": "patrol",
+          "health": 144,
+          "speed": 0.9,
+          "sight": 12,
+          "range": 1.6,
+          "damage": 18,
+          "cooldown": 1.3
+        },
+        "name": "Warden 01",
+        "seed": 3883332032,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.3726467108481099,
+              0.29799620704930274,
+              0.3002029019683705
+            ]
+          },
+          {
+            "id": "spine",
+            "parent": "core",
+            "offset": [
+              0,
+              0.23529998894489673,
+              0
+            ],
+            "radii": [
+              0.33956530546453334,
+              0.34824398363844716,
+              0.31285441831833727
+            ]
+          },
+          {
+            "id": "chest",
+            "parent": "spine",
+            "offset": [
+              0,
+              0.3200079849650596,
+              0
+            ],
+            "radii": [
+              0.5831531036180619,
+              0.41412798054301825,
+              0.35387568016710247
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "chest",
+            "offset": [
+              0,
+              0.5135806719647683,
+              0
+            ],
+            "radii": [
+              0.253231352558391,
+              0.3056240461911615,
+              0.2706955837693145
+            ]
+          }
+        ],
+        "parts": [],
+        "appearance": {
+          "color": "#c58d68",
+          "accent": "#5b707a",
+          "pattern": "plain",
+          "roughness": 0.72,
+          "patternScale": 5.163901887629182,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.45,
+          "strength": 0.2,
+          "metalness": 0.025,
+          "relief": 0.012,
+          "emission": 0,
+          "micro": "pores",
+          "textureSeed": 3883332032,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 1,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9595971132749691,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "guard",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "humanoid",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": 1.4765367220916683,
+        "sockets": [
+          "head",
+          "chest",
+          "pelvis",
+          "upperArm",
+          "forearm",
+          "hand",
+          "upperLeg",
+          "shin",
+          "foot"
+        ],
+        "actions": {
+          "none": {
+            "duration": 1,
+            "mask": "upper",
+            "events": []
+          },
+          "wave": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "point": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": []
+          },
+          "talk": {
+            "duration": 3.1,
+            "mask": "upper",
+            "events": []
+          },
+          "guard": {
+            "duration": 2,
+            "mask": "upper",
+            "events": []
+          },
+          "attack": {
+            "duration": 1.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.52,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "cast": {
+            "duration": 2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.68,
+                "name": "cast-release"
+              }
+            ]
+          },
+          "hit": {
+            "duration": 0.7,
+            "mask": "full",
+            "events": []
+          },
+          "jump": {
+            "duration": 1.2,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.18,
+                "name": "takeoff"
+              },
+              {
+                "at": 0.82,
+                "name": "land"
+              }
+            ]
+          },
+          "sit": {
+            "duration": 1.8,
+            "mask": "full",
+            "events": []
+          },
+          "defeat": {
+            "duration": 2.1,
+            "mask": "full",
+            "events": []
+          },
+          "celebrate": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "bow": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "kneel": {
+            "duration": 2.2,
+            "mask": "full",
+            "events": []
+          },
+          "pray": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "inspect": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "interact": {
+            "duration": 2.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "interact-contact"
+              }
+            ]
+          },
+          "carry": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "push": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "push-contact"
+              }
+            ]
+          },
+          "work": {
+            "duration": 1.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.56,
+                "name": "work-contact"
+              }
+            ]
+          },
+          "thrust": {
+            "duration": 1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "kick": {
+            "duration": 1.25,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "dodge": {
+            "duration": 1,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.3,
+                "name": "dodge-peak"
+              }
+            ]
+          },
+          "roar": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.42,
+                "name": "voice-cue"
+              }
+            ]
+          }
+        },
+        "compatibility": {
+          "family": "humanoid",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": true,
+            "handSockets": true,
+            "upperBodyActions": true,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-9c3d704c",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "humanoid",
+          "proportions": {
+            "scale": 0.958150966138579,
+            "torso": 0.9367037029368803,
+            "shoulders": 1.1922137031968683,
+            "hips": 1.005718056681566,
+            "arms": 0.9343685669396072,
+            "legs": 1.0238848439082504,
+            "head": 0.9510965211617947,
+            "bulk": 1.1996753174401076,
+            "hands": 1.0082922812774777,
+            "feet": 1.06682239640411,
+            "posture": 0
+          },
+          "outfit": "armor",
+          "headStyle": "crest",
+          "handStyle": "fingers",
+          "bodyStyle": "classic"
+        },
+        "actor": {
+          "role": "guard",
+          "faction": "friendly",
+          "behavior": "patrol",
+          "health": 141,
+          "speed": 0.9,
+          "sight": 12,
+          "range": 1.6,
+          "damage": 18,
+          "cooldown": 1.3
+        },
+        "name": "Warden 02",
+        "seed": 284075874,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.34690670196208434,
+              0.2874452898415737,
+              0.2908023224649918
+            ]
+          },
+          {
+            "id": "spine",
+            "parent": "core",
+            "offset": [
+              0,
+              0.2243758894886391,
+              0
+            ],
+            "radii": [
+              0.3297686828515714,
+              0.33207631644318586,
+              0.3043433393736819
+            ]
+          },
+          {
+            "id": "chest",
+            "parent": "spine",
+            "offset": [
+              0,
+              0.3051512097045491,
+              0
+            ],
+            "radii": [
+              0.6054299771277182,
+              0.3949015655000048,
+              0.34512414243868383
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "chest",
+            "offset": [
+              0,
+              0.4944543864362654,
+              0
+            ],
+            "radii": [
+              0.26427527468624235,
+              0.31895291772477524,
+              0.2825011556990867
+            ]
+          }
+        ],
+        "parts": [],
+        "appearance": {
+          "color": "#c58d68",
+          "accent": "#5b707a",
+          "pattern": "plain",
+          "roughness": 0.72,
+          "patternScale": 5.249807099401951,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.45,
+          "strength": 0.2,
+          "metalness": 0.025,
+          "relief": 0.012,
+          "emission": 0,
+          "micro": "pores",
+          "textureSeed": 284075874,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 1,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9835219407575205,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "guard",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "humanoid",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": 1.4233352486339546,
+        "sockets": [
+          "head",
+          "chest",
+          "pelvis",
+          "upperArm",
+          "forearm",
+          "hand",
+          "upperLeg",
+          "shin",
+          "foot"
+        ],
+        "actions": {
+          "none": {
+            "duration": 1,
+            "mask": "upper",
+            "events": []
+          },
+          "wave": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "point": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": []
+          },
+          "talk": {
+            "duration": 3.1,
+            "mask": "upper",
+            "events": []
+          },
+          "guard": {
+            "duration": 2,
+            "mask": "upper",
+            "events": []
+          },
+          "attack": {
+            "duration": 1.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.52,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "cast": {
+            "duration": 2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.68,
+                "name": "cast-release"
+              }
+            ]
+          },
+          "hit": {
+            "duration": 0.7,
+            "mask": "full",
+            "events": []
+          },
+          "jump": {
+            "duration": 1.2,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.18,
+                "name": "takeoff"
+              },
+              {
+                "at": 0.82,
+                "name": "land"
+              }
+            ]
+          },
+          "sit": {
+            "duration": 1.8,
+            "mask": "full",
+            "events": []
+          },
+          "defeat": {
+            "duration": 2.1,
+            "mask": "full",
+            "events": []
+          },
+          "celebrate": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "bow": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "kneel": {
+            "duration": 2.2,
+            "mask": "full",
+            "events": []
+          },
+          "pray": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "inspect": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "interact": {
+            "duration": 2.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "interact-contact"
+              }
+            ]
+          },
+          "carry": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "push": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "push-contact"
+              }
+            ]
+          },
+          "work": {
+            "duration": 1.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.56,
+                "name": "work-contact"
+              }
+            ]
+          },
+          "thrust": {
+            "duration": 1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "kick": {
+            "duration": 1.25,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "dodge": {
+            "duration": 1,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.3,
+                "name": "dodge-peak"
+              }
+            ]
+          },
+          "roar": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.42,
+                "name": "voice-cue"
+              }
+            ]
+          }
+        },
+        "compatibility": {
+          "family": "humanoid",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": true,
+            "handSockets": true,
+            "upperBodyActions": true,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-74948976",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "humanoid",
+          "proportions": {
+            "scale": 1.0888409832380712,
+            "torso": 1.0516056063743309,
+            "shoulders": 1.1382684560492635,
+            "hips": 1.0238931841254235,
+            "arms": 1.071657974277623,
+            "legs": 1.0294784900229423,
+            "head": 0.9952219681227208,
+            "bulk": 1.2146279155988247,
+            "hands": 0.931100902799517,
+            "feet": 1.0524997037127615,
+            "posture": 0
+          },
+          "outfit": "armor",
+          "headStyle": "crest",
+          "handStyle": "fingers",
+          "bodyStyle": "classic"
+        },
+        "actor": {
+          "role": "guard",
+          "faction": "friendly",
+          "behavior": "patrol",
+          "health": 149,
+          "speed": 0.9,
+          "sight": 12,
+          "range": 1.6,
+          "damage": 18,
+          "cooldown": 1.3
+        },
+        "name": "Warden 03",
+        "seed": 3601948838,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.4013484700801988,
+              0.32665229497142134,
+              0.3314921676220178
+            ]
+          },
+          {
+            "id": "spine",
+            "parent": "core",
+            "offset": [
+              0,
+              0.2862578206058236,
+              0
+            ],
+            "radii": [
+              0.3766099073434581,
+              0.42366157449661895,
+              0.348003880007865
+            ]
+          },
+          {
+            "id": "chest",
+            "parent": "spine",
+            "offset": [
+              0,
+              0.38931063602392013,
+              0
+            ],
+            "radii": [
+              0.6568784727829875,
+              0.5038137642662496,
+              0.3953689462562759
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "chest",
+            "offset": [
+              0,
+              0.6260836363660667,
+              0
+            ],
+            "radii": [
+              0.31425515523015274,
+              0.37927346320880506,
+              0.3359279245563702
+            ]
+          }
+        ],
+        "parts": [],
+        "appearance": {
+          "color": "#c58d68",
+          "accent": "#5b707a",
+          "pattern": "plain",
+          "roughness": 0.72,
+          "patternScale": 5.45505994103849,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.45,
+          "strength": 0.2,
+          "metalness": 0.025,
+          "relief": 0.012,
+          "emission": 0,
+          "micro": "pores",
+          "textureSeed": 3601948838,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 1,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.98708228568919,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "guard",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "humanoid",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": 1.6238873280231478,
+        "sockets": [
+          "head",
+          "chest",
+          "pelvis",
+          "upperArm",
+          "forearm",
+          "hand",
+          "upperLeg",
+          "shin",
+          "foot"
+        ],
+        "actions": {
+          "none": {
+            "duration": 1,
+            "mask": "upper",
+            "events": []
+          },
+          "wave": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "point": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": []
+          },
+          "talk": {
+            "duration": 3.1,
+            "mask": "upper",
+            "events": []
+          },
+          "guard": {
+            "duration": 2,
+            "mask": "upper",
+            "events": []
+          },
+          "attack": {
+            "duration": 1.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.52,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "cast": {
+            "duration": 2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.68,
+                "name": "cast-release"
+              }
+            ]
+          },
+          "hit": {
+            "duration": 0.7,
+            "mask": "full",
+            "events": []
+          },
+          "jump": {
+            "duration": 1.2,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.18,
+                "name": "takeoff"
+              },
+              {
+                "at": 0.82,
+                "name": "land"
+              }
+            ]
+          },
+          "sit": {
+            "duration": 1.8,
+            "mask": "full",
+            "events": []
+          },
+          "defeat": {
+            "duration": 2.1,
+            "mask": "full",
+            "events": []
+          },
+          "celebrate": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "bow": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "kneel": {
+            "duration": 2.2,
+            "mask": "full",
+            "events": []
+          },
+          "pray": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "inspect": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "interact": {
+            "duration": 2.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "interact-contact"
+              }
+            ]
+          },
+          "carry": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "push": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "push-contact"
+              }
+            ]
+          },
+          "work": {
+            "duration": 1.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.56,
+                "name": "work-contact"
+              }
+            ]
+          },
+          "thrust": {
+            "duration": 1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "kick": {
+            "duration": 1.25,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "dodge": {
+            "duration": 1,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.3,
+                "name": "dodge-peak"
+              }
+            ]
+          },
+          "roar": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.42,
+                "name": "voice-cue"
+              }
+            ]
+          }
+        },
+        "compatibility": {
+          "family": "humanoid",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": true,
+            "handSockets": true,
+            "upperBodyActions": true,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-a4d5b313",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "humanoid",
+          "proportions": {
+            "scale": 0.9832781308926641,
+            "torso": 1.0703419977137818,
+            "shoulders": 1.2506509124569594,
+            "hips": 1.0350011335359885,
+            "arms": 1.0818518631756306,
+            "legs": 0.9409706139909103,
+            "head": 0.9829406232610345,
+            "bulk": 1.147184492662493,
+            "hands": 0.9474645249424503,
+            "feet": 0.9051881974684074,
+            "posture": 0
+          },
+          "outfit": "armor",
+          "headStyle": "crest",
+          "handStyle": "fingers",
+          "bodyStyle": "classic"
+        },
+        "actor": {
+          "role": "guard",
+          "faction": "friendly",
+          "behavior": "patrol",
+          "health": 134,
+          "speed": 0.9,
+          "sight": 12,
+          "range": 1.6,
+          "damage": 18,
+          "cooldown": 1.3
+        },
+        "name": "Warden 04",
+        "seed": 3052856041,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.36636983281981994,
+              0.29498343926779924,
+              0.2951091634011847
+            ]
+          },
+          {
+            "id": "spine",
+            "parent": "core",
+            "offset": [
+              0,
+              0.2631109697319819,
+              0
+            ],
+            "radii": [
+              0.33241427493609893,
+              0.38940423520333317,
+              0.30541545633013434
+            ]
+          },
+          {
+            "id": "chest",
+            "parent": "spine",
+            "offset": [
+              0,
+              0.35783091883549534,
+              0
+            ],
+            "radii": [
+              0.6517609765479385,
+              0.4630753067282881,
+              0.34402339900317663
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "chest",
+            "offset": [
+              0,
+              0.5736877418037992,
+              0
+            ],
+            "radii": [
+              0.2802861654573883,
+              0.3382764065865031,
+              0.2996162458337599
+            ]
+          }
+        ],
+        "parts": [],
+        "appearance": {
+          "color": "#c58d68",
+          "accent": "#5b707a",
+          "pattern": "plain",
+          "roughness": 0.72,
+          "patternScale": 5.219239969030023,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.45,
+          "strength": 0.2,
+          "metalness": 0.025,
+          "relief": 0.012,
+          "emission": 0,
+          "micro": "pores",
+          "textureSeed": 3052856041,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 1,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9815220417752862,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "guard",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "humanoid",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": 1.3307122005961673,
+        "sockets": [
+          "head",
+          "chest",
+          "pelvis",
+          "upperArm",
+          "forearm",
+          "hand",
+          "upperLeg",
+          "shin",
+          "foot"
+        ],
+        "actions": {
+          "none": {
+            "duration": 1,
+            "mask": "upper",
+            "events": []
+          },
+          "wave": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "point": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": []
+          },
+          "talk": {
+            "duration": 3.1,
+            "mask": "upper",
+            "events": []
+          },
+          "guard": {
+            "duration": 2,
+            "mask": "upper",
+            "events": []
+          },
+          "attack": {
+            "duration": 1.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.52,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "cast": {
+            "duration": 2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.68,
+                "name": "cast-release"
+              }
+            ]
+          },
+          "hit": {
+            "duration": 0.7,
+            "mask": "full",
+            "events": []
+          },
+          "jump": {
+            "duration": 1.2,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.18,
+                "name": "takeoff"
+              },
+              {
+                "at": 0.82,
+                "name": "land"
+              }
+            ]
+          },
+          "sit": {
+            "duration": 1.8,
+            "mask": "full",
+            "events": []
+          },
+          "defeat": {
+            "duration": 2.1,
+            "mask": "full",
+            "events": []
+          },
+          "celebrate": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "bow": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "kneel": {
+            "duration": 2.2,
+            "mask": "full",
+            "events": []
+          },
+          "pray": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "inspect": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "interact": {
+            "duration": 2.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "interact-contact"
+              }
+            ]
+          },
+          "carry": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "push": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "push-contact"
+              }
+            ]
+          },
+          "work": {
+            "duration": 1.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.56,
+                "name": "work-contact"
+              }
+            ]
+          },
+          "thrust": {
+            "duration": 1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "kick": {
+            "duration": 1.25,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "dodge": {
+            "duration": 1,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.3,
+                "name": "dodge-peak"
+              }
+            ]
+          },
+          "roar": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.42,
+                "name": "voice-cue"
+              }
+            ]
+          }
+        },
+        "compatibility": {
+          "family": "humanoid",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": true,
+            "handSockets": true,
+            "upperBodyActions": true,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-1bb5059a",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "humanoid",
+          "proportions": {
+            "scale": 0.9961420999318361,
+            "torso": 0.9566948010930791,
+            "shoulders": 1.1652925626117736,
+            "hips": 1.0136614217609168,
+            "arms": 0.9664177594184875,
+            "legs": 1.0196854867422953,
+            "head": 1.04587990732491,
+            "bulk": 1.1618971315515414,
+            "hands": 0.9598193806298078,
+            "feet": 0.9880000159442425,
+            "posture": 0
+          },
+          "outfit": "armor",
+          "headStyle": "crest",
+          "handStyle": "fingers",
+          "bodyStyle": "classic"
+        },
+        "actor": {
+          "role": "guard",
+          "faction": "friendly",
+          "behavior": "patrol",
+          "health": 147,
+          "speed": 0.9,
+          "sight": 12,
+          "range": 1.6,
+          "damage": 18,
+          "cooldown": 1.3
+        },
+        "name": "Warden 05",
+        "seed": 2300213926,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.36351029422541165,
+              0.2988426299795508,
+              0.29992399539735254
+            ]
+          },
+          {
+            "id": "spine",
+            "parent": "core",
+            "offset": [
+              0,
+              0.23825099203868252,
+              0
+            ],
+            "radii": [
+              0.3384841563571646,
+              0.35261146821725015,
+              0.3113889038773254
+            ]
+          },
+          {
+            "id": "chest",
+            "parent": "spine",
+            "offset": [
+              0,
+              0.32402134917260816,
+              0
+            ],
+            "radii": [
+              0.6152223995881727,
+              0.41932174598808125,
+              0.35142306732830714
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "chest",
+            "offset": [
+              0,
+              0.5294826448253669,
+              0
+            ],
+            "radii": [
+              0.3021350520761535,
+              0.36464575250570247,
+              0.32297195221933656
+            ]
+          }
+        ],
+        "parts": [],
+        "appearance": {
+          "color": "#c58d68",
+          "accent": "#5b707a",
+          "pattern": "plain",
+          "roughness": 0.72,
+          "patternScale": 5.596875367294997,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.45,
+          "strength": 0.2,
+          "metalness": 0.025,
+          "relief": 0.012,
+          "emission": 0,
+          "micro": "pores",
+          "textureSeed": 2300213926,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 1,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9766155330641195,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "guard",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "humanoid",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": 1.4646598689417736,
+        "sockets": [
+          "head",
+          "chest",
+          "pelvis",
+          "upperArm",
+          "forearm",
+          "hand",
+          "upperLeg",
+          "shin",
+          "foot"
+        ],
+        "actions": {
+          "none": {
+            "duration": 1,
+            "mask": "upper",
+            "events": []
+          },
+          "wave": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "point": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": []
+          },
+          "talk": {
+            "duration": 3.1,
+            "mask": "upper",
+            "events": []
+          },
+          "guard": {
+            "duration": 2,
+            "mask": "upper",
+            "events": []
+          },
+          "attack": {
+            "duration": 1.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.52,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "cast": {
+            "duration": 2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.68,
+                "name": "cast-release"
+              }
+            ]
+          },
+          "hit": {
+            "duration": 0.7,
+            "mask": "full",
+            "events": []
+          },
+          "jump": {
+            "duration": 1.2,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.18,
+                "name": "takeoff"
+              },
+              {
+                "at": 0.82,
+                "name": "land"
+              }
+            ]
+          },
+          "sit": {
+            "duration": 1.8,
+            "mask": "full",
+            "events": []
+          },
+          "defeat": {
+            "duration": 2.1,
+            "mask": "full",
+            "events": []
+          },
+          "celebrate": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "bow": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "kneel": {
+            "duration": 2.2,
+            "mask": "full",
+            "events": []
+          },
+          "pray": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "inspect": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "interact": {
+            "duration": 2.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "interact-contact"
+              }
+            ]
+          },
+          "carry": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "push": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "push-contact"
+              }
+            ]
+          },
+          "work": {
+            "duration": 1.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.56,
+                "name": "work-contact"
+              }
+            ]
+          },
+          "thrust": {
+            "duration": 1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "kick": {
+            "duration": 1.25,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "dodge": {
+            "duration": 1,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.3,
+                "name": "dodge-peak"
+              }
+            ]
+          },
+          "roar": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.42,
+                "name": "voice-cue"
+              }
+            ]
+          }
+        },
+        "compatibility": {
+          "family": "humanoid",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": true,
+            "handSockets": true,
+            "upperBodyActions": true,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-32d24737",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "humanoid",
+          "proportions": {
+            "scale": 0.9344147078813985,
+            "torso": 1.0387066084686667,
+            "shoulders": 1.0980873505588622,
+            "hips": 0.9720650497497991,
+            "arms": 0.9089650149364025,
+            "legs": 0.9897449598684906,
+            "head": 0.9991659853050111,
+            "bulk": 1.2879875612008758,
+            "hands": 0.9938583442997188,
+            "feet": 1.087674805252813,
+            "posture": 0
+          },
+          "outfit": "armor",
+          "headStyle": "crest",
+          "handStyle": "fingers",
+          "bodyStyle": "classic"
+        },
+        "actor": {
+          "role": "guard",
+          "faction": "friendly",
+          "behavior": "patrol",
+          "health": 138,
+          "speed": 0.9,
+          "sight": 12,
+          "range": 1.6,
+          "damage": 18,
+          "cooldown": 1.3
+        },
+        "name": "Warden 06",
+        "seed": 376531487,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.3269922766213232,
+              0.2803244123644195,
+              0.2886792583085218
+            ]
+          },
+          {
+            "id": "spine",
+            "parent": "core",
+            "offset": [
+              0,
+              0.24264568303168182,
+              0
+            ],
+            "radii": [
+              0.3308676535788426,
+              0.3591156108868891,
+              0.30753425563933523
+            ]
+          },
+          {
+            "id": "chest",
+            "parent": "spine",
+            "offset": [
+              0,
+              0.3299981289230873,
+              0
+            ],
+            "radii": [
+              0.5438165545773805,
+              0.42705640213576,
+              0.352478173023971
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "chest",
+            "offset": [
+              0,
+              0.5316036622791253,
+              0
+            ],
+            "radii": [
+              0.2707542637623054,
+              0.32677238729933406,
+              0.2894269716079816
+            ]
+          }
+        ],
+        "parts": [],
+        "appearance": {
+          "color": "#c58d68",
+          "accent": "#5b707a",
+          "pattern": "plain",
+          "roughness": 0.72,
+          "patternScale": 5.231693247761577,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.45,
+          "strength": 0.2,
+          "metalness": 0.025,
+          "relief": 0.012,
+          "emission": 0,
+          "micro": "pores",
+          "textureSeed": 376531487,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 1,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.04063060932979,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "guard",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "humanoid",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": 1.347028062146122,
+        "sockets": [
+          "head",
+          "chest",
+          "pelvis",
+          "upperArm",
+          "forearm",
+          "hand",
+          "upperLeg",
+          "shin",
+          "foot"
+        ],
+        "actions": {
+          "none": {
+            "duration": 1,
+            "mask": "upper",
+            "events": []
+          },
+          "wave": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "point": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": []
+          },
+          "talk": {
+            "duration": 3.1,
+            "mask": "upper",
+            "events": []
+          },
+          "guard": {
+            "duration": 2,
+            "mask": "upper",
+            "events": []
+          },
+          "attack": {
+            "duration": 1.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.52,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "cast": {
+            "duration": 2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.68,
+                "name": "cast-release"
+              }
+            ]
+          },
+          "hit": {
+            "duration": 0.7,
+            "mask": "full",
+            "events": []
+          },
+          "jump": {
+            "duration": 1.2,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.18,
+                "name": "takeoff"
+              },
+              {
+                "at": 0.82,
+                "name": "land"
+              }
+            ]
+          },
+          "sit": {
+            "duration": 1.8,
+            "mask": "full",
+            "events": []
+          },
+          "defeat": {
+            "duration": 2.1,
+            "mask": "full",
+            "events": []
+          },
+          "celebrate": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "bow": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "kneel": {
+            "duration": 2.2,
+            "mask": "full",
+            "events": []
+          },
+          "pray": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "inspect": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "interact": {
+            "duration": 2.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "interact-contact"
+              }
+            ]
+          },
+          "carry": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "push": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "push-contact"
+              }
+            ]
+          },
+          "work": {
+            "duration": 1.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.56,
+                "name": "work-contact"
+              }
+            ]
+          },
+          "thrust": {
+            "duration": 1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "kick": {
+            "duration": 1.25,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "dodge": {
+            "duration": 1,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.3,
+                "name": "dodge-peak"
+              }
+            ]
+          },
+          "roar": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.42,
+                "name": "voice-cue"
+              }
+            ]
+          }
+        },
+        "compatibility": {
+          "family": "humanoid",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": true,
+            "handSockets": true,
+            "upperBodyActions": true,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    }
+  ]
+}

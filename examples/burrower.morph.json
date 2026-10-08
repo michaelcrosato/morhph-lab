@@ -1,0 +1,318 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "creature"
+  },
+  "actor": {
+    "role": "monster",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 160,
+    "speed": 1,
+    "sight": 12,
+    "range": 1.8,
+    "damage": 20,
+    "cooldown": 1.4
+  },
+  "name": "Burrower",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.85,
+        0.78,
+        1.18
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "core",
+      "offset": [
+        0,
+        0.16,
+        0.96
+      ],
+      "radii": [
+        0.67,
+        0.64,
+        0.7
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "part-1",
+      "type": "leg",
+      "host": "core",
+      "anchor": [
+        0.806110912208244,
+        -0.3627499104937098,
+        0.46754432908078153
+      ],
+      "size": 0.95,
+      "length": 1.15,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "leg",
+      "host": "core",
+      "anchor": [
+        0.7875969234571017,
+        -0.3544186155556958,
+        -0.5040620310125451
+      ],
+      "size": 1,
+      "length": 1.05,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "eye",
+      "host": "head",
+      "anchor": [
+        0.3971420353928971,
+        0.3971420353928971,
+        0.827379240401869
+      ],
+      "size": 1.08,
+      "length": 0.9,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-6",
+      "type": "mouth",
+      "host": "head",
+      "anchor": [
+        0,
+        -0.30477572710378376,
+        0.9524241471993242
+      ],
+      "size": 0.8,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-4",
+      "type": "claw",
+      "host": "core",
+      "anchor": [
+        0.7974522228289,
+        -0.07974522228289001,
+        0.598089167121675
+      ],
+      "size": 1.1,
+      "length": 1.05,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-5",
+      "type": "mandible",
+      "host": "head",
+      "anchor": [
+        0.4660849584677394,
+        -0.2542281591642215,
+        0.8474271972140716
+      ],
+      "size": 0.8,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-7",
+      "type": "shell",
+      "host": "core",
+      "anchor": [
+        0,
+        0.9578262852211513,
+        -0.2873478855663454
+      ],
+      "size": 1.25,
+      "length": 1.1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#907269",
+    "accent": "#d9a581",
+    "pattern": "cells",
+    "roughness": 0.57,
+    "patternScale": 5.4,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.78,
+    "metalness": 0.025,
+    "relief": 0.022,
+    "emission": 0,
+    "micro": "ridges",
+    "textureSeed": 1042,
+    "layers": []
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0,
+      "walk": 0,
+      "run": 0,
+      "creep": 1,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

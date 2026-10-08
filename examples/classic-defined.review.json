@@ -1,0 +1,583 @@
+{
+  "format": "morph-lab-review",
+  "version": 1,
+  "source": {
+    "version": 6,
+    "rig": {
+      "family": "humanoid",
+      "proportions": {
+        "scale": 1,
+        "torso": 1,
+        "shoulders": 1,
+        "hips": 1,
+        "arms": 1,
+        "legs": 1,
+        "head": 1,
+        "bulk": 1,
+        "hands": 1,
+        "feet": 1,
+        "posture": 0
+      },
+      "outfit": "wrap",
+      "headStyle": "bare",
+      "handStyle": "fingers",
+      "bodyStyle": "classic"
+    },
+    "actor": {
+      "role": "civilian",
+      "faction": "friendly",
+      "behavior": "wander",
+      "health": 60,
+      "speed": 1,
+      "sight": 8,
+      "range": 1.2,
+      "damage": 0,
+      "cooldown": 2
+    },
+    "name": "Balanced biped",
+    "seed": 1042,
+    "generation": 0,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.36,
+          0.3,
+          0.29
+        ]
+      },
+      {
+        "id": "spine",
+        "parent": "core",
+        "offset": [
+          0,
+          0.25,
+          0
+        ],
+        "radii": [
+          0.32,
+          0.37,
+          0.29
+        ]
+      },
+      {
+        "id": "chest",
+        "parent": "spine",
+        "offset": [
+          0,
+          0.33999999999999997,
+          0
+        ],
+        "radii": [
+          0.53,
+          0.44,
+          0.32
+        ]
+      },
+      {
+        "id": "head",
+        "parent": "chest",
+        "offset": [
+          0,
+          0.5500000000000002,
+          0
+        ],
+        "radii": [
+          0.29,
+          0.35,
+          0.31
+        ]
+      }
+    ],
+    "parts": [],
+    "appearance": {
+      "color": "#91a99e",
+      "accent": "#465b59",
+      "pattern": "plain",
+      "roughness": 0.72,
+      "patternScale": 5.4,
+      "weight": 1,
+      "angle": 0,
+      "warp": 0.45,
+      "strength": 0.2,
+      "metalness": 0.025,
+      "relief": 0.012,
+      "emission": 0,
+      "micro": "pores",
+      "textureSeed": 1042,
+      "layers": []
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 0,
+        "radialstroke": 0,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "idle": 1,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 1,
+      "stride": 1,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "ground",
+        "speed": 3.4,
+        "climb": 2.4,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "rigid",
+        "amplitude": 0.25,
+        "frequency": 1,
+        "wavelength": 2.6
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "none",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "candidate": {
+    "version": 6,
+    "rig": {
+      "family": "humanoid",
+      "proportions": {
+        "scale": 1,
+        "torso": 1,
+        "shoulders": 1,
+        "hips": 1,
+        "arms": 1,
+        "legs": 1,
+        "head": 1,
+        "bulk": 1,
+        "hands": 1,
+        "feet": 1,
+        "posture": 0
+      },
+      "outfit": "wrap",
+      "headStyle": "bare",
+      "handStyle": "fingers",
+      "bodyStyle": "defined"
+    },
+    "actor": {
+      "role": "civilian",
+      "faction": "friendly",
+      "behavior": "wander",
+      "health": 60,
+      "speed": 1,
+      "sight": 8,
+      "range": 1.2,
+      "damage": 0,
+      "cooldown": 2
+    },
+    "name": "Balanced biped",
+    "seed": 1042,
+    "generation": 0,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.36,
+          0.3,
+          0.29
+        ]
+      },
+      {
+        "id": "spine",
+        "parent": "core",
+        "offset": [
+          0,
+          0.25,
+          0
+        ],
+        "radii": [
+          0.32,
+          0.37,
+          0.29
+        ]
+      },
+      {
+        "id": "chest",
+        "parent": "spine",
+        "offset": [
+          0,
+          0.33999999999999997,
+          0
+        ],
+        "radii": [
+          0.53,
+          0.44,
+          0.32
+        ]
+      },
+      {
+        "id": "head",
+        "parent": "chest",
+        "offset": [
+          0,
+          0.7400000000000001,
+          0
+        ],
+        "radii": [
+          0.29,
+          0.35,
+          0.31
+        ]
+      }
+    ],
+    "parts": [],
+    "appearance": {
+      "color": "#91a99e",
+      "accent": "#465b59",
+      "pattern": "plain",
+      "roughness": 0.72,
+      "patternScale": 5.4,
+      "weight": 1,
+      "angle": 0,
+      "warp": 0.45,
+      "strength": 0.2,
+      "metalness": 0.025,
+      "relief": 0.012,
+      "emission": 0,
+      "micro": "pores",
+      "textureSeed": 1042,
+      "layers": []
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 0,
+        "radialstroke": 0,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "idle": 1,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 1,
+      "stride": 1,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "ground",
+        "speed": 3.4,
+        "climb": 2.4,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "rigid",
+        "amplitude": 0.25,
+        "frequency": 1,
+        "wavelength": 2.6
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "none",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "baseline": {
+    "version": 6,
+    "rig": {
+      "family": "humanoid",
+      "proportions": {
+        "scale": 1,
+        "torso": 1,
+        "shoulders": 1,
+        "hips": 1,
+        "arms": 1,
+        "legs": 1,
+        "head": 1,
+        "bulk": 1,
+        "hands": 1,
+        "feet": 1,
+        "posture": 0
+      },
+      "outfit": "wrap",
+      "headStyle": "bare",
+      "handStyle": "fingers",
+      "bodyStyle": "classic"
+    },
+    "actor": {
+      "role": "civilian",
+      "faction": "friendly",
+      "behavior": "wander",
+      "health": 60,
+      "speed": 1,
+      "sight": 8,
+      "range": 1.2,
+      "damage": 0,
+      "cooldown": 2
+    },
+    "name": "Balanced biped",
+    "seed": 1042,
+    "generation": 0,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.36,
+          0.3,
+          0.29
+        ]
+      },
+      {
+        "id": "spine",
+        "parent": "core",
+        "offset": [
+          0,
+          0.25,
+          0
+        ],
+        "radii": [
+          0.32,
+          0.37,
+          0.29
+        ]
+      },
+      {
+        "id": "chest",
+        "parent": "spine",
+        "offset": [
+          0,
+          0.33999999999999997,
+          0
+        ],
+        "radii": [
+          0.53,
+          0.44,
+          0.32
+        ]
+      },
+      {
+        "id": "head",
+        "parent": "chest",
+        "offset": [
+          0,
+          0.5500000000000002,
+          0
+        ],
+        "radii": [
+          0.29,
+          0.35,
+          0.31
+        ]
+      }
+    ],
+    "parts": [],
+    "appearance": {
+      "color": "#91a99e",
+      "accent": "#465b59",
+      "pattern": "plain",
+      "roughness": 0.72,
+      "patternScale": 5.4,
+      "weight": 1,
+      "angle": 0,
+      "warp": 0.45,
+      "strength": 0.2,
+      "metalness": 0.025,
+      "relief": 0.012,
+      "emission": 0,
+      "micro": "pores",
+      "textureSeed": 1042,
+      "layers": []
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 0,
+        "radialstroke": 0,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "idle": 1,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 1,
+      "stride": 1,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "ground",
+        "speed": 3.4,
+        "climb": 2.4,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "rigid",
+        "amplitude": 0.25,
+        "frequency": 1,
+        "wavelength": 2.6
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "none",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "settings": {
+    "pose": "bind",
+    "phase": 0.5,
+    "shading": "clay",
+    "view": "front",
+    "layout": "compare",
+    "target": "desktop",
+    "bones": false,
+    "labels": false,
+    "garment": true,
+    "details": true
+  },
+  "frame": {
+    "center": [
+      0,
+      1.5898269414901733,
+      0.012386009097099304
+    ],
+    "span": 3.8791777372360228
+  },
+  "lineage": {
+    "parent": "fnv1a32-7d43d4a7",
+    "profile": "unchanged",
+    "amount": 0
+  },
+  "review": {
+    "decisions": {
+      "silhouette": "unreviewed",
+      "proportions": "unreviewed",
+      "joints": "unreviewed",
+      "surface": "unreviewed",
+      "attachments": "unreviewed",
+      "gameplay": "unreviewed"
+    },
+    "notes": "Compare the defined head and neck with the original soft blend. No production approval. Inspect joints, hands, clothing, game materials, and all required motions.",
+    "fingerprint": null,
+    "status": "not-approved"
+  },
+  "referencePolicy": "Reference images and external OBJ data are not embedded. Reload them from local files. No automatic quality approval."
+}

@@ -1,0 +1,14 @@
+
+> morph-lab@12.0.0 test:examples
+> node scripts/validate-examples.mjs
+
+{
+  "passed": 230,
+  "counts": {
+    "blueprint": 162,
+    "review": 14,
+    "mixer": 22,
+    "roster": 10,
+    "actor": 22
+  }
+}

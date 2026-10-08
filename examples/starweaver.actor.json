@@ -1,0 +1,278 @@
+{
+  "format": "morph-lab-actor",
+  "version": 1,
+  "blueprint": {
+    "version": 6,
+    "rig": {
+      "family": "creature"
+    },
+    "actor": {
+      "role": "monster",
+      "faction": "hostile",
+      "behavior": "chase",
+      "health": 160,
+      "speed": 1,
+      "sight": 12,
+      "range": 1.8,
+      "damage": 20,
+      "cooldown": 1.4
+    },
+    "name": "Star weaver",
+    "seed": 1042,
+    "generation": 0,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.37,
+          0.27,
+          0.38
+        ]
+      }
+    ],
+    "parts": [
+      {
+        "id": "part-1",
+        "type": "radialweb",
+        "host": "core",
+        "anchor": [
+          0,
+          -1,
+          0
+        ],
+        "size": 1,
+        "length": 0.8,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "part-2",
+        "type": "pumpbarrel",
+        "host": "core",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.4,
+        "length": 0.65,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "part-3",
+        "type": "optic",
+        "host": "core",
+        "anchor": [
+          0.86386842558136,
+          0.259160527674408,
+          0.43193421279068
+        ],
+        "size": 0.38,
+        "length": 1,
+        "twist": 0,
+        "mirror": true,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "appearance": {
+      "color": "#ad7068",
+      "accent": "#efc895",
+      "pattern": "fanrays",
+      "roughness": 0.93,
+      "patternScale": 4,
+      "weight": 1,
+      "angle": 0,
+      "warp": 0.18,
+      "strength": 0.72,
+      "metalness": 0,
+      "relief": 0.032,
+      "emission": 0,
+      "micro": "chalk",
+      "textureSeed": 1042,
+      "layers": []
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 0,
+        "radialstroke": 1,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "idle": 0,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 1,
+      "stride": 1,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "water",
+        "speed": 1.5,
+        "climb": 1.7,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "rigid",
+        "amplitude": 0.15,
+        "frequency": 0.65,
+        "wavelength": 3
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "none",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "contract": {
+    "units": "metres",
+    "up": "+Y",
+    "forward": "+Z",
+    "rig": "creature",
+    "controller": "dynamic-compound-upright",
+    "travel": {
+      "medium": "water",
+      "speed": 1.5,
+      "climb": 1.7,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.15,
+      "frequency": 0.65,
+      "wavelength": 3
+    },
+    "restHeight": null,
+    "sockets": [
+      "body"
+    ],
+    "actions": {},
+    "compatibility": {
+      "family": "creature",
+      "locomotion": [
+        "idle",
+        "walk",
+        "run",
+        "creep",
+        "bound",
+        "swim",
+        "hover",
+        "display",
+        "backpedal",
+        "strafe",
+        "prowl",
+        "trot",
+        "cruise",
+        "undulate",
+        "jet",
+        "row",
+        "soar",
+        "powerflight",
+        "flutter",
+        "float",
+        "combbeat",
+        "chainpump",
+        "radialstroke",
+        "metachronal",
+        "canopy",
+        "corkscrew",
+        "turbines",
+        "concertina"
+      ],
+      "inactiveGenes": [],
+      "notes": [
+        "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+      ],
+      "capabilities": {
+        "proceduralRig": false,
+        "handSockets": false,
+        "upperBodyActions": false,
+        "footIK": true,
+        "ragdoll": false,
+        "rootMotion": false,
+        "combat": false,
+        "navigation": false
+      }
+    },
+    "roleIsMetadata": true,
+    "geometry": "generated-at-runtime",
+    "animations": "procedural-at-runtime"
+  }
+}

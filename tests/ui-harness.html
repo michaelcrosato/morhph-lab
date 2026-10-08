@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Morph Lab — editor test harness (no renderer)</title><link rel="stylesheet" href="../style.css"><link rel="icon" href="data:,"></head><body><div id="app"></div><script type="module">
+import {View} from '../src/ui/view.js';
+import {Editor} from '../src/editor/editor.js';
+import {GenomeStore} from '../src/core/store.js';
+import {preset} from '../src/core/genome.js';
+const view=new View(),store=new GenomeStore(preset('wayfarer')),actions=[];
+const editor=new Editor(store,view,{action:name=>actions.push(name)});
+view.ready();document.querySelector('#scene').setAttribute('aria-label','Renderer intentionally omitted from editor test harness');
+window.harness={store,view,editor,actions,ready:true};
+</script></body></html>

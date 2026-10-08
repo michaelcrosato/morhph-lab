@@ -1,0 +1,267 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "humanoid",
+    "proportions": {
+      "scale": 1.12,
+      "torso": 1,
+      "shoulders": 1.23,
+      "hips": 0.88,
+      "arms": 1,
+      "legs": 1,
+      "head": 0.85,
+      "bulk": 1.24,
+      "hands": 1,
+      "feet": 1,
+      "posture": 0
+    },
+    "outfit": "carapace",
+    "headStyle": "crest",
+    "handStyle": "stone",
+    "bodyStyle": "classic"
+  },
+  "actor": {
+    "role": "sentinel",
+    "faction": "neutral",
+    "behavior": "stationary",
+    "health": 300,
+    "speed": 0.65,
+    "sight": 14,
+    "range": 2,
+    "damage": 28,
+    "cooldown": 1.8
+  },
+  "name": "Clockwork",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.354816,
+        0.336,
+        0.34274524771828063
+      ]
+    },
+    {
+      "id": "spine",
+      "parent": "core",
+      "offset": [
+        0,
+        0.28,
+        0
+      ],
+      "radii": [
+        0.39060398980602024,
+        0.41440000000000005,
+        0.3616819730094383
+      ]
+    },
+    {
+      "id": "chest",
+      "parent": "spine",
+      "offset": [
+        0,
+        0.3808,
+        0
+      ],
+      "radii": [
+        0.7301280000000001,
+        0.49280000000000007,
+        0.41218491762873505
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "chest",
+      "offset": [
+        0,
+        0.6059200000000002,
+        0
+      ],
+      "radii": [
+        0.27608,
+        0.3332,
+        0.29512000000000005
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "part-1",
+      "type": "pauldron",
+      "host": "chest",
+      "anchor": [
+        0.9578262852211513,
+        0.2873478855663454,
+        0
+      ],
+      "size": 0.66,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "upperArm",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "pack",
+      "host": "chest",
+      "anchor": [
+        0,
+        0,
+        -1
+      ],
+      "size": 0.75,
+      "length": 0.7,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 1,
+      "material": "metal",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "crystal",
+      "host": "head",
+      "anchor": [
+        0,
+        1,
+        0
+      ],
+      "size": 0.35,
+      "length": 0.8,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#535f65",
+    "accent": "#e1b576",
+    "pattern": "circuit",
+    "roughness": 0.38,
+    "patternScale": 5.4,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.7,
+    "metalness": 0.48,
+    "relief": 0.022,
+    "emission": 0.65,
+    "micro": "brushed",
+    "textureSeed": 1042,
+    "layers": [
+      {
+        "pattern": "speckle",
+        "scale": 7,
+        "weight": 0.2,
+        "angle": 0.3,
+        "warp": 0.35
+      }
+    ]
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0,
+      "walk": 1,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "stiff",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "guard",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

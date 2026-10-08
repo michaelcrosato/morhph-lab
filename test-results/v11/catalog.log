@@ -1,0 +1,99 @@
+mossback pass,pass,pass,pass,pass,pass,pass,pass
+skitter pass,pass,pass,pass,pass,pass,pass,pass
+sprout pass,pass,pass,pass,pass,pass,pass,pass
+carapace pass,pass,pass,pass,pass,pass,pass,pass
+glider pass,pass,pass,pass,pass,pass,pass,pass
+reef pass,pass,pass,pass,pass,pass,pass,pass
+tendril pass,pass,pass,pass,pass,pass,pass,pass
+sentinel pass,pass,pass,pass,pass,pass,pass,pass
+grazer pass,pass,pass,pass,pass,pass,pass,pass
+lantern pass,pass,pass,pass,pass,pass,pass,pass
+thornling pass,pass,pass,pass,pass,pass,pass,pass
+burrower pass,pass,pass,pass,pass,pass,pass,pass
+crownstag pass,pass,pass,pass,pass,pass,pass,pass
+myconid pass,pass,pass,pass,pass,pass,pass,pass
+shardback pass,pass,pass,pass,pass,pass,pass,pass
+billrunner pass,pass,pass,pass,pass,pass,pass,pass
+boglurker pass,pass,pass,pass,pass,pass,pass,pass
+sunmanta pass,pass,pass,pass,pass,pass,pass,pass
+rootweaver pass,pass,pass,pass,pass,pass,pass,pass
+ironmaw pass,pass,pass,pass,pass,pass,pass,pass
+wayfarer pass,pass,pass,pass,pass,pass,pass,pass
+warden pass,pass,pass,pass,pass,pass,pass,pass
+ranger pass,pass,pass,pass,pass,pass,pass,pass
+goblin pass,pass,pass,pass,pass,pass,pass,pass
+ogre pass,pass,pass,pass,pass,pass,pass,pass
+revenant pass,pass,pass,pass,pass,pass,pass,pass
+golem pass,pass,pass,pass,pass,pass,pass,pass
+fiend pass,pass,pass,pass,pass,pass,pass,pass
+arcanist pass,pass,pass,pass,pass,pass,pass,pass
+duelist pass,pass,pass,pass,pass,pass,pass,pass
+outrider pass,pass,pass,pass,pass,pass,pass,pass
+artisan pass,pass,pass,pass,pass,pass,pass,pass
+pilgrim pass,pass,pass,pass,pass,pass,pass,pass
+grovekeeper pass,pass,pass,pass,pass,pass,pass,pass
+oracle pass,pass,pass,pass,pass,pass,pass,pass
+jackal pass,pass,pass,pass,pass,pass,pass,pass
+clockwork pass,pass,pass,pass,pass,pass,pass,pass
+needleswimmer pass,pass,pass,pass,pass,pass,pass,pass
+ribbondrift pass,pass,pass,pass,pass,pass,pass,pass
+moonbell pass,pass,pass,pass,pass,pass,pass,pass
+coilnautilus pass,pass,pass,pass,pass,pass,pass,pass
+diskfin pass,pass,pass,pass,pass,pass,pass,pass
+abyssangler warning,warning,warning,warning,warning,warning,warning,warning
+rayskimmer pass,pass,pass,pass,pass,pass,pass,pass
+paddleback pass,pass,pass,pass,pass,pass,pass,pass
+sailwing pass,pass,pass,pass,pass,pass,pass,pass
+glassdart pass,pass,pass,pass,pass,pass,pass,pass
+velvetmoth pass,pass,pass,pass,pass,pass,pass,pass
+skymedusa pass,pass,pass,pass,pass,pass,pass,pass
+cavekite pass,pass,pass,pass,pass,pass,pass,pass
+gyreseed pass,pass,pass,pass,pass,pass,pass,pass
+windribbon pass,pass,pass,pass,pass,pass,pass,pass
+lanternbeetle pass,pass,pass,pass,pass,pass,pass,pass
+comblantern pass,pass,pass,pass,pass,pass,pass,pass
+salpchain pass,pass,pass,pass,pass,pass,pass,pass
+starweaver pass,pass,pass,pass,pass,pass,pass,pass
+velvetslug pass,pass,pass,pass,pass,pass,pass,pass
+oarshrimp pass,pass,pass,pass,pass,pass,pass,pass
+twinjet pass,pass,pass,pass,pass,pass,pass,pass
+hoopglider pass,pass,pass,pass,pass,pass,pass,pass
+sievewisp pass,pass,pass,pass,pass,pass,pass,pass
+prismkite pass,pass,pass,pass,pass,pass,pass,pass
+screwdrifter pass,pass,pass,pass,pass,pass,pass,pass
+ductmanta pass,pass,pass,pass,pass,pass,pass,pass
+pleatdrake pass,pass,pass,pass,pass,pass,pass,pass
+pebbleroller pass,pass,pass,pass,pass,pass,pass,pass
+mossstrider pass,pass,pass,pass,pass,pass,pass,pass
+crowngrazer pass,pass,pass,pass,pass,pass,pass,pass
+duneauger pass,pass,pass,pass,pass,pass,pass,pass
+clapshell pass,pass,pass,pass,pass,pass,pass,pass
+lanternpolyp pass,pass,pass,pass,pass,pass,pass,pass
+bristleskate pass,pass,pass,pass,pass,pass,pass,pass
+suckerribbon pass,pass,pass,pass,pass,pass,pass,pass
+bloomkite pass,pass,pass,pass,pass,pass,pass,pass
+basketdrifter pass,pass,pass,pass,pass,pass,pass,pass
+apiarist pass,pass,pass,pass,pass,pass,pass,pass
+shrinesentinel pass,pass,pass,pass,pass,pass,pass,pass
+marshforager pass,pass,pass,pass,pass,pass,pass,pass
+thornenvoy pass,pass,pass,pass,pass,pass,pass,pass
+trailhound pass,pass,pass,pass,pass,pass,pass,pass
+hillgrazer pass,pass,pass,pass,pass,pass,pass,pass
+bristletusk pass,pass,pass,pass,pass,pass,pass,pass
+reedhopper pass,pass,pass,pass,pass,pass,pass,pass
+fieldmedic pass,pass,pass,pass,pass,pass,pass,pass
+lamplighter pass,pass,pass,pass,pass,pass,pass,pass
+archivist pass,pass,pass,pass,pass,pass,pass,pass
+prospector pass,pass,pass,pass,pass,pass,pass,pass
+waypostarcher pass,pass,pass,pass,pass,pass,pass,pass
+caravancourier pass,pass,pass,pass,pass,pass,pass,pass
+{
+  models: 89,
+  samples: 712,
+  pass: 704,
+  warning: 8,
+  fail: 0,
+  excludedGenes: 0,
+  images: 192,
+  clippedImages: 0
+}

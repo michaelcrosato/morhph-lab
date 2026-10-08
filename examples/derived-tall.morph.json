@@ -1,0 +1,180 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "humanoid",
+    "proportions": {
+      "scale": 1.18,
+      "torso": 1,
+      "shoulders": 1,
+      "hips": 1,
+      "arms": 1.12,
+      "legs": 1.2,
+      "head": 0.84,
+      "bulk": 0.87,
+      "hands": 1,
+      "feet": 1,
+      "posture": 0
+    },
+    "outfit": "wrap",
+    "headStyle": "bare",
+    "handStyle": "fingers",
+    "bodyStyle": "defined"
+  },
+  "actor": {
+    "role": "civilian",
+    "faction": "friendly",
+    "behavior": "wander",
+    "health": 60,
+    "speed": 1,
+    "sight": 8,
+    "range": 1.2,
+    "damage": 0,
+    "cooldown": 2
+  },
+  "name": "Tall explorer",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.42479999999999996,
+        0.354,
+        0.3304911378713663
+      ]
+    },
+    {
+      "id": "spine",
+      "parent": "core",
+      "offset": [
+        0,
+        0.295,
+        0
+      ],
+      "radii": [
+        0.35714098055384585,
+        0.4366,
+        0.3191829111966992
+      ]
+    },
+    {
+      "id": "chest",
+      "parent": "spine",
+      "offset": [
+        0,
+        0.40119999999999995,
+        0
+      ],
+      "radii": [
+        0.6254,
+        0.5192,
+        0.34492089141945076
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "chest",
+      "offset": [
+        0,
+        0.861872,
+        0
+      ],
+      "radii": [
+        0.287448,
+        0.34691999999999995,
+        0.30727199999999993
+      ]
+    }
+  ],
+  "parts": [],
+  "appearance": {
+    "color": "#91a99e",
+    "accent": "#465b59",
+    "pattern": "plain",
+    "roughness": 0.72,
+    "patternScale": 5.4,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.2,
+    "metalness": 0.025,
+    "relief": 0.012,
+    "emission": 0,
+    "micro": "pores",
+    "textureSeed": 1042,
+    "layers": []
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 1,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}
