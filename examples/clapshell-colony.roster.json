@@ -156,6 +156,9 @@
             "siphonreach": 0,
             "padcrawl": 0.3,
             "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 0,
             "walk": 0,
             "run": 0,
@@ -273,7 +276,10 @@
             "bloomcycle",
             "siphonreach",
             "padcrawl",
-            "sensorscan"
+            "sensorscan",
+            "animalamble",
+            "animalsniff",
+            "animalbound"
           ],
           "inactiveGenes": [],
           "notes": [
@@ -448,6 +454,9 @@
             "siphonreach": 0,
             "padcrawl": 0.3,
             "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 0,
             "walk": 0,
             "run": 0,
@@ -565,7 +574,10 @@
             "bloomcycle",
             "siphonreach",
             "padcrawl",
-            "sensorscan"
+            "sensorscan",
+            "animalamble",
+            "animalsniff",
+            "animalbound"
           ],
           "inactiveGenes": [],
           "notes": [
@@ -740,6 +752,9 @@
             "siphonreach": 0,
             "padcrawl": 0.3,
             "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 0,
             "walk": 0,
             "run": 0,
@@ -857,7 +872,10 @@
             "bloomcycle",
             "siphonreach",
             "padcrawl",
-            "sensorscan"
+            "sensorscan",
+            "animalamble",
+            "animalsniff",
+            "animalbound"
           ],
           "inactiveGenes": [],
           "notes": [
@@ -1032,6 +1050,9 @@
             "siphonreach": 0,
             "padcrawl": 0.3,
             "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 0,
             "walk": 0,
             "run": 0,
@@ -1149,7 +1170,10 @@
             "bloomcycle",
             "siphonreach",
             "padcrawl",
-            "sensorscan"
+            "sensorscan",
+            "animalamble",
+            "animalsniff",
+            "animalbound"
           ],
           "inactiveGenes": [],
           "notes": [
@@ -1324,6 +1348,9 @@
             "siphonreach": 0,
             "padcrawl": 0.3,
             "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 0,
             "walk": 0,
             "run": 0,
@@ -1441,7 +1468,10 @@
             "bloomcycle",
             "siphonreach",
             "padcrawl",
-            "sensorscan"
+            "sensorscan",
+            "animalamble",
+            "animalsniff",
+            "animalbound"
           ],
           "inactiveGenes": [],
           "notes": [
@@ -1616,6 +1646,9 @@
             "siphonreach": 0,
             "padcrawl": 0.3,
             "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 0,
             "walk": 0,
             "run": 0,
@@ -1733,7 +1766,10 @@
             "bloomcycle",
             "siphonreach",
             "padcrawl",
-            "sensorscan"
+            "sensorscan",
+            "animalamble",
+            "animalsniff",
+            "animalbound"
           ],
           "inactiveGenes": [],
           "notes": [

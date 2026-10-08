@@ -215,6 +215,9 @@
             "siphonreach": 0,
             "padcrawl": 0,
             "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 1,
             "walk": 0,
             "run": 0,
@@ -521,6 +524,51 @@
                 "name": "sweep-contact"
               }
             ]
+          },
+          "readbook": {
+            "duration": 3.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.6,
+                "name": "page-cue"
+              }
+            ]
+          },
+          "writenote": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "lamplook": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "bowdraw": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.76,
+                "name": "release-cue"
+              }
+            ]
+          },
+          "offer": {
+            "duration": 2.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.58,
+                "name": "offer-cue"
+              }
+            ]
+          },
+          "restlean": {
+            "duration": 3.4,
+            "mask": "upper",
+            "events": []
           }
         },
         "compatibility": {
@@ -766,6 +814,9 @@
             "siphonreach": 0,
             "padcrawl": 0,
             "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 1,
             "walk": 0,
             "run": 0,
@@ -1072,6 +1123,51 @@
                 "name": "sweep-contact"
               }
             ]
+          },
+          "readbook": {
+            "duration": 3.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.6,
+                "name": "page-cue"
+              }
+            ]
+          },
+          "writenote": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "lamplook": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "bowdraw": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.76,
+                "name": "release-cue"
+              }
+            ]
+          },
+          "offer": {
+            "duration": 2.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.58,
+                "name": "offer-cue"
+              }
+            ]
+          },
+          "restlean": {
+            "duration": 3.4,
+            "mask": "upper",
+            "events": []
           }
         },
         "compatibility": {
@@ -1317,6 +1413,9 @@
             "siphonreach": 0,
             "padcrawl": 0,
             "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 1,
             "walk": 0,
             "run": 0,
@@ -1623,6 +1722,51 @@
                 "name": "sweep-contact"
               }
             ]
+          },
+          "readbook": {
+            "duration": 3.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.6,
+                "name": "page-cue"
+              }
+            ]
+          },
+          "writenote": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "lamplook": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "bowdraw": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.76,
+                "name": "release-cue"
+              }
+            ]
+          },
+          "offer": {
+            "duration": 2.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.58,
+                "name": "offer-cue"
+              }
+            ]
+          },
+          "restlean": {
+            "duration": 3.4,
+            "mask": "upper",
+            "events": []
           }
         },
         "compatibility": {
@@ -1868,6 +2012,9 @@
             "siphonreach": 0,
             "padcrawl": 0,
             "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 1,
             "walk": 0,
             "run": 0,
@@ -2174,6 +2321,51 @@
                 "name": "sweep-contact"
               }
             ]
+          },
+          "readbook": {
+            "duration": 3.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.6,
+                "name": "page-cue"
+              }
+            ]
+          },
+          "writenote": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "lamplook": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "bowdraw": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.76,
+                "name": "release-cue"
+              }
+            ]
+          },
+          "offer": {
+            "duration": 2.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.58,
+                "name": "offer-cue"
+              }
+            ]
+          },
+          "restlean": {
+            "duration": 3.4,
+            "mask": "upper",
+            "events": []
           }
         },
         "compatibility": {
@@ -2419,6 +2611,9 @@
             "siphonreach": 0,
             "padcrawl": 0,
             "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 1,
             "walk": 0,
             "run": 0,
@@ -2725,6 +2920,51 @@
                 "name": "sweep-contact"
               }
             ]
+          },
+          "readbook": {
+            "duration": 3.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.6,
+                "name": "page-cue"
+              }
+            ]
+          },
+          "writenote": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "lamplook": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "bowdraw": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.76,
+                "name": "release-cue"
+              }
+            ]
+          },
+          "offer": {
+            "duration": 2.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.58,
+                "name": "offer-cue"
+              }
+            ]
+          },
+          "restlean": {
+            "duration": 3.4,
+            "mask": "upper",
+            "events": []
           }
         },
         "compatibility": {
@@ -2970,6 +3210,9 @@
             "siphonreach": 0,
             "padcrawl": 0,
             "sensorscan": 0,
+            "animalamble": 0,
+            "animalsniff": 0,
+            "animalbound": 0,
             "idle": 1,
             "walk": 0,
             "run": 0,
@@ -3276,6 +3519,51 @@
                 "name": "sweep-contact"
               }
             ]
+          },
+          "readbook": {
+            "duration": 3.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.6,
+                "name": "page-cue"
+              }
+            ]
+          },
+          "writenote": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "lamplook": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "bowdraw": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.76,
+                "name": "release-cue"
+              }
+            ]
+          },
+          "offer": {
+            "duration": 2.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.58,
+                "name": "offer-cue"
+              }
+            ]
+          },
+          "restlean": {
+            "duration": 3.4,
+            "mask": "upper",
+            "events": []
           }
         },
         "compatibility": {
