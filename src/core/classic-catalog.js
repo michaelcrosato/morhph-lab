@@ -1,0 +1,19 @@
+/** Original attachment metadata. Kept separate to avoid a registry cycle. */
+export const CLASSIC_PARTS=Object.freeze({
+  leg: {label:'Walker', category:'Locomotion', description:'Two-bone leg with procedural foot placement.', anchor:[1,-.35,.35], size:1, length:1, mirror:true},
+  eye: {label:'Observer', category:'Senses', description:'A stalked eye that looks around and blinks.', anchor:[.48,.45,1], size:1, length:1, mirror:true},
+  horn: {label:'Crescent', category:'Ornament', description:'A curved, tapered horn grown from the skin.', anchor:[.6,1,.1], size:1, length:1, mirror:true},
+  tail: {label:'Whiptail', category:'Appendage', description:'A tapered chain with a travelling wave.', anchor:[0,.1,-1], size:1, length:1, mirror:false},
+  fin: {label:'Sailfin', category:'Membrane', description:'A ribbed membrane with procedural flex.', anchor:[0,1,-.35], size:1, length:1, mirror:false},
+  mouth: {label:'Nibbler', category:'Expression', description:'An animated mouth with a ring of teeth.', anchor:[0,-.2,1], size:1, length:1, mirror:false},
+  wing:{label:'Membrane wing',category:'Membrane',description:'A hinged wing with finger ribs and a flexible membrane.',anchor:[1,.5,-.2],size:1,length:1,mirror:true},
+  tentacle:{label:'Tendril',category:'Appendage',description:'A tapered chain with a travelling curl.',anchor:[1,-.2,.7],size:1,length:1,mirror:true},
+  antenna:{label:'Antenna',category:'Senses',description:'A flexible feeler with a glowing tip.',anchor:[.5,1,.6],size:1,length:1,mirror:true},
+  shell:{label:'Carapace',category:'Armor',description:'A segmented dome with raised plates.',anchor:[0,1,-.2],size:1,length:1,mirror:false},
+  mandible:{label:'Mandible',category:'Expression',description:'A curved jaw with teeth and a bite cycle.',anchor:[.6,-.25,1],size:1,length:1,mirror:true},
+  crest:{label:'Spine crest',category:'Armor',description:'A row of tapered spines on a raised base.',anchor:[0,1,-.3],size:1,length:1,mirror:false},
+  clubtail:{label:'Club tail',category:'Appendage',description:'An articulated tail with an armored club.',anchor:[0,.1,-1],size:1,length:1,mirror:false},
+  frill:{label:'Fan frill',category:'Membrane',description:'A radial fan that opens and folds.',anchor:[1,.15,.45],size:1,length:1,mirror:true},
+  claw:{label:'Pincer',category:'Appendage',description:'A stem with two moving claw fingers.',anchor:[1,-.1,.65],size:1,length:1,mirror:true},
+  gill:{label:'Gill fan',category:'Senses',description:'Layered leaf-shaped gills with a breathing cycle.',anchor:[1,.3,0],size:1,length:1,mirror:true},
+});

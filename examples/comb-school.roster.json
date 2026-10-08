@@ -1,0 +1,2858 @@
+{
+  "format": "morph-lab-roster",
+  "version": 1,
+  "seed": 7124,
+  "variation": 0.25,
+  "actors": [
+    {
+      "id": "actor-a1d41371",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 167,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Comb lantern 01",
+        "seed": 2838793156,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.72,
+              0.68,
+              0.92
+            ]
+          },
+          {
+            "id": "tip",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              -0.67
+            ],
+            "radii": [
+              0.3,
+              0.29,
+              0.32
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              1,
+              0,
+              0
+            ],
+            "size": 0.6462295960611664,
+            "length": 0.8233389370879158,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              0.7071067811865476,
+              0.7071067811865475,
+              0
+            ],
+            "size": 0.6352104730519932,
+            "length": 0.7871052964841947,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.125,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              6.123233995736766e-17,
+              1,
+              0
+            ],
+            "size": 0.6573768904519967,
+            "length": 0.8480752488011493,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.25,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -0.7071067811865475,
+              0.7071067811865476,
+              0
+            ],
+            "size": 0.6189464214333567,
+            "length": 0.8432011444410308,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.375,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -1,
+              1.2246467991473532e-16,
+              0
+            ],
+            "size": 0.6899072431423702,
+            "length": 0.8396125145163387,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.5,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-6",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -0.7071067811865476,
+              -0.7071067811865474,
+              0
+            ],
+            "size": 0.6732753239694285,
+            "length": 0.8555797391012311,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.625,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-7",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -1.8369701987210297e-16,
+              -1,
+              0
+            ],
+            "size": 0.6948683928523679,
+            "length": 0.8417153876330703,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.75,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-8",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              0.7071067811865474,
+              -0.7071067811865477,
+              0
+            ],
+            "size": 0.6814418937329901,
+            "length": 0.780559906411916,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.875,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-9",
+            "type": "siphon",
+            "host": "tip",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.4510791142936796,
+            "length": 0.6858434569719247,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-10",
+            "type": "optic",
+            "host": "core",
+            "anchor": [
+              0.86386842558136,
+              0.259160527674408,
+              0.43193421279068
+            ],
+            "size": 0.4505826312210411,
+            "length": 0.9991446897387505,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#264e70",
+          "accent": "#efb676",
+          "pattern": "combtracks",
+          "roughness": 0.3,
+          "patternScale": 4.199012547382154,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.18,
+          "strength": 0.72,
+          "metalness": 0.12,
+          "relief": 0.018,
+          "emission": 0.38,
+          "micro": "cilia",
+          "textureSeed": 2838793156,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 1,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9909376195806544,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "water",
+            "speed": 2.1,
+            "climb": 1.7,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.15,
+            "frequency": 0.65,
+            "wavelength": 3
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "water",
+          "speed": 2.1,
+          "climb": 1.7,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.15,
+          "frequency": 0.65,
+          "wavelength": 3
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-c1a056fd",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 162,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Comb lantern 02",
+        "seed": 601975995,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.72,
+              0.68,
+              0.92
+            ]
+          },
+          {
+            "id": "tip",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              -0.67
+            ],
+            "radii": [
+              0.3,
+              0.29,
+              0.32
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              1,
+              0,
+              0
+            ],
+            "size": 0.6700825060356874,
+            "length": 0.8310040126186796,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              0.7071067811865476,
+              0.7071067811865475,
+              0
+            ],
+            "size": 0.6191210402268916,
+            "length": 0.8237386655220761,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.125,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              6.123233995736766e-17,
+              1,
+              0
+            ],
+            "size": 0.6898434905562317,
+            "length": 0.7797959869531914,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.25,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -0.7071067811865475,
+              0.7071067811865476,
+              0
+            ],
+            "size": 0.65288772339758,
+            "length": 0.8350393777638673,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.375,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -1,
+              1.2246467991473532e-16,
+              0
+            ],
+            "size": 0.6291074482054683,
+            "length": 0.8270520109501668,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.5,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-6",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -0.7071067811865476,
+              -0.7071067811865474,
+              0
+            ],
+            "size": 0.6999692945159041,
+            "length": 0.7864486275799571,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.625,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-7",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -1.8369701987210297e-16,
+              -1,
+              0
+            ],
+            "size": 0.6998682422528509,
+            "length": 0.789822725218255,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.75,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-8",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              0.7071067811865474,
+              -0.7071067811865477,
+              0
+            ],
+            "size": 0.6580477153148968,
+            "length": 0.786185456494335,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.875,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-9",
+            "type": "siphon",
+            "host": "tip",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.46785898829984945,
+            "length": 0.6778799666138365,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-10",
+            "type": "optic",
+            "host": "core",
+            "anchor": [
+              0.86386842558136,
+              0.259160527674408,
+              0.43193421279068
+            ],
+            "size": 0.45197997328243217,
+            "length": 1.0209159965161234,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#264e70",
+          "accent": "#efb676",
+          "pattern": "combtracks",
+          "roughness": 0.3,
+          "patternScale": 3.8677378038410097,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.18,
+          "strength": 0.72,
+          "metalness": 0.12,
+          "relief": 0.018,
+          "emission": 0.38,
+          "micro": "cilia",
+          "textureSeed": 601975995,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 1,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.0295376588765066,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "water",
+            "speed": 2.1,
+            "climb": 1.7,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.15,
+            "frequency": 0.65,
+            "wavelength": 3
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "water",
+          "speed": 2.1,
+          "climb": 1.7,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.15,
+          "frequency": 0.65,
+          "wavelength": 3
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-b2141b1a",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 170,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Comb lantern 03",
+        "seed": 540049540,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.72,
+              0.68,
+              0.92
+            ]
+          },
+          {
+            "id": "tip",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              -0.67
+            ],
+            "radii": [
+              0.3,
+              0.29,
+              0.32
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              1,
+              0,
+              0
+            ],
+            "size": 0.6628398044686765,
+            "length": 0.8467149883070961,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              0.7071067811865476,
+              0.7071067811865475,
+              0
+            ],
+            "size": 0.684281495398027,
+            "length": 0.81043627120601,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.125,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              6.123233995736766e-17,
+              1,
+              0
+            ],
+            "size": 0.6529982882807963,
+            "length": 0.8417486057900824,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.25,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -0.7071067811865475,
+              0.7071067811865476,
+              0
+            ],
+            "size": 0.6221039651910542,
+            "length": 0.824935367857106,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.375,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -1,
+              1.2246467991473532e-16,
+              0
+            ],
+            "size": 0.6683996545721311,
+            "length": 0.7973908164626918,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.5,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-6",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -0.7071067811865476,
+              -0.7071067811865474,
+              0
+            ],
+            "size": 0.6815031324798474,
+            "length": 0.8391534019173124,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.625,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-7",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -1.8369701987210297e-16,
+              -1,
+              0
+            ],
+            "size": 0.6295246079930803,
+            "length": 0.850529426969122,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.75,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-8",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              0.7071067811865474,
+              -0.7071067811865477,
+              0
+            ],
+            "size": 0.6715262442093809,
+            "length": 0.7932792369588277,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.875,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-9",
+            "type": "siphon",
+            "host": "tip",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.422239345064736,
+            "length": 0.7241925936844199,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-10",
+            "type": "optic",
+            "host": "core",
+            "anchor": [
+              0.86386842558136,
+              0.259160527674408,
+              0.43193421279068
+            ],
+            "size": 0.46125926449662075,
+            "length": 0.9913043342297897,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#264e70",
+          "accent": "#efb676",
+          "pattern": "combtracks",
+          "roughness": 0.3,
+          "patternScale": 4.0439869072288275,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.18,
+          "strength": 0.72,
+          "metalness": 0.12,
+          "relief": 0.018,
+          "emission": 0.38,
+          "micro": "cilia",
+          "textureSeed": 540049540,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 1,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.98505374029628,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "water",
+            "speed": 2.1,
+            "climb": 1.7,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.15,
+            "frequency": 0.65,
+            "wavelength": 3
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "water",
+          "speed": 2.1,
+          "climb": 1.7,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.15,
+          "frequency": 0.65,
+          "wavelength": 3
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-db1caed6",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 151,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Comb lantern 04",
+        "seed": 2182058556,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.72,
+              0.68,
+              0.92
+            ]
+          },
+          {
+            "id": "tip",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              -0.67
+            ],
+            "radii": [
+              0.3,
+              0.29,
+              0.32
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              1,
+              0,
+              0
+            ],
+            "size": 0.6196623836673097,
+            "length": 0.8558446410014293,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              0.7071067811865476,
+              0.7071067811865475,
+              0
+            ],
+            "size": 0.6584035010507796,
+            "length": 0.8271871713097207,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.125,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              6.123233995736766e-17,
+              1,
+              0
+            ],
+            "size": 0.6678579275950324,
+            "length": 0.827237136380747,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.25,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -0.7071067811865475,
+              0.7071067811865476,
+              0
+            ],
+            "size": 0.6544993916671956,
+            "length": 0.7932892045690677,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.375,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -1,
+              1.2246467991473532e-16,
+              0
+            ],
+            "size": 0.6816402132762597,
+            "length": 0.8096154206707142,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.5,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-6",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -0.7071067811865476,
+              -0.7071067811865474,
+              0
+            ],
+            "size": 0.6667586131975987,
+            "length": 0.8241423891908489,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.625,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-7",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -1.8369701987210297e-16,
+              -1,
+              0
+            ],
+            "size": 0.6847550990036689,
+            "length": 0.821308049140498,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.75,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-8",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              0.7071067811865474,
+              -0.7071067811865477,
+              0
+            ],
+            "size": 0.6607524862897117,
+            "length": 0.8179876208822242,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.875,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-9",
+            "type": "siphon",
+            "host": "tip",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.4600202074128902,
+            "length": 0.6729161812271922,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-10",
+            "type": "optic",
+            "host": "core",
+            "anchor": [
+              0.86386842558136,
+              0.259160527674408,
+              0.43193421279068
+            ],
+            "size": 0.44796920856577344,
+            "length": 0.9874601079151034,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#264e70",
+          "accent": "#efb676",
+          "pattern": "combtracks",
+          "roughness": 0.3,
+          "patternScale": 4.188368967734277,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.18,
+          "strength": 0.72,
+          "metalness": 0.12,
+          "relief": 0.018,
+          "emission": 0.38,
+          "micro": "cilia",
+          "textureSeed": 2182058556,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 1,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.992853928997647,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "water",
+            "speed": 2.1,
+            "climb": 1.7,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.15,
+            "frequency": 0.65,
+            "wavelength": 3
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "water",
+          "speed": 2.1,
+          "climb": 1.7,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.15,
+          "frequency": 0.65,
+          "wavelength": 3
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-bda4629a",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 158,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Comb lantern 05",
+        "seed": 2985685059,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.72,
+              0.68,
+              0.92
+            ]
+          },
+          {
+            "id": "tip",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              -0.67
+            ],
+            "radii": [
+              0.3,
+              0.29,
+              0.32
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              1,
+              0,
+              0
+            ],
+            "size": 0.6285312955506379,
+            "length": 0.8422448571496643,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              0.7071067811865476,
+              0.7071067811865475,
+              0
+            ],
+            "size": 0.6976326681976207,
+            "length": 0.7932158046932891,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.125,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              6.123233995736766e-17,
+              1,
+              0
+            ],
+            "size": 0.6921552553534275,
+            "length": 0.784803285070695,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.25,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -0.7071067811865475,
+              0.7071067811865476,
+              0
+            ],
+            "size": 0.6834507002035389,
+            "length": 0.8178822809518315,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.375,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -1,
+              1.2246467991473532e-16,
+              0
+            ],
+            "size": 0.6811495181336068,
+            "length": 0.8559033544030971,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.5,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-6",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -0.7071067811865476,
+              -0.7071067811865474,
+              0
+            ],
+            "size": 0.6449802678613924,
+            "length": 0.8343917522397823,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.625,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-7",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -1.8369701987210297e-16,
+              -1,
+              0
+            ],
+            "size": 0.6826971771911485,
+            "length": 0.848608655378688,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.75,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-8",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              0.7071067811865474,
+              -0.7071067811865477,
+              0
+            ],
+            "size": 0.6519054013449932,
+            "length": 0.8593303536893799,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.875,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-9",
+            "type": "siphon",
+            "host": "tip",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.47589165460376537,
+            "length": 0.7335561853041872,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-10",
+            "type": "optic",
+            "host": "core",
+            "anchor": [
+              0.86386842558136,
+              0.259160527674408,
+              0.43193421279068
+            ],
+            "size": 0.41303986883373,
+            "length": 1.0051842866232619,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#264e70",
+          "accent": "#efb676",
+          "pattern": "combtracks",
+          "roughness": 0.3,
+          "patternScale": 3.870677215512842,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.18,
+          "strength": 0.72,
+          "metalness": 0.12,
+          "relief": 0.018,
+          "emission": 0.38,
+          "micro": "cilia",
+          "textureSeed": 2985685059,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 1,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.037156635336578,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "water",
+            "speed": 2.1,
+            "climb": 1.7,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.15,
+            "frequency": 0.65,
+            "wavelength": 3
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "water",
+          "speed": 2.1,
+          "climb": 1.7,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.15,
+          "frequency": 0.65,
+          "wavelength": 3
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-cbd09a02",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 154,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Comb lantern 06",
+        "seed": 255165367,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.72,
+              0.68,
+              0.92
+            ]
+          },
+          {
+            "id": "tip",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              -0.67
+            ],
+            "radii": [
+              0.3,
+              0.29,
+              0.32
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              1,
+              0,
+              0
+            ],
+            "size": 0.6602227674087044,
+            "length": 0.811797900127247,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              0.7071067811865476,
+              0.7071067811865475,
+              0
+            ],
+            "size": 0.6868724991782802,
+            "length": 0.7850710045848973,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.125,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              6.123233995736766e-17,
+              1,
+              0
+            ],
+            "size": 0.6476259590894915,
+            "length": 0.8182697277353145,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.25,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -0.7071067811865475,
+              0.7071067811865476,
+              0
+            ],
+            "size": 0.6738331965211546,
+            "length": 0.8165085882400162,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.375,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -1,
+              1.2246467991473532e-16,
+              0
+            ],
+            "size": 0.6739644036378013,
+            "length": 0.8123972619166597,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.5,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-6",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -0.7071067811865476,
+              -0.7071067811865474,
+              0
+            ],
+            "size": 0.6798249790573028,
+            "length": 0.8219569711145014,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.625,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-7",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              -1.8369701987210297e-16,
+              -1,
+              0
+            ],
+            "size": 0.6325819689809578,
+            "length": 0.8355282722259871,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.75,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "glow",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-8",
+            "type": "combrail",
+            "host": "core",
+            "anchor": [
+              0.7071067811865474,
+              -0.7071067811865477,
+              0
+            ],
+            "size": 0.6677605985978153,
+            "length": 0.786795099940151,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0.875,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-9",
+            "type": "siphon",
+            "host": "tip",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.4564519387437031,
+            "length": 0.7248758082091808,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-10",
+            "type": "optic",
+            "host": "core",
+            "anchor": [
+              0.86386842558136,
+              0.259160527674408,
+              0.43193421279068
+            ],
+            "size": 0.46403713440871797,
+            "length": 0.951725605595857,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#264e70",
+          "accent": "#efb676",
+          "pattern": "combtracks",
+          "roughness": 0.3,
+          "patternScale": 3.932147892192006,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.18,
+          "strength": 0.72,
+          "metalness": 0.12,
+          "relief": 0.018,
+          "emission": 0.38,
+          "micro": "cilia",
+          "textureSeed": 255165367,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 1,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9997049930505455,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "water",
+            "speed": 2.1,
+            "climb": 1.7,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.15,
+            "frequency": 0.65,
+            "wavelength": 3
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "water",
+          "speed": 2.1,
+          "climb": 1.7,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.15,
+          "frequency": 0.65,
+          "wavelength": 3
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    }
+  ]
+}

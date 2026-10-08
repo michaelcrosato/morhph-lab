@@ -1,0 +1,180 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "humanoid",
+    "proportions": {
+      "scale": 0.98,
+      "torso": 1,
+      "shoulders": 0.86,
+      "hips": 1,
+      "arms": 1,
+      "legs": 1.15,
+      "head": 1,
+      "bulk": 0.8,
+      "hands": 1,
+      "feet": 1,
+      "posture": 0
+    },
+    "outfit": "tunic",
+    "headStyle": "hood",
+    "handStyle": "fingers",
+    "bodyStyle": "classic"
+  },
+  "actor": {
+    "role": "scout",
+    "faction": "neutral",
+    "behavior": "patrol",
+    "health": 80,
+    "speed": 1.25,
+    "sight": 18,
+    "range": 1.5,
+    "damage": 12,
+    "cooldown": 0.9
+  },
+  "name": "Ranger",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.3528,
+        0.294,
+        0.26877976527870256
+      ]
+    },
+    {
+      "id": "spine",
+      "parent": "core",
+      "offset": [
+        0,
+        0.245,
+        0
+      ],
+      "radii": [
+        0.2868217285688191,
+        0.3626,
+        0.25419620768217605
+      ]
+    },
+    {
+      "id": "chest",
+      "parent": "spine",
+      "offset": [
+        0,
+        0.33319999999999994,
+        0
+      ],
+      "radii": [
+        0.446684,
+        0.43119999999999997,
+        0.27125924307374716
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "chest",
+      "offset": [
+        0,
+        0.539,
+        0
+      ],
+      "radii": [
+        0.28419999999999995,
+        0.34299999999999997,
+        0.3038
+      ]
+    }
+  ],
+  "parts": [],
+  "appearance": {
+    "color": "#c58d68",
+    "accent": "#647c45",
+    "pattern": "plain",
+    "roughness": 0.72,
+    "patternScale": 5.4,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.2,
+    "metalness": 0.025,
+    "relief": 0.012,
+    "emission": 0,
+    "micro": "pores",
+    "textureSeed": 1042,
+    "layers": []
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0,
+      "walk": 1,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

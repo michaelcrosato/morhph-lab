@@ -1,0 +1,12 @@
+{
+  "suite": "v11 complete geometry and material packing browser checks",
+  "passed": 136,
+  "errors": [],
+  "offline": true,
+  "actualCPUGeometry": true,
+  "editorHasRenderer": false,
+  "gpuTested": false,
+  "physicsTested": false,
+  "entry": "Exact combined HTML via set_content",
+  "htmlSHA256": "efd3d8c0b7ccf9f5edf2d7486dbc60b09fa1602c5e65cb0a4bcb14817c743602"
+}

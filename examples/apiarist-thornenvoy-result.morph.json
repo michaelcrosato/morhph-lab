@@ -1,0 +1,325 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "humanoid",
+    "proportions": {
+      "scale": 1.0150000000000001,
+      "torso": 1,
+      "shoulders": 1,
+      "hips": 1,
+      "arms": 1.03,
+      "legs": 1.0125,
+      "head": 1.03,
+      "bulk": 0.9950000000000001,
+      "hands": 1,
+      "feet": 1,
+      "posture": 0
+    },
+    "outfit": "tunic",
+    "headStyle": "hood",
+    "handStyle": "fingers",
+    "bodyStyle": "defined"
+  },
+  "actor": {
+    "role": "civilian",
+    "faction": "friendly",
+    "behavior": "wander",
+    "health": 66.25,
+    "speed": 0.975,
+    "sight": 10.5,
+    "range": 2.65,
+    "damage": 6,
+    "cooldown": 2.125
+  },
+  "name": "Apiarist × Thorn envoy",
+  "seed": 8121,
+  "generation": 1,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.36540000000000006,
+        0.30450000000000005,
+        0.2939813705980865
+      ]
+    },
+    {
+      "id": "spine",
+      "parent": "core",
+      "offset": [
+        0,
+        0.25375000000000003,
+        0
+      ],
+      "radii": [
+        0.3241494229931247,
+        0.37555000000000005,
+        0.29361320284942916
+      ]
+    },
+    {
+      "id": "chest",
+      "parent": "spine",
+      "offset": [
+        0,
+        0.34509999999999996,
+        0
+      ],
+      "radii": [
+        0.53795,
+        0.44660000000000005,
+        0.3237434742656623
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "chest",
+      "offset": [
+        0,
+        0.7529270000000002,
+        0
+      ],
+      "radii": [
+        0.3031805,
+        0.36590750000000005,
+        0.3240895000000001
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "mix-part-1",
+      "type": "faceplate",
+      "host": "head",
+      "anchor": [
+        0,
+        0,
+        1
+      ],
+      "size": 0.412,
+      "length": 0.955,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "bone",
+      "socket": "head",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-2",
+      "type": "tubecluster",
+      "host": "chest",
+      "anchor": [
+        -0.09950371902099893,
+        0.9950371902099893,
+        0
+      ],
+      "size": 0.4,
+      "length": 1.2,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.55,
+      "material": "inherit",
+      "socket": "hand",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-3",
+      "type": "latticecage",
+      "host": "chest",
+      "anchor": [
+        0,
+        0,
+        -1
+      ],
+      "size": 0.4,
+      "length": 0.65,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.55,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-4",
+      "type": "petalcrown",
+      "host": "head",
+      "anchor": [
+        0,
+        1,
+        0
+      ],
+      "size": 0.57,
+      "length": 0.8,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 0.45,
+      "material": "inherit",
+      "socket": "head",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-5",
+      "type": "petalcrown",
+      "host": "chest",
+      "anchor": [
+        0.9950371902099893,
+        0.09950371902099893,
+        0
+      ],
+      "size": 0.36,
+      "length": 0.7,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0.5,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.45,
+      "material": "inherit",
+      "socket": "upperArm",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#817e5d",
+    "accent": "#d7af9c",
+    "pattern": "petalveins",
+    "roughness": 0.608,
+    "patternScale": 3.5,
+    "weight": 0.6,
+    "angle": 0,
+    "warp": 0.16,
+    "strength": 0.5399999999999999,
+    "metalness": 0.006,
+    "relief": 0.0268,
+    "emission": 0,
+    "micro": "petalgrain",
+    "textureSeed": 1042,
+    "layers": [
+      {
+        "pattern": "stitchgrid",
+        "scale": 3.5,
+        "weight": 0.4,
+        "angle": 0,
+        "warp": 0.16
+      }
+    ]
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "ripplewalk": 0,
+      "shellclap": 0,
+      "bloomcycle": 0,
+      "siphonreach": 0,
+      "padcrawl": 0,
+      "sensorscan": 0,
+      "idle": 1,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.12,
+      "frequency": 0.55,
+      "wavelength": 3.5
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "sweep",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

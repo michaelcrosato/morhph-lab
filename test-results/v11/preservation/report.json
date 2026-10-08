@@ -1,0 +1,88 @@
+{
+  "baseline": "Unmodified Morph-Lab-v10-source.zip",
+  "recipes": {
+    "tested": 89,
+    "passed": 89,
+    "failures": []
+  },
+  "existingCompleteGeometry": {
+    "samples": 130,
+    "passed": 130,
+    "failures": []
+  },
+  "views": [
+    {
+      "id": "mossback",
+      "label": "before",
+      "meshes": 1,
+      "excludedGenes": 6,
+      "clipped": 0
+    },
+    {
+      "id": "mossback",
+      "label": "after",
+      "meshes": 26,
+      "excludedGenes": 0,
+      "clipped": 0
+    },
+    {
+      "id": "glider",
+      "label": "before",
+      "meshes": 1,
+      "excludedGenes": 7,
+      "clipped": 0
+    },
+    {
+      "id": "glider",
+      "label": "after",
+      "meshes": 30,
+      "excludedGenes": 0,
+      "clipped": 0
+    },
+    {
+      "id": "tendril",
+      "label": "before",
+      "meshes": 1,
+      "excludedGenes": 6,
+      "clipped": 0
+    },
+    {
+      "id": "tendril",
+      "label": "after",
+      "meshes": 24,
+      "excludedGenes": 0,
+      "clipped": 0
+    },
+    {
+      "id": "fiend",
+      "label": "before",
+      "meshes": 67,
+      "excludedGenes": 3,
+      "clipped": 0
+    },
+    {
+      "id": "fiend",
+      "label": "after",
+      "meshes": 73,
+      "excludedGenes": 0,
+      "clipped": 0
+    }
+  ],
+  "scope": "Hashes compare positions, normals, indices and UVs for two samples of each previously complete model. Old unsupported parts are deliberate new triangulation. No GPU comparison.",
+  "currentCoverage": {
+    "models": 89,
+    "humanoids": 27,
+    "creatures": 62,
+    "civilianHumanoids": 9,
+    "partFamilies": 73,
+    "sharedPartFamilies": 73,
+    "completeReviewModels": 89,
+    "kits": 31,
+    "movementRecipes": 37,
+    "humanoidActions": 35,
+    "pigmentPatterns": 46,
+    "microtextures": 31,
+    "surfaceRecipes": 46,
+    "palettes": 36
+  }
+}

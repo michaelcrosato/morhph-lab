@@ -1,0 +1,59 @@
+{
+  "suite": "Independent material-grouped GLB imports, ranges and motion",
+  "checks": 1072,
+  "passed": 1072,
+  "failures": 0,
+  "source": "Fresh procedural source buffers before grouping",
+  "staticImporter": "trimesh 4.11.1",
+  "animationDecoder": "Independent Python / NumPy",
+  "models": [
+    {
+      "id": "mossback",
+      "meshes": 8,
+      "triangles": 30424,
+      "poses": 9,
+      "maxPositionErrorMetres": 1.4901161193847656e-08
+    },
+    {
+      "id": "glider",
+      "meshes": 8,
+      "triangles": 29750,
+      "poses": 9,
+      "maxPositionErrorMetres": 2.9802322387695312e-08
+    },
+    {
+      "id": "reef",
+      "meshes": 8,
+      "triangles": 22296,
+      "poses": 9,
+      "maxPositionErrorMetres": 5.960464477539063e-08
+    },
+    {
+      "id": "tendril",
+      "meshes": 8,
+      "triangles": 20312,
+      "poses": 9,
+      "maxPositionErrorMetres": 2.9802322387695312e-08
+    },
+    {
+      "id": "fiend",
+      "meshes": 9,
+      "triangles": 53532,
+      "poses": 9,
+      "maxPositionErrorMetres": 1.4901161193847656e-08
+    },
+    {
+      "id": "archivist",
+      "meshes": 11,
+      "triangles": 42632,
+      "poses": 9,
+      "maxPositionErrorMetres": 5.960464477539063e-08
+    }
+  ],
+  "gpuTested": false,
+  "physicsTested": false,
+  "khronosValidatorRun": false,
+  "blenderTested": false,
+  "unityTested": false,
+  "unrealTested": false
+}

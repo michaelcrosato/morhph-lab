@@ -1,0 +1,9 @@
+{
+  "edition": "cdn",
+  "three": "0.181.0",
+  "rapier": "0.19.3",
+  "modules": 107,
+  "bytes": 1230078,
+  "combined": true,
+  "version": "12.0.0"
+}

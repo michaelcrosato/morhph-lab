@@ -1,0 +1,9 @@
+{
+  "suite": "v11 regression asset delivery and diagnostic UI",
+  "passed": 44,
+  "webgl2Available": false,
+  "engineRenderingTested": false,
+  "physicsTested": false,
+  "errors": [],
+  "htmlSHA256": "74339b28f1cb86bc8f96c5b766df9835c1208efde734c7546574192dcaea2e58"
+}

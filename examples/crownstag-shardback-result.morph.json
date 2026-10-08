@@ -1,0 +1,463 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "creature"
+  },
+  "actor": {
+    "role": "monster",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 160,
+    "speed": 1,
+    "sight": 12,
+    "range": 1.8,
+    "damage": 20,
+    "cooldown": 1.4
+  },
+  "name": "Crownstag × Shardback",
+  "seed": 2311,
+  "generation": 1,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.818,
+        0.726,
+        1.3599999999999999
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "core",
+      "offset": [
+        0,
+        0.29200000000000004,
+        0.9219999999999999
+      ],
+      "radii": [
+        0.61,
+        0.584,
+        0.6519999999999999
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "mix-part-1",
+      "type": "leg",
+      "host": "core",
+      "anchor": [
+        0.7702831786245292,
+        -0.21612652698946266,
+        0.5999609562792937
+      ],
+      "size": 0.7775,
+      "length": 1.675,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-2",
+      "type": "leg",
+      "host": "core",
+      "anchor": [
+        0.9575630078685184,
+        -0.25732385669419117,
+        -0.12983650772345628
+      ],
+      "size": 0.8500000000000001,
+      "length": 1.5625,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-3",
+      "type": "eye",
+      "host": "head",
+      "anchor": [
+        0.40473687690476545,
+        0.35383433922006025,
+        0.8432018268849281
+      ],
+      "size": 0.8700000000000001,
+      "length": 1.2000000000000002,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-4",
+      "type": "tail",
+      "host": "core",
+      "anchor": [
+        0,
+        0.04993761694389223,
+        -0.9987523388778446
+      ],
+      "size": 1,
+      "length": 1.15,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.25,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-5",
+      "type": "antler",
+      "host": "head",
+      "anchor": [
+        0.4943740446449421,
+        0.8523690424912795,
+        -0.1704738084982559
+      ],
+      "size": 0.7,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.25,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-6",
+      "type": "ear",
+      "host": "head",
+      "anchor": [
+        0.9347835805883489,
+        0.3552177606235726,
+        0
+      ],
+      "size": 0.5,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.25,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-7",
+      "type": "muzzle",
+      "host": "head",
+      "anchor": [
+        0,
+        -0.14834045293024462,
+        0.9889363528682975
+      ],
+      "size": 0.55,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.25,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-8",
+      "type": "leg",
+      "host": "core",
+      "anchor": [
+        0.7514550043999297,
+        -0.16532010096798455,
+        -0.6387367537399402
+      ],
+      "size": 0.78,
+      "length": 1.6,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.75,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-9",
+      "type": "mouth",
+      "host": "head",
+      "anchor": [
+        0,
+        -0.2873478855663454,
+        0.9578262852211513
+      ],
+      "size": 0.6,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.75,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-10",
+      "type": "shell",
+      "host": "core",
+      "anchor": [
+        0,
+        1,
+        0
+      ],
+      "size": 1.23,
+      "length": 1.2,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 0.75,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-11",
+      "type": "crystal",
+      "host": "core",
+      "anchor": [
+        0,
+        0.9805806756909201,
+        -0.19611613513818404
+      ],
+      "size": 1.1,
+      "length": 1.4,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.75,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-12",
+      "type": "crystal",
+      "host": "head",
+      "anchor": [
+        0,
+        0.9805806756909201,
+        -0.19611613513818404
+      ],
+      "size": 0.55,
+      "length": 0.7,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 0.75,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#847b73",
+    "accent": "#cad1be",
+    "pattern": "veins",
+    "roughness": 0.44,
+    "patternScale": 5.4,
+    "weight": 0.5,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.78,
+    "metalness": 0.036,
+    "relief": 0.0216,
+    "emission": 0,
+    "micro": "pores",
+    "textureSeed": 1042,
+    "layers": [
+      {
+        "pattern": "rosettes",
+        "scale": 5.4,
+        "weight": 0.4,
+        "angle": 0,
+        "warp": 0.45
+      },
+      {
+        "pattern": "speckle",
+        "scale": 7,
+        "weight": 0.1,
+        "angle": 0.3,
+        "warp": 0.35
+      }
+    ]
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0,
+      "walk": 0,
+      "run": 0,
+      "creep": 0.4,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0.6,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

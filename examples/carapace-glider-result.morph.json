@@ -1,0 +1,430 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "creature"
+  },
+  "actor": {
+    "role": "monster",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 160,
+    "speed": 1,
+    "sight": 12,
+    "range": 1.8,
+    "damage": 20,
+    "cooldown": 1.4
+  },
+  "name": "Carapace × Glider",
+  "seed": 8128,
+  "generation": 1,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.692,
+        0.5815,
+        1.2565
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "core",
+      "offset": [
+        0,
+        0.121,
+        0.908
+      ],
+      "radii": [
+        0.5725,
+        0.549,
+        0.622
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "mix-part-1",
+      "type": "leg",
+      "host": "core",
+      "anchor": [
+        0.7948084184455161,
+        -0.30192276924395284,
+        0.5264239920256295
+      ],
+      "size": 0.8764,
+      "length": 1.3259999999999998,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-2",
+      "type": "leg",
+      "host": "core",
+      "anchor": [
+        0.8781578375186951,
+        -0.32074174084011875,
+        -0.35491343745671183
+      ],
+      "size": 0.936,
+      "length": 1.21,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-3",
+      "type": "leg",
+      "host": "core",
+      "anchor": [
+        0.7514550043999297,
+        -0.16532010096798455,
+        -0.6387367537399402
+      ],
+      "size": 0.78,
+      "length": 1.6,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.31999999999999995,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-4",
+      "type": "eye",
+      "host": "head",
+      "anchor": [
+        0.4004887951088998,
+        0.378769109519925,
+        0.8343516564768747
+      ],
+      "size": 0.9904000000000001,
+      "length": 1.028,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-5",
+      "type": "mouth",
+      "host": "head",
+      "anchor": [
+        0,
+        -0.2992096556534468,
+        0.9541873935258973
+      ],
+      "size": 0.736,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-6",
+      "type": "shell",
+      "host": "core",
+      "anchor": [
+        0,
+        0.9889363528682975,
+        -0.14834045293024462
+      ],
+      "size": 1.35,
+      "length": 1.5,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.31999999999999995,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-7",
+      "type": "mandible",
+      "host": "head",
+      "anchor": [
+        0.556890098923011,
+        -0.238667185252719,
+        0.79555728417573
+      ],
+      "size": 0.85,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.31999999999999995,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-8",
+      "type": "antenna",
+      "host": "head",
+      "anchor": [
+        0.4472135954999579,
+        0.7155417527999327,
+        0.5366563145999494
+      ],
+      "size": 0.7,
+      "length": 1.4,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.31999999999999995,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-9",
+      "type": "tail",
+      "host": "core",
+      "anchor": [
+        0,
+        0.04993761694389223,
+        -0.9987523388778446
+      ],
+      "size": 1,
+      "length": 1.15,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.68,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-10",
+      "type": "wing",
+      "host": "core",
+      "anchor": [
+        0.8728715609439696,
+        0.4800793585191833,
+        -0.08728715609439697
+      ],
+      "size": 1.2,
+      "length": 1.35,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.68,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-11",
+      "type": "crest",
+      "host": "head",
+      "anchor": [
+        0,
+        1,
+        0
+      ],
+      "size": 0.65,
+      "length": 0.8,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.68,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#85786e",
+    "accent": "#d1d694",
+    "pattern": "chevron",
+    "roughness": 0.57,
+    "patternScale": 5.4,
+    "weight": 0.6,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.78,
+    "metalness": 0.095,
+    "relief": 0.022,
+    "emission": 0,
+    "micro": "pores",
+    "textureSeed": 1042,
+    "layers": [
+      {
+        "pattern": "cells",
+        "scale": 5.4,
+        "weight": 0.4,
+        "angle": 0,
+        "warp": 0.45
+      }
+    ]
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0,
+      "walk": 0,
+      "run": 0,
+      "creep": 0.25,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0.75,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

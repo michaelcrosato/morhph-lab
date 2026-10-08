@@ -1,0 +1,3002 @@
+{
+  "format": "morph-lab-roster",
+  "version": 1,
+  "seed": 4201,
+  "variation": 0.3,
+  "actors": [
+    {
+      "id": "actor-bc34414e",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "humanoid",
+          "proportions": {
+            "scale": 1.083649480353296,
+            "torso": 1.0310938199725934,
+            "shoulders": 0.9855185212254524,
+            "hips": 1.0363759889709763,
+            "arms": 0.9646079894853756,
+            "legs": 1.2450101216243348,
+            "head": 0.9195947942882776,
+            "bulk": 0.7933429813333788,
+            "hands": 1.068901571878232,
+            "feet": 0.9031519727664999,
+            "posture": 0
+          },
+          "outfit": "tunic",
+          "headStyle": "hood",
+          "handStyle": "fingers",
+          "bodyStyle": "classic"
+        },
+        "actor": {
+          "role": "scout",
+          "faction": "neutral",
+          "behavior": "patrol",
+          "health": 81,
+          "speed": 1.25,
+          "sight": 18,
+          "range": 1.5,
+          "damage": 12,
+          "cooldown": 0.9
+        },
+        "name": "Outrider 01",
+        "seed": 1070683803,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.4043045886836514,
+              0.32509484410598877,
+              0.2965869725661064
+            ]
+          },
+          {
+            "id": "spine",
+            "parent": "core",
+            "offset": [
+              0,
+              0.27933607055219895,
+              0
+            ],
+            "radii": [
+              0.31609905606517563,
+              0.4134173844172544,
+              0.2799092927560316
+            ]
+          },
+          {
+            "id": "chest",
+            "parent": "spine",
+            "offset": [
+              0,
+              0.3798970559509904,
+              0
+            ],
+            "radii": [
+              0.5660170157043903,
+              0.49163148417187014,
+              0.2983241726988914
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "chest",
+            "offset": [
+              0,
+              0.6072898035402753,
+              0
+            ],
+            "radii": [
+              0.2889903420801655,
+              0.3487814473381308,
+              0.30892071049948727
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "pack",
+            "host": "chest",
+            "anchor": [
+              0,
+              0.05989229072794672,
+              -0.9982048454657787
+            ],
+            "size": 0.7605900690867565,
+            "length": 0.9805398265458644,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "staff",
+            "host": "core",
+            "anchor": [
+              -0.05989229072794672,
+              0.9982048454657787,
+              0
+            ],
+            "size": 0.8650756645348155,
+            "length": 0.9976767821144312,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "hand",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "banner",
+            "host": "chest",
+            "anchor": [
+              0.11073202057883433,
+              0.36910673526278115,
+              -0.9227668381569528
+            ],
+            "size": 0.567362452890491,
+            "length": 0.9665744079556317,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#b58a71",
+          "accent": "#4e715e",
+          "pattern": "plain",
+          "roughness": 0.96,
+          "patternScale": 5.25997217707336,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.45,
+          "strength": 0.16,
+          "metalness": 0,
+          "relief": 0.028,
+          "emission": 0,
+          "micro": "weave",
+          "textureSeed": 1070683803,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 1,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.000613662265241,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "nimble",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "humanoid",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": 1.9143665051164647,
+        "sockets": [
+          "head",
+          "chest",
+          "pelvis",
+          "upperArm",
+          "forearm",
+          "hand",
+          "upperLeg",
+          "shin",
+          "foot"
+        ],
+        "actions": {
+          "none": {
+            "duration": 1,
+            "mask": "upper",
+            "events": []
+          },
+          "wave": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "point": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": []
+          },
+          "talk": {
+            "duration": 3.1,
+            "mask": "upper",
+            "events": []
+          },
+          "guard": {
+            "duration": 2,
+            "mask": "upper",
+            "events": []
+          },
+          "attack": {
+            "duration": 1.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.52,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "cast": {
+            "duration": 2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.68,
+                "name": "cast-release"
+              }
+            ]
+          },
+          "hit": {
+            "duration": 0.7,
+            "mask": "full",
+            "events": []
+          },
+          "jump": {
+            "duration": 1.2,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.18,
+                "name": "takeoff"
+              },
+              {
+                "at": 0.82,
+                "name": "land"
+              }
+            ]
+          },
+          "sit": {
+            "duration": 1.8,
+            "mask": "full",
+            "events": []
+          },
+          "defeat": {
+            "duration": 2.1,
+            "mask": "full",
+            "events": []
+          },
+          "celebrate": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "bow": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "kneel": {
+            "duration": 2.2,
+            "mask": "full",
+            "events": []
+          },
+          "pray": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "inspect": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "interact": {
+            "duration": 2.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "interact-contact"
+              }
+            ]
+          },
+          "carry": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "push": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "push-contact"
+              }
+            ]
+          },
+          "work": {
+            "duration": 1.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.56,
+                "name": "work-contact"
+              }
+            ]
+          },
+          "thrust": {
+            "duration": 1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "kick": {
+            "duration": 1.25,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "dodge": {
+            "duration": 1,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.3,
+                "name": "dodge-peak"
+              }
+            ]
+          },
+          "roar": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.42,
+                "name": "voice-cue"
+              }
+            ]
+          }
+        },
+        "compatibility": {
+          "family": "humanoid",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": true,
+            "handSockets": true,
+            "upperBodyActions": true,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-2b5d1567",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "humanoid",
+          "proportions": {
+            "scale": 1.142504500897415,
+            "torso": 1.06227021609433,
+            "shoulders": 0.9519093533858657,
+            "hips": 0.9309693753672764,
+            "arms": 0.9740938541735522,
+            "legs": 1.2424692824641241,
+            "head": 0.9460931073175743,
+            "bulk": 0.9005470208243002,
+            "hands": 0.9824181650578976,
+            "feet": 1.0805939126107842,
+            "posture": 0
+          },
+          "outfit": "tunic",
+          "headStyle": "hood",
+          "handStyle": "fingers",
+          "bodyStyle": "classic"
+        },
+        "actor": {
+          "role": "scout",
+          "faction": "neutral",
+          "behavior": "patrol",
+          "health": 81,
+          "speed": 1.25,
+          "sight": 18,
+          "range": 1.5,
+          "damage": 12,
+          "cooldown": 0.9
+        },
+        "name": "Outrider 02",
+        "seed": 1271262740,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.3829092125597166,
+              0.3427513502692245,
+              0.32276208776383175
+            ]
+          },
+          {
+            "id": "spine",
+            "parent": "core",
+            "offset": [
+              0,
+              0.30341212576426047,
+              0
+            ],
+            "radii": [
+              0.35059882438765,
+              0.44904994613110544,
+              0.3144192406209333
+            ]
+          },
+          {
+            "id": "chest",
+            "parent": "spine",
+            "offset": [
+              0,
+              0.41264049103939415,
+              0
+            ],
+            "radii": [
+              0.5764071819655407,
+              0.5340053413450984,
+              0.34153644528169286
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "chest",
+            "offset": [
+              0,
+              0.6595427045006516,
+              0
+            ],
+            "radii": [
+              0.31346553367972146,
+              0.3783204716824224,
+              0.33508384634728844
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "pack",
+            "host": "chest",
+            "anchor": [
+              0,
+              0.05989229072794672,
+              -0.9982048454657787
+            ],
+            "size": 0.8610611021877266,
+            "length": 0.9430769384279847,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "staff",
+            "host": "core",
+            "anchor": [
+              -0.05989229072794672,
+              0.9982048454657787,
+              0
+            ],
+            "size": 0.8863004543818533,
+            "length": 1.0395894690975547,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "hand",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "banner",
+            "host": "chest",
+            "anchor": [
+              0.11073202057883433,
+              0.36910673526278115,
+              -0.9227668381569528
+            ],
+            "size": 0.5475794048458337,
+            "length": 0.9840197819657623,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#b58a71",
+          "accent": "#4e715e",
+          "pattern": "plain",
+          "roughness": 0.96,
+          "patternScale": 5.168053652532399,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.45,
+          "strength": 0.16,
+          "metalness": 0,
+          "relief": 0.028,
+          "emission": 0,
+          "micro": "weave",
+          "textureSeed": 1271262740,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 1,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9598566961893812,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "nimble",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "humanoid",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": 2.03871872804579,
+        "sockets": [
+          "head",
+          "chest",
+          "pelvis",
+          "upperArm",
+          "forearm",
+          "hand",
+          "upperLeg",
+          "shin",
+          "foot"
+        ],
+        "actions": {
+          "none": {
+            "duration": 1,
+            "mask": "upper",
+            "events": []
+          },
+          "wave": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "point": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": []
+          },
+          "talk": {
+            "duration": 3.1,
+            "mask": "upper",
+            "events": []
+          },
+          "guard": {
+            "duration": 2,
+            "mask": "upper",
+            "events": []
+          },
+          "attack": {
+            "duration": 1.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.52,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "cast": {
+            "duration": 2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.68,
+                "name": "cast-release"
+              }
+            ]
+          },
+          "hit": {
+            "duration": 0.7,
+            "mask": "full",
+            "events": []
+          },
+          "jump": {
+            "duration": 1.2,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.18,
+                "name": "takeoff"
+              },
+              {
+                "at": 0.82,
+                "name": "land"
+              }
+            ]
+          },
+          "sit": {
+            "duration": 1.8,
+            "mask": "full",
+            "events": []
+          },
+          "defeat": {
+            "duration": 2.1,
+            "mask": "full",
+            "events": []
+          },
+          "celebrate": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "bow": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "kneel": {
+            "duration": 2.2,
+            "mask": "full",
+            "events": []
+          },
+          "pray": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "inspect": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "interact": {
+            "duration": 2.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "interact-contact"
+              }
+            ]
+          },
+          "carry": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "push": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "push-contact"
+              }
+            ]
+          },
+          "work": {
+            "duration": 1.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.56,
+                "name": "work-contact"
+              }
+            ]
+          },
+          "thrust": {
+            "duration": 1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "kick": {
+            "duration": 1.25,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "dodge": {
+            "duration": 1,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.3,
+                "name": "dodge-peak"
+              }
+            ]
+          },
+          "roar": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.42,
+                "name": "voice-cue"
+              }
+            ]
+          }
+        },
+        "compatibility": {
+          "family": "humanoid",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": true,
+            "handSockets": true,
+            "upperBodyActions": true,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-576d9c2a",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "humanoid",
+          "proportions": {
+            "scale": 1.0653543823875486,
+            "torso": 1.0499589554220439,
+            "shoulders": 1.0532863419547678,
+            "hips": 0.9831044030026532,
+            "arms": 0.9125842253421433,
+            "legs": 1.1926895389131966,
+            "head": 0.8953494792827406,
+            "bulk": 0.7743497304171789,
+            "hands": 0.9454859655583278,
+            "feet": 0.9337435447983444,
+            "posture": 0
+          },
+          "outfit": "tunic",
+          "headStyle": "hood",
+          "handStyle": "fingers",
+          "bodyStyle": "classic"
+        },
+        "actor": {
+          "role": "scout",
+          "faction": "neutral",
+          "behavior": "patrol",
+          "health": 85,
+          "speed": 1.25,
+          "sight": 18,
+          "range": 1.5,
+          "damage": 12,
+          "cooldown": 0.9
+        },
+        "name": "Outrider 03",
+        "seed": 847546655,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.3770476502700137,
+              0.3196063147162646,
+              0.2898186855966308
+            ]
+          },
+          {
+            "id": "spine",
+            "parent": "core",
+            "offset": [
+              0,
+              0.2796445936214818,
+              0
+            ],
+            "radii": [
+              0.3077647921166259,
+              0.41387399855979307,
+              0.27186961385180414
+            ]
+          },
+          {
+            "id": "chest",
+            "parent": "spine",
+            "offset": [
+              0,
+              0.38031664732521514,
+              0
+            ],
+            "radii": [
+              0.5947253067645449,
+              0.492174484773808,
+              0.2887042808081128
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "chest",
+            "offset": [
+              0,
+              0.6053352729894409,
+              0
+            ],
+            "radii": [
+              0.27662070254146043,
+              0.33385257203279706,
+              0.29569799237190597
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "pack",
+            "host": "chest",
+            "anchor": [
+              0,
+              0.05989229072794672,
+              -0.9982048454657787
+            ],
+            "size": 0.8242713941291439,
+            "length": 0.9574144450109452,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "staff",
+            "host": "core",
+            "anchor": [
+              -0.05989229072794672,
+              0.9982048454657787,
+              0
+            ],
+            "size": 0.800295963161625,
+            "length": 0.9466872563026846,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "hand",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "banner",
+            "host": "chest",
+            "anchor": [
+              0.11073202057883433,
+              0.36910673526278115,
+              -0.9227668381569528
+            ],
+            "size": 0.5838939550903159,
+            "length": 1.0491932073235513,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#b58a71",
+          "accent": "#4e715e",
+          "pattern": "plain",
+          "roughness": 0.96,
+          "patternScale": 5.496651325933636,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.45,
+          "strength": 0.16,
+          "metalness": 0,
+          "relief": 0.028,
+          "emission": 0,
+          "micro": "weave",
+          "textureSeed": 847546655,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 1,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9835316127445549,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "nimble",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "humanoid",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": 1.81015108678186,
+        "sockets": [
+          "head",
+          "chest",
+          "pelvis",
+          "upperArm",
+          "forearm",
+          "hand",
+          "upperLeg",
+          "shin",
+          "foot"
+        ],
+        "actions": {
+          "none": {
+            "duration": 1,
+            "mask": "upper",
+            "events": []
+          },
+          "wave": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "point": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": []
+          },
+          "talk": {
+            "duration": 3.1,
+            "mask": "upper",
+            "events": []
+          },
+          "guard": {
+            "duration": 2,
+            "mask": "upper",
+            "events": []
+          },
+          "attack": {
+            "duration": 1.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.52,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "cast": {
+            "duration": 2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.68,
+                "name": "cast-release"
+              }
+            ]
+          },
+          "hit": {
+            "duration": 0.7,
+            "mask": "full",
+            "events": []
+          },
+          "jump": {
+            "duration": 1.2,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.18,
+                "name": "takeoff"
+              },
+              {
+                "at": 0.82,
+                "name": "land"
+              }
+            ]
+          },
+          "sit": {
+            "duration": 1.8,
+            "mask": "full",
+            "events": []
+          },
+          "defeat": {
+            "duration": 2.1,
+            "mask": "full",
+            "events": []
+          },
+          "celebrate": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "bow": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "kneel": {
+            "duration": 2.2,
+            "mask": "full",
+            "events": []
+          },
+          "pray": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "inspect": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "interact": {
+            "duration": 2.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "interact-contact"
+              }
+            ]
+          },
+          "carry": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "push": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "push-contact"
+              }
+            ]
+          },
+          "work": {
+            "duration": 1.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.56,
+                "name": "work-contact"
+              }
+            ]
+          },
+          "thrust": {
+            "duration": 1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "kick": {
+            "duration": 1.25,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "dodge": {
+            "duration": 1,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.3,
+                "name": "dodge-peak"
+              }
+            ]
+          },
+          "roar": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.42,
+                "name": "voice-cue"
+              }
+            ]
+          }
+        },
+        "compatibility": {
+          "family": "humanoid",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": true,
+            "handSockets": true,
+            "upperBodyActions": true,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-6ca0013b",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "humanoid",
+          "proportions": {
+            "scale": 1.044301783823408,
+            "torso": 1.0469836525712162,
+            "shoulders": 0.9809738891668618,
+            "hips": 1.0217850158223882,
+            "arms": 0.9365362742636353,
+            "legs": 1.2444128395575098,
+            "head": 0.9709335212362931,
+            "bulk": 0.9155297518649604,
+            "hands": 1.0181487912451848,
+            "feet": 0.9393605706607923,
+            "posture": 0
+          },
+          "outfit": "tunic",
+          "headStyle": "hood",
+          "handStyle": "fingers",
+          "bodyStyle": "classic"
+        },
+        "actor": {
+          "role": "scout",
+          "faction": "neutral",
+          "behavior": "patrol",
+          "health": 85,
+          "speed": 1.25,
+          "sight": 18,
+          "range": 1.5,
+          "damage": 12,
+          "cooldown": 0.9
+        },
+        "name": "Outrider 04",
+        "seed": 3350414705,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.38413868929464573,
+              0.31329053514702243,
+              0.29623893195768364
+            ]
+          },
+          {
+            "id": "spine",
+            "parent": "core",
+            "offset": [
+              0,
+              0.2733417240035171,
+              0
+            ],
+            "radii": [
+              0.32258560454620244,
+              0.4045457515252053,
+              0.28977455581367745
+            ]
+          },
+          {
+            "id": "chest",
+            "parent": "spine",
+            "offset": [
+              0,
+              0.37174474464478324,
+              0
+            ],
+            "radii": [
+              0.5429493746408042,
+              0.4810814342461901,
+              0.3155463046383626
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "chest",
+            "offset": [
+              0,
+              0.5965866355389536,
+              0
+            ],
+            "radii": [
+              0.2940448063782911,
+              0.3548816628703513,
+              0.31432375854231115
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "pack",
+            "host": "chest",
+            "anchor": [
+              0,
+              0.05989229072794672,
+              -0.9982048454657787
+            ],
+            "size": 0.8176797203843016,
+            "length": 1.0483702590223403,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "staff",
+            "host": "core",
+            "anchor": [
+              -0.05989229072794672,
+              0.9982048454657787,
+              0
+            ],
+            "size": 0.90377577615669,
+            "length": 1.05902416058816,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "hand",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "banner",
+            "host": "chest",
+            "anchor": [
+              0.11073202057883433,
+              0.36910673526278115,
+              -0.9227668381569528
+            ],
+            "size": 0.5591496709741186,
+            "length": 0.9738375946879387,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#b58a71",
+          "accent": "#4e715e",
+          "pattern": "plain",
+          "roughness": 0.96,
+          "patternScale": 5.604743599751965,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.45,
+          "strength": 0.16,
+          "metalness": 0,
+          "relief": 0.028,
+          "emission": 0,
+          "micro": "weave",
+          "textureSeed": 3350414705,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 1,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9824553931201808,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "nimble",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "humanoid",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": 1.848544413418731,
+        "sockets": [
+          "head",
+          "chest",
+          "pelvis",
+          "upperArm",
+          "forearm",
+          "hand",
+          "upperLeg",
+          "shin",
+          "foot"
+        ],
+        "actions": {
+          "none": {
+            "duration": 1,
+            "mask": "upper",
+            "events": []
+          },
+          "wave": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "point": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": []
+          },
+          "talk": {
+            "duration": 3.1,
+            "mask": "upper",
+            "events": []
+          },
+          "guard": {
+            "duration": 2,
+            "mask": "upper",
+            "events": []
+          },
+          "attack": {
+            "duration": 1.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.52,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "cast": {
+            "duration": 2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.68,
+                "name": "cast-release"
+              }
+            ]
+          },
+          "hit": {
+            "duration": 0.7,
+            "mask": "full",
+            "events": []
+          },
+          "jump": {
+            "duration": 1.2,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.18,
+                "name": "takeoff"
+              },
+              {
+                "at": 0.82,
+                "name": "land"
+              }
+            ]
+          },
+          "sit": {
+            "duration": 1.8,
+            "mask": "full",
+            "events": []
+          },
+          "defeat": {
+            "duration": 2.1,
+            "mask": "full",
+            "events": []
+          },
+          "celebrate": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "bow": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "kneel": {
+            "duration": 2.2,
+            "mask": "full",
+            "events": []
+          },
+          "pray": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "inspect": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "interact": {
+            "duration": 2.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "interact-contact"
+              }
+            ]
+          },
+          "carry": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "push": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "push-contact"
+              }
+            ]
+          },
+          "work": {
+            "duration": 1.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.56,
+                "name": "work-contact"
+              }
+            ]
+          },
+          "thrust": {
+            "duration": 1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "kick": {
+            "duration": 1.25,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "dodge": {
+            "duration": 1,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.3,
+                "name": "dodge-peak"
+              }
+            ]
+          },
+          "roar": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.42,
+                "name": "voice-cue"
+              }
+            ]
+          }
+        },
+        "compatibility": {
+          "family": "humanoid",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": true,
+            "handSockets": true,
+            "upperBodyActions": true,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-864908f4",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "humanoid",
+          "proportions": {
+            "scale": 1.0313180909901858,
+            "torso": 0.9972308318829164,
+            "shoulders": 0.8987546326942741,
+            "hips": 1.0128527727513574,
+            "arms": 1.075920585822314,
+            "legs": 1.1322263238861925,
+            "head": 0.9782203948847018,
+            "bulk": 0.8500890625617,
+            "hands": 1.0971893518045546,
+            "feet": 1.0720590154966338,
+            "posture": 0
+          },
+          "outfit": "tunic",
+          "headStyle": "hood",
+          "handStyle": "fingers",
+          "bodyStyle": "classic"
+        },
+        "actor": {
+          "role": "scout",
+          "faction": "neutral",
+          "behavior": "patrol",
+          "health": 80,
+          "speed": 1.25,
+          "sight": 18,
+          "range": 1.5,
+          "damage": 12,
+          "cooldown": 0.9
+        },
+        "name": "Outrider 05",
+        "seed": 1887746807,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.3760464196972967,
+              0.3093954272970557,
+              0.28718168613997797
+            ]
+          },
+          {
+            "id": "spine",
+            "parent": "core",
+            "offset": [
+              0,
+              0.25711554945351106,
+              0
+            ],
+            "radii": [
+              0.3092633000257318,
+              0.3805310131911963,
+              0.2757546522752853
+            ]
+          },
+          {
+            "id": "chest",
+            "parent": "spine",
+            "offset": [
+              0,
+              0.34967714725677507,
+              0
+            ],
+            "radii": [
+              0.4912580133911876,
+              0.45252336703817947,
+              0.2969576330105374
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "chest",
+            "offset": [
+              0,
+              0.564477860342091,
+              0
+            ],
+            "radii": [
+              0.29256835316384533,
+              0.3530997365770547,
+              0.31274548096824845
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "pack",
+            "host": "chest",
+            "anchor": [
+              0,
+              0.05989229072794672,
+              -0.9982048454657787
+            ],
+            "size": 0.7710901872003451,
+            "length": 0.9552729249931872,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "staff",
+            "host": "core",
+            "anchor": [
+              -0.05989229072794672,
+              0.9982048454657787,
+              0
+            ],
+            "size": 0.8590858226380078,
+            "length": 1.0268796292878688,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "hand",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "banner",
+            "host": "chest",
+            "anchor": [
+              0.11073202057883433,
+              0.36910673526278115,
+              -0.9227668381569528
+            ],
+            "size": 0.5473098940316121,
+            "length": 0.9604850397631526,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#b58a71",
+          "accent": "#4e715e",
+          "pattern": "plain",
+          "roughness": 0.96,
+          "patternScale": 5.222087608370931,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.45,
+          "strength": 0.16,
+          "metalness": 0,
+          "relief": 0.028,
+          "emission": 0,
+          "micro": "weave",
+          "textureSeed": 1887746807,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 1,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.0264045030623674,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "nimble",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "humanoid",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": 1.684632197340276,
+        "sockets": [
+          "head",
+          "chest",
+          "pelvis",
+          "upperArm",
+          "forearm",
+          "hand",
+          "upperLeg",
+          "shin",
+          "foot"
+        ],
+        "actions": {
+          "none": {
+            "duration": 1,
+            "mask": "upper",
+            "events": []
+          },
+          "wave": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "point": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": []
+          },
+          "talk": {
+            "duration": 3.1,
+            "mask": "upper",
+            "events": []
+          },
+          "guard": {
+            "duration": 2,
+            "mask": "upper",
+            "events": []
+          },
+          "attack": {
+            "duration": 1.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.52,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "cast": {
+            "duration": 2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.68,
+                "name": "cast-release"
+              }
+            ]
+          },
+          "hit": {
+            "duration": 0.7,
+            "mask": "full",
+            "events": []
+          },
+          "jump": {
+            "duration": 1.2,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.18,
+                "name": "takeoff"
+              },
+              {
+                "at": 0.82,
+                "name": "land"
+              }
+            ]
+          },
+          "sit": {
+            "duration": 1.8,
+            "mask": "full",
+            "events": []
+          },
+          "defeat": {
+            "duration": 2.1,
+            "mask": "full",
+            "events": []
+          },
+          "celebrate": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "bow": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "kneel": {
+            "duration": 2.2,
+            "mask": "full",
+            "events": []
+          },
+          "pray": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "inspect": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "interact": {
+            "duration": 2.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "interact-contact"
+              }
+            ]
+          },
+          "carry": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "push": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "push-contact"
+              }
+            ]
+          },
+          "work": {
+            "duration": 1.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.56,
+                "name": "work-contact"
+              }
+            ]
+          },
+          "thrust": {
+            "duration": 1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "kick": {
+            "duration": 1.25,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "dodge": {
+            "duration": 1,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.3,
+                "name": "dodge-peak"
+              }
+            ]
+          },
+          "roar": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.42,
+                "name": "voice-cue"
+              }
+            ]
+          }
+        },
+        "compatibility": {
+          "family": "humanoid",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": true,
+            "handSockets": true,
+            "upperBodyActions": true,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-1e825feb",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "humanoid",
+          "proportions": {
+            "scale": 1.0791868093049153,
+            "torso": 1.0706059960974381,
+            "shoulders": 0.9456262494251132,
+            "hips": 0.9750115570542403,
+            "arms": 0.9898525353218429,
+            "legs": 1.1422478794751223,
+            "head": 1.0320567783690058,
+            "bulk": 0.8930725867985282,
+            "hands": 0.9144559606956318,
+            "feet": 1.0786076510394924,
+            "posture": 0
+          },
+          "outfit": "tunic",
+          "headStyle": "hood",
+          "handStyle": "fingers",
+          "bodyStyle": "classic"
+        },
+        "actor": {
+          "role": "scout",
+          "faction": "neutral",
+          "behavior": "patrol",
+          "health": 76,
+          "speed": 1.25,
+          "sight": 18,
+          "range": 1.5,
+          "damage": 12,
+          "cooldown": 0.9
+        },
+        "name": "Outrider 06",
+        "seed": 807581872,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.3787990600654018,
+              0.3237560427914746,
+              0.30424000250596683
+            ]
+          },
+          {
+            "id": "spine",
+            "parent": "core",
+            "offset": [
+              0,
+              0.2888459672377762,
+              0
+            ],
+            "radii": [
+              0.33006639529614146,
+              0.4274920315119088,
+              0.29575902485971156
+            ]
+          },
+          {
+            "id": "chest",
+            "parent": "spine",
+            "offset": [
+              0,
+              0.39283051544337555,
+              0
+            ],
+            "radii": [
+              0.5408689087033929,
+              0.5083689023384861,
+              0.3208654825390107
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "chest",
+            "offset": [
+              0,
+              0.6329650194862148,
+              0
+            ],
+            "radii": [
+              0.3229967978841716,
+              0.3898237215843451,
+              0.34527243911756283
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "pack",
+            "host": "chest",
+            "anchor": [
+              0,
+              0.05989229072794672,
+              -0.9982048454657787
+            ],
+            "size": 0.7758192443025763,
+            "length": 1.0029371924884618,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "staff",
+            "host": "core",
+            "anchor": [
+              -0.05989229072794672,
+              0.9982048454657787,
+              0
+            ],
+            "size": 0.8397414537117583,
+            "length": 1.009601010894403,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "hand",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "banner",
+            "host": "chest",
+            "anchor": [
+              0.11073202057883433,
+              0.36910673526278115,
+              -0.9227668381569528
+            ],
+            "size": 0.5733719661221839,
+            "length": 0.9909032996371389,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#b58a71",
+          "accent": "#4e715e",
+          "pattern": "plain",
+          "roughness": 0.96,
+          "patternScale": 5.386838203389198,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.45,
+          "strength": 0.16,
+          "metalness": 0,
+          "relief": 0.028,
+          "emission": 0,
+          "micro": "weave",
+          "textureSeed": 807581872,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 1,
+            "cruise": 0,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 1,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.0311350952787324,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "ground",
+            "speed": 3.4,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "rigid",
+            "amplitude": 0.25,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "nimble",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "humanoid",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "ground",
+          "speed": 3.4,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "rigid",
+          "amplitude": 0.25,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": 1.7783811881054346,
+        "sockets": [
+          "head",
+          "chest",
+          "pelvis",
+          "upperArm",
+          "forearm",
+          "hand",
+          "upperLeg",
+          "shin",
+          "foot"
+        ],
+        "actions": {
+          "none": {
+            "duration": 1,
+            "mask": "upper",
+            "events": []
+          },
+          "wave": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "point": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": []
+          },
+          "talk": {
+            "duration": 3.1,
+            "mask": "upper",
+            "events": []
+          },
+          "guard": {
+            "duration": 2,
+            "mask": "upper",
+            "events": []
+          },
+          "attack": {
+            "duration": 1.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.52,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "cast": {
+            "duration": 2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.68,
+                "name": "cast-release"
+              }
+            ]
+          },
+          "hit": {
+            "duration": 0.7,
+            "mask": "full",
+            "events": []
+          },
+          "jump": {
+            "duration": 1.2,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.18,
+                "name": "takeoff"
+              },
+              {
+                "at": 0.82,
+                "name": "land"
+              }
+            ]
+          },
+          "sit": {
+            "duration": 1.8,
+            "mask": "full",
+            "events": []
+          },
+          "defeat": {
+            "duration": 2.1,
+            "mask": "full",
+            "events": []
+          },
+          "celebrate": {
+            "duration": 2.8,
+            "mask": "upper",
+            "events": []
+          },
+          "bow": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "kneel": {
+            "duration": 2.2,
+            "mask": "full",
+            "events": []
+          },
+          "pray": {
+            "duration": 3.2,
+            "mask": "upper",
+            "events": []
+          },
+          "inspect": {
+            "duration": 3,
+            "mask": "upper",
+            "events": []
+          },
+          "interact": {
+            "duration": 2.1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "interact-contact"
+              }
+            ]
+          },
+          "carry": {
+            "duration": 2.4,
+            "mask": "upper",
+            "events": []
+          },
+          "push": {
+            "duration": 2.2,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.55,
+                "name": "push-contact"
+              }
+            ]
+          },
+          "work": {
+            "duration": 1.6,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.56,
+                "name": "work-contact"
+              }
+            ]
+          },
+          "thrust": {
+            "duration": 1,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "kick": {
+            "duration": 1.25,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.5,
+                "name": "attack-contact"
+              }
+            ]
+          },
+          "dodge": {
+            "duration": 1,
+            "mask": "full",
+            "events": [
+              {
+                "at": 0.3,
+                "name": "dodge-peak"
+              }
+            ]
+          },
+          "roar": {
+            "duration": 2.5,
+            "mask": "upper",
+            "events": [
+              {
+                "at": 0.42,
+                "name": "voice-cue"
+              }
+            ]
+          }
+        },
+        "compatibility": {
+          "family": "humanoid",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot"
+          ],
+          "inactiveGenes": [],
+          "notes": [],
+          "capabilities": {
+            "proceduralRig": true,
+            "handSockets": true,
+            "upperBodyActions": true,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    }
+  ]
+}

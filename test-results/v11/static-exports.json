@@ -1,0 +1,1540 @@
+{
+  "tested": 89,
+  "exported": 89,
+  "failures": [],
+  "technicalWarnings": [
+    {
+      "id": "abyssangler",
+      "exported": true,
+      "technicalStatus": "warning",
+      "warningCount": 1,
+      "sourceMeshes": 26,
+      "meshes": 10,
+      "triangles": 28692,
+      "bytes": 779932,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "c01be1ffbde814818283ee986c2d9bf7e9279fea5421bd7a1699d572d56376e6"
+    }
+  ],
+  "scope": "Static bind-pose GLB builds and internal binary readback. Warnings explicitly allowed and retained. Not GPU or visual approval.",
+  "records": [
+    {
+      "id": "mossback",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 26,
+      "meshes": 8,
+      "triangles": 30424,
+      "bytes": 833760,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "95c9c40360c6b6e729ef40607188d339998576c66e9eeca85037852255ffb30b"
+    },
+    {
+      "id": "skitter",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 28,
+      "meshes": 8,
+      "triangles": 26876,
+      "bytes": 749812,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "9336015b0a0967cb0e4e60a7a12096f9aa0b01df871030c839a48086f03a9982"
+    },
+    {
+      "id": "sprout",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 22,
+      "meshes": 8,
+      "triangles": 22416,
+      "bytes": 620572,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "cb74e3a92e751b85674890f96344b557b4389b7dcba46fc7f763361efebc621c"
+    },
+    {
+      "id": "carapace",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 36,
+      "meshes": 9,
+      "triangles": 36160,
+      "bytes": 1006968,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "f1d3bb313c15159c55f676041956d73bd0a72f6d4d5a3065ea560416fcea156a"
+    },
+    {
+      "id": "glider",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 30,
+      "meshes": 8,
+      "triangles": 29750,
+      "bytes": 826708,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "dd95d745eb0bcc3f1d63afaf1264f9c1a5452e18756ccedf750e48d8f41a9f42"
+    },
+    {
+      "id": "reef",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 26,
+      "meshes": 8,
+      "triangles": 22296,
+      "bytes": 611076,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "7036364fcb8044b4717fee17ecccebf7c88fbd4ee2ea191acc2e1a306e40ca93"
+    },
+    {
+      "id": "tendril",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 24,
+      "meshes": 8,
+      "triangles": 20312,
+      "bytes": 542824,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "2448fcfd76c3660f50910b5c9d49898cd0c6b84cd41623c9fa7fe53a61d25df3"
+    },
+    {
+      "id": "sentinel",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 29,
+      "meshes": 8,
+      "triangles": 36372,
+      "bytes": 999256,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "251ef29a8a5a615736513cde360662810acef36fccff2c41b997d0175e7b6291"
+    },
+    {
+      "id": "grazer",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 30,
+      "meshes": 9,
+      "triangles": 33076,
+      "bytes": 904356,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "1111325ff8f8862a3efeaaf84dccb905fa96c83c7fc16810b7503b03e675615d"
+    },
+    {
+      "id": "lantern",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 28,
+      "meshes": 9,
+      "triangles": 25064,
+      "bytes": 698032,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "5cf02ea9b45f615fc3208315ae24c038b4e2fabf3fb77cf73d645876e73f1c56"
+    },
+    {
+      "id": "thornling",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 28,
+      "meshes": 9,
+      "triangles": 26448,
+      "bytes": 734056,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "780659b4bddb2b6326a3f7c9d939aaf0606ceb35a826e24b3266a4c33272471f"
+    },
+    {
+      "id": "burrower",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 32,
+      "meshes": 8,
+      "triangles": 34852,
+      "bytes": 954892,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "5ea6ede06ccbc227d417e586f7876944e04c2505dd4e9452f4cad2c8d7634eb3"
+    },
+    {
+      "id": "crownstag",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 32,
+      "meshes": 9,
+      "triangles": 34088,
+      "bytes": 940308,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "9d335cab8df3a20486a227d89e5c76da4fe71adadc658080e5652abe68742254"
+    },
+    {
+      "id": "myconid",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 24,
+      "meshes": 9,
+      "triangles": 18534,
+      "bytes": 515516,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "bf975cfd5312b154012ee7bdd02431df322dac768ac5882288900910d6104e70"
+    },
+    {
+      "id": "shardback",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 32,
+      "meshes": 9,
+      "triangles": 34528,
+      "bytes": 960752,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "737f69d1e709f92f889272ddc3641be0003d6a84d1b94f5319c76b9c16e38e98"
+    },
+    {
+      "id": "billrunner",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 25,
+      "meshes": 9,
+      "triangles": 21774,
+      "bytes": 613500,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "fa285e86c93f16b9de6b8a0d1987070edcdcdaa130e0cfba6bf661a06b12d8c8"
+    },
+    {
+      "id": "boglurker",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 32,
+      "meshes": 8,
+      "triangles": 32032,
+      "bytes": 888796,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "2016339d5d418714591ab89ac9609e7e046fb8045ad23b2902d81b0c5d6fb890"
+    },
+    {
+      "id": "sunmanta",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 23,
+      "meshes": 9,
+      "triangles": 19066,
+      "bytes": 528052,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "87e6c1adf82c35c1d0fa231ceaceac9c58f30aeef76e5223129f5bacf5a3ed23"
+    },
+    {
+      "id": "rootweaver",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 28,
+      "meshes": 9,
+      "triangles": 24260,
+      "bytes": 660380,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "0436cb0ac2cb06cc962233cf8a75ff5d66693ad06288a210230b8217117f7b32"
+    },
+    {
+      "id": "ironmaw",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 35,
+      "meshes": 10,
+      "triangles": 35511,
+      "bytes": 993752,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "5c71faa039fb38ea6f07fe7dcbab3d72809d86743efd6eaa044aca4e4da3169a"
+    },
+    {
+      "id": "wayfarer",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 54,
+      "meshes": 8,
+      "triangles": 41104,
+      "bytes": 1124584,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "bc143214d802b935fe00d3ca446eb6c59898f97cd21caa72cbd40d16b8f409e8"
+    },
+    {
+      "id": "warden",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 66,
+      "meshes": 8,
+      "triangles": 49928,
+      "bytes": 1365832,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "2b8e66a9c88d833fa668ffc300cc7e18b1010439d32fc2280a3dfd5d34d3aa46"
+    },
+    {
+      "id": "ranger",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 56,
+      "meshes": 8,
+      "triangles": 42188,
+      "bytes": 1155516,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "2a4a5a48d51d997983e038806cbb6a83f03a40431d6f229929bec648449b93fa"
+    },
+    {
+      "id": "goblin",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 63,
+      "meshes": 9,
+      "triangles": 40956,
+      "bytes": 1141652,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "e9da45b46ed066258876cbe0d10787e56df71487513eaed386517b4fa31d39a5"
+    },
+    {
+      "id": "ogre",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 55,
+      "meshes": 9,
+      "triangles": 45848,
+      "bytes": 1240916,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "14a19fd7680d6cdaa7c68c8abe2f13d6cd074121a59bb5d1e95900893a07d863"
+    },
+    {
+      "id": "revenant",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 61,
+      "meshes": 8,
+      "triangles": 40092,
+      "bytes": 1116448,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "b0b4fafe23ef9138855accd9ac51f8fe68610234f254bd13fa65ba56e1b33ceb"
+    },
+    {
+      "id": "golem",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 57,
+      "meshes": 8,
+      "triangles": 45768,
+      "bytes": 1244628,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "39c6588ef55fea4ad1598c1989196b758b5f41636699c5760ddac41e6e23db61"
+    },
+    {
+      "id": "fiend",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 73,
+      "meshes": 9,
+      "triangles": 53532,
+      "bytes": 1485180,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "d6c938e7ad863b899b4d50269a795197ae8f41b2b5c2b414e8a7cdaa4759b35f"
+    },
+    {
+      "id": "arcanist",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 56,
+      "meshes": 8,
+      "triangles": 42284,
+      "bytes": 1157988,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "62f5dc19941df70520c4968ccd6447a0d41ac363369d9e30d082834ef278eb01"
+    },
+    {
+      "id": "duelist",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 75,
+      "meshes": 9,
+      "triangles": 53304,
+      "bytes": 1469012,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "6fb137fdc47b3958adad0250b259c5c47bf7237c32ce093e762ecc165817d270"
+    },
+    {
+      "id": "outrider",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 65,
+      "meshes": 11,
+      "triangles": 46508,
+      "bytes": 1280688,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "3f934847ee006430affb61cf91767abbe7fddf9a47a461205cbab5e6affce239"
+    },
+    {
+      "id": "artisan",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 59,
+      "meshes": 10,
+      "triangles": 42208,
+      "bytes": 1162588,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "b5e051021edd3b23b80bb08e5fb4a20957a77728399e7b60418e4a2feba5d872"
+    },
+    {
+      "id": "pilgrim",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 62,
+      "meshes": 11,
+      "triangles": 45660,
+      "bytes": 1258356,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "1f7c4a51e5b8d4d8dd3d7230990cdf029507d15647d5246b4bceff56316e39e1"
+    },
+    {
+      "id": "grovekeeper",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 76,
+      "meshes": 11,
+      "triangles": 50128,
+      "bytes": 1396748,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "aabfcf79f04267b81001eb872cf2496817eb03b857b207f73abb2868f289796f"
+    },
+    {
+      "id": "oracle",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 65,
+      "meshes": 10,
+      "triangles": 47209,
+      "bytes": 1301064,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "5b95b3359f0f05e9e31eee420d92cb813363bbaee982b780e3a768fcb384bc33"
+    },
+    {
+      "id": "jackal",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 70,
+      "meshes": 9,
+      "triangles": 48356,
+      "bytes": 1352428,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "1c4f7c48b7f32bf2999bffed5f1de5124cf7fe86428ea743a330939054824b00"
+    },
+    {
+      "id": "clockwork",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 70,
+      "meshes": 10,
+      "triangles": 53275,
+      "bytes": 1465008,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "562de4241fc6a90bf448ec0f0c514d3f637d62442ecb5c93bc0605623df8a8f9"
+    },
+    {
+      "id": "needleswimmer",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 25,
+      "meshes": 8,
+      "triangles": 16588,
+      "bytes": 454988,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "10d795641aa311e2e801bd06ebd3cfb8e3828ea3b6fd595a18778269d784db8f"
+    },
+    {
+      "id": "ribbondrift",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 23,
+      "meshes": 8,
+      "triangles": 15360,
+      "bytes": 418008,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "3cb2776ec5159359170b7ab5feef77724348ac9e0eba5718e4b1d20af580df65"
+    },
+    {
+      "id": "moonbell",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 9,
+      "meshes": 4,
+      "triangles": 17528,
+      "bytes": 500596,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "40424c441d241ce05ba2b106431c7a160c8a34e051164be3df574aaba5eaa6ea"
+    },
+    {
+      "id": "coilnautilus",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 20,
+      "meshes": 10,
+      "triangles": 24528,
+      "bytes": 699728,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "61352369c23ba04779807bfb039589b0095904dfd0541ae9807c620ee8b05f24"
+    },
+    {
+      "id": "diskfin",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 27,
+      "meshes": 8,
+      "triangles": 16732,
+      "bytes": 461880,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "dfa6b36f13f0c29cf300e4ce48c5fddbcae454d2caa726275c81a1c476e83297"
+    },
+    {
+      "id": "abyssangler",
+      "exported": true,
+      "technicalStatus": "warning",
+      "warningCount": 1,
+      "sourceMeshes": 26,
+      "meshes": 10,
+      "triangles": 28692,
+      "bytes": 779932,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "c01be1ffbde814818283ee986c2d9bf7e9279fea5421bd7a1699d572d56376e6"
+    },
+    {
+      "id": "rayskimmer",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 21,
+      "meshes": 9,
+      "triangles": 18396,
+      "bytes": 502696,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "979b5fe5487b7a203b29bc0f81c221d49761bab9e58b9e04a0d7800eedb18093"
+    },
+    {
+      "id": "paddleback",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 33,
+      "meshes": 9,
+      "triangles": 24416,
+      "bytes": 670716,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "bd0f7966dadf089edcdc5faaf0ead66077f8562426f0a916d5da7144589bdd2f"
+    },
+    {
+      "id": "sailwing",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 25,
+      "meshes": 9,
+      "triangles": 26952,
+      "bytes": 757804,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "e1d05b7512348f37f10e16155782d04e1a10e4736d85d6f8248b4cb8c4696ddd"
+    },
+    {
+      "id": "glassdart",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 18,
+      "meshes": 5,
+      "triangles": 28376,
+      "bytes": 795900,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "a058afffe105daabfae6bd68e30bb3a504c7b6b3e25956feddd22a9accbd419d"
+    },
+    {
+      "id": "velvetmoth",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 27,
+      "meshes": 6,
+      "triangles": 34668,
+      "bytes": 979108,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "7fdd627b96463ba9f77d0888264f9150ef3f1494611fc31662ce49fabe7e9ebb"
+    },
+    {
+      "id": "skymedusa",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 19,
+      "meshes": 8,
+      "triangles": 16292,
+      "bytes": 455116,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "0c79ce01793bc2f0ecab165180f4851f116081739c631fa3a51631905b948004"
+    },
+    {
+      "id": "cavekite",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 25,
+      "meshes": 9,
+      "triangles": 20132,
+      "bytes": 558760,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "9b15bbee1c41b7e73a943eb0e1e85f5474be6bb07747ab8c6aa308320314ae28"
+    },
+    {
+      "id": "gyreseed",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 6,
+      "meshes": 4,
+      "triangles": 8328,
+      "bytes": 228080,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "64c8b96ec71c12830b5a2a20ab5cf7e86bb139c10b5169961e799f77d73b721c"
+    },
+    {
+      "id": "windribbon",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 33,
+      "meshes": 9,
+      "triangles": 38736,
+      "bytes": 1081924,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "38612afc0ff3109d09533bd2fcfddfa1015329c6bd247f5e159c87086e9ccecb"
+    },
+    {
+      "id": "lanternbeetle",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 20,
+      "meshes": 8,
+      "triangles": 31380,
+      "bytes": 878272,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "06587a6183e99fb69bca0c72f44c14998792ebffb701b1eb3c92d9e3435dddca"
+    },
+    {
+      "id": "comblantern",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 30,
+      "meshes": 9,
+      "triangles": 45212,
+      "bytes": 1359004,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "c0c10a009fef404afe377dc79f4d0b60ab200df387326762ccebeacd7f8b7181"
+    },
+    {
+      "id": "salpchain",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 18,
+      "meshes": 3,
+      "triangles": 44624,
+      "bytes": 1193096,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "516c2af2f7f1ca2f68f9b968bedfdd9780d4844767cc06f05ae9fabb7fabba13"
+    },
+    {
+      "id": "starweaver",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 17,
+      "meshes": 9,
+      "triangles": 17292,
+      "bytes": 477472,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "e9302b5062be68f26f934916987fcc6e5e515672665a6ef47fb890e812db7d4d"
+    },
+    {
+      "id": "velvetslug",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 19,
+      "meshes": 6,
+      "triangles": 30524,
+      "bytes": 871604,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "2a08818b0c9181467817142fe2392a396bb0dc6b3d9d216be3ac80d08163869c"
+    },
+    {
+      "id": "oarshrimp",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 30,
+      "meshes": 9,
+      "triangles": 34312,
+      "bytes": 979416,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "6e5d6e0e31f02b133fdae3c539b40a7c8e525d4938eb408c19528f35005c43df"
+    },
+    {
+      "id": "twinjet",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 20,
+      "meshes": 9,
+      "triangles": 31256,
+      "bytes": 863020,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "238a7ac4bf0fa08dfc7890ff88c0aec5087f0d4e291d705cfe584f775ada4c17"
+    },
+    {
+      "id": "hoopglider",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 20,
+      "meshes": 9,
+      "triangles": 14452,
+      "bytes": 401660,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "b3dc7dd2029ef2bfc0fe27db4da4abf697d6ab9fe892a3dfd7c8a12cf85d26e5"
+    },
+    {
+      "id": "sievewisp",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 7,
+      "meshes": 4,
+      "triangles": 31348,
+      "bytes": 922792,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "d477904f0da78572af7602aa700d596673b3b5cc8cdedc350acf93563015c8bf"
+    },
+    {
+      "id": "prismkite",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 17,
+      "meshes": 8,
+      "triangles": 8440,
+      "bytes": 244040,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "b797cbf138504445d1cd87748a71047f0821d65af180ac3797d4e3baee56e3fd"
+    },
+    {
+      "id": "screwdrifter",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 6,
+      "meshes": 4,
+      "triangles": 11192,
+      "bytes": 311244,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "e9ee799448bc6b162b71319b61c9e2649d6215c54ea2448af4815beddbfa4bb9"
+    },
+    {
+      "id": "ductmanta",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 26,
+      "meshes": 10,
+      "triangles": 20308,
+      "bytes": 571908,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "b71e7daf2d9c281fd4ce35131d8ab14bee2d78216c3defe4449bd1077d47fa96"
+    },
+    {
+      "id": "pleatdrake",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 32,
+      "meshes": 8,
+      "triangles": 20404,
+      "bytes": 582620,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "ef484297dd5eff8b0a3a5a13346bc0f057b1f4fc8363a0140a212ce2114c16f5"
+    },
+    {
+      "id": "pebbleroller",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 22,
+      "meshes": 9,
+      "triangles": 21580,
+      "bytes": 615596,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "e3a984491db1286984f76b1eff7a63c8064e95acfb745509047852995b5d64c2"
+    },
+    {
+      "id": "mossstrider",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 25,
+      "meshes": 8,
+      "triangles": 20128,
+      "bytes": 568828,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "4c459bd6107b5a26af1c883c4d87ad192fd3cf670f835e9a6d8622556ec13c63"
+    },
+    {
+      "id": "crowngrazer",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 23,
+      "meshes": 10,
+      "triangles": 19188,
+      "bytes": 547012,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "058d21db6c7ca7e0ae5142a47eb6489eea441807f07e5b9b08151ade70a698e3"
+    },
+    {
+      "id": "duneauger",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 22,
+      "meshes": 5,
+      "triangles": 31972,
+      "bytes": 888912,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "594d552fc692d73bc4f52e6aff6974c94803fb4461191936eaf4698909f88354"
+    },
+    {
+      "id": "clapshell",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 18,
+      "meshes": 9,
+      "triangles": 19460,
+      "bytes": 550128,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "9065417fda21780fefcb1a314ded3303d54668c3a3a6f81b9021b3eea7ca5ff8"
+    },
+    {
+      "id": "lanternpolyp",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 11,
+      "meshes": 7,
+      "triangles": 27888,
+      "bytes": 783092,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "c961f02159af94c47919edafbd281018f82a6eb78bc2ef0bd2a4f7f8ee293ba9"
+    },
+    {
+      "id": "bristleskate",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 24,
+      "meshes": 10,
+      "triangles": 26532,
+      "bytes": 752232,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "ccc6dd2c94400b5291efb01a74960c51117432f3aa10b7e88bfb6985a53a70eb"
+    },
+    {
+      "id": "suckerribbon",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 39,
+      "meshes": 8,
+      "triangles": 62512,
+      "bytes": 1782344,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "e99ef56fda1e5d2d8f508c7ee85cbf49831ea42090c1c9d1b6159e7dba071bc0"
+    },
+    {
+      "id": "bloomkite",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 10,
+      "meshes": 6,
+      "triangles": 13708,
+      "bytes": 382024,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "aceb2f45f0a8a2db7404d60cd5c55524c51df1a1abd5c043bb204f4b2b10dc3a"
+    },
+    {
+      "id": "basketdrifter",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 13,
+      "meshes": 5,
+      "triangles": 25308,
+      "bytes": 704084,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "50ce4b14e669cf5236cceb3ab69b958f611611e1da2c9f2dd2b17c3018317221"
+    },
+    {
+      "id": "apiarist",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 65,
+      "meshes": 10,
+      "triangles": 61064,
+      "bytes": 1683444,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "b60a6a9c528e9dd592f9bfd07eff62448140cbd3a78a2d4003334fde83a4f191"
+    },
+    {
+      "id": "shrinesentinel",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 63,
+      "meshes": 9,
+      "triangles": 76528,
+      "bytes": 2095500,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "fd54d80fccd87a69f4fa78b9ed0e18f67e7b0d95aea14dd551952db1775d171d"
+    },
+    {
+      "id": "marshforager",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 65,
+      "meshes": 9,
+      "triangles": 53732,
+      "bytes": 1475876,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "59ed2e0ea8fdf32bee92d84654f779f08e696cc4fb15f74a5eab786d3a431749"
+    },
+    {
+      "id": "thornenvoy",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 66,
+      "meshes": 10,
+      "triangles": 56916,
+      "bytes": 1564704,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "f3f57963441557450643d252f1dfebd0b2339b91632b7c942ffd051d8d94add9"
+    },
+    {
+      "id": "trailhound",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 28,
+      "meshes": 9,
+      "triangles": 18896,
+      "bytes": 538592,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "02e3e7d2af6914ebb3cba7858b163c01f3633001ab4bf9a16e06255415287daf"
+    },
+    {
+      "id": "hillgrazer",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 32,
+      "meshes": 9,
+      "triangles": 21480,
+      "bytes": 602120,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "6693a02493b2140f224d26098bf0bd2405db0087b1e49c132da81683e6e3aef3"
+    },
+    {
+      "id": "bristletusk",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 29,
+      "meshes": 9,
+      "triangles": 19864,
+      "bytes": 557544,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "59181440f1dfef3163e85ba4936b2d34619452c6806bad66fb38bc2e6ffc5b64"
+    },
+    {
+      "id": "reedhopper",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 22,
+      "meshes": 8,
+      "triangles": 14820,
+      "bytes": 421208,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "b135efce5dc6396b68bed29de5533c8d0e83c98cc525c4ee418525e73656a952"
+    },
+    {
+      "id": "fieldmedic",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 65,
+      "meshes": 11,
+      "triangles": 45204,
+      "bytes": 1250524,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "9d9ddadd1576b05035255f2598e18b85f022b3334967e3b1f553bd1d4eafc6e2"
+    },
+    {
+      "id": "lamplighter",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 65,
+      "meshes": 12,
+      "triangles": 47108,
+      "bytes": 1298876,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "c2b53960a83e776c757b9fa3209eb95a68c1fe3b6f1c2d8471ac244eac769600"
+    },
+    {
+      "id": "archivist",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 62,
+      "meshes": 11,
+      "triangles": 42632,
+      "bytes": 1179080,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "8782a37f0d1afe703bda40cf322a916bae6374165d3885c3930343df790e96b0"
+    },
+    {
+      "id": "prospector",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 69,
+      "meshes": 11,
+      "triangles": 48448,
+      "bytes": 1338964,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "a373cd9fe5e8c576ebb282ce08aed1e1960e9cc19721a2417e171ced7d7b966f"
+    },
+    {
+      "id": "waypostarcher",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 65,
+      "meshes": 11,
+      "triangles": 45164,
+      "bytes": 1248348,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "d79e4913b0330d5bff09dc6b34551050d02e10ecb2a0d09fc6d1495d10497ec7"
+    },
+    {
+      "id": "caravancourier",
+      "exported": true,
+      "technicalStatus": "pass",
+      "warningCount": 0,
+      "sourceMeshes": 63,
+      "meshes": 11,
+      "triangles": 42152,
+      "bytes": 1168928,
+      "allActiveGenesIncluded": true,
+      "roundTrip": {
+        "checked": true,
+        "checkedSamples": 1,
+        "maxPositionError": 0
+      },
+      "sha256": "9367c92dd82ab66d13a0226dc5998f9dfad5a3305149262d50476fb860749502"
+    }
+  ]
+}

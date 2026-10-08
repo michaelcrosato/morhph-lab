@@ -1,0 +1,291 @@
+{
+  "format": "morph-lab-actor",
+  "version": 1,
+  "blueprint": {
+    "version": 6,
+    "rig": {
+      "family": "creature"
+    },
+    "actor": {
+      "role": "monster",
+      "faction": "hostile",
+      "behavior": "chase",
+      "health": 160,
+      "speed": 1,
+      "sight": 12,
+      "range": 1.8,
+      "damage": 20,
+      "cooldown": 1.4
+    },
+    "name": "Clap shell",
+    "seed": 1042,
+    "generation": 0,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.3,
+          0.27,
+          0.3
+        ]
+      }
+    ],
+    "parts": [
+      {
+        "id": "part-1",
+        "type": "valvepair",
+        "host": "core",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 1.4,
+        "length": 1.1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "part-2",
+        "type": "tubecluster",
+        "host": "core",
+        "anchor": [
+          0,
+          -1,
+          0
+        ],
+        "size": 0.7,
+        "length": 0.8,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "part-3",
+        "type": "optic",
+        "host": "core",
+        "anchor": [
+          0.8025723539051279,
+          0.20064308847628198,
+          0.5618006477335895
+        ],
+        "size": 0.4,
+        "length": 1,
+        "twist": 0,
+        "mirror": true,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "appearance": {
+      "color": "#bda084",
+      "accent": "#efdab7",
+      "pattern": "growthbands",
+      "roughness": 0.46,
+      "patternScale": 3.5,
+      "weight": 1,
+      "angle": 0,
+      "warp": 0.16,
+      "strength": 0.7,
+      "metalness": 0.1,
+      "relief": 0.042,
+      "emission": 0,
+      "micro": "suction",
+      "textureSeed": 1042,
+      "layers": []
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 0,
+        "radialstroke": 0,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "ripplewalk": 0,
+        "shellclap": 1,
+        "bloomcycle": 0,
+        "siphonreach": 0,
+        "padcrawl": 0.3,
+        "sensorscan": 0,
+        "idle": 0,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 1,
+      "stride": 1,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "water",
+        "speed": 3.4,
+        "climb": 2.4,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "rigid",
+        "amplitude": 0.12,
+        "frequency": 0.55,
+        "wavelength": 3.5
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "none",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "contract": {
+    "units": "metres",
+    "up": "+Y",
+    "forward": "+Z",
+    "rig": "creature",
+    "controller": "dynamic-compound-upright",
+    "travel": {
+      "medium": "water",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.12,
+      "frequency": 0.55,
+      "wavelength": 3.5
+    },
+    "restHeight": null,
+    "sockets": [
+      "body"
+    ],
+    "actions": {},
+    "compatibility": {
+      "family": "creature",
+      "locomotion": [
+        "idle",
+        "walk",
+        "run",
+        "creep",
+        "bound",
+        "swim",
+        "hover",
+        "display",
+        "backpedal",
+        "strafe",
+        "prowl",
+        "trot",
+        "cruise",
+        "undulate",
+        "jet",
+        "row",
+        "soar",
+        "powerflight",
+        "flutter",
+        "float",
+        "combbeat",
+        "chainpump",
+        "radialstroke",
+        "metachronal",
+        "canopy",
+        "corkscrew",
+        "turbines",
+        "concertina",
+        "ripplewalk",
+        "shellclap",
+        "bloomcycle",
+        "siphonreach",
+        "padcrawl",
+        "sensorscan"
+      ],
+      "inactiveGenes": [],
+      "notes": [
+        "Leg banks and tube feet are animated attachments. On ground creatures, downward mounts set fixed rest clearance only. They do not make terrain contacts. Test clearance.",
+        "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+      ],
+      "capabilities": {
+        "proceduralRig": false,
+        "handSockets": false,
+        "upperBodyActions": false,
+        "footIK": true,
+        "ragdoll": false,
+        "rootMotion": false,
+        "combat": false,
+        "navigation": false
+      }
+    },
+    "roleIsMetadata": true,
+    "geometry": "generated-at-runtime",
+    "animations": "procedural-at-runtime"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "suite": "v9 Tide & Sky regression checks",
+  "passed": 57,
+  "errors": [],
+  "offlineGeometry": true,
+  "newModelCount": 16,
+  "directFileNavigation": {
+    "attempted": true,
+    "passed": false,
+    "reason": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///mnt/data/morph-lab-v12-work/morph-lab-v12/dist/Morph-Lab-Review.html"
+  },
+  "engineAndPhysicsVerified": false,
+  "editorHarnessHasRenderer": false
+}

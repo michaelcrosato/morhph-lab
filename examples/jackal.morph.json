@@ -1,0 +1,259 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "humanoid",
+    "proportions": {
+      "scale": 1.06,
+      "torso": 1,
+      "shoulders": 1,
+      "hips": 1,
+      "arms": 1.17,
+      "legs": 1.13,
+      "head": 1.07,
+      "bulk": 0.88,
+      "hands": 1,
+      "feet": 1,
+      "posture": 0.14
+    },
+    "outfit": "wrap",
+    "headStyle": "bare",
+    "handStyle": "claws",
+    "bodyStyle": "classic"
+  },
+  "actor": {
+    "role": "stalker",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 90,
+    "speed": 1.1,
+    "sight": 15,
+    "range": 1.7,
+    "damage": 22,
+    "cooldown": 1.3
+  },
+  "name": "Jackal",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.3816,
+        0.318,
+        0.29773132570313543
+      ]
+    },
+    {
+      "id": "spine",
+      "parent": "core",
+      "offset": [
+        0,
+        0.265,
+        0
+      ],
+      "radii": [
+        0.3222915450514031,
+        0.3922,
+        0.2883667609139445
+      ]
+    },
+    {
+      "id": "chest",
+      "parent": "spine",
+      "offset": [
+        0,
+        0.36039999999999994,
+        0
+      ],
+      "radii": [
+        0.5618000000000001,
+        0.46640000000000004,
+        0.3121544859175863
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "chest",
+      "offset": [
+        0,
+        0.5874520000000001,
+        0
+      ],
+      "radii": [
+        0.32891800000000004,
+        0.39697000000000005,
+        0.351602
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "part-1",
+      "type": "ear",
+      "host": "head",
+      "anchor": [
+        0.7281999926928028,
+        0.685364699004991,
+        0
+      ],
+      "size": 0.55,
+      "length": 1.2,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "muzzle",
+      "host": "head",
+      "anchor": [
+        0,
+        -0.09950371902099893,
+        0.9950371902099893
+      ],
+      "size": 0.6,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "tail",
+      "host": "core",
+      "anchor": [
+        0,
+        -0.09950371902099893,
+        -0.9950371902099893
+      ],
+      "size": 0.62,
+      "length": 1.25,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#aa8152",
+    "accent": "#4c4142",
+    "pattern": "rosettes",
+    "roughness": 0.77,
+    "patternScale": 5.4,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.7,
+    "metalness": 0,
+    "relief": 0.042,
+    "emission": 0,
+    "micro": "leather",
+    "textureSeed": 1042,
+    "layers": []
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 1,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "skulking",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "roar",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": false,
+      "mask": "auto"
+    }
+  }
+}

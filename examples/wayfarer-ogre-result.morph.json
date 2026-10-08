@@ -1,0 +1,215 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "humanoid",
+    "proportions": {
+      "scale": 1.1575,
+      "torso": 1,
+      "shoulders": 1.18,
+      "hips": 1.1125,
+      "arms": 1.081,
+      "legs": 0.9415,
+      "head": 0.9415,
+      "bulk": 1.2475,
+      "hands": 1.18,
+      "feet": 1.1125,
+      "posture": 0.045000000000000005
+    },
+    "outfit": "tunic",
+    "headStyle": "crop",
+    "handStyle": "fingers",
+    "bodyStyle": "classic"
+  },
+  "actor": {
+    "role": "civilian",
+    "faction": "friendly",
+    "behavior": "wander",
+    "health": 141,
+    "speed": 0.874,
+    "sight": 8.9,
+    "range": 1.6949999999999998,
+    "damage": 15.75,
+    "cooldown": 2.09
+  },
+  "name": "Wayfarer × Ogre",
+  "seed": 1934,
+  "generation": 1,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.46357875000000004,
+        0.34725,
+        0.35475549905057446
+      ]
+    },
+    {
+      "id": "spine",
+      "parent": "core",
+      "offset": [
+        0,
+        0.289375,
+        0
+      ],
+      "radii": [
+        0.4046571325401891,
+        0.42827499999999996,
+        0.37492057527853484
+      ]
+    },
+    {
+      "id": "chest",
+      "parent": "spine",
+      "offset": [
+        0,
+        0.3935499999999999,
+        0
+      ],
+      "radii": [
+        0.7239005,
+        0.5093,
+        0.4276587264427475
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "chest",
+      "offset": [
+        0,
+        0.632562175,
+        0
+      ],
+      "radii": [
+        0.31603801249999997,
+        0.38142518749999993,
+        0.33783373749999995
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "mix-part-1",
+      "type": "horn",
+      "host": "head",
+      "anchor": [
+        0.41772308771082384,
+        -0.2610769298192649,
+        0.870256432730883
+      ],
+      "size": 0.35,
+      "length": 0.45,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": -0.5,
+      "variant": 0,
+      "presence": 0.5,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#b98d6b",
+    "accent": "#4c6467",
+    "pattern": "plain",
+    "roughness": 0.72,
+    "patternScale": 5.4,
+    "weight": 0.65,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.193,
+    "metalness": 0.025,
+    "relief": 0.012,
+    "emission": 0,
+    "micro": "pores",
+    "textureSeed": 1042,
+    "layers": [
+      {
+        "pattern": "cracks",
+        "scale": 5.4,
+        "weight": 0.35,
+        "angle": 0,
+        "warp": 0.45
+      }
+    ]
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 1,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "heavy",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "sourceArchiveExtracted": true,
+  "buildExitCode": 0,
+  "coverageTestsExitCode": 0,
+  "CLIExitCode": 0,
+  "rebuiltHTMLMatchesShippedFile": true,
+  "rebuiltHTMLSHA256": "74339b28f1cb86bc8f96c5b766df9835c1208efde734c7546574192dcaea2e58",
+  "CLIModelMatchesIndependentlyCheckedSample": true,
+  "sourceFilesUnchanged": true,
+  "gpuTested": false,
+  "physicsTested": false
+}

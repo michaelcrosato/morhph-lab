@@ -1,0 +1,404 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "creature"
+  },
+  "actor": {
+    "role": "monster",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 160,
+    "speed": 1,
+    "sight": 12,
+    "range": 1.8,
+    "damage": 20,
+    "cooldown": 1.4
+  },
+  "name": "Grazer × Sentinel",
+  "seed": 42,
+  "generation": 1,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.8825000000000001,
+        0.8059999999999999,
+        1.388
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "core",
+      "offset": [
+        0,
+        0.2185,
+        1.025
+      ],
+      "radii": [
+        0.67,
+        0.64,
+        0.7
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "mix-part-1",
+      "type": "leg",
+      "host": "core",
+      "anchor": [
+        0.806110912208244,
+        -0.3627499104937098,
+        0.46754432908078153
+      ],
+      "size": 0.95,
+      "length": 1.15,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-2",
+      "type": "leg",
+      "host": "core",
+      "anchor": [
+        0.7875969234571017,
+        -0.3544186155556958,
+        -0.5040620310125451
+      ],
+      "size": 1,
+      "length": 1.05,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-3",
+      "type": "eye",
+      "host": "head",
+      "anchor": [
+        0.3971420353928971,
+        0.3971420353928971,
+        0.827379240401869
+      ],
+      "size": 1.08,
+      "length": 0.9,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-4",
+      "type": "tail",
+      "host": "core",
+      "anchor": [
+        0,
+        0.04993761694389223,
+        -0.9987523388778446
+      ],
+      "size": 1,
+      "length": 1.15,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.4,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-5",
+      "type": "mouth",
+      "host": "head",
+      "anchor": [
+        0,
+        -0.30477572710378376,
+        0.9524241471993242
+      ],
+      "size": 0.8,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-6",
+      "type": "horn",
+      "host": "head",
+      "anchor": [
+        0.5126145946300565,
+        0.854357657716761,
+        0.08543576577167611
+      ],
+      "size": 1.05,
+      "length": 1.45,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 0.4,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-7",
+      "type": "gill",
+      "host": "head",
+      "anchor": [
+        0.9128709291752769,
+        0.18257418583505539,
+        -0.36514837167011077
+      ],
+      "size": 0.5,
+      "length": 0.7,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.4,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-8",
+      "type": "clubtail",
+      "host": "core",
+      "anchor": [
+        0,
+        0.09950371902099893,
+        -0.9950371902099893
+      ],
+      "size": 1.1,
+      "length": 1.2,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.6,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-9",
+      "type": "crest",
+      "host": "core",
+      "anchor": [
+        0,
+        0.9805806756909201,
+        -0.19611613513818404
+      ],
+      "size": 1.3,
+      "length": 1.25,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.6,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-10",
+      "type": "shell",
+      "host": "head",
+      "anchor": [
+        0,
+        0.9284766908852592,
+        -0.3713906763541037
+      ],
+      "size": 0.7,
+      "length": 0.65,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.6,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#807b5b",
+    "accent": "#e4ce94",
+    "pattern": "cracks",
+    "roughness": 0.57,
+    "patternScale": 5.4,
+    "weight": 0.65,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.78,
+    "metalness": 0.025,
+    "relief": 0.022,
+    "emission": 0,
+    "micro": "pebbles",
+    "textureSeed": 1042,
+    "layers": [
+      {
+        "pattern": "stripes",
+        "scale": 5.4,
+        "weight": 0.35,
+        "angle": 0,
+        "warp": 0.45
+      }
+    ]
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0,
+      "walk": 1,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

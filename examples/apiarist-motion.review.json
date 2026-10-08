@@ -1,0 +1,831 @@
+{
+  "format": "morph-lab-review",
+  "version": 1,
+  "source": {
+    "version": 6,
+    "rig": {
+      "family": "humanoid",
+      "proportions": {
+        "scale": 0.98,
+        "torso": 1,
+        "shoulders": 1.06,
+        "hips": 1,
+        "arms": 1,
+        "legs": 1,
+        "head": 1.04,
+        "bulk": 1.08,
+        "hands": 1,
+        "feet": 1,
+        "posture": 0
+      },
+      "outfit": "tunic",
+      "headStyle": "hood",
+      "handStyle": "fingers",
+      "bodyStyle": "defined"
+    },
+    "actor": {
+      "role": "civilian",
+      "faction": "friendly",
+      "behavior": "wander",
+      "health": 60,
+      "speed": 1,
+      "sight": 8,
+      "range": 1.2,
+      "damage": 0,
+      "cooldown": 2
+    },
+    "name": "Apiarist",
+    "seed": 1042,
+    "generation": 0,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.3528,
+          0.294,
+          0.28972102463133126
+        ]
+      },
+      {
+        "id": "spine",
+        "parent": "core",
+        "offset": [
+          0,
+          0.245,
+          0
+        ],
+        "radii": [
+          0.32340412589486,
+          0.3626,
+          0.29534930370664497
+        ]
+      },
+      {
+        "id": "chest",
+        "parent": "spine",
+        "offset": [
+          0,
+          0.33319999999999994,
+          0
+        ],
+        "radii": [
+          0.550564,
+          0.43119999999999997,
+          0.32968675131688574
+        ]
+      },
+      {
+        "id": "head",
+        "parent": "chest",
+        "offset": [
+          0,
+          0.7275520000000001,
+          0
+        ],
+        "radii": [
+          0.295568,
+          0.35672,
+          0.315952
+        ]
+      }
+    ],
+    "parts": [
+      {
+        "id": "part-1",
+        "type": "faceplate",
+        "host": "head",
+        "anchor": [
+          0,
+          0,
+          1
+        ],
+        "size": 0.43,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "bone",
+        "socket": "head",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "part-2",
+        "type": "tubecluster",
+        "host": "chest",
+        "anchor": [
+          -0.09950371902099893,
+          0.9950371902099893,
+          0
+        ],
+        "size": 0.4,
+        "length": 1.2,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "hand",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "part-3",
+        "type": "latticecage",
+        "host": "chest",
+        "anchor": [
+          0,
+          0,
+          -1
+        ],
+        "size": 0.4,
+        "length": 0.65,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "appearance": {
+      "color": "#a88457",
+      "accent": "#e3c974",
+      "pattern": "stitchgrid",
+      "roughness": 0.95,
+      "patternScale": 3.5,
+      "weight": 1,
+      "angle": 0,
+      "warp": 0.16,
+      "strength": 0.3,
+      "metalness": 0,
+      "relief": 0.028,
+      "emission": 0,
+      "micro": "ribcloth",
+      "textureSeed": 1042,
+      "layers": []
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 0,
+        "radialstroke": 0,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "ripplewalk": 0,
+        "shellclap": 0,
+        "bloomcycle": 0,
+        "siphonreach": 0,
+        "padcrawl": 0,
+        "sensorscan": 0,
+        "idle": 1,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 1,
+      "stride": 1,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "ground",
+        "speed": 3.4,
+        "climb": 2.4,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "rigid",
+        "amplitude": 0.12,
+        "frequency": 0.55,
+        "wavelength": 3.5
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "sweep",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "candidate": {
+    "version": 6,
+    "rig": {
+      "family": "humanoid",
+      "proportions": {
+        "scale": 0.98,
+        "torso": 1,
+        "shoulders": 1.06,
+        "hips": 1,
+        "arms": 1,
+        "legs": 1,
+        "head": 1.04,
+        "bulk": 1.08,
+        "hands": 1,
+        "feet": 1,
+        "posture": 0
+      },
+      "outfit": "tunic",
+      "headStyle": "hood",
+      "handStyle": "fingers",
+      "bodyStyle": "defined"
+    },
+    "actor": {
+      "role": "civilian",
+      "faction": "friendly",
+      "behavior": "wander",
+      "health": 60,
+      "speed": 1,
+      "sight": 8,
+      "range": 1.2,
+      "damage": 0,
+      "cooldown": 2
+    },
+    "name": "Apiarist",
+    "seed": 1042,
+    "generation": 0,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.3528,
+          0.294,
+          0.28972102463133126
+        ]
+      },
+      {
+        "id": "spine",
+        "parent": "core",
+        "offset": [
+          0,
+          0.245,
+          0
+        ],
+        "radii": [
+          0.32340412589486,
+          0.3626,
+          0.29534930370664497
+        ]
+      },
+      {
+        "id": "chest",
+        "parent": "spine",
+        "offset": [
+          0,
+          0.33319999999999994,
+          0
+        ],
+        "radii": [
+          0.550564,
+          0.43119999999999997,
+          0.32968675131688574
+        ]
+      },
+      {
+        "id": "head",
+        "parent": "chest",
+        "offset": [
+          0,
+          0.7275520000000001,
+          0
+        ],
+        "radii": [
+          0.295568,
+          0.35672,
+          0.315952
+        ]
+      }
+    ],
+    "parts": [
+      {
+        "id": "part-1",
+        "type": "faceplate",
+        "host": "head",
+        "anchor": [
+          0,
+          0,
+          1
+        ],
+        "size": 0.43,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "bone",
+        "socket": "head",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "part-2",
+        "type": "tubecluster",
+        "host": "chest",
+        "anchor": [
+          -0.09950371902099893,
+          0.9950371902099893,
+          0
+        ],
+        "size": 0.4,
+        "length": 1.2,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "hand",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "part-3",
+        "type": "latticecage",
+        "host": "chest",
+        "anchor": [
+          0,
+          0,
+          -1
+        ],
+        "size": 0.4,
+        "length": 0.65,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "appearance": {
+      "color": "#a88457",
+      "accent": "#e3c974",
+      "pattern": "stitchgrid",
+      "roughness": 0.95,
+      "patternScale": 3.5,
+      "weight": 1,
+      "angle": 0,
+      "warp": 0.16,
+      "strength": 0.3,
+      "metalness": 0,
+      "relief": 0.028,
+      "emission": 0,
+      "micro": "ribcloth",
+      "textureSeed": 1042,
+      "layers": []
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 0,
+        "radialstroke": 0,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "ripplewalk": 0,
+        "shellclap": 0,
+        "bloomcycle": 0,
+        "siphonreach": 0,
+        "padcrawl": 0,
+        "sensorscan": 0,
+        "idle": 1,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 1,
+      "stride": 1,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "ground",
+        "speed": 3.4,
+        "climb": 2.4,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "rigid",
+        "amplitude": 0.12,
+        "frequency": 0.55,
+        "wavelength": 3.5
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "sweep",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "baseline": {
+    "version": 6,
+    "rig": {
+      "family": "humanoid",
+      "proportions": {
+        "scale": 0.98,
+        "torso": 1,
+        "shoulders": 1.06,
+        "hips": 1,
+        "arms": 1,
+        "legs": 1,
+        "head": 1.04,
+        "bulk": 1.08,
+        "hands": 1,
+        "feet": 1,
+        "posture": 0
+      },
+      "outfit": "tunic",
+      "headStyle": "hood",
+      "handStyle": "fingers",
+      "bodyStyle": "defined"
+    },
+    "actor": {
+      "role": "civilian",
+      "faction": "friendly",
+      "behavior": "wander",
+      "health": 60,
+      "speed": 1,
+      "sight": 8,
+      "range": 1.2,
+      "damage": 0,
+      "cooldown": 2
+    },
+    "name": "Apiarist",
+    "seed": 1042,
+    "generation": 0,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.3528,
+          0.294,
+          0.28972102463133126
+        ]
+      },
+      {
+        "id": "spine",
+        "parent": "core",
+        "offset": [
+          0,
+          0.245,
+          0
+        ],
+        "radii": [
+          0.32340412589486,
+          0.3626,
+          0.29534930370664497
+        ]
+      },
+      {
+        "id": "chest",
+        "parent": "spine",
+        "offset": [
+          0,
+          0.33319999999999994,
+          0
+        ],
+        "radii": [
+          0.550564,
+          0.43119999999999997,
+          0.32968675131688574
+        ]
+      },
+      {
+        "id": "head",
+        "parent": "chest",
+        "offset": [
+          0,
+          0.7275520000000001,
+          0
+        ],
+        "radii": [
+          0.295568,
+          0.35672,
+          0.315952
+        ]
+      }
+    ],
+    "parts": [
+      {
+        "id": "part-1",
+        "type": "faceplate",
+        "host": "head",
+        "anchor": [
+          0,
+          0,
+          1
+        ],
+        "size": 0.43,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "bone",
+        "socket": "head",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "part-2",
+        "type": "tubecluster",
+        "host": "chest",
+        "anchor": [
+          -0.09950371902099893,
+          0.9950371902099893,
+          0
+        ],
+        "size": 0.4,
+        "length": 1.2,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "hand",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "part-3",
+        "type": "latticecage",
+        "host": "chest",
+        "anchor": [
+          0,
+          0,
+          -1
+        ],
+        "size": 0.4,
+        "length": 0.65,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "appearance": {
+      "color": "#a88457",
+      "accent": "#e3c974",
+      "pattern": "stitchgrid",
+      "roughness": 0.95,
+      "patternScale": 3.5,
+      "weight": 1,
+      "angle": 0,
+      "warp": 0.16,
+      "strength": 0.3,
+      "metalness": 0,
+      "relief": 0.028,
+      "emission": 0,
+      "micro": "ribcloth",
+      "textureSeed": 1042,
+      "layers": []
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 0,
+        "radialstroke": 0,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "ripplewalk": 0,
+        "shellclap": 0,
+        "bloomcycle": 0,
+        "siphonreach": 0,
+        "padcrawl": 0,
+        "sensorscan": 0,
+        "idle": 1,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 1,
+      "stride": 1,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "ground",
+        "speed": 3.4,
+        "climb": 2.4,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "rigid",
+        "amplitude": 0.12,
+        "frequency": 0.55,
+        "wavelength": 3.5
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "sweep",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "settings": {
+    "pose": "motion-cycle",
+    "phase": 0.35,
+    "shading": "pattern",
+    "view": "quarter",
+    "layout": "quad",
+    "target": "desktop",
+    "bones": false,
+    "labels": false,
+    "garment": true,
+    "details": true
+  },
+  "frame": null,
+  "lineage": {
+    "parent": "fnv1a32-5c97c076",
+    "profile": "unchanged",
+    "amount": 0
+  },
+  "review": {
+    "decisions": {
+      "silhouette": "unreviewed",
+      "proportions": "unreviewed",
+      "joints": "unreviewed",
+      "surface": "unreviewed",
+      "attachments": "unreviewed",
+      "gameplay": "unreviewed"
+    },
+    "notes": "Actual procedural geometry. Check attachment and body clearance. CPU pigment is approximate. No GPU, physics, or production approval.",
+    "fingerprint": null,
+    "status": "not-approved"
+  },
+  "referencePolicy": "Reference images and external OBJ data are not embedded. Reload them from local files. No automatic quality approval."
+}

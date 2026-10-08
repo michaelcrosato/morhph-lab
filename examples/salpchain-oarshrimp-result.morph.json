@@ -1,0 +1,472 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "creature"
+  },
+  "actor": {
+    "role": "monster",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 160,
+    "speed": 1,
+    "sight": 12,
+    "range": 1.8,
+    "damage": 20,
+    "cooldown": 1.4
+  },
+  "name": "Linked salp × Oar shrimp",
+  "seed": 7121,
+  "generation": 1,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.29000000000000004,
+        0.29000000000000004,
+        0.4575
+      ]
+    },
+    {
+      "id": "unit1",
+      "parent": "core",
+      "offset": [
+        0,
+        0,
+        -0.515
+      ],
+      "radii": [
+        0.275,
+        0.275,
+        0.43000000000000005
+      ]
+    },
+    {
+      "id": "unit2",
+      "parent": "unit1",
+      "offset": [
+        0,
+        -0.0225,
+        -0.51
+      ],
+      "radii": [
+        0.26,
+        0.2675,
+        0.41500000000000004
+      ]
+    },
+    {
+      "id": "unit3",
+      "parent": "unit2",
+      "offset": [
+        0,
+        0,
+        -0.53
+      ],
+      "radii": [
+        0.26,
+        0.26,
+        0.4
+      ]
+    },
+    {
+      "id": "unit4",
+      "parent": "unit3",
+      "offset": [
+        0,
+        0,
+        -0.53
+      ],
+      "radii": [
+        0.26,
+        0.26,
+        0.4
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "mix-part-1",
+      "type": "pumpbarrel",
+      "host": "core",
+      "anchor": [
+        0,
+        1,
+        0
+      ],
+      "size": 0.93,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 0.55,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        -0.32,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-2",
+      "type": "pumpbarrel",
+      "host": "unit1",
+      "anchor": [
+        0,
+        1,
+        0
+      ],
+      "size": 0.93,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0.17,
+      "bend": 0,
+      "variant": 2,
+      "presence": 0.55,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        -0.32,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-3",
+      "type": "pumpbarrel",
+      "host": "unit2",
+      "anchor": [
+        0,
+        1,
+        0
+      ],
+      "size": 0.93,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0.34,
+      "bend": 0,
+      "variant": 2,
+      "presence": 0.55,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        -0.32,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-4",
+      "type": "pumpbarrel",
+      "host": "unit3",
+      "anchor": [
+        0,
+        1,
+        0
+      ],
+      "size": 0.93,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0.51,
+      "bend": 0,
+      "variant": 2,
+      "presence": 0.55,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        -0.32,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-5",
+      "type": "pumpbarrel",
+      "host": "unit4",
+      "anchor": [
+        0,
+        1,
+        0
+      ],
+      "size": 0.93,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0.68,
+      "bend": 0,
+      "variant": 2,
+      "presence": 0.55,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        -0.32,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-6",
+      "type": "branchfan",
+      "host": "unit4",
+      "anchor": [
+        0,
+        0,
+        -1
+      ],
+      "size": 0.35,
+      "length": 0.72,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.55,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-7",
+      "type": "swimmeret",
+      "host": "core",
+      "anchor": [
+        0.9081532183729996,
+        -0.40866894826784983,
+        -0.09081532183729996
+      ],
+      "size": 0.67,
+      "length": 0.85,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 0.45,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-8",
+      "type": "swimmeret",
+      "host": "unit1",
+      "anchor": [
+        0.9245003270420487,
+        -0.3698001308168195,
+        -0.09245003270420488
+      ],
+      "size": 0.44,
+      "length": 0.7,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0.25,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.45,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-9",
+      "type": "caudal",
+      "host": "unit2",
+      "anchor": [
+        0,
+        0,
+        -1
+      ],
+      "size": 0.58,
+      "length": 0.75,
+      "twist": 1.5707963267948966,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.45,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-10",
+      "type": "branchfan",
+      "host": "core",
+      "anchor": [
+        0.5026090374675883,
+        0.3866223365135295,
+        0.773244673027059
+      ],
+      "size": 0.35,
+      "length": 1.1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.45,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mix-part-11",
+      "type": "optic",
+      "host": "core",
+      "anchor": [
+        0.86386842558136,
+        0.259160527674408,
+        0.43193421279068
+      ],
+      "size": 0.75,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 0.45,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#907a72",
+    "accent": "#e0dcc1",
+    "pattern": "tessera",
+    "roughness": 0.446,
+    "patternScale": 4,
+    "weight": 0.6,
+    "angle": 0,
+    "warp": 0.18,
+    "strength": 0.72,
+    "metalness": 0.116,
+    "relief": 0.0296,
+    "emission": 0,
+    "micro": "tesserae",
+    "textureSeed": 1042,
+    "layers": [
+      {
+        "pattern": "polypcells",
+        "scale": 4,
+        "weight": 0.4,
+        "angle": 0,
+        "warp": 0.18
+      }
+    ]
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0.6,
+      "radialstroke": 0,
+      "metachronal": 0.4,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 0,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "water",
+      "speed": 2.24,
+      "climb": 1.7,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "lateral",
+      "amplitude": 0.106,
+      "frequency": 0.65,
+      "wavelength": 3
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

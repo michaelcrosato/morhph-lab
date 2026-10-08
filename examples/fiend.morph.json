@@ -1,0 +1,259 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "humanoid",
+    "proportions": {
+      "scale": 1.1,
+      "torso": 1,
+      "shoulders": 1.3,
+      "hips": 1,
+      "arms": 1.2,
+      "legs": 1.08,
+      "head": 0.92,
+      "bulk": 1.12,
+      "hands": 1,
+      "feet": 1,
+      "posture": 0.12
+    },
+    "outfit": "carapace",
+    "headStyle": "bare",
+    "handStyle": "claws",
+    "bodyStyle": "classic"
+  },
+  "actor": {
+    "role": "monster",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 160,
+    "speed": 1,
+    "sight": 12,
+    "range": 1.8,
+    "damage": 20,
+    "cooldown": 1.4
+  },
+  "name": "Fiend",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.396,
+        0.33,
+        0.32816721296634355
+      ]
+    },
+    {
+      "id": "spine",
+      "parent": "core",
+      "offset": [
+        0,
+        0.275,
+        0
+      ],
+      "radii": [
+        0.3683238762890934,
+        0.40700000000000003,
+        0.33759786729184177
+      ]
+    },
+    {
+      "id": "chest",
+      "parent": "spine",
+      "offset": [
+        0,
+        0.374,
+        0
+      ],
+      "radii": [
+        0.7579000000000001,
+        0.48400000000000004,
+        0.37890852649138596
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "chest",
+      "offset": [
+        0,
+        0.59972,
+        0
+      ],
+      "radii": [
+        0.29348,
+        0.3542,
+        0.31372000000000005
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "part-1",
+      "type": "horn",
+      "host": "head",
+      "anchor": [
+        0.6211923929348259,
+        0.7645444836120934,
+        -0.172022508812721
+      ],
+      "size": 0.65,
+      "length": 1.05,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "tail",
+      "host": "core",
+      "anchor": [
+        0,
+        -0.11914522061843065,
+        -0.9928768384869221
+      ],
+      "size": 0.85,
+      "length": 1.2,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "crest",
+      "host": "chest",
+      "anchor": [
+        0,
+        0.3713906763541037,
+        -0.9284766908852592
+      ],
+      "size": 0.55,
+      "length": 0.65,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#995b56",
+    "accent": "#d2ae79",
+    "pattern": "scales",
+    "roughness": 0.72,
+    "patternScale": 5.4,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.3,
+    "metalness": 0.025,
+    "relief": 0.012,
+    "emission": 0,
+    "micro": "scales",
+    "textureSeed": 1042,
+    "layers": []
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 1,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

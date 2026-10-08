@@ -1,0 +1,315 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "creature"
+  },
+  "actor": {
+    "role": "monster",
+    "faction": "neutral",
+    "behavior": "chase",
+    "health": 160,
+    "speed": 1,
+    "sight": 12,
+    "range": 1.8,
+    "damage": 20,
+    "cooldown": 1.4
+  },
+  "name": "Bristle tusk",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.57,
+        0.59,
+        0.88
+      ]
+    },
+    {
+      "id": "shoulder",
+      "parent": "core",
+      "offset": [
+        0,
+        0.11,
+        0.42
+      ],
+      "radii": [
+        0.52,
+        0.61,
+        0.56
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "shoulder",
+      "offset": [
+        0,
+        -0.22,
+        0.48
+      ],
+      "radii": [
+        0.42,
+        0.36,
+        0.42
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "part-1",
+      "type": "beastleg",
+      "host": "core",
+      "anchor": [
+        0.37808697000580244,
+        -0.9002070714423868,
+        0.2160496971461728
+      ],
+      "size": 0.68,
+      "length": 0.74,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 1,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0.39
+      ]
+    },
+    {
+      "id": "part-2",
+      "type": "beastleg",
+      "host": "core",
+      "anchor": [
+        0.37808697000580244,
+        -0.9002070714423868,
+        -0.2160496971461728
+      ],
+      "size": 0.68,
+      "length": 0.74,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0.5,
+      "bend": 0,
+      "variant": 1,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        -0.39
+      ]
+    },
+    {
+      "id": "part-3",
+      "type": "optic",
+      "host": "head",
+      "anchor": [
+        0.777909841584414,
+        0.2333729524753242,
+        0.5834323811883104
+      ],
+      "size": 0.53,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-4",
+      "type": "muzzle",
+      "host": "head",
+      "anchor": [
+        0,
+        -0.09950371902099893,
+        0.9950371902099893
+      ],
+      "size": 0.83,
+      "length": 1,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-5",
+      "type": "ear",
+      "host": "head",
+      "anchor": [
+        0.49171966140998224,
+        0.8707535670801769,
+        0
+      ],
+      "size": 0.4,
+      "length": 1,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "part-6",
+      "type": "brushtail",
+      "host": "core",
+      "anchor": [
+        0,
+        0.04993761694389223,
+        -0.9987523388778446
+      ],
+      "size": 0.36,
+      "length": 0.65,
+      "twist": 0,
+      "mirror": false,
+      "flex": 1,
+      "phase": 0,
+      "bend": 0,
+      "variant": 2,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#594e45",
+    "accent": "#b39770",
+    "pattern": "countershade",
+    "roughness": 0.88,
+    "patternScale": 3,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.1,
+    "strength": 0.45,
+    "metalness": 0,
+    "relief": 0.025,
+    "emission": 0,
+    "micro": "shortcoat",
+    "textureSeed": 1042,
+    "layers": []
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "ripplewalk": 0,
+      "shellclap": 0,
+      "bloomcycle": 0,
+      "siphonreach": 0,
+      "padcrawl": 0,
+      "sensorscan": 0,
+      "animalamble": 0,
+      "animalsniff": 1,
+      "animalbound": 0,
+      "idle": 0,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "neutral",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

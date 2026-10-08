@@ -1,0 +1,31 @@
+/** Assets selected from the v8 coverage review, not an extra novelty set. */
+const part=(label,category,description,variants,anchor,extra={})=>({label,category,description,variants,anchor,size:1,length:1,mirror:false,...extra});
+export const FIELD_PARTS=Object.freeze({
+ beastleg:part('Animal leg','Locomotion','A two-link leg with a paw, split hoof, or webbed foot. Visual IK and fixed support height; no individual contact physics.',['Paw','Split hoof','Webbed foot'],[.2,-1,0],{mirror:true}),
+ brushtail:part('Coat tail','Appendage','A smooth tail with brush, tuft, or bristle forms.',['Brush','End tuft','Bristle'],[0,.05,-1]),
+ worktool:part('Work tool','Equipment','A hammer, pick, or spade. No digging or damage logic.',['Hammer','Pick','Spade'],[-.06,1,0],{socket:'hand'}),
+ fieldlamp:part('Field lamp','Equipment','A caged lamp, hooded lamp, or survey beacon. Emissive geometry, not a scene light.',['Cage','Hood','Beacon'],[-.06,0,-1],{socket:'hand'}),
+ folio:part('Book and records','Equipment','An opening book, map scroll, or writing board.',['Book','Map scroll','Writing board'],[.1,0,1],{socket:'hand'}),
+ bowrig:part('Bow and quiver','Equipment','A short bow, long bow, or back quiver. The draw cycle is visual only.',['Short bow','Long bow','Quiver'],[.1,0,1],{socket:'hand'}),
+ utilitybelt:part('Utility belt','Equipment','A curved strap with pouches, vial cases, or supply rolls.',['Pouches','Vial cases','Supply rolls'],[0,0,1],{socket:'pelvis'}),
+ mantle:part('Travel mantle','Equipment','A short cape, split cape, or scarf. A fixed-root wave, not physical cloth.',['Short cape','Split cape','Scarf'],[0,0,-1],{socket:'chest'})
+});
+export const FIELD_MODELS=Object.freeze([
+ {id:'trailhound',label:'Trail hound',family:'creature',role:'companion',note:'Ground companion · four paws, muzzle, ears, and a brush tail'},
+ {id:'hillgrazer',label:'Hill grazer',family:'creature',role:'wildlife',note:'Ground wildlife · split hooves, long neck, and short antlers'},
+ {id:'bristletusk',label:'Bristle tusk',family:'creature',role:'wildlife',note:'Ground wildlife · heavy front body, tusks, and bristle tail'},
+ {id:'reedhopper',label:'Reed hopper',family:'creature',role:'wildlife',note:'Ground wildlife · large rear legs and broad webbed feet'},
+ {id:'fieldmedic',label:'Field medic',family:'humanoid',role:'civilian',note:'Civilian · supply belt, travel mantle, and offer gesture'},
+ {id:'lamplighter',label:'Lamplighter',family:'humanoid',role:'civilian',note:'Civilian · held caged lamp and inspection gesture'},
+ {id:'archivist',label:'Archivist',family:'humanoid',role:'civilian',note:'Civilian · opening book and reading pose'},
+ {id:'prospector',label:'Prospector',family:'humanoid',role:'civilian',note:'Civilian · pick, expedition pack, and work strike'},
+ {id:'waypostarcher',label:'Waypost archer',family:'humanoid',role:'guard',note:'Guard · long bow, quiver, and draw gesture'},
+ {id:'caravancourier',label:'Caravan courier',family:'humanoid',role:'civilian',note:'Civilian · scroll, pouches, framed pack, and checking records'}
+].map(p=>({...p,medium:'ground',collection:'field'})));
+export const FIELD_KITS=Object.freeze({
+ fieldworker:{label:'Worker kit',family:'humanoid',note:'Work tool, supply belt, and pack',parts:[{type:'worktool',host:'chest',socket:'hand',anchor:[-.06,1,0],size:.65},{type:'utilitybelt',host:'core',socket:'pelvis',anchor:[0,0,1],size:.8},{type:'pack',host:'chest',anchor:[0,0,-1],size:.75,variant:1}]},
+ fieldscholar:{label:'Scholar kit',family:'humanoid',note:'Opening book and travel mantle',parts:[{type:'folio',host:'chest',socket:'hand',anchor:[.1,0,1],size:.6},{type:'mantle',host:'chest',socket:'chest',anchor:[0,0,-1],size:.7}]},
+ fieldarcher:{label:'Archer kit',family:'humanoid',note:'Hand bow and a back quiver',parts:[{type:'bowrig',host:'chest',socket:'hand',anchor:[.1,0,1],size:.85,variant:1},{type:'bowrig',host:'chest',socket:'chest',anchor:[.01,1,0],socketOffset:[.12,-.25,-.45],size:.65,variant:2}]},
+ fieldtraveler:{label:'Night traveler kit',family:'humanoid',note:'Lamp, mantle, and pouches',parts:[{type:'fieldlamp',host:'chest',socket:'hand',anchor:[-.1,0,-1],size:.65},{type:'mantle',host:'chest',socket:'chest',anchor:[0,0,-1],size:.72,variant:1},{type:'utilitybelt',host:'core',socket:'pelvis',anchor:[0,0,1],size:.8}]},
+ fieldface:{label:'Animal face kit',family:'any',note:'Visible eyes, paired ears, and a hinged muzzle',parts:[{type:'optic',host:'head',anchor:[.6,.35,.8],size:.6,mirror:true},{type:'ear',host:'head',anchor:[.5,.8,0],size:.5,mirror:true},{type:'muzzle',host:'head',anchor:[0,-.1,1],size:.65}]}
+});

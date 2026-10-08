@@ -1,0 +1,2162 @@
+{
+  "format": "morph-lab-roster",
+  "version": 1,
+  "seed": 4614,
+  "variation": 0.25,
+  "actors": [
+    {
+      "id": "actor-ab1e6fac",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 162,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Needle swimmer 01",
+        "seed": 3890814221,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.42,
+              0.48,
+              1.04
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              0.64
+            ],
+            "radii": [
+              0.36,
+              0.36,
+              0.62
+            ]
+          },
+          {
+            "id": "rear",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              -0.57
+            ],
+            "radii": [
+              0.25,
+              0.28,
+              0.57
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.8426301447967508,
+              0.18537863185528516,
+              0.5055780868780505
+            ],
+            "size": 0.7102767816209234,
+            "length": 1.0176727522397413,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "caudal",
+            "host": "rear",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.9477442938077729,
+            "length": 1.081589992926456,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "paddle",
+            "host": "core",
+            "anchor": [
+              0.9565984147417261,
+              -0.11479180976900713,
+              0.26784755612768335
+            ],
+            "size": 0.5478270776130376,
+            "length": 0.8380221282870043,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "ribbon",
+            "host": "core",
+            "anchor": [
+              0,
+              0.9889363528682975,
+              -0.14834045293024462
+            ],
+            "size": 0.3921676277532242,
+            "length": 0.47143798357620836,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "siphon",
+            "host": "head",
+            "anchor": [
+              0,
+              0,
+              1
+            ],
+            "size": 0.43669931616692337,
+            "length": 0.5774667118256912,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#347c91",
+          "accent": "#dfd9a3",
+          "pattern": "cycloid",
+          "roughness": 0.29,
+          "patternScale": 3.9801269758027047,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.2,
+          "strength": 0.7,
+          "metalness": 0.12,
+          "relief": 0.028,
+          "emission": 0,
+          "micro": "denticles",
+          "textureSeed": 3890814221,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 1,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 0.9,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9834852012631018,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "water",
+            "speed": 3.2,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "lateral",
+            "amplitude": 0.19,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "water",
+          "speed": 3.2,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "lateral",
+          "amplitude": 0.19,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-30d93d88",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 167,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Needle swimmer 02",
+        "seed": 883498047,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.42,
+              0.48,
+              1.04
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              0.64
+            ],
+            "radii": [
+              0.36,
+              0.36,
+              0.62
+            ]
+          },
+          {
+            "id": "rear",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              -0.57
+            ],
+            "radii": [
+              0.25,
+              0.28,
+              0.57
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.8426301447967508,
+              0.18537863185528516,
+              0.5055780868780505
+            ],
+            "size": 0.7229800451709889,
+            "length": 0.9604683418758213,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "caudal",
+            "host": "rear",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 1.0281147444911767,
+            "length": 1.0678783360775561,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "paddle",
+            "host": "core",
+            "anchor": [
+              0.9565984147417261,
+              -0.11479180976900713,
+              0.26784755612768335
+            ],
+            "size": 0.5274159171979409,
+            "length": 0.8844901179063599,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "ribbon",
+            "host": "core",
+            "anchor": [
+              0,
+              0.9889363528682975,
+              -0.14834045293024462
+            ],
+            "size": 0.41306171093601735,
+            "length": 0.45971229192987084,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "siphon",
+            "host": "head",
+            "anchor": [
+              0,
+              0,
+              1
+            ],
+            "size": 0.43441312257433307,
+            "length": 0.5763067187764682,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#347c91",
+          "accent": "#dfd9a3",
+          "pattern": "cycloid",
+          "roughness": 0.29,
+          "patternScale": 4.103736236225814,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.2,
+          "strength": 0.7,
+          "metalness": 0.12,
+          "relief": 0.028,
+          "emission": 0,
+          "micro": "denticles",
+          "textureSeed": 883498047,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 1,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 0.9,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.0245001204195432,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "water",
+            "speed": 3.2,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "lateral",
+            "amplitude": 0.19,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "water",
+          "speed": 3.2,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "lateral",
+          "amplitude": 0.19,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-5e3e91fd",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 152,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Needle swimmer 03",
+        "seed": 1350860602,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.42,
+              0.48,
+              1.04
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              0.64
+            ],
+            "radii": [
+              0.36,
+              0.36,
+              0.62
+            ]
+          },
+          {
+            "id": "rear",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              -0.57
+            ],
+            "radii": [
+              0.25,
+              0.28,
+              0.57
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.8426301447967508,
+              0.18537863185528516,
+              0.5055780868780505
+            ],
+            "size": 0.7228066482581198,
+            "length": 1.0266146770678461,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "caudal",
+            "host": "rear",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.9793291235982906,
+            "length": 1.0758647314819973,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "paddle",
+            "host": "core",
+            "anchor": [
+              0.9565984147417261,
+              -0.11479180976900713,
+              0.26784755612768335
+            ],
+            "size": 0.5624673133491888,
+            "length": 0.844127871644916,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "ribbon",
+            "host": "core",
+            "anchor": [
+              0,
+              0.9889363528682975,
+              -0.14834045293024462
+            ],
+            "size": 0.4071297511341982,
+            "length": 0.48244115456566217,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "siphon",
+            "host": "head",
+            "anchor": [
+              0,
+              0,
+              1
+            ],
+            "size": 0.42326835777203087,
+            "length": 0.5601605690328871,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#347c91",
+          "accent": "#dfd9a3",
+          "pattern": "cycloid",
+          "roughness": 0.29,
+          "patternScale": 4.144269751268439,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.2,
+          "strength": 0.7,
+          "metalness": 0.12,
+          "relief": 0.028,
+          "emission": 0,
+          "micro": "denticles",
+          "textureSeed": 1350860602,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 1,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 0.9,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.0022662478149869,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "water",
+            "speed": 3.2,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "lateral",
+            "amplitude": 0.19,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "water",
+          "speed": 3.2,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "lateral",
+          "amplitude": 0.19,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-7fe92baf",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 170,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Needle swimmer 04",
+        "seed": 2558389785,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.42,
+              0.48,
+              1.04
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              0.64
+            ],
+            "radii": [
+              0.36,
+              0.36,
+              0.62
+            ]
+          },
+          {
+            "id": "rear",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              -0.57
+            ],
+            "radii": [
+              0.25,
+              0.28,
+              0.57
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.8426301447967508,
+              0.18537863185528516,
+              0.5055780868780505
+            ],
+            "size": 0.7182164878724142,
+            "length": 0.9552461182698607,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "caudal",
+            "host": "rear",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 1.002295767335454,
+            "length": 1.0700738134409766,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "paddle",
+            "host": "core",
+            "anchor": [
+              0.9565984147417261,
+              -0.11479180976900713,
+              0.26784755612768335
+            ],
+            "size": 0.5338351449882612,
+            "length": 0.8329653671896086,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "ribbon",
+            "host": "core",
+            "anchor": [
+              0,
+              0.9889363528682975,
+              -0.14834045293024462
+            ],
+            "size": 0.40164364367956296,
+            "length": 0.45818609059229487,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "siphon",
+            "host": "head",
+            "anchor": [
+              0,
+              0,
+              1
+            ],
+            "size": 0.44598126521974335,
+            "length": 0.5413740315486212,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#347c91",
+          "accent": "#dfd9a3",
+          "pattern": "cycloid",
+          "roughness": 0.29,
+          "patternScale": 3.7708462578011677,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.2,
+          "strength": 0.7,
+          "metalness": 0.12,
+          "relief": 0.028,
+          "emission": 0,
+          "micro": "denticles",
+          "textureSeed": 2558389785,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 1,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 0.9,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9966935826756526,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "water",
+            "speed": 3.2,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "lateral",
+            "amplitude": 0.19,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "water",
+          "speed": 3.2,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "lateral",
+          "amplitude": 0.19,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-46c8b055",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 167,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Needle swimmer 05",
+        "seed": 2676573218,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.42,
+              0.48,
+              1.04
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              0.64
+            ],
+            "radii": [
+              0.36,
+              0.36,
+              0.62
+            ]
+          },
+          {
+            "id": "rear",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              -0.57
+            ],
+            "radii": [
+              0.25,
+              0.28,
+              0.57
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.8426301447967508,
+              0.18537863185528516,
+              0.5055780868780505
+            ],
+            "size": 0.7262080250889994,
+            "length": 1.0362498146481811,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "caudal",
+            "host": "rear",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 1.0191816709702834,
+            "length": 1.0326556268963032,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "paddle",
+            "host": "core",
+            "anchor": [
+              0.9565984147417261,
+              -0.11479180976900713,
+              0.26784755612768335
+            ],
+            "size": 0.5601152481278405,
+            "length": 0.8942451983036007,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "ribbon",
+            "host": "core",
+            "anchor": [
+              0,
+              0.9889363528682975,
+              -0.14834045293024462
+            ],
+            "size": 0.40714396070688963,
+            "length": 0.497352968338877,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "siphon",
+            "host": "head",
+            "anchor": [
+              0,
+              0,
+              1
+            ],
+            "size": 0.39718189204344523,
+            "length": 0.5677492401760538,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#347c91",
+          "accent": "#dfd9a3",
+          "pattern": "cycloid",
+          "roughness": 0.29,
+          "patternScale": 3.8237864654511213,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.2,
+          "strength": 0.7,
+          "metalness": 0.12,
+          "relief": 0.028,
+          "emission": 0,
+          "micro": "denticles",
+          "textureSeed": 2676573218,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 1,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 0.9,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 1.012120968423551,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "water",
+            "speed": 3.2,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "lateral",
+            "amplitude": 0.19,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "water",
+          "speed": 3.2,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "lateral",
+          "amplitude": 0.19,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    },
+    {
+      "id": "actor-19bc54a8",
+      "format": "morph-lab-actor",
+      "version": 1,
+      "blueprint": {
+        "version": 6,
+        "rig": {
+          "family": "creature"
+        },
+        "actor": {
+          "role": "monster",
+          "faction": "hostile",
+          "behavior": "chase",
+          "health": 164,
+          "speed": 1,
+          "sight": 12,
+          "range": 1.8,
+          "damage": 20,
+          "cooldown": 1.4
+        },
+        "name": "Needle swimmer 06",
+        "seed": 2750064135,
+        "generation": 1,
+        "nodes": [
+          {
+            "id": "core",
+            "parent": null,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "radii": [
+              0.42,
+              0.48,
+              1.04
+            ]
+          },
+          {
+            "id": "head",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              0.64
+            ],
+            "radii": [
+              0.36,
+              0.36,
+              0.62
+            ]
+          },
+          {
+            "id": "rear",
+            "parent": "core",
+            "offset": [
+              0,
+              0,
+              -0.57
+            ],
+            "radii": [
+              0.25,
+              0.28,
+              0.57
+            ]
+          }
+        ],
+        "parts": [
+          {
+            "id": "part-1",
+            "type": "optic",
+            "host": "head",
+            "anchor": [
+              0.8426301447967508,
+              0.18537863185528516,
+              0.5055780868780505
+            ],
+            "size": 0.7354480914166197,
+            "length": 0.9990646048914641,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-2",
+            "type": "caudal",
+            "host": "rear",
+            "anchor": [
+              0,
+              0,
+              -1
+            ],
+            "size": 0.9389782875368837,
+            "length": 1.074079959722003,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-3",
+            "type": "paddle",
+            "host": "core",
+            "anchor": [
+              0.9565984147417261,
+              -0.11479180976900713,
+              0.26784755612768335
+            ],
+            "size": 0.5435802219729522,
+            "length": 0.8795054494065698,
+            "twist": 0,
+            "mirror": true,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 0,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-4",
+            "type": "ribbon",
+            "host": "core",
+            "anchor": [
+              0,
+              0.9889363528682975,
+              -0.14834045293024462
+            ],
+            "size": 0.3843659758684226,
+            "length": 0.46180947007611395,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 2,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "part-5",
+            "type": "siphon",
+            "host": "head",
+            "anchor": [
+              0,
+              0,
+              1
+            ],
+            "size": 0.4020932561578229,
+            "length": 0.5392278962035197,
+            "twist": 0,
+            "mirror": false,
+            "flex": 1,
+            "phase": 0,
+            "bend": 0,
+            "variant": 1,
+            "presence": 1,
+            "material": "inherit",
+            "socket": "body",
+            "socketOffset": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "appearance": {
+          "color": "#347c91",
+          "accent": "#dfd9a3",
+          "pattern": "cycloid",
+          "roughness": 0.29,
+          "patternScale": 4.234361958689988,
+          "weight": 1,
+          "angle": 0,
+          "warp": 0.2,
+          "strength": 0.7,
+          "metalness": 0.12,
+          "relief": 0.028,
+          "emission": 0,
+          "micro": "denticles",
+          "textureSeed": 2750064135,
+          "layers": []
+        },
+        "motion": {
+          "weights": {
+            "combbeat": 0,
+            "chainpump": 0,
+            "radialstroke": 0,
+            "metachronal": 0,
+            "canopy": 0,
+            "corkscrew": 0,
+            "turbines": 0,
+            "concertina": 0,
+            "idle": 0,
+            "walk": 0,
+            "run": 0,
+            "creep": 0,
+            "bound": 0,
+            "swim": 0,
+            "hover": 0,
+            "backpedal": 0,
+            "strafe": 0,
+            "prowl": 0,
+            "trot": 0,
+            "cruise": 1,
+            "undulate": 0,
+            "jet": 0,
+            "row": 0,
+            "soar": 0,
+            "powerflight": 0,
+            "flutter": 0,
+            "float": 0,
+            "display": 0
+          },
+          "layers": {
+            "breath": 1,
+            "blink": 0.9,
+            "gaze": 1,
+            "tail": 1,
+            "flex": 1,
+            "jaw": 1
+          },
+          "tempo": 0.9720734129368793,
+          "stride": 1,
+          "lift": 1,
+          "phaseLag": 0.5,
+          "travel": {
+            "medium": "water",
+            "speed": 3.2,
+            "climb": 2.4,
+            "bank": 0.25
+          },
+          "bodyWave": {
+            "kind": "lateral",
+            "amplitude": 0.19,
+            "frequency": 1,
+            "wavelength": 2.6
+          },
+          "humanoid": {
+            "style": "neutral",
+            "armSwing": 1,
+            "lookYaw": 0,
+            "lookPitch": 0,
+            "action": "none",
+            "actionWeight": 1,
+            "actionSpeed": 1,
+            "repeat": true,
+            "mask": "auto"
+          }
+        }
+      },
+      "contract": {
+        "units": "metres",
+        "up": "+Y",
+        "forward": "+Z",
+        "rig": "creature",
+        "controller": "dynamic-compound-upright",
+        "travel": {
+          "medium": "water",
+          "speed": 3.2,
+          "climb": 2.4,
+          "bank": 0.25
+        },
+        "bodyWave": {
+          "kind": "lateral",
+          "amplitude": 0.19,
+          "frequency": 1,
+          "wavelength": 2.6
+        },
+        "restHeight": null,
+        "sockets": [
+          "body"
+        ],
+        "actions": {},
+        "compatibility": {
+          "family": "creature",
+          "locomotion": [
+            "idle",
+            "walk",
+            "run",
+            "creep",
+            "bound",
+            "swim",
+            "hover",
+            "display",
+            "backpedal",
+            "strafe",
+            "prowl",
+            "trot",
+            "cruise",
+            "undulate",
+            "jet",
+            "row",
+            "soar",
+            "powerflight",
+            "flutter",
+            "float",
+            "combbeat",
+            "chainpump",
+            "radialstroke",
+            "metachronal",
+            "canopy",
+            "corkscrew",
+            "turbines",
+            "concertina"
+          ],
+          "inactiveGenes": [],
+          "notes": [
+            "Three-axis arcade travel. Fin and wing dimensions do not change thrust or lift. Body waves do not deform the collision hull."
+          ],
+          "capabilities": {
+            "proceduralRig": false,
+            "handSockets": false,
+            "upperBodyActions": false,
+            "footIK": true,
+            "ragdoll": false,
+            "rootMotion": false,
+            "combat": false,
+            "navigation": false
+          }
+        },
+        "roleIsMetadata": true,
+        "geometry": "generated-at-runtime",
+        "animations": "procedural-at-runtime"
+      }
+    }
+  ]
+}

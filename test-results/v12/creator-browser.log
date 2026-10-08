@@ -1,0 +1,89 @@
+1 Creator is the default workspace
+2 All 89 source recipes are available
+3 Actual procedural triangles are visible
+4 Missing engine never blocks creation
+5 Saved list starts empty; no concept-art placeholders
+6 The default page does not load Rapier
+7 Desktop has no horizontal overflow
+8 Randomize creates a new valid creature
+9 Undo restores original
+10 Same source and seed repeat exactly
+11 Save adds one real snapshot
+12 Saved snapshot equals visible model
+13 Exact duplicate is not added twice
+14 Variation branches without changing saved parent
+15 A branch can be kept separately
+16 Load restores complete saved snapshot
+17 Favorites filter shows only marked discovery
+18 Search filters without deleting discoveries
+19 Trait roll body completes without error
+20 body roll is one undo step
+21 Trait roll head completes without error
+22 head roll is one undo step
+23 Trait roll parts completes without error
+24 parts roll is one undo step
+25 Trait roll surface completes without error
+26 surface keeps structure and seed
+27 surface roll is one undo step
+28 Trait roll pigment completes without error
+29 pigment keeps structure and seed
+30 pigment roll is one undo step
+31 Trait roll motion completes without error
+32 motion keeps structure and seed
+33 motion roll is one undo step
+34 Attachment lock discloses body dependency
+35 Body roll is disabled while host-dependent parts are locked
+36 Locked head keeps body IDs and dimensions
+37 Locked roll uses original geometry seed
+38 Six candidates are actual rendered images
+39 Batch generation leaves source and saves unchanged
+40 Candidate can become the next parent
+41 Chosen branch can be saved
+42 Both saved parents load independently
+43 Blend slider opens an uncommitted preview
+44 Slider recomputes from fixed snapshots
+45 Cancel restores the previous current creature
+46 Keep mix creates one undo step
+47 One Undo removes complete mix
+48 Redo restores complete mix
+49 Mix does not change either original save
+50 Rename is visible in blueprint and recipe
+51 Blueprint download matches visible source
+52 Roll/mix recipe includes both complete source snapshots
+53 Recipe import reconstructs exact named result
+54 Invalid collection import retains all data
+55 Backup contains all saved blueprints
+56 Reimport deduplicates existing collection
+57 Cancel removal retains discovery
+58 Confirmed deletion keeps current and parent snapshots
+59 Backup restores removed discovery
+60 Creator exports actual valid GLB header and ZIP CRC
+61 Asset source retains visible creator genome
+62 Asset export does not alter creator state
+63 Motion phase changes real geometry pixels
+64 Clay display changes rendered pixels
+65 Play control enters playback
+66 Unavailable graphics preserves all editing controls
+67 Inspect receives current creature
+68 Creator and collection survive Inspect round trip
+69 Offline Workshop error has Creator recovery
+70 Workshop receives current snapshot
+71 Engine failure does not lose saved discoveries
+72 Workspace changes stay in one document
+73 Review notes survive Creator and failed Workshop
+74 No unrequested fake default saves in fresh document
+75 Export/import works between separate documents
+76 Mobile creator fits viewport
+77 Saved thumbnails are actual generated PNGs
+78 No uncaught errors
+{
+  "suite": "v12 real creator, saved snapshots, mixing, exports and workspace recovery",
+  "passed": 78,
+  "errors": [],
+  "htmlSHA256": "51856a211e3562eb3a0887956c8fd13e2229d3eedd654d56608c56fc9a8b8b7f",
+  "rendering": "Actual CPU geometry",
+  "gpuTested": false,
+  "physicsTested": false,
+  "originStorageInBrowser": "Unavailable under set_content; no mock storage used",
+  "navigation": "Exact packaged HTML via set_content; no Windows file navigation"
+}

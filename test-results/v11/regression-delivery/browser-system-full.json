@@ -1,0 +1,98 @@
+{
+  "format": "morph-lab-system-check",
+  "version": 1,
+  "applicationVersion": "11.0.0",
+  "createdAt": "2026-10-06T19:46:45.525Z",
+  "scope": "full",
+  "enginePins": {
+    "three": "0.181.0",
+    "rapier": "0.19.3"
+  },
+  "environment": {
+    "protocol": "about:",
+    "secureContext": false,
+    "webAssembly": true
+  },
+  "checks": [
+    {
+      "id": "wasm",
+      "label": "WebAssembly",
+      "status": "pass",
+      "data": {
+        "compiled": true
+      }
+    },
+    {
+      "id": "webgl2",
+      "label": "WebGL2 context",
+      "status": "blocked",
+      "message": "No WebGL2 context. Enable browser graphics acceleration and check the graphics driver or browser policy."
+    },
+    {
+      "id": "patterns",
+      "label": "Procedural GLSL",
+      "status": "blocked",
+      "message": "No WebGL2 context. Shader compilation was not tested."
+    },
+    {
+      "id": "three-load",
+      "label": "Load Three.js",
+      "status": "blocked",
+      "message": "Failed to fetch dynamically imported module: [resource]"
+    },
+    {
+      "id": "three-version",
+      "label": "Three.js version",
+      "status": "blocked",
+      "message": "Engine was not loaded."
+    },
+    {
+      "id": "rapier-load",
+      "label": "Load Rapier",
+      "status": "blocked",
+      "message": "Failed to fetch dynamically imported module: [resource]"
+    },
+    {
+      "id": "rapier-version",
+      "label": "Rapier version",
+      "status": "blocked",
+      "message": "Engine was not loaded."
+    },
+    {
+      "id": "physics-ground",
+      "label": "Rapier: ground",
+      "status": "blocked",
+      "message": "The pinned physics engine was not initialized."
+    },
+    {
+      "id": "physics-water",
+      "label": "Rapier: water",
+      "status": "blocked",
+      "message": "The pinned physics engine was not initialized."
+    },
+    {
+      "id": "physics-air",
+      "label": "Rapier: air",
+      "status": "blocked",
+      "message": "The pinned physics engine was not initialized."
+    },
+    {
+      "id": "three-render",
+      "label": "Complete model render",
+      "status": "blocked",
+      "message": "The pinned Three.js engine and WebGL2 are both required."
+    }
+  ],
+  "limitations": [
+    "No report is sent to a server.",
+    "Smoke tests do not approve visual quality, frame rate, all models, or a full gameplay session.",
+    "Blocked and skipped checks are not passes."
+  ],
+  "durationMs": 14,
+  "status": "blocked",
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "blocked": 10
+  }
+}

@@ -1,0 +1,1038 @@
+{
+  "format": "morph-lab-review",
+  "version": 1,
+  "source": {
+    "version": 6,
+    "rig": {
+      "family": "creature"
+    },
+    "actor": {
+      "role": "monster",
+      "faction": "hostile",
+      "behavior": "chase",
+      "health": 160,
+      "speed": 1,
+      "sight": 12,
+      "range": 1.8,
+      "damage": 20,
+      "cooldown": 1.4
+    },
+    "name": "Linked salp",
+    "seed": 1042,
+    "generation": 0,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      },
+      {
+        "id": "unit1",
+        "parent": "core",
+        "offset": [
+          0,
+          0,
+          -0.53
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      },
+      {
+        "id": "unit2",
+        "parent": "unit1",
+        "offset": [
+          0,
+          0,
+          -0.53
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      },
+      {
+        "id": "unit3",
+        "parent": "unit2",
+        "offset": [
+          0,
+          0,
+          -0.53
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      },
+      {
+        "id": "unit4",
+        "parent": "unit3",
+        "offset": [
+          0,
+          0,
+          -0.53
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      }
+    ],
+    "parts": [
+      {
+        "id": "part-1",
+        "type": "pumpbarrel",
+        "host": "core",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-2",
+        "type": "pumpbarrel",
+        "host": "unit1",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.17,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-3",
+        "type": "pumpbarrel",
+        "host": "unit2",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.34,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-4",
+        "type": "pumpbarrel",
+        "host": "unit3",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.51,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-5",
+        "type": "pumpbarrel",
+        "host": "unit4",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.68,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-6",
+        "type": "branchfan",
+        "host": "unit4",
+        "anchor": [
+          0,
+          0,
+          -1
+        ],
+        "size": 0.35,
+        "length": 0.72,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "appearance": {
+      "color": "#558e93",
+      "accent": "#daf0d5",
+      "pattern": "polypcells",
+      "roughness": 0.56,
+      "patternScale": 4,
+      "weight": 1,
+      "angle": 0,
+      "warp": 0.18,
+      "strength": 0.72,
+      "metalness": 0.02,
+      "relief": 0.035,
+      "emission": 0,
+      "micro": "capillary",
+      "textureSeed": 1042,
+      "layers": []
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 1,
+        "radialstroke": 0,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "idle": 0,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 1,
+      "stride": 1,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "water",
+        "speed": 1.6,
+        "climb": 1.7,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "lateral",
+        "amplitude": 0.11,
+        "frequency": 0.65,
+        "wavelength": 3
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "none",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "candidate": {
+    "version": 6,
+    "rig": {
+      "family": "creature"
+    },
+    "actor": {
+      "role": "monster",
+      "faction": "hostile",
+      "behavior": "chase",
+      "health": 160,
+      "speed": 1,
+      "sight": 12,
+      "range": 1.8,
+      "damage": 20,
+      "cooldown": 1.4
+    },
+    "name": "Linked salp",
+    "seed": 1042,
+    "generation": 0,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      },
+      {
+        "id": "unit1",
+        "parent": "core",
+        "offset": [
+          0,
+          0,
+          -0.53
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      },
+      {
+        "id": "unit2",
+        "parent": "unit1",
+        "offset": [
+          0,
+          0,
+          -0.53
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      },
+      {
+        "id": "unit3",
+        "parent": "unit2",
+        "offset": [
+          0,
+          0,
+          -0.53
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      },
+      {
+        "id": "unit4",
+        "parent": "unit3",
+        "offset": [
+          0,
+          0,
+          -0.53
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      }
+    ],
+    "parts": [
+      {
+        "id": "part-1",
+        "type": "pumpbarrel",
+        "host": "core",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-2",
+        "type": "pumpbarrel",
+        "host": "unit1",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.17,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-3",
+        "type": "pumpbarrel",
+        "host": "unit2",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.34,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-4",
+        "type": "pumpbarrel",
+        "host": "unit3",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.51,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-5",
+        "type": "pumpbarrel",
+        "host": "unit4",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.68,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-6",
+        "type": "branchfan",
+        "host": "unit4",
+        "anchor": [
+          0,
+          0,
+          -1
+        ],
+        "size": 0.35,
+        "length": 0.72,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "appearance": {
+      "color": "#558e93",
+      "accent": "#daf0d5",
+      "pattern": "polypcells",
+      "roughness": 0.56,
+      "patternScale": 4,
+      "weight": 1,
+      "angle": 0,
+      "warp": 0.18,
+      "strength": 0.72,
+      "metalness": 0.02,
+      "relief": 0.035,
+      "emission": 0,
+      "micro": "capillary",
+      "textureSeed": 1042,
+      "layers": []
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 1,
+        "radialstroke": 0,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "idle": 0,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 1,
+      "stride": 1,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "water",
+        "speed": 1.6,
+        "climb": 1.7,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "lateral",
+        "amplitude": 0.11,
+        "frequency": 0.65,
+        "wavelength": 3
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "none",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "baseline": {
+    "version": 6,
+    "rig": {
+      "family": "creature"
+    },
+    "actor": {
+      "role": "monster",
+      "faction": "hostile",
+      "behavior": "chase",
+      "health": 160,
+      "speed": 1,
+      "sight": 12,
+      "range": 1.8,
+      "damage": 20,
+      "cooldown": 1.4
+    },
+    "name": "Linked salp",
+    "seed": 1042,
+    "generation": 0,
+    "nodes": [
+      {
+        "id": "core",
+        "parent": null,
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      },
+      {
+        "id": "unit1",
+        "parent": "core",
+        "offset": [
+          0,
+          0,
+          -0.53
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      },
+      {
+        "id": "unit2",
+        "parent": "unit1",
+        "offset": [
+          0,
+          0,
+          -0.53
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      },
+      {
+        "id": "unit3",
+        "parent": "unit2",
+        "offset": [
+          0,
+          0,
+          -0.53
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      },
+      {
+        "id": "unit4",
+        "parent": "unit3",
+        "offset": [
+          0,
+          0,
+          -0.53
+        ],
+        "radii": [
+          0.26,
+          0.26,
+          0.4
+        ]
+      }
+    ],
+    "parts": [
+      {
+        "id": "part-1",
+        "type": "pumpbarrel",
+        "host": "core",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-2",
+        "type": "pumpbarrel",
+        "host": "unit1",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.17,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-3",
+        "type": "pumpbarrel",
+        "host": "unit2",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.34,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-4",
+        "type": "pumpbarrel",
+        "host": "unit3",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.51,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-5",
+        "type": "pumpbarrel",
+        "host": "unit4",
+        "anchor": [
+          0,
+          1,
+          0
+        ],
+        "size": 0.93,
+        "length": 1,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0.68,
+        "bend": 0,
+        "variant": 2,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          -0.32,
+          0
+        ]
+      },
+      {
+        "id": "part-6",
+        "type": "branchfan",
+        "host": "unit4",
+        "anchor": [
+          0,
+          0,
+          -1
+        ],
+        "size": 0.35,
+        "length": 0.72,
+        "twist": 0,
+        "mirror": false,
+        "flex": 1,
+        "phase": 0,
+        "bend": 0,
+        "variant": 0,
+        "presence": 1,
+        "material": "inherit",
+        "socket": "body",
+        "socketOffset": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "appearance": {
+      "color": "#558e93",
+      "accent": "#daf0d5",
+      "pattern": "polypcells",
+      "roughness": 0.56,
+      "patternScale": 4,
+      "weight": 1,
+      "angle": 0,
+      "warp": 0.18,
+      "strength": 0.72,
+      "metalness": 0.02,
+      "relief": 0.035,
+      "emission": 0,
+      "micro": "capillary",
+      "textureSeed": 1042,
+      "layers": []
+    },
+    "motion": {
+      "weights": {
+        "combbeat": 0,
+        "chainpump": 1,
+        "radialstroke": 0,
+        "metachronal": 0,
+        "canopy": 0,
+        "corkscrew": 0,
+        "turbines": 0,
+        "concertina": 0,
+        "idle": 0,
+        "walk": 0,
+        "run": 0,
+        "creep": 0,
+        "bound": 0,
+        "swim": 0,
+        "hover": 0,
+        "backpedal": 0,
+        "strafe": 0,
+        "prowl": 0,
+        "trot": 0,
+        "cruise": 0,
+        "undulate": 0,
+        "jet": 0,
+        "row": 0,
+        "soar": 0,
+        "powerflight": 0,
+        "flutter": 0,
+        "float": 0,
+        "display": 0
+      },
+      "layers": {
+        "breath": 1,
+        "blink": 1,
+        "gaze": 1,
+        "tail": 1,
+        "flex": 1,
+        "jaw": 1
+      },
+      "tempo": 1,
+      "stride": 1,
+      "lift": 1,
+      "phaseLag": 0.5,
+      "travel": {
+        "medium": "water",
+        "speed": 1.6,
+        "climb": 1.7,
+        "bank": 0.25
+      },
+      "bodyWave": {
+        "kind": "lateral",
+        "amplitude": 0.11,
+        "frequency": 0.65,
+        "wavelength": 3
+      },
+      "humanoid": {
+        "style": "neutral",
+        "armSwing": 1,
+        "lookYaw": 0,
+        "lookPitch": 0,
+        "action": "none",
+        "actionWeight": 1,
+        "actionSpeed": 1,
+        "repeat": true,
+        "mask": "auto"
+      }
+    }
+  },
+  "settings": {
+    "pose": "motion-cycle",
+    "phase": 0.3,
+    "shading": "pattern",
+    "view": "flight",
+    "layout": "quad",
+    "target": "desktop",
+    "bones": false,
+    "labels": false,
+    "garment": true,
+    "details": true
+  },
+  "frame": null,
+  "lineage": {
+    "parent": "fnv1a32-e376071e",
+    "profile": "unchanged",
+    "amount": 0
+  },
+  "review": {
+    "decisions": {
+      "silhouette": "unreviewed",
+      "proportions": "unreviewed",
+      "joints": "unreviewed",
+      "surface": "unreviewed",
+      "attachments": "unreviewed",
+      "gameplay": "unreviewed"
+    },
+    "notes": "Inspect the generated body and Strange Forms parts. CPU pigment is an approximation. No GPU, physics, or production approval.",
+    "fingerprint": null,
+    "status": "not-approved"
+  },
+  "referencePolicy": "Reference images and external OBJ data are not embedded. Reload them from local files. No automatic quality approval."
+}

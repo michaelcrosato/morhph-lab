@@ -1,0 +1,73 @@
+{
+  "suites": [
+    {
+      "suite": "v4_browser",
+      "exitCode": 0,
+      "seconds": 10.0,
+      "passed": 147,
+      "report": "test-results/v12/browser-regression/v4_browser.json"
+    },
+    {
+      "suite": "v5_browser",
+      "exitCode": 0,
+      "seconds": 15.92,
+      "passed": 71,
+      "report": "test-results/v12/browser-regression/v5_browser.json"
+    },
+    {
+      "suite": "navigation_browser",
+      "exitCode": 0,
+      "seconds": 6.31,
+      "passed": 27,
+      "report": "test-results/v12/browser-regression/navigation_browser.json"
+    },
+    {
+      "suite": "tidal_browser",
+      "exitCode": 0,
+      "seconds": 8.41,
+      "passed": 57,
+      "report": "test-results/v12/browser-regression/tidal_browser.json"
+    },
+    {
+      "suite": "frontier_browser",
+      "exitCode": 0,
+      "seconds": 8.76,
+      "passed": 76,
+      "report": "test-results/v12/browser-regression/frontier_browser.json"
+    },
+    {
+      "suite": "bloom_browser",
+      "exitCode": 0,
+      "seconds": 27.03,
+      "passed": 121,
+      "report": "test-results/v12/browser-regression/bloom_browser.json"
+    },
+    {
+      "suite": "field_browser",
+      "exitCode": 0,
+      "seconds": 15.28,
+      "passed": 92,
+      "report": "test-results/v12/browser-regression/field_browser.json"
+    },
+    {
+      "suite": "delivery_browser",
+      "exitCode": 0,
+      "seconds": 7.57,
+      "passed": 44,
+      "report": "test-results/v12/browser-regression/delivery_browser.json"
+    },
+    {
+      "suite": "coverage_browser",
+      "exitCode": 0,
+      "seconds": 22.38,
+      "passed": 136,
+      "report": "test-results/v12/browser-regression/coverage_browser.json"
+    }
+  ],
+  "passed": 771,
+  "failures": 0,
+  "htmlSHA256": "efd3d8c0b7ccf9f5edf2d7486dbc60b09fa1602c5e65cb0a4bcb14817c743602",
+  "sameBuildForAllSuites": true,
+  "gpuTested": false,
+  "physicsTested": false
+}

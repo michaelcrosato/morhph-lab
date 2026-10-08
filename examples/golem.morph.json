@@ -1,0 +1,180 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "humanoid",
+    "proportions": {
+      "scale": 1.2,
+      "torso": 1,
+      "shoulders": 1.4,
+      "hips": 1.18,
+      "arms": 1.13,
+      "legs": 1,
+      "head": 0.85,
+      "bulk": 1.5,
+      "hands": 1.4,
+      "feet": 1.35,
+      "posture": 0
+    },
+    "outfit": "carapace",
+    "headStyle": "bare",
+    "handStyle": "stone",
+    "bodyStyle": "classic"
+  },
+  "actor": {
+    "role": "sentinel",
+    "faction": "neutral",
+    "behavior": "stationary",
+    "health": 300,
+    "speed": 0.65,
+    "sight": 14,
+    "range": 2,
+    "damage": 28,
+    "cooldown": 1.8
+  },
+  "name": "Golem",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.5097599999999999,
+        0.36,
+        0.38512530805571193
+      ]
+    },
+    {
+      "id": "spine",
+      "parent": "core",
+      "offset": [
+        0,
+        0.3,
+        0
+      ],
+      "radii": [
+        0.45161434464947464,
+        0.444,
+        0.4262112152442729
+      ]
+    },
+    {
+      "id": "chest",
+      "parent": "spine",
+      "offset": [
+        0,
+        0.408,
+        0
+      ],
+      "radii": [
+        0.8904,
+        0.528,
+        0.4997934299008832
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "chest",
+      "offset": [
+        0,
+        0.6492,
+        0
+      ],
+      "radii": [
+        0.29579999999999995,
+        0.357,
+        0.3162
+      ]
+    }
+  ],
+  "parts": [],
+  "appearance": {
+    "color": "#778689",
+    "accent": "#a5d9bd",
+    "pattern": "cracks",
+    "roughness": 0.92,
+    "patternScale": 5.4,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.8,
+    "metalness": 0.025,
+    "relief": 0.045,
+    "emission": 0.13,
+    "micro": "pebbles",
+    "textureSeed": 1042,
+    "layers": []
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 1,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "stiff",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}

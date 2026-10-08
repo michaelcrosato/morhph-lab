@@ -1,0 +1,15 @@
+node_modules/
+vendor/
+__pycache__/
+*.pyc
+.DS_Store
+*:Zone.Identifier
+.env
+.env.*
+!.env.example
+
+# Managed-workspace mounts and the writable Git metadata fallback used here.
+.agents/
+.aws/
+.codex/
+.git-data/

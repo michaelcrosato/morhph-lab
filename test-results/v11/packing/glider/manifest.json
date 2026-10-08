@@ -1,0 +1,420 @@
+{
+  "format": "morph-lab-asset-delivery",
+  "version": 1,
+  "applicationVersion": "11.0.0",
+  "name": "Glider",
+  "sourceFingerprint": "fnv1a32-26e464d7",
+  "sourceSHA256": "afdd2a070656bded6fe22830536e18d75b8cb18b15c88a887197c165af2bc45f",
+  "settingsSHA256": "180415e130f50a0d5f7352d3d3634018f3c3e7204ab63a96c4bc2c5bb04a25f9",
+  "settings": {
+    "meshLayout": "material",
+    "mode": "motion",
+    "pose": "bind",
+    "phase": 0.5,
+    "frames": 9,
+    "start": 0,
+    "end": 1,
+    "target": "desktop",
+    "pigment": true,
+    "acknowledgeWarnings": true
+  },
+  "packing": {
+    "mode": "material",
+    "sourceMeshes": 30,
+    "exportMeshes": 8,
+    "meshesRemoved": 22,
+    "verticesRemoved": 0,
+    "trianglesRemoved": 0,
+    "changesShape": false,
+    "changesSampledAnimation": false,
+    "sourceRanges": [
+      {
+        "name": "material/skin",
+        "material": "skin",
+        "ranges": [
+          {
+            "name": "Body surface",
+            "material": "skin",
+            "firstVertex": 0,
+            "vertexCount": 4430,
+            "firstIndex": 0,
+            "indexCount": 26568
+          },
+          {
+            "name": "part-1:1/leg/skin",
+            "material": "skin",
+            "firstVertex": 4430,
+            "vertexCount": 1144,
+            "firstIndex": 26568,
+            "indexCount": 5424
+          },
+          {
+            "name": "part-1:-1/leg/skin",
+            "material": "skin",
+            "firstVertex": 5574,
+            "vertexCount": 1144,
+            "firstIndex": 31992,
+            "indexCount": 5424
+          },
+          {
+            "name": "part-2:1/leg/skin",
+            "material": "skin",
+            "firstVertex": 6718,
+            "vertexCount": 1144,
+            "firstIndex": 37416,
+            "indexCount": 5424
+          },
+          {
+            "name": "part-2:-1/leg/skin",
+            "material": "skin",
+            "firstVertex": 7862,
+            "vertexCount": 1144,
+            "firstIndex": 42840,
+            "indexCount": 5424
+          },
+          {
+            "name": "part-3:1/eye/skin",
+            "material": "skin",
+            "firstVertex": 9006,
+            "vertexCount": 294,
+            "firstIndex": 48264,
+            "indexCount": 1392
+          },
+          {
+            "name": "part-3:-1/eye/skin",
+            "material": "skin",
+            "firstVertex": 9300,
+            "vertexCount": 294,
+            "firstIndex": 49656,
+            "indexCount": 1392
+          },
+          {
+            "name": "part-5:1/tail/skin",
+            "material": "skin",
+            "firstVertex": 9594,
+            "vertexCount": 1872,
+            "firstIndex": 51048,
+            "indexCount": 8784
+          },
+          {
+            "name": "part-6:1/mouth/skin",
+            "material": "skin",
+            "firstVertex": 11466,
+            "vertexCount": 297,
+            "firstIndex": 59832,
+            "indexCount": 1536
+          },
+          {
+            "name": "part-4:1/wing/skin",
+            "material": "skin",
+            "firstVertex": 11763,
+            "vertexCount": 126,
+            "firstIndex": 61368,
+            "indexCount": 432
+          },
+          {
+            "name": "part-4:-1/wing/skin",
+            "material": "skin",
+            "firstVertex": 11889,
+            "vertexCount": 126,
+            "firstIndex": 61800,
+            "indexCount": 432
+          },
+          {
+            "name": "part-7:1/crest/skin|none",
+            "material": "skin",
+            "firstVertex": 12015,
+            "vertexCount": 273,
+            "firstIndex": 62232,
+            "indexCount": 1320
+          }
+        ]
+      },
+      {
+        "name": "material/accent",
+        "material": "accent",
+        "ranges": [
+          {
+            "name": "part-1:1/leg/accent",
+            "material": "accent",
+            "firstVertex": 0,
+            "vertexCount": 165,
+            "firstIndex": 0,
+            "indexCount": 720
+          },
+          {
+            "name": "part-1:-1/leg/accent",
+            "material": "accent",
+            "firstVertex": 165,
+            "vertexCount": 165,
+            "firstIndex": 720,
+            "indexCount": 720
+          },
+          {
+            "name": "part-2:1/leg/accent",
+            "material": "accent",
+            "firstVertex": 330,
+            "vertexCount": 165,
+            "firstIndex": 1440,
+            "indexCount": 720
+          },
+          {
+            "name": "part-2:-1/leg/accent",
+            "material": "accent",
+            "firstVertex": 495,
+            "vertexCount": 165,
+            "firstIndex": 2160,
+            "indexCount": 720
+          },
+          {
+            "name": "part-5:1/tail/accent",
+            "material": "accent",
+            "firstVertex": 660,
+            "vertexCount": 624,
+            "firstIndex": 2880,
+            "indexCount": 2928
+          },
+          {
+            "name": "part-6:1/mouth/accent",
+            "material": "accent",
+            "firstVertex": 1284,
+            "vertexCount": 594,
+            "firstIndex": 5808,
+            "indexCount": 2880
+          },
+          {
+            "name": "part-7:1/crest/accent|none",
+            "material": "accent",
+            "firstVertex": 1878,
+            "vertexCount": 935,
+            "firstIndex": 8688,
+            "indexCount": 4800
+          }
+        ]
+      },
+      {
+        "name": "material/eye",
+        "material": "eye",
+        "ranges": [
+          {
+            "name": "part-3:1/eye/eye",
+            "material": "eye",
+            "firstVertex": 0,
+            "vertexCount": 273,
+            "firstIndex": 0,
+            "indexCount": 1320
+          },
+          {
+            "name": "part-3:-1/eye/eye",
+            "material": "eye",
+            "firstVertex": 273,
+            "vertexCount": 273,
+            "firstIndex": 1320,
+            "indexCount": 1320
+          }
+        ]
+      },
+      {
+        "name": "material/iris",
+        "material": "iris",
+        "ranges": [
+          {
+            "name": "part-3:1/eye/iris",
+            "material": "iris",
+            "firstVertex": 0,
+            "vertexCount": 273,
+            "firstIndex": 0,
+            "indexCount": 1320
+          },
+          {
+            "name": "part-3:-1/eye/iris",
+            "material": "iris",
+            "firstVertex": 273,
+            "vertexCount": 273,
+            "firstIndex": 1320,
+            "indexCount": 1320
+          }
+        ]
+      },
+      {
+        "name": "material/pupil",
+        "material": "pupil",
+        "ranges": [
+          {
+            "name": "part-3:1/eye/pupil",
+            "material": "pupil",
+            "firstVertex": 0,
+            "vertexCount": 273,
+            "firstIndex": 0,
+            "indexCount": 1320
+          },
+          {
+            "name": "part-3:-1/eye/pupil",
+            "material": "pupil",
+            "firstVertex": 273,
+            "vertexCount": 273,
+            "firstIndex": 1320,
+            "indexCount": 1320
+          }
+        ]
+      },
+      {
+        "name": "material/glint",
+        "material": "glint",
+        "ranges": [
+          {
+            "name": "part-3:1/eye/glint",
+            "material": "glint",
+            "firstVertex": 0,
+            "vertexCount": 273,
+            "firstIndex": 0,
+            "indexCount": 1320
+          },
+          {
+            "name": "part-3:-1/eye/glint",
+            "material": "glint",
+            "firstVertex": 273,
+            "vertexCount": 273,
+            "firstIndex": 1320,
+            "indexCount": 1320
+          }
+        ]
+      },
+      {
+        "name": "material/dark",
+        "material": "dark",
+        "ranges": [
+          {
+            "name": "part-6:1/mouth/dark",
+            "material": "dark",
+            "firstVertex": 0,
+            "vertexCount": 273,
+            "firstIndex": 0,
+            "indexCount": 1320
+          }
+        ]
+      },
+      {
+        "name": "material/membrane",
+        "material": "membrane",
+        "ranges": [
+          {
+            "name": "part-4:1/wing/membrane",
+            "material": "membrane",
+            "firstVertex": 0,
+            "vertexCount": 42,
+            "firstIndex": 0,
+            "indexCount": 165
+          },
+          {
+            "name": "part-4:-1/wing/membrane",
+            "material": "membrane",
+            "firstVertex": 42,
+            "vertexCount": 42,
+            "firstIndex": 165,
+            "indexCount": 165
+          }
+        ]
+      }
+    ],
+    "note": "Material grouping changes node names and granularity. Keep Separate meshes when individual components must remain addressable. This is not mesh simplification or a frame-rate measurement."
+  },
+  "inactiveGenes": [],
+  "coordinates": {
+    "handedness": "right",
+    "up": "+Y",
+    "forward": "+Z",
+    "units": "metres",
+    "origin": "Original compiler origin; no recentering"
+  },
+  "totals": {
+    "vertices": 17642,
+    "triangles": 29750,
+    "meshes": 8
+  },
+  "bounds": {
+    "min": [
+      -3.7846314907073975,
+      -8.558588504570253e-9,
+      -3.5280025005340576
+    ],
+    "max": [
+      3.8043928146362305,
+      4.2733154296875,
+      2.0434842109680176
+    ]
+  },
+  "geometry": {
+    "format": "glTF 2.0 binary",
+    "backend": "foundation-cpu",
+    "allActiveGenesIncluded": true,
+    "allGenesIncluded": true,
+    "garmentAndDetailsIncluded": true,
+    "skinOrSkeleton": false
+  },
+  "animation": {
+    "name": "procedural-motion",
+    "method": "sampled POSITION and NORMAL morph targets",
+    "samples": 9,
+    "targetsPerMesh": 8,
+    "durationSeconds": 2,
+    "interpolation": "LINEAR",
+    "recommendedPlayback": "once",
+    "endpointGapMetres": 1.7014940261944345,
+    "loopClosed": false
+  },
+  "materials": {
+    "method": "CPU pigment baked to linear vertex colors",
+    "texturesIncluded": false,
+    "customShadersIncluded": false,
+    "standardPBR": true
+  },
+  "actor": {
+    "role": "monster",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 160,
+    "speed": 1,
+    "sight": 12,
+    "range": 1.8,
+    "damage": 20,
+    "cooldown": 1.4
+  },
+  "checks": {
+    "technicalStatus": "pass",
+    "warningCount": 0,
+    "warningsAcknowledged": true,
+    "sourceUnchanged": true,
+    "visualApproval": false
+  },
+  "limitations": [
+    "Geometry comes from the offline Inspector, not a capture of the WebGL2 Workshop.",
+    "Materials use linear vertex colors and standard metallic/roughness values. Fine pattern detail, bump textures, and custom shaders are not exported.",
+    "Motion is a sampled vertex bake. It has no reusable skeleton, retargeting, root-motion track, terrain contact, or physical collision data.",
+    "No loop is forced. Play once by default; inspect the reported endpoint gap before looping.",
+    "The source blueprint is the editable asset. Regenerate after changing proportions, parts, or actions.",
+    "Technical checks do not approve self-intersections, equipment fit, anatomy, or production quality."
+  ],
+  "files": [
+    {
+      "name": "model.glb",
+      "bytes": 4245424,
+      "sha256": "3bf8717414a1dcb26698860e4c17d3726522fcc53588ede0df1d7b4872e33b6b"
+    },
+    {
+      "name": "source.morph.json",
+      "bytes": 5788,
+      "sha256": "afdd2a070656bded6fe22830536e18d75b8cb18b15c88a887197c165af2bc45f"
+    },
+    {
+      "name": "audit.json",
+      "bytes": 26133,
+      "sha256": "be0335c935df8fc14106ccdfacba10fbdcc1668fa0fd66222f7755e31ea8c419"
+    },
+    {
+      "name": "README.txt",
+      "bytes": 1044,
+      "sha256": "b04cc250c7479327203a4a50acc2b90d3da5bafb814bce701ccac420bb1ca4e3"
+    }
+  ]
+}

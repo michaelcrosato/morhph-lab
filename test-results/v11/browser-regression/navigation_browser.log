@@ -1,0 +1,13 @@
+{
+  "suite": "v9 combined-workspace navigation",
+  "passed": 27,
+  "uncaughtErrors": [],
+  "offline": true,
+  "entryMethod": "Playwright set_content with the exact shipped HTML",
+  "fileNavigationTested": false,
+  "fileNavigationLimitation": "Direct file navigation is blocked by the test environment (ERR_BLOCKED_BY_ADMINISTRATOR). In-file switches were exercised through the real buttons.",
+  "engineMocks": false,
+  "engineFailureRecoveryTested": true,
+  "fullWebGL2WorkshopTested": false,
+  "rapierTested": false
+}

@@ -1,0 +1,207 @@
+{
+  "version": 6,
+  "rig": {
+    "family": "humanoid",
+    "proportions": {
+      "scale": 1.35,
+      "torso": 1,
+      "shoulders": 1.4,
+      "hips": 1.25,
+      "arms": 1.18,
+      "legs": 0.87,
+      "head": 0.87,
+      "bulk": 1.55,
+      "hands": 1.4,
+      "feet": 1.25,
+      "posture": 0.1
+    },
+    "outfit": "wrap",
+    "headStyle": "bare",
+    "handStyle": "fingers",
+    "bodyStyle": "classic"
+  },
+  "actor": {
+    "role": "brute",
+    "faction": "hostile",
+    "behavior": "chase",
+    "health": 240,
+    "speed": 0.72,
+    "sight": 10,
+    "range": 2.3,
+    "damage": 35,
+    "cooldown": 2.2
+  },
+  "name": "Ogre",
+  "seed": 1042,
+  "generation": 0,
+  "nodes": [
+    {
+      "id": "core",
+      "parent": null,
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "radii": [
+        0.6074999999999999,
+        0.405,
+        0.4368322473968501
+      ]
+    },
+    {
+      "id": "spine",
+      "parent": "core",
+      "offset": [
+        0,
+        0.3375,
+        0
+      ],
+      "radii": [
+        0.5147737895709996,
+        0.4995,
+        0.48741356926125884
+      ]
+    },
+    {
+      "id": "chest",
+      "parent": "spine",
+      "offset": [
+        0,
+        0.45899999999999996,
+        0
+      ],
+      "radii": [
+        1.0017,
+        0.5940000000000001,
+        0.5743800546597521
+      ]
+    },
+    {
+      "id": "head",
+      "parent": "chest",
+      "offset": [
+        0,
+        0.73197,
+        0
+      ],
+      "radii": [
+        0.340605,
+        0.411075,
+        0.364095
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "part-1",
+      "type": "horn",
+      "host": "head",
+      "anchor": [
+        0.41772308771082384,
+        -0.2610769298192649,
+        0.870256432730883
+      ],
+      "size": 0.35,
+      "length": 0.45,
+      "twist": 0,
+      "mirror": true,
+      "flex": 1,
+      "phase": 0,
+      "bend": -0.5,
+      "variant": 0,
+      "presence": 1,
+      "material": "inherit",
+      "socket": "body",
+      "socketOffset": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "appearance": {
+    "color": "#a08d70",
+    "accent": "#665254",
+    "pattern": "cracks",
+    "roughness": 0.72,
+    "patternScale": 5.4,
+    "weight": 1,
+    "angle": 0,
+    "warp": 0.45,
+    "strength": 0.18,
+    "metalness": 0.025,
+    "relief": 0.012,
+    "emission": 0,
+    "micro": "pores",
+    "textureSeed": 1042,
+    "layers": []
+  },
+  "motion": {
+    "weights": {
+      "combbeat": 0,
+      "chainpump": 0,
+      "radialstroke": 0,
+      "metachronal": 0,
+      "canopy": 0,
+      "corkscrew": 0,
+      "turbines": 0,
+      "concertina": 0,
+      "idle": 1,
+      "walk": 0,
+      "run": 0,
+      "creep": 0,
+      "bound": 0,
+      "swim": 0,
+      "hover": 0,
+      "backpedal": 0,
+      "strafe": 0,
+      "prowl": 0,
+      "trot": 0,
+      "cruise": 0,
+      "undulate": 0,
+      "jet": 0,
+      "row": 0,
+      "soar": 0,
+      "powerflight": 0,
+      "flutter": 0,
+      "float": 0,
+      "display": 0
+    },
+    "layers": {
+      "breath": 1,
+      "blink": 1,
+      "gaze": 1,
+      "tail": 1,
+      "flex": 1,
+      "jaw": 1
+    },
+    "tempo": 1,
+    "stride": 1,
+    "lift": 1,
+    "phaseLag": 0.5,
+    "travel": {
+      "medium": "ground",
+      "speed": 3.4,
+      "climb": 2.4,
+      "bank": 0.25
+    },
+    "bodyWave": {
+      "kind": "rigid",
+      "amplitude": 0.25,
+      "frequency": 1,
+      "wavelength": 2.6
+    },
+    "humanoid": {
+      "style": "heavy",
+      "armSwing": 1,
+      "lookYaw": 0,
+      "lookPitch": 0,
+      "action": "none",
+      "actionWeight": 1,
+      "actionSpeed": 1,
+      "repeat": true,
+      "mask": "auto"
+    }
+  }
+}
